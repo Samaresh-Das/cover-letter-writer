@@ -1,103 +1,134 @@
-import Image from "next/image";
+// app/page.jsx
+"use client";
+
+import { useState, useRef } from "react";
+import { DEFAULT_SYSTEM_INSTRUCTION } from "@/lib/prompt";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [jd, setJd] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [letters, setLetters] = useState([]);
+  const [error, setError] = useState(null);
+  const sliderRef = useRef(null);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  const onGenerate = async () => {
+    if (!jd.trim()) return;
+    setLoading(true);
+    setError(null);
+
+    try {
+      const res = await fetch("/api/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ jobDescription: jd }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Generation failed");
+
+      const newLetter = { id: crypto.randomUUID(), text: data.text, createdAt: Date.now() };
+      setLetters(prev => [newLetter, ...prev]);
+
+      // Scroll slider to start
+      setTimeout(() => {
+        sliderRef.current?.scrollTo({ left: 0, behavior: 'smooth' });
+      }, 100);
+    } catch (e) {
+      setError(e.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const copyToClipboard = text => navigator.clipboard.writeText(text);
+
+  return (
+    <main className="relative min-h-screen flex flex-col items-center px-4 py-8 bg-bg text-text overflow-hidden">
+      {/* Gradient blobs */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -left-32 w-[500px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(124,58,237,0.35),transparent)] blur-3xl" />
+        <div className="absolute top-0 -right-40 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.25),transparent)] blur-3xl" />
+        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-[radial-gradient(ellipse_at_center,rgba(236,72,153,0.25),transparent)] blur-3xl" />
+      </div>
+
+      {/* Header */}
+      <header className="max-w-3xl w-full mb-10 z-10 text-center">
+        <h1 className="text-3xl font-bold text-primaryLight mb-2">Cover Letter Writer</h1>
+        <p className="text-muted">
+          Paste a job description, and I’ll craft a 3-paragraph cover letter tailored to your skills.
+        </p>
+      </header>
+
+      {/* Input Form */}
+      <section className="max-w-3xl w-full mb-12 z-20">
+        <label className="block text-sm text-muted mb-2">Job Description</label>
+        <textarea
+          className="w-full h-48 p-4 rounded-lg bg-surface/70 backdrop-blur-md text-inherit focus:outline-none focus:ring-2 focus:ring-primary placeholder-muted"
+          placeholder="Paste JD here..."
+          value={jd}
+          onChange={e => setJd(e.target.value)}
+        />
+        <div className="flex items-center gap-4 mt-4">
+          <button
+            onClick={onGenerate}
+            disabled={loading || !jd.trim()}
+            className="px-6 py-2 rounded-lg bg-primary text-white font-medium hover:scale-105 transition-transform duration-200 disabled:opacity-50 shadow-card"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            {loading ? "Generating..." : "Generate"}
+          </button>
+          <details className="ml-auto">
+            <summary className="cursor-pointer text-sm text-muted hover:text-primary transition-colors">
+              Default instruction
+            </summary>
+            <pre className="mt-2 whitespace-pre-wrap text-xs bg-surface/70 backdrop-blur p-3 rounded-lg border border-primary/20">
+              {DEFAULT_SYSTEM_INSTRUCTION}
+            </pre>
+          </details>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        {error && <p className="text-red-400 text-sm mt-2">{error}</p>}
+      </section>
+
+      {/* Slider */}
+      <section className="relative w-full flex-1 z-10">
+        <div
+          ref={sliderRef}
+          className="w-full overflow-x-auto scrollbar-hide flex space-x-6 snap-x snap-mandatory px-4 py-6 mx-auto"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+          {letters.length === 0 && (
+            <div className="flex-shrink-0 w-full text-center text-muted">
+              Your generated cover letters will appear here.
+            </div>
+          )}
+
+
+          {letters.map((letter, idx) => (
+            <div key={letter.id} className="flex-shrink-0 snap-center w-full max-w-3xl mx-auto">
+              <article className="h-96 bg-surface/70 backdrop-blur-lg border border-primary/20 rounded-2xl p-6 shadow-card hover:shadow-primaryLight/50 transition-shadow duration-200">
+                <header className="flex items-center justify-between mb-4">
+                  <h2 className="text-lg font-semibold">Cover Letter #{letters.length - idx}</h2>
+                  <button
+                    onClick={() => copyToClipboard(letter.text)}
+                    className="text-sm px-3 py-1 rounded bg-primary/20 text-primary hover:bg-primary/30 hover:scale-110 transition-transform duration-150"
+                  >
+                    Copy
+                  </button>
+                </header>
+                <div className="whitespace-pre-wrap text-sm leading-6 mb-4 h-56 overflow-y-auto">
+                  {letter.text}
+                </div>
+                <footer className="text-xs text-muted">
+                  Generated {new Date(letter.createdAt).toLocaleTimeString()}
+                </footer>
+              </article>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <footer className="mt-8 mb-8 text-xs text-muted z-10">
+        Built with Next.js + Tailwind CSS. Theme: dark bluish with violet tones.
       </footer>
-    </div>
+    </main>
   );
 }
+
