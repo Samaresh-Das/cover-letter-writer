@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 
 export default function Letter({ letters, copyToClipboard }) {
     return (
-        <div className="w-full max-w-6xl py-12 z-10 mx-auto">
+        <div className="w-full md:max-w-6xl py-12 z-10 md:mx-auto md:p-10">
             <Swiper
                 modules={[EffectCoverflow, Navigation]}
                 effect="coverflow"
@@ -16,7 +16,7 @@ export default function Letter({ letters, copyToClipboard }) {
                 centeredSlides={true}
                 slidesPerView="auto"
                 loop={false}
-                navigation={true}
+                // navigation={true}
                 coverflowEffect={{
                     rotate: 0,
                     stretch: 0,
@@ -29,7 +29,7 @@ export default function Letter({ letters, copyToClipboard }) {
                 {letters.map((letter, idx) => (
                     <SwiperSlide
                         key={letter.id}
-                        className="!w-[600px] !h-[600px] flex justify-center mx-auto"
+                        className="lg:!w-[600px] md:!w-[500px] !w-300px !h-[600px] flex justify-center md:mx-auto"
                     >
                         <article className="w-full h-full bg-surface/70 backdrop-blur-lg border border-primary/20 rounded-2xl p-6 shadow-card flex flex-col mx-auto">
                             <header className="flex items-center justify-between mb-4">
@@ -43,11 +43,13 @@ export default function Letter({ letters, copyToClipboard }) {
                                     Copy
                                 </button>
                             </header>
-                            <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-primary scrollbar-track-surface/50 pr-2">
-                                <p className="whitespace-pre-wrap text-sm leading-6">
+                            <div className="flex-1 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-primary scrollbar-track-surface/50 pr-2">
+                                <p className="whitespace-pre-wrap break-words text-sm leading-6">
                                     {letter.text}
                                 </p>
+
                             </div>
+
                             <footer className="mt-4 text-xs text-muted text-right">
                                 {new Date(letter.createdAt).toLocaleTimeString()}
                             </footer>

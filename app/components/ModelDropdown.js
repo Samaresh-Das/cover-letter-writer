@@ -27,7 +27,10 @@ export default function CustomDropdown({ model, setModel }) {
 
     return (
         <div className="relative w-full max-w-sm text-sm z-30" ref={dropdownRef}>
-            <label className="text-muted mb-1 block">Choose AI Model</label>
+            <label className="text-muted mb-1 block">
+                Choose AI Model <span className="text-xs text-muted/70 text-gray-400">({models[0].label} is default)</span>
+            </label>
+
 
             <button
                 onClick={() => setOpen(prev => !prev)}
