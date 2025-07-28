@@ -41,7 +41,7 @@ export default function LeftOptions({
                     value={customInstr}
                     onChange={e => setCustomInstr(e.target.value)}
                     placeholder="Override the default prompt…"
-                    className="mt-1 block w-full rounded-lg bg-surface/70 text-text p-2 border border-transparent focus:border-primary focus:ring-1 focus:ring-primary transition"
+                    className="mt-1 block w-full rounded-2xl bg-surface/70 text-text p-2 border-1 border-gray-800 transparent focus:border-primary focus:ring-1 focus:ring-primary transition"
                 />
             </label>
         </div>
