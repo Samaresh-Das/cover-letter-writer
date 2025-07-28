@@ -17,7 +17,7 @@ export default function Footer() {
                     {/* Branding */}
                     <div>
                         <h2 className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-purple-300 via-blue-300 to-pink-300 text-transparent bg-clip-text drop-shadow-md">
-                            CoverLetterGen
+                            CovGen
                         </h2>
                         <p className="mt-2 text-sm text-muted leading-relaxed italic">
                             Elevate your applications with AI-crafted, job-specific cover letters — styled for impact.
