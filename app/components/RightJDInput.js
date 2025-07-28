@@ -53,7 +53,7 @@ export default function RightJDInput({
                         value={jdLink}
                         onChange={(e) => setJdLink(e.target.value)}
                         placeholder="Paste a  JD link"
-                        className="flex-1 p-2 rounded bg-surface/70 text-text"
+                        className="flex-1 p-2 rounded-2xl bg-surface/70 text-text border-1 border-gray-800"
                     />
                     <button
                         onClick={fetchJDFromLink}
@@ -71,7 +71,7 @@ export default function RightJDInput({
                 <textarea
                     value={jd}
                     onChange={e => setJd(e.target.value)}
-                    className="mt-1 block w-full rounded bg-surface/70 text-text p-4 h-[300px] md:h-[250px]"
+                    className="mt-1 block w-full rounded-2xl bg-surface/70 text-text p-4 h-[300px] md:h-[250px] border-1 border-gray-800"
                     placeholder="Paste JD here…"
                 />
             </label>

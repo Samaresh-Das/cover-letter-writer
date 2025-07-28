@@ -1,5 +1,5 @@
 "use client";
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation } from "swiper/modules";
 import "swiper/css";

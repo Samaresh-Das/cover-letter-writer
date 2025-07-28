@@ -1,4 +1,3 @@
-// app/page.jsx
 "use client";
 
 import { useState, useRef } from "react";
@@ -8,7 +7,7 @@ import { Toaster } from "react-hot-toast";
 import GradientBlocks from "./components/GradientBlocks";
 import Header from "./components/Header";
 import Controls from "./components/Controls";
-import JDInputSection from "./components/JDInputSection";
+import IntroModal from "./components/IntroModal";
 
 
 export default function Home() {
@@ -135,7 +134,7 @@ export default function Home() {
         }}
       />
 
-
+      <IntroModal />
 
     </main>
   );
