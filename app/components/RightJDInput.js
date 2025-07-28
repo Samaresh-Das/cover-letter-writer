@@ -1,6 +1,7 @@
 "use client";
 
 import { DEFAULT_SYSTEM_INSTRUCTION } from "@/lib/prompt";
+import { useState } from "react";
 
 export default function RightJDInput({
     jd, setJd,
@@ -10,17 +11,69 @@ export default function RightJDInput({
     setManager,
     setCustomInstr,
 }) {
+    const [jdLink, setJdLink] = useState("");
+    const [fetching, setFetching] = useState(false);
+
+    const fetchJDFromLink = async () => {
+        if (!jdLink.trim()) return;
+        setFetching(true);
+
+        try {
+            const res = await fetch("/api/fetch-jd", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ url: jdLink.trim() }),
+            });
+
+            const data = await res.json();
+            if (data.jd) {
+                setJd(data.jd);
+            } else {
+                alert("Could not extract JD: " + (data.error || "Unknown error"));
+            }
+        } catch (err) {
+            alert("Error fetching JD");
+            console.error(err);
+        }
+
+        setFetching(false);
+    };
     return (
         <div className="flex-1 space-y-4">
             <label className="block">
-                <span className="text-sm text-muted">Job Description</span>
+                <span className="text-lg text-muted">Job Description</span>
+
+            </label>
+            {/* JD Link Input */}
+            <label className="block">
+                <span className="text-sm text-muted">JD Share Link (Optional)</span>
+                <div className="flex gap-2 mt-1">
+                    <input
+                        type="text"
+                        value={jdLink}
+                        onChange={(e) => setJdLink(e.target.value)}
+                        placeholder="Paste a  JD link"
+                        className="flex-1 p-2 rounded bg-surface/70 text-text"
+                    />
+                    <button
+                        onClick={fetchJDFromLink}
+                        disabled={fetching}
+                        className="bg-primary text-white px-4 py-2 hover:scale-105 transition disabled:opacity-50 backdrop-blur-2xl bg-white/10 border border-white/20 shadow-md rounded-4xl disabled:cursor-not-allowed"
+                    >
+                        {fetching ? "Fetching…" : "Fetch"}
+                    </button>
+                </div>
+            </label>
+            <h4>OR </h4>
+            <label className="block">
+                <span className="text-sm text-muted">Paste a JD here</span>
+
                 <textarea
                     value={jd}
                     onChange={e => setJd(e.target.value)}
                     className="mt-1 block w-full rounded bg-surface/70 text-text p-4 h-[300px] md:h-[250px]"
                     placeholder="Paste JD here…"
                 />
-
             </label>
 
             <div className="flex flex-wrap gap-4">

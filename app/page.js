@@ -2,14 +2,13 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { DEFAULT_SYSTEM_INSTRUCTION } from "@/lib/prompt";
+
 import Letter from "./components/Letter";
-import CustomDropdown from "./components/ModelDropdown";
 import { Toaster } from "react-hot-toast";
 import GradientBlocks from "./components/GradientBlocks";
 import Header from "./components/Header";
 import Controls from "./components/Controls";
-
+import JDInputSection from "./components/JDInputSection";
 
 
 export default function Home() {
@@ -27,6 +26,24 @@ export default function Home() {
     if (!jd.trim()) return;
     setLoading(true);
     setError(null);
+
+    const fetchJDFromLink = async (link) => {
+      const res = await fetch('/api/fetch-jd', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ url: link }),
+      });
+
+      const data = await res.json();
+      if (data.jd) {
+        console.log("JD Extracted:", data.jd);
+      } else {
+        console.error("Error:", data.error);
+      }
+    };
+
+
+
 
     try {
       const res = await fetch("/api/generate", {
@@ -79,6 +96,7 @@ export default function Home() {
       >
         Reset
       </button>
+      {/* <JDInputSection jd={jd} setJd={setJd} /> */}
 
       {/* Slider */}
       <section className="relative w-full flex-1 z-10">

@@ -29,7 +29,7 @@ export default function Letter({ letters, copyToClipboard }) {
                 {letters.map((letter, idx) => (
                     <SwiperSlide
                         key={letter.id}
-                        className="lg:!w-[600px] md:!w-[500px] !w-300px !h-[600px] flex justify-center md:mx-auto"
+                        className="md:!w-[500px] lg:!w-[600px]  !w-300px !h-[600px] flex justify-center md:mx-auto"
                     >
                         <article className="w-full h-full bg-surface/70 backdrop-blur-lg border border-primary/20 rounded-2xl p-6 shadow-card flex flex-col mx-auto">
                             <header className="flex items-center justify-between mb-4">
