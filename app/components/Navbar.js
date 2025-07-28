@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export const Navbar = () => {
@@ -12,9 +13,9 @@ export const Navbar = () => {
 
                 {/* Navigation */}
                 <nav className="hidden md:flex gap-8 text-sm font-medium text-muted">
-                    <a href="/" className="hover:text-primary transition">Home</a>
-                    <a href="/features" className="hover:text-primary transition">Features</a>
-                    <a href="/docs" className="hover:text-primary transition">Docs</a>
+                    <Link href="/" className="hover:text-primary transition">Home</Link>
+                    <Link href="/features" className="hover:text-primary transition">Features</Link>
+                    <Link href="/docs" className="hover:text-primary transition">Docs</Link>
                 </nav>
 
                 {/* Profile Icon */}

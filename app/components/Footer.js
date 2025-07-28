@@ -1,5 +1,6 @@
 'use client';
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { FaInstagram, FaLinkedin, FaGlobe } from "react-icons/fa";
 
 export default function Footer() {
@@ -28,12 +29,12 @@ export default function Footer() {
                     <div>
                         <h3 className="text-md font-semibold mb-3 text-primaryLight">Quick Links</h3>
                         <div className="grid grid-cols-2 gap-2 text-sm">
-                            <a href="/" className="hover:text-[#f72585] hover:font-bold transition">Home</a>
-                            <a href="/about" className="hover:text-primary transition hover:text-[#f72585] hover:font-bold">About</a>
-                            <a href="/contact" className="hover:text-primary transition hover:text-[#f72585] hover:font-bold">Contact Me</a>
-                            <a href="/privacy" className="hover:text-primary transition hover:text-[#f72585] hover:font-bold">Privacy Policy</a>
-                            <a href="/terms" className="hover:text-primary transition hover:text-[#f72585] hover:font-bold">Terms</a>
-                            <a href="/faq" className="hover:text-primary transition hover:text-[#f72585] hover:font-bold">FAQ</a>
+                            <Link href="/" className="hover:text-[#f72585] hover:font-bold transition">Home</Link>
+                            <Link href="/about" className="hover:text-primary transition hover:text-[#f72585] hover:font-bold">About</Link>
+                            <Link href="/contact" className="hover:text-primary transition hover:text-[#f72585] hover:font-bold">Contact Me</Link>
+                            <Link href="/privacy" className="hover:text-primary transition hover:text-[#f72585] hover:font-bold">Privacy Policy</Link>
+                            <Link href="/terms" className="hover:text-primary transition hover:text-[#f72585] hover:font-bold">Terms</Link>
+                            <Link href="/faq" className="hover:text-primary transition hover:text-[#f72585] hover:font-bold">FAQ</Link>
                         </div>
                     </div>
 
