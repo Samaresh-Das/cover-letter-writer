@@ -49,6 +49,7 @@
 // }
 
 import { DEFAULT_SYSTEM_INSTRUCTION } from "@/lib/prompt";
+import sanitizeCoverLetter from "@/lib/SanitizeCovLetter";
 import { NextResponse } from "next/server";
 
 export const runtime = "edge";
@@ -109,8 +110,9 @@ export async function POST(req) {
 
         const data = await res.json();
         const text = data?.choices?.[0]?.message?.content ?? "";
+        const cleanText = sanitizeCoverLetter(text);
 
-        return NextResponse.json({ text });
+        return NextResponse.json({ text: cleanText });
     } catch (e) {
         return NextResponse.json({ error: e.message }, { status: 500 });
     }
