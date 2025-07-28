@@ -12,7 +12,9 @@
     "motion": "^12.23.9",
     "next": "15.4.4",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "react-hot-toast": "^2.5.2",
+    "swiper": "^11.2.10"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
