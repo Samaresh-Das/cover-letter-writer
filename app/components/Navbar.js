@@ -27,12 +27,15 @@ export const Navbar = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
-                    <button className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition">
-                        {/* Profile icon (not signed in yet) */}
-                        <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v1h20v-1c0-3.3-6.7-5-10-5z" />
-                        </svg>
-                    </button>
+                    <Link href="/profile">
+
+                        <button className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition">
+                            {/* Profile icon (not signed in yet) */}
+                            <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v1h20v-1c0-3.3-6.7-5-10-5z" />
+                            </svg>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </header>
