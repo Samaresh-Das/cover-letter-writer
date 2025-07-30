@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  manifest: "/manifest.webmanifest",
   title: "CovGen – Cover Letter Generator",
   description:
     "CovGen is your AI-powered assistant to generate personalized, professional cover letters in seconds. Paste a job description, customize your details, and get a tailored letter aligned with your skills and experience.",
@@ -29,7 +30,6 @@ export const metadata = {
   ],
   authors: [{ name: "Samaresh Das", url: "https://portfolio-2-tau-sable.vercel.app/" }],
   creator: "Samaresh Das",
-  themeColor: "#0F172A",
   openGraph: {
     title: "CovGen – Create Job-Winning Cover Letters Instantly",
     description:
