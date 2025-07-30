@@ -2,7 +2,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
 import { Navbar } from "./components/Navbar";
-import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,9 +14,6 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  icons: {
-    icon: "/list_16678024.png",
-  },
   title: "CovGen – Cover Letter Generator",
   description:
     "CovGen is your AI-powered assistant to generate personalized, professional cover letters in seconds. Paste a job description, customize your details, and get a tailored letter aligned with your skills and experience.",
@@ -56,8 +52,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <link rel="icon" type="image/gif" href="./list_16678024.png" />
-
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

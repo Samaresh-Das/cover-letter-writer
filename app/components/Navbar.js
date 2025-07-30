@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -7,7 +8,7 @@ export const Navbar = () => {
             <div className="max-w-7xl mx-auto flex items-center justify-between">
                 {/* Logo */}
                 <div className="flex items-center gap-2 text-primary font-semibold text-xl">
-                    <span className="text-2xl">📝</span>
+                    <span className="text-2xl"><Image src="/favicon.ico" alt="CovGen Logo" width={32} height={32} /></span>
                     <span className="tracking-tight">CovGen</span>
                 </div>
 
