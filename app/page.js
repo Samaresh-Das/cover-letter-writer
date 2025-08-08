@@ -26,24 +26,6 @@ export default function Home() {
     setLoading(true);
     setError(null);
 
-    const fetchJDFromLink = async (link) => {
-      const res = await fetch('/api/fetch-jd', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ url: link }),
-      });
-
-      const data = await res.json();
-      if (data.jd) {
-        console.log("JD Extracted:", data.jd);
-      } else {
-        console.error("Error:", data.error);
-      }
-    };
-
-
-
-
     try {
       const res = await fetch("/api/generate", {
         method: "POST",

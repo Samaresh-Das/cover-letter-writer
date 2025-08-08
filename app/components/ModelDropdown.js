@@ -2,10 +2,11 @@ import { useState, useRef, useEffect } from "react";
 
 
 const models = [
-    { label: "Mistral Nemo free 1.37B", value: "mistralai/mistral-nemo:free" },
-    { label: "DeepSeek V3 217B", value: "deepseek/deepseek-chat-v3-0324:free" },
-    { label: "DeepSeek: R1 36B", value: "deepseek/deepseek-r1:free" },
-    { label: "Mistral Small 3.1 24B", value: "mistralai/mistral-small-3.1-24b-instruct:free" },
+    { label: "Mistral Nemo free 1.37B", value: "mistralai/mistral-nemo:free", speed: "fast" },
+    { label: "Chat GPT 20B", value: "openai/gpt-oss-20b:free", speed: "fastest" },
+    { label: "Mistral Small 3.1 24B", value: "mistralai/mistral-small-3.1-24b-instruct:free", speed: "normal" },
+    { label: "DeepSeek: R1 36B", value: "deepseek/deepseek-r1:free", speed: "normal" },
+    { label: "DeepSeek V3 217B", value: "deepseek/deepseek-chat-v3-0324:free", speed: "slowest" },
 ];
 
 export default function CustomDropdown({ model, setModel }) {
@@ -23,7 +24,8 @@ export default function CustomDropdown({ model, setModel }) {
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
-    const selected = models.find(m => m.value === model);
+    const selected = models.find(m => m.value === model) || models[0];
+
 
     return (
         <div className="relative w-full max-w-sm text-sm z-30" ref={dropdownRef}>
@@ -59,7 +61,7 @@ export default function CustomDropdown({ model, setModel }) {
                             className={`px-4 py-2 cursor-pointer hover:bg-primary/20 ${model === m.value ? "bg-primary/10 font-semibold" : ""
                                 }`}
                         >
-                            {m.label}
+                            {m.label} - <span className="text-xs text-muted animate-pulse font-extrabold">{m.speed}</span>
                         </li>
                     ))}
                 </ul>
