@@ -2,11 +2,13 @@ import { useState, useRef, useEffect } from "react";
 
 
 const models = [
-    { label: "Mistral Nemo free 1.37B", value: "mistralai/mistral-nemo:free", speed: "fast" },
-    { label: "Chat GPT 20B", value: "openai/gpt-oss-20b:free", speed: "fastest" },
+    // { label: "Mistral Nemo free 1.37B", value: "mistralai/mistral-nemo:free", speed: "fast" },
+    { label: "Mistral 7B", value: "mistralai/mistral-7b-instruct:free", speed: "fast" },
+    { label: "Chat GPT 20B", value: "openai/gpt-oss-20b:free", speed: "medium" },
     { label: "Mistral Small 3.1 24B", value: "mistralai/mistral-small-3.1-24b-instruct:free", speed: "normal" },
-    { label: "DeepSeek: R1 36B", value: "deepseek/deepseek-r1:free", speed: "normal" },
-    { label: "DeepSeek V3 217B", value: "deepseek/deepseek-chat-v3-0324:free", speed: "slowest" },
+    { label: "Llama 3B", value: "meta-llama/llama-3.2-3b-instruct:free", speed: "normal" },
+    // { label: "DeepSeek: R1 36B", value: "deepseek/deepseek-r1:free", speed: "normal" },
+    // { label: "DeepSeek V3 217B", value: "deepseek/deepseek-chat-v3-0324:free", speed: "slowest" },
 ];
 
 export default function CustomDropdown({ model, setModel }) {

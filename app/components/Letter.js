@@ -10,13 +10,17 @@ export default function Letter({ letters, copyToClipboard }) {
     return (
         <div className="w-full md:max-w-6xl py-12 z-10 md:mx-auto md:p-10">
             <Swiper
+                key={letters.length}
                 modules={[EffectCoverflow, Navigation]}
                 effect="coverflow"
-                grabCursor={true}
+                grabCursor={false}
                 centeredSlides={true}
                 slidesPerView="auto"
                 loop={false}
                 // navigation={true}
+                preventClicks={false}
+                preventClicksPropagation={false}
+                touchStartPreventDefault={false}
                 coverflowEffect={{
                     rotate: 0,
                     stretch: 0,
@@ -29,7 +33,7 @@ export default function Letter({ letters, copyToClipboard }) {
                 {letters.map((letter, idx) => (
                     <SwiperSlide
                         key={letter.id}
-                        className="md:!w-[500px] lg:!w-[600px]  !w-300px !h-[600px] flex justify-center md:mx-auto"
+                        className="!pointer-events-auto md:!w-[500px] lg:!w-[600px]  !w-300px !h-[600px] flex justify-center md:mx-auto"
                     >
                         <article className="w-full h-full bg-surface/70 backdrop-blur-lg border border-primary/20 rounded-2xl p-6 shadow-card flex flex-col mx-auto">
                             <header className="flex items-center justify-between mb-4">
@@ -37,7 +41,11 @@ export default function Letter({ letters, copyToClipboard }) {
                                     Letter #{letters.length - idx}
                                 </h2>
                                 <button
-                                    onClick={() => { copyToClipboard(letter.text); toast.success("Copied to clipboard"); }}
+                                    style={{ pointerEvents: "auto" }}
+                                    onClick={() => {
+                                        copyToClipboard(letter.text);
+                                        toast.success("Copied to clipboard");
+                                    }}
                                     className="text-sm px-3 py-1 rounded bg-primary/20 text-primary hover:bg-primary/30 transition-transform hover:scale-105"
                                 >
                                     Copy
