@@ -19,7 +19,7 @@ export async function POST(req) {
     }
 
     const baseURL = process.env.OPENROUTER_BASE_URL || "https://openrouter.ai/api/v1";
-    const model = selectedModel || process.env.OPENROUTER_MODEL || "mistralai/mistral-7b-instruct:free";
+    const model = selectedModel || process.env.OPENROUTER_MODEL || "openai/gpt-oss-120b:free";
     let systemPrompt = customInstr?.trim() || DEFAULT_SYSTEM_INSTRUCTION;
     if (manager?.trim()) {
         systemPrompt += `\n\nPlease address the letter to “Dear ${manager.trim()}” at the top.`;
@@ -49,7 +49,7 @@ export async function POST(req) {
                     { role: "user", content: userPrompt },
                 ],
                 temperature: 0.7,
-                max_tokens: 600,
+                max_tokens: 1600,
             }),
         });
 
