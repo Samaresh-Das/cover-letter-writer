@@ -1,15 +1,20 @@
 import { useState, useRef, useEffect } from "react";
 
 
+// const models = [
+//     // { label: "Mistral Nemo free 1.37B", value: "mistralai/mistral-nemo:free", speed: "fast" },
+//     // { label: "Mistral 7B", value: "mistralai/mistral-7b-instruct:free", speed: "fast" },
+//     { label: "Chat GPT 20B", value: "openai/gpt-oss-20b:free", speed: "medium" },
+//     { label: "Chat GPT 120B", value: "openai/gpt-oss-120b:free", speed: "medium" },
+//     { label: "Llama 70B", value: "meta-llama/llama-3.3-70b-instruct:free", speed: "normal" },
+//     // { label: "Mistral Small 3.1 24B", value: "mistralai/mistral-small-3.1-24b-instruct:free", speed: "normal" },
+//     // { label: "DeepSeek: R1 36B", value: "deepseek/deepseek-r1:free", speed: "normal" },
+//     // { label: "DeepSeek V3 217B", value: "deepseek/deepseek-chat-v3-0324:free", speed: "slowest" },
+// ];
 const models = [
-    // { label: "Mistral Nemo free 1.37B", value: "mistralai/mistral-nemo:free", speed: "fast" },
-    // { label: "Mistral 7B", value: "mistralai/mistral-7b-instruct:free", speed: "fast" },
-    { label: "Chat GPT 20B", value: "openai/gpt-oss-20b:free", speed: "medium" },
-    { label: "Chat GPT 120B", value: "openai/gpt-oss-120b:free", speed: "medium" },
-    { label: "Llama 70B", value: "meta-llama/llama-3.3-70b-instruct:free", speed: "normal" },
-    // { label: "Mistral Small 3.1 24B", value: "mistralai/mistral-small-3.1-24b-instruct:free", speed: "normal" },
-    // { label: "DeepSeek: R1 36B", value: "deepseek/deepseek-r1:free", speed: "normal" },
-    // { label: "DeepSeek V3 217B", value: "deepseek/deepseek-chat-v3-0324:free", speed: "slowest" },
+    { label: "LLaMA 3.1 8B Instant ⚡", value: "llama-3.1-8b-instant", speed: "fastest" },
+    { label: "LLaMA 3.3 70B", value: "llama-3.3-70b-versatile", speed: "smart" },
+    { label: "GPT OSS 20B", value: "openai/gpt-oss-20b", speed: "balanced" },
 ];
 
 export default function CustomDropdown({ model, setModel }) {

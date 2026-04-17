@@ -18,8 +18,12 @@ export async function POST(req) {
         return NextResponse.json({ error: "Missing jobDescription" }, { status: 400 });
     }
 
-    const baseURL = process.env.OPENROUTER_BASE_URL || "https://openrouter.ai/api/v1";
-    const model = selectedModel || process.env.OPENROUTER_MODEL || "openai/gpt-oss-120b:free";
+    // const baseURL = process.env.OPENROUTER_BASE_URL || "https://openrouter.ai/api/v1";
+    // const model = selectedModel || process.env.OPENROUTER_MODEL || "openai/gpt-oss-120b:free";
+    const GROQ_URL = "https://api.groq.com/openai/v1";
+
+    const model = selectedModel || "llama-3.1-8b-instant";
+
     let systemPrompt = customInstr?.trim() || DEFAULT_SYSTEM_INSTRUCTION;
     if (manager?.trim()) {
         systemPrompt += `\n\nPlease address the letter to “Dear ${manager.trim()}” at the top.`;
@@ -34,13 +38,11 @@ export async function POST(req) {
     if (resumeLink) userPrompt += `\n\nResume Link: ${resumeLink.trim()}`;
 
     try {
-        const res = await fetch(`${baseURL}/chat/completions`, {
+        const res = await fetch(`${GROQ_URL}/chat/completions`, {
             method: "POST",
             headers: {
-                "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,
+                "Authorization": `Bearer ${process.env.GROQ_API_KEY}`,
                 "Content-Type": "application/json",
-                "HTTP-Referer": process.env.APP_URL || "http://localhost:3000",
-                "X-Title": process.env.APP_TITLE || "Cover Letter Writer",
             },
             body: JSON.stringify({
                 model,
@@ -49,7 +51,7 @@ export async function POST(req) {
                     { role: "user", content: userPrompt },
                 ],
                 temperature: 0.7,
-                max_tokens: 1600,
+                max_tokens: 700,
             }),
         });
 
