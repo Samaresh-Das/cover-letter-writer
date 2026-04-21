@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { FaLinkedin } from "react-icons/fa";
+import Image from "next/image";
 import HistoryModal from "./HistoryModal";
 
 const dummyProfile = {
@@ -38,9 +39,11 @@ export default function Profile() {
             {/* Profile Card */}
             <section className="max-w-5xl mx-auto bg-surface border border-border-col rounded-2xl p-8 shadow-card space-y-4 mb-10">
                 <div className="flex flex-col md:flex-row items-center gap-6">
-                    <img
+                    <Image
                         src={dummyProfile.image}
                         alt="Profile"
+                        width={96}
+                        height={96}
                         className="w-24 h-24 rounded-full border-4 border-primary-light shadow-sm"
                     />
                     <div className="text-center md:text-left flex-1">

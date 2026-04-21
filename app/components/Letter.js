@@ -75,7 +75,7 @@ export default function Letter({ letters, copyToClipboard, sliderRef }) {
         if (letters.length > 0) {
             setActiveId(letters[0].id);
         }
-    }, [letters.length]);
+    }, [letters]);
 
     useEffect(() => {
         const container = sliderRef?.current;

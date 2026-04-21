@@ -7,12 +7,12 @@ const slides = [
     {
         title: "🚧 Welcome to CovGen Beta",
         description:
-            "This app is still under active development. You're using the core functionality — cover letter generation based on AI. Some components are placeholders, but the heart is working!",
+            "This app is still under active development. You&apos;re using the core functionality — cover letter generation based on AI. Some components are placeholders, but the heart is working!",
     },
     {
         title: "🛠 Upcoming Features",
         description:
-            "Soon, you'll see user profiles, saved letters, mobile apps, voice-to-cover-letter input, and more! Stay tuned and be part of this journey 🚀",
+            "Soon, you&apos;ll see user profiles, saved letters, mobile apps, voice-to-cover-letter input, and more! Stay tuned and be part of this journey 🚀",
     },
 ];
 
@@ -69,7 +69,7 @@ export default function IntroModal() {
                                 onClick={() => setShow(false)}
                                 className="px-6 py-2.5 rounded-full text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-all duration-200"
                             >
-                                Let's Go 🚀
+                                Let&apos;s Go 🚀
                             </button>
                         )}
                     </div>
