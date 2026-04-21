@@ -4,11 +4,9 @@ import { useState, useRef } from "react";
 
 import Letter from "./components/Letter";
 import { Toaster } from "react-hot-toast";
-import GradientBlocks from "./components/GradientBlocks";
 import Header from "./components/Header";
 import Controls from "./components/Controls";
 import IntroModal from "./components/IntroModal";
-
 
 export default function Home() {
   const [jd, setJd] = useState("");
@@ -39,7 +37,6 @@ export default function Home() {
       const newLetter = { id: crypto.randomUUID(), text: data.text, createdAt: Date.now() };
       setLetters(prev => [newLetter, ...prev]);
 
-      // Scroll slider to start
       setTimeout(() => {
         sliderRef.current?.scrollTo({ left: 0, behavior: 'smooth' });
       }, 100);
@@ -53,8 +50,7 @@ export default function Home() {
   const copyToClipboard = text => navigator.clipboard.writeText(text);
 
   return (
-    <main className="relative min-h-screen flex flex-col items-center md:px-4  md:py-8 p-10 bg-bg text-text overflow-hidden">
-      <GradientBlocks />
+    <main className="relative min-h-screen flex flex-col items-center md:px-4 md:py-6 p-5 bg-white text-gray-900 overflow-hidden">
       <Header />
 
       <Controls
@@ -70,55 +66,40 @@ export default function Home() {
 
       <button
         onClick={() => setLetters([])}
-
         disabled={letters.length === 0}
-        className={`bg-primary ${loading ? "text-gray-400" : "text-white"} px-6 py-2 rounded-4xl hover:scale-105 transition bg-white/10 backdrop-blur-md border border-white/20 shadow-md
-    disabled:opacity-50 disabled:cursor-not-allowed`}
+        className="bg-white text-blue-600 border border-gray-300 px-6 py-2 rounded-full hover:bg-blue-50 transition-all duration-200 font-medium disabled:opacity-40 disabled:cursor-not-allowed"
       >
         Reset
       </button>
-      {/* <JDInputSection jd={jd} setJd={setJd} /> */}
 
       {/* Slider */}
-      <section className="relative w-full flex-1 z-10">
-        <div
-          ref={sliderRef}
-          className="w-full overflow-x-auto scrollbar-hide flex space-x-6 snap-x snap-mandatory px-4 py-6 mx-auto"
-        >
-          {letters.length === 0 && (
-            <div className="flex-shrink-0 w-full text-center text-muted">
-              Your generated cover letters will appear here.
-            </div>
-          )}
-
-          {letters.length > 0 && (
-            <Letter letters={letters} copyToClipboard={copyToClipboard} />
-          )}
-
-        </div>
+      <section className="relative w-full flex-1 z-10 mt-4">
+        {letters.length === 0 ? (
+          <div className="w-full flex justify-center py-16">
+            <p className="text-gray-400 text-base">Your generated cover letters will appear here.</p>
+          </div>
+        ) : (
+          <Letter letters={letters} copyToClipboard={copyToClipboard} sliderRef={sliderRef} />
+        )}
       </section>
 
-      <footer className="mt-8 mb-8 text-xs text-muted z-10">
-        Built with Next.js + Tailwind CSS. Theme: dark bluish with violet tones.
+      <footer className="mt-8 mb-6 text-xs text-gray-400 z-10 text-center">
+        Built with Next.js + Tailwind CSS.
       </footer>
       <Toaster
         position="bottom-center"
         toastOptions={{
           style: {
-            backgroundColor: 'rgba(255, 255, 255, 0.1)',
-            color: '#a7c957',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)', // for Safari
-            border: '1px solid rgba(255, 255, 255, 0.2)',
-            borderRadius: '12px',
-            boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+            backgroundColor: '#323232',
+            color: '#ffffff',
+            borderRadius: '8px',
+            fontSize: '14px',
+            padding: '12px 24px',
           }
         }}
       />
 
       <IntroModal />
-
     </main>
   );
 }
-

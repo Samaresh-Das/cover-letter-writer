@@ -9,39 +9,42 @@ export default function LeftOptions({
     customInstr, setCustomInstr,
 }) {
     return (
-        <div className="flex-1 space-y-4">
+        <div className="flex-1 space-y-5">
             <label className="block">
-                <span className="text-sm text-muted">Hiring Manager Name (optional)</span>
+                <span className="text-sm font-medium text-gray-700 mb-1.5 block">Hiring Manager Name <span className="text-gray-400 font-normal">(optional)</span></span>
                 <input
                     type="text"
                     value={manager}
                     onChange={e => setManager(e.target.value)}
-                    className="mt-1 block w-full rounded bg-surface/70 text-text p-2"
+                    className="block w-full rounded-lg bg-white text-gray-900 px-4 py-2.5 border border-gray-300 outline-none transition-all duration-200 placeholder:text-gray-400"
                     placeholder="e.g. John Doe"
                 />
             </label>
 
             <label className="block">
-                <span className="text-sm text-muted">Resume Link</span>
+                <span className="text-sm font-medium text-gray-700 mb-1.5 block">Resume Link</span>
                 <input
                     type="url"
                     // value={resumeLink}
                     onChange={e => setResumeLink(e.target.value)}
                     placeholder={resumeLink}
-                    className="mt-1 block w-full rounded bg-surface/70 text-text p-2"
+                    className="block w-full rounded-lg bg-white text-gray-900 px-4 py-2.5 border border-gray-300 outline-none transition-all duration-200 placeholder:text-gray-400"
                 />
             </label>
 
-            <CustomDropdown model={model} setModel={setModel} />
+            <div className="block">
+                <span className="text-sm font-medium text-gray-700 mb-1.5 block">Generation Model</span>
+                <CustomDropdown model={model} setModel={setModel} />
+            </div>
 
             <label className="block">
-                <span className="text-sm text-muted">Custom Instruction (optional)</span>
+                <span className="text-sm font-medium text-gray-700 mb-1.5 block">Custom Instruction <span className="text-gray-400 font-normal">(optional)</span></span>
                 <textarea
                     rows={3}
                     value={customInstr}
                     onChange={e => setCustomInstr(e.target.value)}
                     placeholder="Override the default prompt…"
-                    className="mt-1 block w-full rounded-2xl bg-surface/70 text-text p-2 border-1 border-gray-800 transparent focus:border-primary focus:ring-1 focus:ring-primary transition"
+                    className="block w-full rounded-lg bg-white text-gray-900 px-4 py-2.5 border border-gray-300 outline-none transition-all duration-200 resize-y placeholder:text-gray-400"
                 />
             </label>
         </div>

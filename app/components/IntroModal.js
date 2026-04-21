@@ -7,7 +7,7 @@ const slides = [
     {
         title: "🚧 Welcome to CovGen Beta",
         description:
-            "This app is still under active development. You’re using the core functionality — cover letter generation based on AI. Some components are placeholders, but the heart is working! 💜",
+            "This app is still under active development. You're using the core functionality — cover letter generation based on AI. Some components are placeholders, but the heart is working!",
     },
     {
         title: "🛠 Upcoming Features",
@@ -21,7 +21,6 @@ export default function IntroModal() {
     const [slide, setSlide] = useState(0);
 
     useEffect(() => {
-        // Only show once per session
         if (typeof window !== "undefined" && !sessionStorage.getItem("intro_shown")) {
             setShow(true);
             sessionStorage.setItem("intro_shown", "true");
@@ -36,42 +35,41 @@ export default function IntroModal() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-[1000]"
+                className="fixed inset-0 bg-black/50 flex items-center justify-center z-[1000]"
             >
                 <motion.div
-                    initial={{ scale: 0.9, opacity: 0 }}
+                    initial={{ scale: 0.92, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 0.9, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="max-w-md w-full mx-4 bg-surface/80 backdrop-blur-lg border border-primary/20 rounded-2xl p-6 shadow-lg text-text relative z-10"
+                    exit={{ scale: 0.92, opacity: 0 }}
+                    transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
+                    className="max-w-md w-full mx-4 bg-white rounded-2xl p-8 text-gray-900 relative z-10 shadow-2xl"
                 >
-                    <h2 className="text-xl font-semibold mb-2 text-primaryLight">
+                    <h2 className="text-xl font-semibold mb-3 text-gray-900">
                         {slides[slide].title}
                     </h2>
-                    <p className="text-muted text-sm">{slides[slide].description}</p>
+                    <p className="text-gray-500 text-sm leading-relaxed">{slides[slide].description}</p>
 
-                    {/* Buttons */}
-                    <div className="flex justify-between mt-6">
+                    <div className="flex justify-between mt-8">
                         <button
                             onClick={() => setSlide((s) => Math.max(0, s - 1))}
                             disabled={slide === 0}
-                            className="px-4 py-2 rounded-lg text-sm bg-primary/10 text-primary hover:bg-primary/20 disabled:opacity-40 transition"
+                            className="px-5 py-2 rounded-full text-sm font-medium text-blue-600 hover:bg-blue-50 disabled:opacity-30 transition-all duration-200"
                         >
                             ⬅ Prev
                         </button>
                         {slide < slides.length - 1 ? (
                             <button
                                 onClick={() => setSlide((s) => Math.min(slides.length - 1, s + 1))}
-                                className="px-4 py-2 rounded-lg text-sm bg-primary/10 text-primary hover:bg-primary/20 transition"
+                                className="px-5 py-2 rounded-full text-sm font-medium text-blue-600 hover:bg-blue-50 transition-all duration-200"
                             >
                                 Next ➡
                             </button>
                         ) : (
                             <button
                                 onClick={() => setShow(false)}
-                                className="px-4 py-2 rounded-lg text-sm bg-primary text-white hover:opacity-90 transition"
+                                className="px-6 py-2.5 rounded-full text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-all duration-200"
                             >
-                                Let’s Go 🚀
+                                Let's Go 🚀
                             </button>
                         )}
                     </div>
