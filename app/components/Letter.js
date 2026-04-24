@@ -17,21 +17,14 @@ function LetterCard({ letter, idx, total, copyToClipboard, isActive }) {
             }}
         >
             <article
-                className="w-full h-full rounded-2xl p-6 md:p-8 flex flex-col relative overflow-hidden bg-white"
-                style={{
-                    border: isActive ? "2px solid #1a73e8" : "1px solid #e0e0e0",
-                    boxShadow: isActive
-                        ? "0 1px 3px rgba(26,115,232,0.12), 0 8px 24px rgba(26,115,232,0.08)"
-                        : "0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1)",
-                    transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-                }}
+                className={`w-full h-full rounded-3xl p-6 md:p-8 flex flex-col relative overflow-hidden transition-all duration-500 ease-out ${isActive ? 'clay-card' : 'bg-white border border-slate-200 shadow-sm opacity-50'}`}
             >
                 <header className="flex items-center justify-between mb-5">
                     <div className="flex flex-col">
-                        <span className="text-[11px] font-semibold uppercase tracking-[0.15em] mb-1 text-blue-600">
+                        <span className="text-[11px] font-bold uppercase tracking-widest mb-1 text-blue-600">
                             Draft
                         </span>
-                        <h2 className="text-xl font-semibold text-gray-900">
+                        <h2 className="text-xl font-bold text-slate-900" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                             Letter #{total - idx}
                         </h2>
                     </div>
@@ -41,24 +34,24 @@ function LetterCard({ letter, idx, total, copyToClipboard, isActive }) {
                             copyToClipboard(letter.text);
                             toast.success("Copied to clipboard");
                         }}
-                        className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 active:scale-95 ${isActive
-                            ? 'bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white border border-blue-200'
-                            : 'bg-gray-50 text-gray-400 border border-gray-200'
+                        className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 active:scale-95 ${isActive
+                            ? 'bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-100 shadow-sm'
+                            : 'bg-slate-50 text-slate-400 border border-slate-200'
                             }`}
                     >
-                        Copy
+                        Copy Letter
                     </button>
                 </header>
 
                 <div className="flex-1 overflow-y-auto pr-3 -mr-3"
-                    style={{ scrollbarWidth: "thin", scrollbarColor: "#dadce0 transparent" }}
+                    style={{ scrollbarWidth: "thin", scrollbarColor: "#93C5FD transparent" }}
                 >
-                    <p className="whitespace-pre-wrap break-words text-sm md:text-base leading-relaxed text-gray-700">
+                    <p className="whitespace-pre-wrap break-words text-[15px] md:text-base leading-relaxed text-slate-700 font-medium">
                         {letter.text}
                     </p>
                 </div>
 
-                <footer className="mt-5 pt-4 flex justify-between items-center text-[10px] uppercase tracking-widest font-medium text-gray-400 border-t border-gray-100">
+                <footer className="mt-5 pt-4 flex justify-between items-center text-[11px] uppercase tracking-widest font-bold text-slate-400 border-t border-slate-100">
                     <span>Generated AI Content</span>
                     <span>{new Date(letter.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
                 </footer>

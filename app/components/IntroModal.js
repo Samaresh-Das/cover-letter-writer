@@ -42,32 +42,32 @@ export default function IntroModal() {
                     animate={{ scale: 1, opacity: 1 }}
                     exit={{ scale: 0.92, opacity: 0 }}
                     transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
-                    className="max-w-md w-full mx-4 bg-white rounded-2xl p-8 text-gray-900 relative z-10 shadow-2xl"
+                    className="max-w-md w-full mx-4 clay-card p-8 text-slate-900 relative z-10"
                 >
-                    <h2 className="text-xl font-semibold mb-3 text-gray-900">
+                    <h2 className="text-2xl font-bold mb-3 text-slate-900" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                         {slides[slide].title}
                     </h2>
-                    <p className="text-gray-500 text-sm leading-relaxed">{slides[slide].description}</p>
+                    <p className="text-slate-500 text-[15px] leading-relaxed font-medium">{slides[slide].description}</p>
 
                     <div className="flex justify-between mt-8">
                         <button
                             onClick={() => setSlide((s) => Math.max(0, s - 1))}
                             disabled={slide === 0}
-                            className="px-5 py-2 rounded-full text-sm font-medium text-blue-600 hover:bg-blue-50 disabled:opacity-30 transition-all duration-200"
+                            className="px-5 py-2.5 rounded-xl text-sm font-semibold text-blue-600 hover:bg-blue-50 border border-transparent hover:border-blue-100 disabled:opacity-30 transition-all duration-200"
                         >
                             ⬅ Prev
                         </button>
                         {slide < slides.length - 1 ? (
                             <button
                                 onClick={() => setSlide((s) => Math.min(slides.length - 1, s + 1))}
-                                className="px-5 py-2 rounded-full text-sm font-medium text-blue-600 hover:bg-blue-50 transition-all duration-200"
+                                className="px-5 py-2.5 rounded-xl text-sm font-semibold text-blue-600 hover:bg-blue-50 border border-transparent hover:border-blue-100 transition-all duration-200"
                             >
                                 Next ➡
                             </button>
                         ) : (
                             <button
                                 onClick={() => setShow(false)}
-                                className="px-6 py-2.5 rounded-full text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-all duration-200"
+                                className="btn-primary-landing !py-2.5 !px-6"
                             >
                                 Let&apos;s Go 🚀
                             </button>
