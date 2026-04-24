@@ -10,7 +10,7 @@ import Controls from "../components/Controls";
 import IntroModal from "../components/IntroModal";
 
 
-export default function D() {
+export default function Dashboard() {
   const [jd, setJd] = useState("");
   const [manager, setManager] = useState("");
   const [resumeLink, setResumeLink] = useState("https://drive.google.com/file/d/19y5PIUIQ7SPwk4sLbPlE3z2DGRrUmEMn/view?usp=sharing");
@@ -121,4 +121,3 @@ export default function D() {
     </main>
   );
 }
-
