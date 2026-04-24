@@ -1,7 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Space_Grotesk, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
 import { Navbar } from "./components/Navbar";
+import { headers } from "next/headers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,6 +13,18 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
 });
 
 export const metadata = {
@@ -49,15 +63,21 @@ export const metadata = {
 };
 
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const headersList = await headers();
+  const pathname = headersList.get("x-next-pathname") || "";
+
+  // Show landing-specific layout on root path
+  const isLanding = pathname === "/" || pathname === "";
+
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} ${dmSans.variable} antialiased`}
       >
-        <Navbar />
+        {!isLanding && <Navbar />}
         {children}
-        <Footer />
+        {!isLanding && <Footer />}
       </body>
     </html>
   );
