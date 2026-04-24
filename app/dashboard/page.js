@@ -4,7 +4,6 @@ import { useState, useRef } from "react";
 
 import Letter from "../components/Letter";
 import { Toaster } from "react-hot-toast";
-import GradientBlocks from "../components/GradientBlocks";
 import Header from "../components/Header";
 import Controls from "../components/Controls";
 import IntroModal from "../components/IntroModal";
@@ -54,7 +53,6 @@ export default function Dashboard() {
 
   return (
     <main className="relative min-h-screen flex flex-col items-center md:px-4  md:py-8 p-10 bg-bg text-text overflow-hidden">
-      <GradientBlocks />
       <Header />
 
       <Controls
