@@ -7,15 +7,17 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                bg: "#0F172A",
-                surface: "#1E293B",
-                primary: "#7C3AED",
-                primaryLight: "#A78BFA",
-                text: "#E2E8F0",
-                muted: "#94A3B8",
+                bg: "#F8F9FA", // Surface
+                surface: "#FFFFFF", // Surface Container Lowest
+                primary: "#0b57d0", // Material 3 Blue Primary
+                primaryLight: "#d3e3fd", // Primary Container
+                text: "#1f1f1f", // On Surface
+                muted: "#444746", // On Surface Variant
+                borderCol: "#C4C7C5", // Outline Variant
             },
             boxShadow: {
-                card: "0 10px 25px -10px rgba(124,58,237,0.3)",
+                card: "0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30)", // M3 Elevation 1
+                cardHover: "0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30)", // M3 Elevation 2
             },
         },
     },
