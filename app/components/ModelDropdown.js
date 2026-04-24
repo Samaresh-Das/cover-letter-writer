@@ -26,7 +26,7 @@ export default function CustomDropdown({ model, setModel }) {
         <div className="relative w-full max-w-sm text-sm z-30" ref={dropdownRef}>
             <button
                 onClick={() => setOpen(prev => !prev)}
-                className="w-full text-left bg-white border border-gray-300 text-gray-900 px-4 py-2.5 rounded-lg flex justify-between items-center outline-none transition-all duration-200 hover:border-gray-400"
+                className="w-full text-left bg-slate-50/80 border border-blue-100 text-slate-900 px-4 py-3 rounded-xl flex justify-between items-center outline-none transition-all duration-200 hover:border-blue-300 focus:bg-white focus:border-blue-400 focus:ring-4 focus:ring-blue-50"
             >
                 {selected?.label || "Select Model"}
                 <svg

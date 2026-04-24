@@ -41,25 +41,25 @@ export default function RightJDInput({
 
     return (
         <div className="flex-1 space-y-5">
-            <h3 className="text-lg font-semibold text-gray-900">Job Description</h3>
+            <h3 className="text-xl font-bold text-slate-900" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>Job Description</h3>
 
             {/* JD Link Input */}
             <label className="block">
-                <span className="text-sm font-medium text-gray-700 mb-1.5 block">JD Share Link <span className="text-gray-400 font-normal">(Optional)</span></span>
+                <span className="text-sm font-semibold text-slate-700 mb-2 block">LinkedIn Job URL <span className="text-slate-400 font-normal">(Auto-extracts JD)</span></span>
                 <div className="flex gap-2">
                     <input
-                        type="text"
+                        type="url"
                         value={jdLink}
                         onChange={(e) => setJdLink(e.target.value)}
-                        placeholder="Paste a JD link"
-                        className="flex-1 px-4 py-2.5 rounded-lg bg-white text-gray-900 border border-gray-300 outline-none transition-all duration-200 placeholder:text-gray-400"
+                        placeholder="https://www.linkedin.com/jobs/view/..."
+                        className="flex-1 px-4 py-3 rounded-xl bg-slate-50/80 text-slate-900 border border-blue-100 outline-none transition-all duration-200 placeholder:text-slate-400 focus:bg-white focus:border-blue-400 focus:ring-4 focus:ring-blue-50"
                     />
                     <button
                         onClick={fetchJDFromLink}
                         disabled={fetching}
-                        className="bg-white text-blue-600 font-medium px-5 py-2.5 rounded-full border border-gray-300 hover:bg-blue-50 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="bg-blue-50 text-blue-700 font-semibold px-6 py-3 rounded-xl border border-blue-100 hover:bg-blue-100 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
                     >
-                        {fetching ? "Fetching…" : "Fetch"}
+                        {fetching ? "Extracting…" : "Extract"}
                     </button>
                 </div>
             </label>
@@ -71,27 +71,37 @@ export default function RightJDInput({
             </div>
 
             <label className="block">
-                <span className="text-sm font-medium text-gray-700 mb-1.5 block">Paste a JD here</span>
+                <span className="text-sm font-semibold text-slate-700 mb-2 block">Or paste Job Description manually</span>
                 <textarea
                     value={jd}
                     onChange={e => setJd(e.target.value)}
-                    className="w-full rounded-lg bg-white text-gray-900 px-4 py-3 h-[240px] border border-gray-300 outline-none transition-all duration-200 resize-y placeholder:text-gray-400"
-                    placeholder="Paste JD here…"
+                    className="w-full rounded-xl bg-slate-50/80 text-slate-900 px-4 py-4 h-[240px] border border-blue-100 outline-none transition-all duration-200 resize-y placeholder:text-slate-400 focus:bg-white focus:border-blue-400 focus:ring-4 focus:ring-blue-50"
+                    placeholder="Paste the full job description here…"
                 />
             </label>
 
-            <div className="flex flex-wrap gap-3 pt-1">
+            <div className="flex flex-wrap gap-4 pt-2">
                 <button
                     onClick={onGenerate}
                     disabled={loading || !jd.trim()}
-                    className="bg-blue-600 text-white font-medium px-7 py-2.5 rounded-full hover:bg-blue-700 hover:shadow-md transition-all duration-200 disabled:bg-gray-200 disabled:text-gray-500 disabled:shadow-none disabled:cursor-not-allowed"
+                    className="btn-primary-landing w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed group"
                 >
-                    {loading ? "Generating…" : "Generate Cover Letter"}
+                    {loading ? (
+                        <>
+                            <svg className="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                            Generating...
+                        </>
+                    ) : (
+                        <>
+                            Generate Cover Letter
+                            <svg className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </>
+                    )}
                 </button>
                 <button
-                    onClick={() => { setManager(""); setCustomInstr(""); setJd("") }}
+                    onClick={() => { setManager(""); setCustomInstr(""); setJd(""); setJdLink(""); }}
                     disabled={loading && !jd.trim()}
-                    className="bg-white text-blue-600 border border-gray-300 px-6 py-2.5 rounded-full hover:bg-blue-50 transition-all duration-200 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="btn-secondary-landing w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                     Clear All
                 </button>
@@ -99,17 +109,6 @@ export default function RightJDInput({
 
             {error && <p className="text-red-600 text-sm font-medium">{error}</p>}
 
-            <details className="group bg-white rounded-xl border border-gray-200 overflow-hidden mt-2">
-                <summary className="px-4 py-3 cursor-pointer flex justify-between items-center hover:bg-gray-50 transition-colors duration-200 select-none outline-none">
-                    <span className="text-sm text-gray-700 font-medium">View Default Instruction</span>
-                    <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </summary>
-                <pre className="px-4 py-3 text-xs text-gray-500 whitespace-pre-wrap border-t border-gray-100 bg-gray-50">
-                    {DEFAULT_SYSTEM_INSTRUCTION}
-                </pre>
-            </details>
         </div>
     );
 }

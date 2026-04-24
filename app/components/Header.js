@@ -2,10 +2,12 @@ import React from 'react'
 
 const Header = () => {
     return (
-        <header className="max-w-3xl w-full mb-10 z-10 text-center pt-4">
-            <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-3 tracking-tight">Cover Letter Writer</h1>
-            <p className="text-gray-500 text-base md:text-lg leading-relaxed">
-                Paste a job description, and I&apos;ll craft a 3-paragraph cover letter tailored to your skills.
+        <header className="max-w-3xl w-full mb-12 z-10 text-center pt-8">
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                <span className="gradient-text">CovGen</span> Workspace
+            </h1>
+            <p className="text-slate-500 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+                Paste a job description, and I&apos;ll craft a tailored cover letter based on your real experience in seconds.
             </p>
         </header>
     )

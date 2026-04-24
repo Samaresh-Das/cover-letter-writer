@@ -52,8 +52,14 @@ export default function Dashboard() {
   const copyToClipboard = text => navigator.clipboard.writeText(text);
 
   return (
-    <main className="relative min-h-screen flex flex-col items-center md:px-4  md:py-8 p-10 bg-bg text-text overflow-hidden">
-      <Header />
+    <main className="landing-page relative min-h-screen flex flex-col items-center md:px-4 md:py-8 p-6 overflow-hidden w-full">
+      {/* Background Gradient Orbs (Static) */}
+      <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-blue-50/50 to-transparent -z-10 pointer-events-none" />
+      <div className="gradient-orb w-[600px] h-[600px] bg-blue-400/10 -top-40 -left-40" />
+      <div className="gradient-orb w-[500px] h-[500px] bg-purple-400/10 top-1/4 -right-40" />
+
+      <div className="relative z-10 w-full max-w-7xl xl:max-w-[1400px] mx-auto flex flex-col items-center">
+        <Header />
 
       <Controls
         manager={manager} setManager={setManager}
@@ -68,12 +74,10 @@ export default function Dashboard() {
 
       <button
         onClick={() => setLetters([])}
-
         disabled={letters.length === 0}
-        className={`bg-primary ${loading ? "text-gray-400" : "text-white"} px-6 py-2 rounded-4xl hover:scale-105 transition bg-white/10 backdrop-blur-md border border-white/20 shadow-md
-    disabled:opacity-50 disabled:cursor-not-allowed`}
+        className="btn-secondary-landing mt-6 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Reset
+        Reset Workspace
       </button>
       {/* <JDInputSection jd={jd} setJd={setJd} /> */}
 
@@ -96,8 +100,8 @@ export default function Dashboard() {
         </div>
       </section>
 
-      <footer className="mt-8 mb-8 text-xs text-muted z-10">
-        Built with Next.js + Tailwind CSS. Theme: dark bluish with violet tones.
+      <footer className="mt-8 mb-8 text-xs text-slate-400 z-10">
+        &copy; {new Date().getFullYear()} CovGen
       </footer>
       <Toaster
         position="bottom-center"
@@ -116,6 +120,7 @@ export default function Dashboard() {
 
       <IntroModal />
 
+      </div>
     </main>
   );
 }
