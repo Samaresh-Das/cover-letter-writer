@@ -1,9 +1,14 @@
 'use client';
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { FaInstagram, FaLinkedin, FaGlobe } from "react-icons/fa";
 
 export default function Footer() {
+    const pathname = usePathname();
+
+    if (pathname === "/" || pathname === "") return null;
+
     return (
         <footer className="relative z-20 w-full">
             <div className="bg-white border-t border-gray-200 text-gray-800">

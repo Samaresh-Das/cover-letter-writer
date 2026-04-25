@@ -33,7 +33,7 @@ export default function LandingFooter() {
               <li><a href="#features" className="hover:text-blue-500 transition-colors cursor-pointer">Features</a></li>
               <li><a href="#how-it-works" className="hover:text-blue-500 transition-colors cursor-pointer">How it Works</a></li>
               <li><a href="#pricing" className="hover:text-blue-500 transition-colors cursor-pointer">Pricing</a></li>
-              <li><Link href="/dashboard" className="hover:text-blue-500 transition-colors cursor-pointer">Dashboard</Link></li>
+              <li><Link href="/auth" className="hover:text-blue-500 transition-colors cursor-pointer">Dashboard</Link></li>
             </ul>
           </div>
 

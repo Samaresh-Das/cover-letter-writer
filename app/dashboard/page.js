@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import Letter from "../components/Letter";
 import { Toaster } from "react-hot-toast";
@@ -12,13 +12,26 @@ import IntroModal from "../components/IntroModal";
 export default function Dashboard() {
   const [jd, setJd] = useState("");
   const [manager, setManager] = useState("");
-  const [resumeLink, setResumeLink] = useState("https://drive.google.com/file/d/19y5PIUIQ7SPwk4sLbPlE3z2DGRrUmEMn/view?usp=sharing");
+  const [resumeLink, setResumeLink] = useState("");
   const [model, setModel] = useState(process.env.NEXT_PUBLIC_DEFAULT_MODEL);
   const [customInstr, setCustomInstr] = useState("");
   const [loading, setLoading] = useState(false);
   const [letters, setLetters] = useState([]);
   const [error, setError] = useState(null);
   const sliderRef = useRef(null);
+
+  useEffect(() => {
+    const savedUser = localStorage.getItem('user');
+    if (savedUser) {
+      try {
+        const user = JSON.parse(savedUser);
+        if (user.resumeLink) setResumeLink(user.resumeLink);
+        if (user.customInstructions) setCustomInstr(user.customInstructions);
+      } catch (e) {
+        console.error("Error parsing user from localStorage", e);
+      }
+    }
+  }, []);
 
   const onGenerate = async () => {
     if (!jd.trim()) return;
@@ -52,7 +65,7 @@ export default function Dashboard() {
   const copyToClipboard = text => navigator.clipboard.writeText(text);
 
   return (
-    <main className="landing-page relative min-h-screen flex flex-col items-center md:px-4 md:py-8 p-6 overflow-hidden w-full">
+    <main className="landing-page relative min-h-screen flex flex-col items-center md:px-4 md:py-8 p-6 pt-20 md:pt-24 overflow-hidden w-full">
       {/* Background Gradient Orbs (Static) */}
       <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-blue-50/50 to-transparent -z-10 pointer-events-none" />
       <div className="gradient-orb w-[600px] h-[600px] bg-blue-400/10 -top-40 -left-40" />

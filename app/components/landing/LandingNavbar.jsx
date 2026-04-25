@@ -65,7 +65,12 @@ export default function LandingNavbar() {
 
           {/* CTA + Mobile Menu */}
           <div className="flex items-center gap-3">
-            <Link href="/dashboard" className="hidden sm:block">
+            <Link href="/auth" className="hidden sm:block">
+              <button className="text-slate-600 hover:text-blue-600 font-medium text-sm px-4 py-2 transition-colors cursor-pointer">
+                Sign In
+              </button>
+            </Link>
+            <Link href="/auth" className="hidden sm:block">
               <button className="btn-primary-landing text-sm py-2.5 px-5 cursor-pointer">
                 Get Started
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -121,7 +126,7 @@ export default function LandingNavbar() {
                   {link.label}
                 </a>
               ))}
-              <Link href="/dashboard" onClick={() => setMobileOpen(false)}>
+              <Link href="/auth" onClick={() => setMobileOpen(false)}>
                 <button className="w-full btn-primary-landing text-sm py-2.5 mt-2 justify-center cursor-pointer">
                   Get Started
                 </button>

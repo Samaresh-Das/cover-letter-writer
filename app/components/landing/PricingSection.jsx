@@ -95,7 +95,7 @@ export default function PricingSection() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/dashboard">
+                <Link href="/auth">
                   <button className={`w-full py-3.5 rounded-xl font-semibold text-sm cursor-pointer transition-all duration-200 ${plan.popular
                     ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5'
                     : 'bg-slate-100 text-slate-700 hover:bg-slate-200'

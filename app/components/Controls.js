@@ -42,7 +42,7 @@ export default function Controls({
                     </p>
                     <div className="flex-1 rounded-xl bg-white border border-slate-200 p-4 overflow-y-auto" style={{ maxHeight: "400px", scrollbarWidth: "thin", scrollbarColor: "#93C5FD transparent" }}>
                         <pre className="text-[11px] text-slate-600 font-mono whitespace-pre-wrap break-words leading-relaxed">
-                            {DEFAULT_SYSTEM_INSTRUCTION}
+                            {customInstr || DEFAULT_SYSTEM_INSTRUCTION}
                         </pre>
                     </div>
                 </div>

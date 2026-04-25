@@ -68,21 +68,23 @@ export const metadata = {
 };
 
 
+import GoogleProviderWrapper from "./components/GoogleProviderWrapper";
+
+import AuthGuard from "./components/AuthGuard";
+
 export default async function RootLayout({ children }) {
-  const headersList = await headers();
-  const pathname = headersList.get("x-next-pathname") || "";
-
-  // Show landing-specific layout on root path
-  const isLanding = pathname === "/" || pathname === "";
-
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${spaceGrotesk.variable} ${dmSans.variable} antialiased`}
       >
-        {!isLanding && <Navbar />}
-        {children}
-        {!isLanding && <Footer />}
+        <GoogleProviderWrapper>
+          <AuthGuard>
+            <Navbar />
+            {children}
+            <Footer />
+          </AuthGuard>
+        </GoogleProviderWrapper>
       </body>
     </html>
   );
