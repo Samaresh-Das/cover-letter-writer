@@ -43,6 +43,7 @@ export default function LandingFooter() {
               <li><Link href="/privacy" className="hover:text-blue-500 transition-colors cursor-pointer">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-blue-500 transition-colors cursor-pointer">Terms of Service</Link></li>
               <li><Link href="/contact" className="hover:text-blue-500 transition-colors cursor-pointer">Contact</Link></li>
+              <li><Link href="/sitemap.xml" className="hover:text-blue-500 transition-colors cursor-pointer">Sitemap</Link></li>
             </ul>
           </div>
         </div>

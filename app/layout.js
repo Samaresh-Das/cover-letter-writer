@@ -71,6 +71,7 @@ export const metadata = {
 import GoogleProviderWrapper from "./components/GoogleProviderWrapper";
 
 import AuthGuard from "./components/AuthGuard";
+import V2FeaturesModal from "./components/V2FeaturesModal";
 
 export default async function RootLayout({ children }) {
   return (
@@ -84,6 +85,7 @@ export default async function RootLayout({ children }) {
             <Navbar />
             {children}
             <Footer />
+            <V2FeaturesModal />
           </AuthGuard>
         </GoogleProviderWrapper>
       </body>

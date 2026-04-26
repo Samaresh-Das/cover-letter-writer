@@ -3,16 +3,24 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { FaRocket } from 'react-icons/fa';
 
 export default function LandingNavbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [ctaHref, setCtaHref] = useState('/auth');
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Check if user already has an auth cookie — if so, CTA goes to dashboard
+    const hasToken = document.cookie.split(';').some(c => c.trim().startsWith('token='));
+    if (hasToken) setCtaHref('/dashboard');
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
 
   const navLinks = [
     { label: 'Features', href: '#features' },
@@ -65,14 +73,23 @@ export default function LandingNavbar() {
 
           {/* CTA + Mobile Menu */}
           <div className="flex items-center gap-3">
-            <Link href="/auth" className="hidden sm:block">
+            <motion.button 
+              onClick={() => window.dispatchEvent(new Event("open-v2-modal"))}
+              animate={{ scale: [1, 1.05, 1] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              className="hidden lg:flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600 text-white text-xs font-bold shadow-lg shadow-blue-200 hover:shadow-blue-300 transition-all duration-300 cursor-pointer"
+            >
+              <FaRocket className="animate-bounce" />
+              What&apos;s coming in v2.0
+            </motion.button>
+            <Link href={ctaHref} className="hidden sm:block">
               <button className="text-slate-600 hover:text-blue-600 font-medium text-sm px-4 py-2 transition-colors cursor-pointer">
-                Sign In
+                {ctaHref === '/dashboard' ? 'Go to Dashboard' : 'Sign In'}
               </button>
             </Link>
-            <Link href="/auth" className="hidden sm:block">
+            <Link href={ctaHref} className="hidden sm:block">
               <button className="btn-primary-landing text-sm py-2.5 px-5 cursor-pointer">
-                Get Started
+                {ctaHref === '/dashboard' ? 'Go to Dashboard' : 'Get Started'}
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12" />
                   <polyline points="12 5 19 12 12 19" />
@@ -126,9 +143,9 @@ export default function LandingNavbar() {
                   {link.label}
                 </a>
               ))}
-              <Link href="/auth" onClick={() => setMobileOpen(false)}>
+              <Link href={ctaHref} onClick={() => setMobileOpen(false)}>
                 <button className="w-full btn-primary-landing text-sm py-2.5 mt-2 justify-center cursor-pointer">
-                  Get Started
+                  {ctaHref === '/dashboard' ? 'Go to Dashboard' : 'Get Started'}
                 </button>
               </Link>
             </div>
