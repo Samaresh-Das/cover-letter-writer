@@ -6,7 +6,6 @@ import Letter from "../components/Letter";
 import { Toaster } from "react-hot-toast";
 import Header from "../components/Header";
 import Controls from "../components/Controls";
-import IntroModal from "../components/IntroModal";
 
 
 export default function Dashboard() {
@@ -151,7 +150,6 @@ export default function Dashboard() {
         }}
       />
 
-      <IntroModal />
 
       </div>
     </main>

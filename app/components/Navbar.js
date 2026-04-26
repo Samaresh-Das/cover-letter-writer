@@ -4,7 +4,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
-import { FaUser, FaSignOutAlt, FaChevronDown } from 'react-icons/fa';
+import { FaUser, FaSignOutAlt, FaChevronDown, FaRocket } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 export const Navbar = () => {
     const pathname = usePathname();
@@ -82,6 +83,8 @@ export const Navbar = () => {
     const handleLogout = () => {
         localStorage.removeItem('token');
         localStorage.removeItem('user');
+        // Clear the auth cookie so middleware stops redirecting to dashboard
+        document.cookie = 'token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=Lax';
         setUser(null);
         setIsDropdownOpen(false);
         router.push('/');
@@ -128,6 +131,16 @@ export const Navbar = () => {
                 {/* Profile Icon & Dropdown (Hidden on Auth Page) */}
                 {!isAuthPage && (
                     <div className="flex items-center gap-4">
+                        <motion.button 
+                            onClick={() => window.dispatchEvent(new Event("open-v2-modal"))}
+                            animate={{ scale: [1, 1.05, 1] }}
+                            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                            className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600 text-white text-xs font-bold shadow-lg shadow-blue-200 hover:shadow-blue-300 transition-all duration-300 cursor-pointer"
+                        >
+                            <FaRocket className="animate-bounce" />
+                            What&apos;s coming in v2.0
+                        </motion.button>
+
                         <Link 
                             href="/pricing" 
                             className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold shadow-lg shadow-orange-200 hover:shadow-orange-300 hover:scale-105 transition-all duration-300 active:scale-95"

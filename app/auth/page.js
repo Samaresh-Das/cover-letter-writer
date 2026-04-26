@@ -19,9 +19,11 @@ export default function AuthPage() {
 
       const { token, onboardingComplete, user } = response.data;
       
-      // Save token and user
+      // Save token and user to localStorage
       localStorage.setItem('token', token);
       localStorage.setItem('user', JSON.stringify(user));
+      // Also set a cookie so Next.js middleware can read it for server-side redirects
+      document.cookie = `token=${token}; path=/; max-age=604800; SameSite=Lax`; // 7 days
       
       toast.success('Successfully logged in!');
 

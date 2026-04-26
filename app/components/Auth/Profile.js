@@ -30,6 +30,8 @@ export default function Profile() {
     const handleLogout = () => {
         localStorage.removeItem('token');
         localStorage.removeItem('user');
+        // Clear the auth cookie so middleware stops redirecting to dashboard
+        document.cookie = 'token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=Lax';
         router.push('/');
     };
 
