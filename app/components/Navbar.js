@@ -41,7 +41,7 @@ export const Navbar = () => {
             const token = localStorage.getItem('token');
             if (!token) return;
             try {
-                const res = await fetch("http://localhost:8080/api/users/profile", {
+                const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/users/profile`, {
                     headers: { "Authorization": `Bearer ${token}` }
                 });
                 if (res.ok) {

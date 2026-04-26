@@ -13,7 +13,7 @@ export default function AuthPage() {
   const handleGoogleSuccess = async (credentialResponse) => {
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:8080/api/auth/google', {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/auth/google`, {
         credential: credentialResponse.credential,
       });
 

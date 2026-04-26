@@ -31,7 +31,7 @@ export default function OnboardingPage() {
 
     try {
       const response = await axios.post(
-        'http://localhost:8080/api/users/onboarding',
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/users/onboarding`,
         { resumeLink, customInstructions },
         { headers: { Authorization: `Bearer ${token}` } }
       );
