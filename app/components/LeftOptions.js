@@ -38,7 +38,7 @@ export default function LeftOptions({
             </div>
 
             <label className="block">
-                <span className="text-sm font-semibold text-slate-700 mb-2 block">Custom Instruction <span className="text-slate-400 font-normal">(optional)</span></span>
+                <span className="text-sm font-semibold text-slate-700 mb-2 block">Custom Instruction <span className="text-slate-400 font-normal">(leave empty to use default, any input overrides)</span></span>
                 <textarea
                     rows={3}
                     value={customInstr}

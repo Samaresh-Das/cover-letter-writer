@@ -5,14 +5,21 @@ const Header = () => {
     const [user, setUser] = useState(null);
 
     useEffect(() => {
-        const savedUser = localStorage.getItem('user');
-        if (savedUser) {
-            try {
-                setUser(JSON.parse(savedUser));
-            } catch (e) {
-                console.error("Error parsing user", e);
+        const loadUser = () => {
+            const savedUser = localStorage.getItem('user');
+            if (savedUser) {
+                try {
+                    setUser(JSON.parse(savedUser));
+                } catch (e) {
+                    console.error("Error parsing user", e);
+                }
             }
-        }
+        };
+
+        loadUser();
+        window.addEventListener('userUpdated', loadUser);
+
+        return () => window.removeEventListener('userUpdated', loadUser);
     }, []);
 
     return (

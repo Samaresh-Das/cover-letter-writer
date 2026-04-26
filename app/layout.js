@@ -77,6 +77,7 @@ export default async function RootLayout({ children }) {
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${spaceGrotesk.variable} ${dmSans.variable} antialiased`}
+        suppressHydrationWarning
       >
         <GoogleProviderWrapper>
           <AuthGuard>

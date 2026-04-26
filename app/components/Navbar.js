@@ -18,6 +18,9 @@ export const Navbar = () => {
         const handleScroll = () => setScrolled(window.scrollY > 10);
         window.addEventListener('scroll', handleScroll);
         
+        /**
+         * Loads user data from local storage for fast initial UI.
+         */
         const loadUser = () => {
             const savedUser = localStorage.getItem('user');
             if (savedUser) {
@@ -31,7 +34,31 @@ export const Navbar = () => {
             }
         };
 
+        /**
+         * Fetches latest user data from server to keep local storage in sync.
+         */
+        const syncUserWithServer = async () => {
+            const token = localStorage.getItem('token');
+            if (!token) return;
+            try {
+                const res = await fetch("http://localhost:8080/api/users/profile", {
+                    headers: { "Authorization": `Bearer ${token}` }
+                });
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data.user) {
+                        localStorage.setItem('user', JSON.stringify(data.user));
+                        setUser(data.user);
+                        window.dispatchEvent(new Event("userUpdated")); // Tell Header to update too
+                    }
+                }
+            } catch (err) {
+                console.error("Background sync failed", err);
+            }
+        };
+
         loadUser();
+        syncUserWithServer();
 
         // Close dropdown when clicking outside
         const handleClickOutside = (event) => {
@@ -40,13 +67,18 @@ export const Navbar = () => {
             }
         };
         document.addEventListener('mousedown', handleClickOutside);
+        window.addEventListener('userUpdated', loadUser);
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
             document.removeEventListener('mousedown', handleClickOutside);
+            window.removeEventListener('userUpdated', loadUser);
         };
     }, [pathname]); // Re-load user on navigation just in case
 
+    /**
+     * Clears authentication data and redirects to landing page.
+     */
     const handleLogout = () => {
         localStorage.removeItem('token');
         localStorage.removeItem('user');
@@ -95,11 +127,22 @@ export const Navbar = () => {
 
                 {/* Profile Icon & Dropdown (Hidden on Auth Page) */}
                 {!isAuthPage && (
-                    <div className="relative" ref={dropdownRef}>
-                        <button 
-                            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                            className="flex items-center gap-2 group p-1 pr-2 rounded-full hover:bg-slate-50 transition-all cursor-pointer"
+                    <div className="flex items-center gap-4">
+                        <Link 
+                            href="/pricing" 
+                            className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold shadow-lg shadow-orange-200 hover:shadow-orange-300 hover:scale-105 transition-all duration-300 active:scale-95"
                         >
+                            <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+                            </svg>
+                            Buy Credits
+                        </Link>
+
+                        <div className="relative" ref={dropdownRef}>
+                            <button 
+                                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                                className="flex items-center gap-2 group p-1 pr-2 rounded-full hover:bg-slate-50 transition-all cursor-pointer"
+                            >
                             <div className="relative">
                                 {user?.picture ? (
                                     <div className="w-9 h-9 rounded-full overflow-hidden border-2 border-transparent group-hover:border-blue-500 transition-all shadow-sm">
@@ -147,8 +190,9 @@ export const Navbar = () => {
                             </div>
                         )}
                     </div>
-                )}
-            </div>
-        </header>
+                </div>
+            )}
+        </div>
+    </header>
     );
 };
