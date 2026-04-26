@@ -7,6 +7,7 @@ export default function Controls({
     resumeLink, setResumeLink,
     model, setModel,
     customInstr, setCustomInstr,
+    defaultUserInstr,
     jd, setJd,
     onGenerate, loading, error,
 }) {
@@ -38,11 +39,11 @@ export default function Controls({
                 <div className="clay-card p-6 flex flex-col h-full bg-slate-50/50">
                     <h3 className="text-sm font-bold text-slate-900 mb-3 uppercase tracking-widest text-blue-600">Default Instruction</h3>
                     <p className="text-xs text-slate-500 mb-4 font-medium leading-relaxed">
-                        This is the base system prompt used to guide the AI. Your custom instructions (if any) are appended to this.
+                        This is the base system prompt. Any input in the Custom Instruction box will completely replace this.
                     </p>
                     <div className="flex-1 rounded-xl bg-white border border-slate-200 p-4 overflow-y-auto" style={{ maxHeight: "400px", scrollbarWidth: "thin", scrollbarColor: "#93C5FD transparent" }}>
                         <pre className="text-[11px] text-slate-600 font-mono whitespace-pre-wrap break-words leading-relaxed">
-                            {DEFAULT_SYSTEM_INSTRUCTION}
+                            {customInstr || defaultUserInstr || DEFAULT_SYSTEM_INSTRUCTION}
                         </pre>
                     </div>
                 </div>

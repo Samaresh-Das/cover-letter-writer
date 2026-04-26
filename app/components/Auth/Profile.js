@@ -1,64 +1,80 @@
 "use client";
 
-import { useState } from "react";
-import { FaLinkedin } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import { FaLinkedin, FaSignOutAlt } from "react-icons/fa";
 import Image from "next/image";
 import HistoryModal from "./HistoryModal";
-
-const dummyProfile = {
-    name: "Samaresh Das",
-    resumeLink: "https://your-resume-link.com",
-    defaultPrompt:
-        "Write a confident, personalized, and concise 3-paragraph cover letter tailored to the job description.",
-    linkedin: "https://www.linkedin.com/in/samareshdas",
-    image: "https://img.icons8.com/color/96/user-male-circle--v1.png",
-    letters: [
-        {
-            id: 1,
-            title: "Frontend Developer at Google",
-            jd: "Looking for a frontend developer with strong React and UI skills...",
-            coverLetter:
-                "Dear Hiring Manager,\n\nI'm excited to apply for the Frontend Developer role at Google. With 3 years of experience building scalable React apps...\n\nBest,\nSamaresh Das",
-        },
-        {
-            id: 2,
-            title: "AI Intern at OpenAI",
-            jd: "You will contribute to language model research and deployment...",
-            coverLetter:
-                "Dear OpenAI Team,\n\nThe opportunity to contribute to foundational research excites me deeply. My academic background in NLP and passion for open-source AI...\n\nSincerely,\nSamaresh Das",
-        },
-    ],
-};
+import { useRouter } from "next/navigation";
 
 export default function Profile() {
+    const router = useRouter();
+    const [user, setUser] = useState(null);
     const [modalData, setModalData] = useState(null);
-    const [resumeLink, setResumeLink] = useState(dummyProfile.resumeLink);
+    const [resumeLink, setResumeLink] = useState("");
+    const [customInstr, setCustomInstr] = useState("");
+
+    useEffect(() => {
+        const savedUser = localStorage.getItem('user');
+        if (savedUser) {
+            try {
+                const userData = JSON.parse(savedUser);
+                setUser(userData);
+                setResumeLink(userData.resumeLink || "");
+                setCustomInstr(userData.customInstructions || "");
+            } catch (e) {
+                console.error("Error parsing user data", e);
+            }
+        }
+    }, []);
+
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        router.push('/');
+    };
+
+    if (!user) {
+        return (
+            <div className="min-h-screen flex items-center justify-center">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+            </div>
+        );
+    }
 
     return (
-        <main className="min-h-screen bg-bg text-text px-4 py-12 md:px-10">
+        <main className="min-h-screen bg-bg text-text px-4 py-24 md:px-10">
             {/* Profile Card */}
             <section className="max-w-5xl mx-auto bg-surface border border-border-col rounded-2xl p-8 shadow-card space-y-4 mb-10">
                 <div className="flex flex-col md:flex-row items-center gap-6">
-                    <Image
-                        src={dummyProfile.image}
-                        alt="Profile"
-                        width={96}
-                        height={96}
-                        className="w-24 h-24 rounded-full border-4 border-primary-light shadow-sm"
-                    />
+                    {user.picture ? (
+                        <Image
+                            src={user.picture}
+                            alt="Profile"
+                            width={96}
+                            height={96}
+                            className="w-24 h-24 rounded-full border-4 border-primary-light shadow-sm object-cover"
+                        />
+                    ) : (
+                        <div className="w-24 h-24 rounded-full bg-primary flex items-center justify-center text-white text-3xl font-bold border-4 border-primary-light shadow-sm">
+                            {user.name?.charAt(0) || 'U'}
+                        </div>
+                    )}
                     <div className="text-center md:text-left flex-1">
-                        <h1 className="text-2xl md:text-3xl font-bold text-text">
-                            👋 Hello, {dummyProfile.name}
-                        </h1>
-                        <a
-                            href={dummyProfile.linkedin}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 text-primary hover:underline mt-2"
-                        >
-                            <FaLinkedin className="text-primary text-lg" />
-                            LinkedIn Profile
-                        </a>
+                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <div>
+                                <h1 className="text-2xl md:text-3xl font-bold text-text">
+                                    👋 Hello, {user.name}
+                                </h1>
+                                <p className="text-muted text-sm mt-1">{user.email}</p>
+                            </div>
+                            <button 
+                                onClick={handleLogout}
+                                className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-red-50 text-red-600 hover:bg-red-100 border border-red-100 rounded-xl font-medium transition-colors cursor-pointer"
+                            >
+                                <FaSignOutAlt />
+                                Logout
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -67,43 +83,31 @@ export default function Profile() {
                         <label className="block text-sm font-medium text-text mb-1">Resume Link</label>
                         <input
                             type="url"
-                            className="w-full px-4 py-3 rounded-xl bg-surface border border-border-col text-text focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200 outline-none"
+                            readOnly
+                            className="w-full px-4 py-3 rounded-xl bg-bg border border-border-col text-muted outline-none cursor-not-allowed"
                             value={resumeLink}
-                            onChange={(e) => setResumeLink(e.target.value)}
                         />
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-text mb-1">Default Prompt</label>
+                        <label className="block text-sm font-medium text-text mb-1">Default Instructions</label>
                         <textarea
                             readOnly
-                            className="w-full min-h-[100px] px-4 py-3 rounded-xl bg-bg border border-border-col text-muted"
-                            value={dummyProfile.defaultPrompt}
+                            className="w-full min-h-[100px] px-4 py-3 rounded-xl bg-bg border border-border-col text-muted outline-none cursor-not-allowed"
+                            value={customInstr}
                         />
                     </div>
                 </div>
             </section>
 
-            {/* Cover Letters */}
+            {/* Cover Letters (Currently Placeholder for Real Data) */}
             <section className="max-w-6xl mx-auto space-y-6">
                 <h2 className="text-xl md:text-2xl font-semibold text-text">📄 Saved Cover Letters</h2>
 
                 <div className="grid md:grid-cols-2 gap-6">
-                    {dummyProfile.letters.map((letter) => (
-                        <div
-                            key={letter.id}
-                            className="bg-surface border border-border-col rounded-2xl p-5 shadow-card transition-all duration-200 hover:shadow-card-hover cursor-pointer"
-                            onClick={() => setModalData(letter)}
-                        >
-                            <h3 className="text-lg font-semibold text-primary mb-2">{letter.title}</h3>
-                            <div className="text-xs text-muted mb-3 line-clamp-2">
-                                <strong>JD:</strong> {letter.jd}
-                            </div>
-                            <div className="bg-bg text-sm text-text whitespace-pre-wrap p-4 rounded-xl max-h-48 overflow-y-auto border border-border-col">
-                                {letter.coverLetter}
-                            </div>
-                        </div>
-                    ))}
+                    <div className="col-span-full py-12 text-center bg-surface border border-dashed border-border-col rounded-2xl text-muted">
+                        No saved cover letters found in your history yet.
+                    </div>
                 </div>
             </section>
 

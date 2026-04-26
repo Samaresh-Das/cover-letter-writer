@@ -114,11 +114,43 @@ export default function Letter({ letters, copyToClipboard, sliderRef }) {
         cardRefs.current[id] = el;
     }, []);
 
+    const isDragging = useRef(false);
+    const startX = useRef(0);
+    const scrollLeft = useRef(0);
+
+    const onMouseDown = (e) => {
+        if (!sliderRef?.current) return;
+        isDragging.current = true;
+        sliderRef.current.classList.add('cursor-grabbing');
+        sliderRef.current.classList.remove('snap-x', 'snap-mandatory');
+        startX.current = e.pageX - sliderRef.current.offsetLeft;
+        scrollLeft.current = sliderRef.current.scrollLeft;
+    };
+
+    const onMouseLeaveOrUp = () => {
+        if (!isDragging.current || !sliderRef?.current) return;
+        isDragging.current = false;
+        sliderRef.current.classList.remove('cursor-grabbing');
+        sliderRef.current.classList.add('snap-x', 'snap-mandatory');
+    };
+
+    const onMouseMove = (e) => {
+        if (!isDragging.current || !sliderRef?.current) return;
+        e.preventDefault();
+        const x = e.pageX - sliderRef.current.offsetLeft;
+        const walk = (x - startX.current) * 2;
+        sliderRef.current.scrollLeft = scrollLeft.current - walk;
+    };
+
     return (
         <div className="w-full relative py-8 px-2 overflow-hidden">
             <div
                 ref={sliderRef}
-                className="flex overflow-x-auto snap-x snap-mandatory gap-6 md:gap-8 px-[15vw] md:px-[25vw] items-center pb-2 pt-2"
+                onMouseDown={onMouseDown}
+                onMouseLeave={onMouseLeaveOrUp}
+                onMouseUp={onMouseLeaveOrUp}
+                onMouseMove={onMouseMove}
+                className="flex overflow-x-auto snap-x snap-mandatory gap-6 md:gap-8 px-[15vw] md:px-[25vw] items-center pb-2 pt-2 cursor-grab"
                 style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
                 {letters.map((letter, idx) => (

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import Letter from "../components/Letter";
 import { Toaster } from "react-hot-toast";
@@ -12,31 +12,69 @@ import IntroModal from "../components/IntroModal";
 export default function Dashboard() {
   const [jd, setJd] = useState("");
   const [manager, setManager] = useState("");
-  const [resumeLink, setResumeLink] = useState("https://drive.google.com/file/d/19y5PIUIQ7SPwk4sLbPlE3z2DGRrUmEMn/view?usp=sharing");
+  const [resumeLink, setResumeLink] = useState("");
   const [model, setModel] = useState(process.env.NEXT_PUBLIC_DEFAULT_MODEL);
   const [customInstr, setCustomInstr] = useState("");
+  const [defaultUserInstr, setDefaultUserInstr] = useState("");
   const [loading, setLoading] = useState(false);
   const [letters, setLetters] = useState([]);
   const [error, setError] = useState(null);
   const sliderRef = useRef(null);
 
+  useEffect(() => {
+    const savedUser = localStorage.getItem('user');
+    if (savedUser) {
+      try {
+        const user = JSON.parse(savedUser);
+        if (user.resumeLink) setResumeLink(user.resumeLink);
+        if (user.customInstructions) setDefaultUserInstr(user.customInstructions);
+      } catch (e) {
+        console.error("Error parsing user from localStorage", e);
+      }
+    }
+  }, []);
+
+  /**
+   * Triggers the AI cover letter generation via the backend API.
+   * Handles authentication, credit updates, and result state.
+   */
   const onGenerate = async () => {
     if (!jd.trim()) return;
     setLoading(true);
     setError(null);
 
+    const token = localStorage.getItem('token');
+    if (!token) {
+        setError("You must be logged in to generate.");
+        setLoading(false);
+        return;
+    }
+
     try {
-      const res = await fetch("/api/generate", {
+      const res = await fetch("http://localhost:8080/api/generate", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        },
         body: JSON.stringify({ jobDescription: jd, model, manager, resumeLink, customInstr }),
       });
 
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Generation failed");
+      if (!res.ok) throw new Error(data.message || data.error || "Generation failed");
 
       const newLetter = { id: crypto.randomUUID(), text: data.text, createdAt: Date.now() };
       setLetters(prev => [newLetter, ...prev]);
+
+      // Update credits in local storage
+      const savedUser = localStorage.getItem('user');
+      if (savedUser && data.creditsRemaining !== undefined) {
+          const userObj = JSON.parse(savedUser);
+          userObj.credits = data.creditsRemaining;
+          localStorage.setItem('user', JSON.stringify(userObj));
+          // Notify other components (Header, Navbar) to update
+          window.dispatchEvent(new Event("userUpdated"));
+      }
 
       // Scroll slider to start
       setTimeout(() => {
@@ -52,7 +90,7 @@ export default function Dashboard() {
   const copyToClipboard = text => navigator.clipboard.writeText(text);
 
   return (
-    <main className="landing-page relative min-h-screen flex flex-col items-center md:px-4 md:py-8 p-6 overflow-hidden w-full">
+    <main className="landing-page relative min-h-screen flex flex-col items-center md:px-4 md:py-8 p-6 pt-20 md:pt-24 overflow-hidden w-full">
       {/* Background Gradient Orbs (Static) */}
       <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-blue-50/50 to-transparent -z-10 pointer-events-none" />
       <div className="gradient-orb w-[600px] h-[600px] bg-blue-400/10 -top-40 -left-40" />
@@ -66,6 +104,7 @@ export default function Dashboard() {
         resumeLink={resumeLink} setResumeLink={setResumeLink}
         model={model} setModel={setModel}
         customInstr={customInstr} setCustomInstr={setCustomInstr}
+        defaultUserInstr={defaultUserInstr}
         jd={jd} setJd={setJd}
         onGenerate={onGenerate}
         loading={loading}
@@ -83,21 +122,15 @@ export default function Dashboard() {
 
       {/* Slider */}
       <section className="relative w-full flex-1 z-10">
-        <div
-          ref={sliderRef}
-          className="w-full overflow-x-auto scrollbar-hide flex space-x-6 snap-x snap-mandatory px-4 py-6 mx-auto"
-        >
           {letters.length === 0 && (
-            <div className="flex-shrink-0 w-full text-center text-muted">
+            <div className="w-full text-center text-muted px-4 py-6">
               Your generated cover letters will appear here.
             </div>
           )}
 
           {letters.length > 0 && (
-            <Letter letters={letters} copyToClipboard={copyToClipboard} />
+            <Letter letters={letters} copyToClipboard={copyToClipboard} sliderRef={sliderRef} />
           )}
-
-        </div>
       </section>
 
       <footer className="mt-8 mb-8 text-xs text-slate-400 z-10">
