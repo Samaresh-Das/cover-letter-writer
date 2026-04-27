@@ -10,7 +10,7 @@ const plans = [
     period: 'forever',
     desc: 'Perfect for getting started',
     features: [
-      '5 cover letters per day',
+      '10 credits per month',
       'LinkedIn job extraction',
       'Basic AI model',
       'Copy to clipboard',

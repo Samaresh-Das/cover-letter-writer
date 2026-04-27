@@ -10,12 +10,12 @@ export default function RefundPolicyPage() {
   return (
     <div className="min-h-screen bg-white font-sans pb-24">
       <Navbar />
-      
+
       <main className="max-w-4xl mx-auto px-6 pt-32">
         <h1 className="text-4xl font-black text-slate-900 mb-8 tracking-tight" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
           Refund & Cancellation Policy
         </h1>
-        
+
         <div className="prose prose-slate max-w-none space-y-8 text-slate-700 leading-relaxed">
           <p className="text-sm text-slate-500 italic">Last Updated: April 27, 2026</p>
 
@@ -32,7 +32,7 @@ export default function RefundPolicyPage() {
               Due to the digital nature of our service and the immediate consumption of AI processing resources, <strong>all credit pack purchases are final and non-refundable</strong> once any portion of the credits has been used.
             </p>
             <p className="mt-4">
-              If you have purchased credits and have not used any of them, you may request a refund within 7 days of purchase by contacting us at support@covgen.ai.
+              However, in cases of duplicate transactions or technical errors, users may contact us at <a href="mailto:covgen.support@gmail.com" className="text-blue-600 hover:underline">covgen.support@gmail.com</a> within 3 days of purchase for review. Refunds, if applicable, will be processed at our discretion..
             </p>
           </section>
 
@@ -49,14 +49,14 @@ export default function RefundPolicyPage() {
           <section>
             <h2 className="text-2xl font-bold text-slate-900 mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>4. Billing Errors</h2>
             <p>
-              If you believe you have been charged incorrectly, please reach out to us immediately at <strong>support@covgen.ai</strong>. We will review your transaction and process any necessary corrections as quickly as possible.
+              If you believe you have been charged incorrectly, please reach out to us immediately at <strong><a href="mailto:covgen.support@gmail.com" className="text-blue-600 hover:underline">covgen.support@gmail.com</a></strong>. We will review your transaction and process any necessary corrections as quickly as possible.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-slate-900 mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>5. Contact for Billing</h2>
             <p>
-              For all refund requests or billing-related inquiries, please email <strong>support@covgen.ai</strong> with your account email and transaction details.
+              For all refund requests or billing-related inquiries, please email <strong><a href="mailto:covgen.support@gmail.com" className="text-blue-600 hover:underline">covgen.support@gmail.com</a></strong> with your account email and transaction details.
             </p>
           </section>
         </div>

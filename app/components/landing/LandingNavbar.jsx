@@ -83,11 +83,6 @@ export default function LandingNavbar() {
               What&apos;s coming in v2.0
             </motion.button>
             <Link href={ctaHref} className="hidden sm:block">
-              <button className="text-slate-600 hover:text-blue-600 font-medium text-sm px-4 py-2 transition-colors cursor-pointer">
-                {ctaHref === '/dashboard' ? 'Go to Dashboard' : 'Sign In'}
-              </button>
-            </Link>
-            <Link href={ctaHref} className="hidden sm:block">
               <button className="btn-primary-landing text-sm py-2.5 px-5 cursor-pointer">
                 {ctaHref === '/dashboard' ? 'Go to Dashboard' : 'Get Started'}
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="text-2xl font-bold text-slate-900 mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>1. Introduction</h2>
             <p>
-              Welcome to CovGen. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy, or our practices with regards to your personal information, please contact us at support@covgen.ai.
+              Welcome to CovGen. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy, or our practices with regards to your personal information, please contact us at <a href="mailto:covgen.support@gmail.com" className="text-blue-600 hover:underline">covgen.support@gmail.com</a>.
             </p>
           </section>
 
@@ -64,7 +64,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="text-2xl font-bold text-slate-900 mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>6. Contact Us</h2>
             <p>
-              If you have questions or comments about this policy, you may email us at <strong>support@covgen.ai</strong>.
+              If you have questions or comments about this policy, you may email us at <strong><a href="mailto:covgen.support@gmail.com" className="text-blue-600 hover:underline">covgen.support@gmail.com</a></strong>.
             </p>
           </section>
         </div>

@@ -64,9 +64,9 @@ export default function AuthPage() {
                 <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
               </svg>
             </span>
-            <h3 className="text-xl font-semibold text-gray-800">Daily Credits - 3</h3>
+            <h3 className="text-xl font-semibold text-gray-800">10 Free Credits / Month</h3>
           </div>
-          <p className="text-sm text-gray-600 font-medium">The app is entirely free to use for these credits every day!</p>
+          <p className="text-sm text-gray-600 font-medium">Your 10 free credits reset every month. No credit card required!</p>
         </div>
 
         {loading ? (
