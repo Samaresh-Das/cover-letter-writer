@@ -3,7 +3,6 @@
 import { useState, useRef, useEffect } from "react";
 
 import Letter from "../components/Letter";
-import { Toaster } from "react-hot-toast";
 import Header from "../components/Header";
 import Controls from "../components/Controls";
 
@@ -19,6 +18,7 @@ export default function Dashboard() {
   const [letters, setLetters] = useState([]);
   const [error, setError] = useState(null);
   const sliderRef = useRef(null);
+  const generationTimestamps = useRef([]);
 
   useEffect(() => {
     const savedUser = localStorage.getItem('user');
@@ -48,6 +48,35 @@ export default function Dashboard() {
         setLoading(false);
         return;
     }
+
+    // Rate Limit Check (2 per minute)
+    const now = Date.now();
+    generationTimestamps.current = generationTimestamps.current.filter(t => now - t < 60000);
+    if (generationTimestamps.current.length >= 2) {
+        setError("Rate limit reached. Please wait a minute before generating again.");
+        setLoading(false);
+        return;
+    }
+
+    // Credit Check
+    const savedUser = localStorage.getItem('user');
+    let currentCredits = 0;
+    if (savedUser) {
+        try {
+            currentCredits = JSON.parse(savedUser).credits || 0;
+        } catch(e) {}
+    }
+
+    const PREMIUM_MODELS = ["llama-3.1-70b-versatile", "llama-3.2-90b-vision-preview"];
+    const requiredCredits = PREMIUM_MODELS.includes(model) ? 2 : 1;
+
+    if (currentCredits < requiredCredits) {
+        setError(`You've run out of credits or need more. This action requires ${requiredCredits} credits.`);
+        setLoading(false);
+        return;
+    }
+
+    generationTimestamps.current.push(now);
 
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/generate`, {
@@ -135,22 +164,6 @@ export default function Dashboard() {
       <footer className="mt-8 mb-8 text-xs text-slate-400 z-10">
         &copy; {new Date().getFullYear()} CovGen
       </footer>
-      <Toaster
-        position="bottom-center"
-        toastOptions={{
-          style: {
-            backgroundColor: 'rgba(255, 255, 255, 0.1)',
-            color: '#a7c957',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)', // for Safari
-            border: '1px solid rgba(255, 255, 255, 0.2)',
-            borderRadius: '12px',
-            boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
-          }
-        }}
-      />
-
-
       </div>
     </main>
   );

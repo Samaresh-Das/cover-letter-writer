@@ -72,6 +72,7 @@ import GoogleProviderWrapper from "./components/GoogleProviderWrapper";
 
 import AuthGuard from "./components/AuthGuard";
 import V2FeaturesModal from "./components/V2FeaturesModal";
+import { Toaster } from "react-hot-toast";
 
 export default async function RootLayout({ children }) {
   return (
@@ -86,6 +87,7 @@ export default async function RootLayout({ children }) {
             {children}
             <Footer />
             <V2FeaturesModal />
+            <Toaster position="bottom-center" />
           </AuthGuard>
         </GoogleProviderWrapper>
       </body>

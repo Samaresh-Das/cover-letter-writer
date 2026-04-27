@@ -141,6 +141,14 @@ export const Navbar = () => {
                             What&apos;s coming in v2.0
                         </motion.button>
 
+                        {/* Credits Display */}
+                        {user && pathname !== '/dashboard' && (
+                            <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 rounded-full border border-slate-200 shadow-sm">
+                                <span className="text-xs font-bold text-slate-600">Credits:</span>
+                                <span className="text-sm font-black text-blue-600">{user.credits}</span>
+                            </div>
+                        )}
+
                         <Link 
                             href="/pricing" 
                             className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold shadow-lg shadow-orange-200 hover:shadow-orange-300 hover:scale-105 transition-all duration-300 active:scale-95"

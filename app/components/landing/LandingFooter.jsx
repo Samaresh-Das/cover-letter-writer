@@ -24,6 +24,11 @@ export default function LandingFooter() {
             <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
               AI-powered cover letter generator. Paste a LinkedIn job link, get a personalized letter in seconds.
             </p>
+            <div className="mt-6 space-y-1">
+              <p className="text-[10px] text-slate-500 uppercase tracking-wider font-bold">Business Identity</p>
+              <p className="text-xs text-slate-400">Operated by <strong>Samaresh Das</strong> (Individual/Sole Proprietor)</p>
+              <p className="text-xs text-slate-400">Address: Uttar Fatak Raj Bari, B.C.ROAD, Burdwan, West Bengal, INDIA</p>
+            </div>
           </div>
 
           {/* Links */}
@@ -32,18 +37,18 @@ export default function LandingFooter() {
             <ul className="space-y-2.5 text-sm text-slate-400">
               <li><a href="#features" className="hover:text-blue-500 transition-colors cursor-pointer">Features</a></li>
               <li><a href="#how-it-works" className="hover:text-blue-500 transition-colors cursor-pointer">How it Works</a></li>
-              <li><a href="#pricing" className="hover:text-blue-500 transition-colors cursor-pointer">Pricing</a></li>
-              <li><Link href="/auth" className="hover:text-blue-500 transition-colors cursor-pointer">Dashboard</Link></li>
+              <li><Link href="/pricing" className="hover:text-blue-500 transition-colors cursor-pointer">Pricing</Link></li>
+              <li><Link href="/about" className="hover:text-blue-500 transition-colors cursor-pointer">About Us</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-sm font-semibold text-slate-900 mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>Legal</h4>
             <ul className="space-y-2.5 text-sm text-slate-400">
-              <li><Link href="/privacy" className="hover:text-blue-500 transition-colors cursor-pointer">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="hover:text-blue-500 transition-colors cursor-pointer">Terms of Service</Link></li>
+              <li><Link href="/privacy-policy" className="hover:text-blue-500 transition-colors cursor-pointer">Privacy Policy</Link></li>
+              <li><Link href="/terms-and-conditions" className="hover:text-blue-500 transition-colors cursor-pointer">Terms & Conditions</Link></li>
+              <li><Link href="/refund-policy" className="hover:text-blue-500 transition-colors cursor-pointer">Refund Policy</Link></li>
               <li><Link href="/contact" className="hover:text-blue-500 transition-colors cursor-pointer">Contact</Link></li>
-              <li><Link href="/sitemap.xml" className="hover:text-blue-500 transition-colors cursor-pointer">Sitemap</Link></li>
             </ul>
           </div>
         </div>
