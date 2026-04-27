@@ -49,10 +49,17 @@ The project is actively evolving. Here's what's coming up:
 - [ ] Build a **React Native app**
 - [ ] Setup an **Express backend** to support API calls from the app
 
-### 🎟️ Credits System
+### 🎟️ Credits System (Implemented)
 
-- [ ] Introduce a **credits-based system** for limited free access
-- [ ] Allow users to purchase additional credits via in-app or web payment
+The app now features a fully functional **Credit-based Pricing System**:
+- **Free Plan**: 10 credits auto-renewing daily.
+- **Pro Plan (₹299/mo)**: 200 credits monthly, priority generation, and access to premium models.
+- **Credit Packs**: One-time purchases (e.g. 40, 100, 250 credits) that never expire.
+- **Dynamic Extensibility**:
+  - **Credit costs per feature** are decoupled. Standard generation is 1 credit, Premium is 2 credits. Future features (like resume analysis) can simply define their own credit cost.
+  - **New Plans/Packs** can be added to the `pricing-controller.js` on the backend, and the frontend `PricingCard` UI will dynamically accommodate them without breaking layout.
+  - **Model Tiers** can be easily expanded. Just add a new model ID to `PREMIUM_MODELS` to automatically change its pricing tier.
+  - **Rate Limiting**: Built-in 2 requests/minute both on frontend (UI blocks) and backend (Express rate limit) to prevent spamming.
 
 ---
 

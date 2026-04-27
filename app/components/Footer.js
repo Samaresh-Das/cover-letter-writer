@@ -30,11 +30,11 @@ export default function Footer() {
                         <div className="grid grid-cols-2 gap-2 text-sm text-gray-500">
                             <Link href="/" className="hover:text-blue-600 transition-colors duration-200">Home</Link>
                             <Link href="/about" className="hover:text-blue-600 transition-colors duration-200">About</Link>
-                            <Link href="/contact" className="hover:text-blue-600 transition-colors duration-200">Contact Me</Link>
-                            <Link href="/privacy" className="hover:text-blue-600 transition-colors duration-200">Privacy Policy</Link>
-                            <Link href="/terms" className="hover:text-blue-600 transition-colors duration-200">Terms</Link>
-                            <Link href="/faq" className="hover:text-blue-600 transition-colors duration-200">FAQ</Link>
-                            <Link href="/sitemap.xml" className="hover:text-blue-600 transition-colors duration-200">Sitemap</Link>
+                            <Link href="/contact" className="hover:text-blue-600 transition-colors duration-200">Contact</Link>
+                            <Link href="/pricing" className="hover:text-blue-600 transition-colors duration-200">Pricing</Link>
+                            <Link href="/privacy-policy" className="hover:text-blue-600 transition-colors duration-200">Privacy Policy</Link>
+                            <Link href="/terms-and-conditions" className="hover:text-blue-600 transition-colors duration-200">Terms & Conditions</Link>
+                            <Link href="/refund-policy" className="hover:text-blue-600 transition-colors duration-200">Refund Policy</Link>
                         </div>
                     </div>
 
@@ -77,7 +77,7 @@ export default function Footer() {
                 </div>
 
                 <div className="text-center text-xs text-gray-400 py-4 border-t border-gray-100">
-                    © {new Date().getFullYear()} Samaresh Das. All rights reserved.
+                    © {new Date().getFullYear()} CovGen. All rights reserved.
                 </div>
             </div>
         </footer>
