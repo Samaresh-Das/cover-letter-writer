@@ -14,7 +14,7 @@ export default function ContactPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate API call
     setTimeout(() => {
       toast.success("Message sent! We'll get back to you soon.");
@@ -26,7 +26,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans pb-24">
       <Navbar />
-      
+
       <main className="max-w-4xl mx-auto px-6 pt-32">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-black text-slate-900 mb-6 tracking-tight" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
@@ -41,7 +41,9 @@ export default function ContactPage() {
           <div className="md:col-span-2 space-y-8">
             <div>
               <h3 className="text-sm font-bold text-blue-600 uppercase tracking-widest mb-2">Support Email</h3>
-              <p className="text-lg font-semibold text-slate-900">support@covgen.ai</p>
+              <p className="text-lg font-semibold text-slate-900">
+                <a href="mailto:covgen.support@gmail.com" className="hover:text-blue-600 transition-colors">covgen.support@gmail.com</a>
+              </p>
             </div>
             <div>
               <h3 className="text-sm font-bold text-blue-600 uppercase tracking-widest mb-2">Our Office</h3>
@@ -53,8 +55,8 @@ export default function ContactPage() {
             <div>
               <h3 className="text-sm font-bold text-blue-600 uppercase tracking-widest mb-2">Socials</h3>
               <div className="flex gap-4">
-                <a href="#" className="text-slate-500 hover:text-blue-600 transition-colors font-medium">LinkedIn</a>
-                <a href="#" className="text-slate-500 hover:text-pink-500 transition-colors font-medium">Instagram</a>
+                <a href="https://www.linkedin.com/in/samaresh-d-ab9621212/" className="text-slate-500 hover:text-blue-600 transition-colors font-medium">LinkedIn</a>
+                <a href="https://www.instagram.com/samareshthedev/" className="text-slate-500 hover:text-pink-500 transition-colors font-medium">Instagram</a>
               </div>
             </div>
             <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
@@ -67,39 +69,39 @@ export default function ContactPage() {
             <form onSubmit={handleSubmit} className="bg-white p-8 rounded-3xl border border-slate-200 shadow-xl space-y-6">
               <div>
                 <label className="block text-sm font-bold text-slate-700 mb-2">Full Name</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   required
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
                   placeholder="John Doe"
                   value={formData.name}
-                  onChange={(e) => setFormData({...formData, name: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 />
               </div>
               <div>
                 <label className="block text-sm font-bold text-slate-700 mb-2">Email Address</label>
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   required
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
                   placeholder="john@example.com"
                   value={formData.email}
-                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
               </div>
               <div>
                 <label className="block text-sm font-bold text-slate-700 mb-2">Message</label>
-                <textarea 
+                <textarea
                   required
                   rows="4"
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none"
                   placeholder="How can we help you?"
                   value={formData.message}
-                  onChange={(e) => setFormData({...formData, message: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 ></textarea>
               </div>
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 disabled={isSubmitting}
                 className={`w-full py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-800 transition-all transform active:scale-95 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
               >

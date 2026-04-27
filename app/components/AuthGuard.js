@@ -17,7 +17,7 @@ export default function AuthGuard({ children }) {
 
       if (isProtectedRoute && !token) {
         setAuthorized(false);
-        router.push('/auth');
+        router.push('/');
       } else {
         setAuthorized(true);
       }

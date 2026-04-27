@@ -10,12 +10,12 @@ export default function TermsAndConditionsPage() {
   return (
     <div className="min-h-screen bg-white font-sans pb-24">
       <Navbar />
-      
+
       <main className="max-w-4xl mx-auto px-6 pt-32">
         <h1 className="text-4xl font-black text-slate-900 mb-8 tracking-tight" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
           Terms & Conditions
         </h1>
-        
+
         <div className="prose prose-slate max-w-none space-y-8 text-slate-700 leading-relaxed">
           <p className="text-sm text-slate-500 italic">Last Updated: April 27, 2026</p>
 

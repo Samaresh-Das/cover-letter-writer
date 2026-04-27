@@ -17,7 +17,7 @@ export function middleware(request) {
 
   // If user is NOT authenticated and trying to visit a protected route → go to auth
   if (!token && PROTECTED_ROUTES.some(route => pathname.startsWith(route))) {
-    return NextResponse.redirect(new URL('/auth', request.url));
+    return NextResponse.redirect(new URL('/', request.url));
   }
 
   const response = NextResponse.next();

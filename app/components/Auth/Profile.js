@@ -32,7 +32,7 @@ export default function Profile() {
         localStorage.removeItem('user');
         // Clear the auth cookie so middleware stops redirecting to dashboard
         document.cookie = 'token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=Lax';
-        router.push('/');
+        window.location.href = '/';
     };
 
     if (!user) {
