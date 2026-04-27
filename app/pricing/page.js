@@ -126,7 +126,7 @@ export default function PricingPage() {
                                 "Access to Premium Models (2x cost)",
                                 "Priority generation queue",
                                 "200 credits auto-reset monthly",
-                                "Future pro features access"
+                                "This is a recurring monthly subscription. You will be billed ₹299 every month until cancelled."
                             ]}
                             badge="Recommended"
                             buttonText={user?.plan === 'pro' ? "Current Plan" : "Upgrade to Pro"}

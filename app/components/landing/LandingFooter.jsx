@@ -24,6 +24,11 @@ export default function LandingFooter() {
             <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
               AI-powered cover letter generator. Paste a LinkedIn job link, get a personalized letter in seconds.
             </p>
+            <div className="mt-6 space-y-1">
+              <p className="text-[10px] text-slate-500 uppercase tracking-wider font-bold">Business Identity</p>
+              <p className="text-xs text-slate-400">Operated by <strong>Samaresh Das</strong> (Individual/Sole Proprietor)</p>
+              <p className="text-xs text-slate-400">Address: Uttar Fatak Raj Bari, B.C.ROAD, Burdwan, West Bengal, INDIA</p>
+            </div>
           </div>
 
           {/* Links */}

@@ -33,7 +33,7 @@ export default function ContactPage() {
             Get in Touch
           </h1>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Have questions, feedback, or need support? We're here to help. Our team typically responds within 24–48 hours.
+            Have questions, feedback, or need support? We&apos;re here to help. Our team typically responds within 24–48 hours.
           </p>
         </div>
 
@@ -42,6 +42,13 @@ export default function ContactPage() {
             <div>
               <h3 className="text-sm font-bold text-blue-600 uppercase tracking-widest mb-2">Support Email</h3>
               <p className="text-lg font-semibold text-slate-900">support@covgen.ai</p>
+            </div>
+            <div>
+              <h3 className="text-sm font-bold text-blue-600 uppercase tracking-widest mb-2">Our Office</h3>
+              <p className="text-sm font-medium text-slate-700 leading-relaxed">
+                Uttar Fatak Raj Bari, B.C.ROAD.<br />
+                Burdwan, West Bengal, INDIA
+              </p>
             </div>
             <div>
               <h3 className="text-sm font-bold text-blue-600 uppercase tracking-widest mb-2">Socials</h3>

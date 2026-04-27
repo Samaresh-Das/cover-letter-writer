@@ -29,7 +29,7 @@ export default function TermsAndConditionsPage() {
           <section>
             <h2 className="text-2xl font-bold text-slate-900 mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>2. Description of Service</h2>
             <p>
-              CovGen provides an AI-powered tool designed to help users generate professional cover letters based on provided job descriptions and personal input. The service is provided "as is" and intended to assist in the job application process.
+              CovGen provides an AI-powered tool designed to help users generate professional cover letters based on provided job descriptions and personal input. The service is provided &quot;as is&quot; and intended to assist in the job application process.
             </p>
           </section>
 

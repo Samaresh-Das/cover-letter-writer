@@ -39,17 +39,17 @@ export default function AboutPage() {
           <div>
             <h2 className="text-2xl font-bold text-slate-900 mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>Who We Serve</h2>
             <p>
-              Whether you're a student applying for your first internship, a professional looking to make a career pivot, or an experienced executive, CovGen is built for you. We cater to users across all industries and experience levels.
+              Whether you&apos;re a student applying for your first internship, a professional looking to make a career pivot, or an experienced executive, CovGen is built for you. We cater to users across all industries and experience levels.
             </p>
           </div>
 
           <div className="bg-blue-50 p-8 rounded-3xl border border-blue-100 mt-12">
             <h2 className="text-2xl font-bold text-slate-900 mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>The Founder</h2>
             <p className="mb-4">
-              CovGen was founded by <strong>Samaresh Das</strong>, a developer passionate about building tools that solve real-world problems. With a background in software engineering and a deep interest in AI, Samaresh created CovGen to help fellow professionals navigate the competitive job market more effectively.
+              CovGen was founded and is operated by <strong>Samaresh Das</strong> (Individual/Sole Proprietor), a developer passionate about building tools that solve real-world problems. With a background in software engineering and a deep interest in AI, Samaresh created CovGen to help fellow professionals navigate the competitive job market more effectively.
             </p>
             <p className="text-sm text-slate-500 italic">
-              "I wanted to build something that actually helps people get closer to their dream jobs by removing the friction of writing cover letters." — Samaresh Das
+              &quot;I wanted to build something that actually helps people get closer to their dream jobs by removing the friction of writing cover letters.&quot; — Samaresh Das
             </p>
           </div>
         </section>

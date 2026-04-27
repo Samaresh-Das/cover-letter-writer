@@ -20,7 +20,13 @@ export default function Footer() {
                             CovGen
                         </h2>
                         <p className="mt-2 text-sm text-gray-500 leading-relaxed">
-                            Elevate your applications with AI-crafted, job-specific cover letters — styled for impact.
+                            Elevate your applications with AI-crafted, job-specific cover letters.
+                        </p>
+                        <p className="mt-4 text-xs text-gray-400">
+                            CovGen is operated by <strong>Samaresh Das</strong> (Individual/Sole Proprietor).
+                        </p>
+                        <p className="mt-2 text-xs text-gray-400">
+                            Address: Uttar Fatak Raj Bari, B.C.ROAD. Burdwan, West Bengal, INDIA
                         </p>
                     </div>
 
