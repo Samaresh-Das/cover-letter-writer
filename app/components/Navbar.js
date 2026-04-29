@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
-import { FaUser, FaSignOutAlt, FaChevronDown, FaRocket, FaBars, FaTimes } from 'react-icons/fa';
+import { FaUser, FaSignOutAlt, FaChevronDown, FaRocket, FaBars, FaTimes, FaHistory } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export const Navbar = () => {
@@ -258,6 +258,10 @@ export const Navbar = () => {
                                                     <Link href="/profile" onClick={() => setIsDropdownOpen(false)} className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-slate-600 hover:bg-blue-50 rounded-2xl transition-all">
                                                         <FaUser className="w-4 h-4" />
                                                         My Profile
+                                                    </Link>
+                                                    <Link href="/purchases" onClick={() => setIsDropdownOpen(false)} className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-slate-600 hover:bg-blue-50 rounded-2xl transition-all">
+                                                        <FaHistory className="w-4 h-4" />
+                                                        Purchase History
                                                     </Link>
                                                     <button onClick={handleLogout} className="w-full flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-red-500 hover:bg-red-50 rounded-2xl transition-all cursor-pointer">
                                                         <FaSignOutAlt className="w-4 h-4" />

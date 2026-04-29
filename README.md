@@ -61,6 +61,15 @@ The app now features a fully functional **Credit-based Pricing System**:
   - **Model Tiers** can be easily expanded. Just add a new model ID to `PREMIUM_MODELS` to automatically change its pricing tier.
   - **Rate Limiting**: Built-in 2 requests/minute both on frontend (UI blocks) and backend (Express rate limit) to prevent spamming.
 
+### 💳 Razorpay Payment Integration (Implemented)
+
+All purchases now go through **Razorpay Standard Web Checkout** with server-side signature verification. Credits are only added after HMAC-SHA256 verification — no malpractice possible.
+
+### 🔮 Future Work — Payments & Notifications (High Priority)
+
+- **Razorpay Subscriptions API**: Migrate Pro Plan from one-time payment to true recurring billing via Razorpay Subscriptions API. Requires webhook listener for `subscription.charged` events.
+- **Email Renewal Reminders**: Send email to Pro Plan users **3 days before** their plan expires, reminding them to re-purchase. Requires CRON job + transactional email service (Resend/SendGrid/SES).
+
 ---
 
 ---

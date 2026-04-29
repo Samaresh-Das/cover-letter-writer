@@ -19,75 +19,132 @@ export default function PricingPage() {
         return () => window.removeEventListener('userUpdated', loadUser);
     }, []);
 
-    const handlePurchasePack = async (packId) => {
+    // ── Shared Razorpay payment flow ────────────────────────────────────
+    const initiateRazorpayPayment = async (itemId) => {
         const token = localStorage.getItem('token');
-        if (!token) return toast.error("Please login to purchase credits.");
+        if (!token) return toast.error("Please login to make a purchase.");
 
-        setIsLoading({ ...isLoading, [packId]: true });
-        
+        setIsLoading(prev => ({ ...prev, [itemId]: true }));
+
         try {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/pricing/purchase-pack`, {
+            // ── Step 1: Create order on backend ─────────────────────────
+            const orderRes = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/payment/create-order`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                     "Authorization": `Bearer ${token}`
                 },
-                body: JSON.stringify({ packId })
+                body: JSON.stringify({ itemId })
             });
-            const data = await res.json();
-            
-            if (res.ok) {
-                toast.success(`Purchased! You now have ${data.creditsRemaining} credits.`);
-                // Update local user state
-                if (user) {
-                    const updatedUser = { ...user, credits: data.creditsRemaining };
-                    localStorage.setItem('user', JSON.stringify(updatedUser));
-                    window.dispatchEvent(new Event("userUpdated"));
-                }
-            } else {
-                toast.error(data.message || "Purchase failed.");
+            const orderData = await orderRes.json();
+
+            if (!orderRes.ok) {
+                toast.error(orderData.message || "Failed to create order.");
+                setIsLoading(prev => ({ ...prev, [itemId]: false }));
+                return;
             }
+
+            // ── Step 2: Open Razorpay modal ─────────────────────────────
+            let paymentSuccess = false;
+            const options = {
+                key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
+                amount: orderData.amount,
+                currency: orderData.currency,
+                name: "CovGen",
+                description: orderData.itemLabel,
+                order_id: orderData.orderId,
+                handler: async function (response) {
+                    paymentSuccess = true;
+                    // ── Step 3: Verify payment on backend ───────────────
+                    await verifyPayment(response, itemId);
+                },
+                prefill: {
+                    name: user?.name || "",
+                    email: user?.email || "",
+                },
+                theme: {
+                    color: "#4F46E5",
+                },
+                modal: {
+                    ondismiss: function () {
+                        if (!paymentSuccess) {
+                            toast("Payment cancelled.", { icon: "ℹ️" });
+                            setIsLoading(prev => ({ ...prev, [itemId]: false }));
+                        }
+                    },
+                },
+            };
+
+            // Check if Razorpay script is loaded
+            if (typeof window.Razorpay === "undefined") {
+                toast.error("Payment gateway is loading. Please try again in a moment.");
+                setIsLoading(prev => ({ ...prev, [itemId]: false }));
+                return;
+            }
+
+            const rzp = new window.Razorpay(options);
+
+            rzp.on("payment.failed", function (response) {
+                toast.error(response.error?.description || "Payment failed. Please try again.");
+                setIsLoading(prev => ({ ...prev, [itemId]: false }));
+            });
+
+            rzp.open();
         } catch (err) {
-            toast.error("Network error during purchase.");
+            console.error("Payment initiation error:", err);
+            toast.error("Network error. Please try again.");
+            setIsLoading(prev => ({ ...prev, [itemId]: false }));
         } finally {
-            setIsLoading({ ...isLoading, [packId]: false });
+            // Don't clear loading here — it's cleared in handler/ondismiss/failed
         }
     };
 
-    const handleSubscribe = async () => {
+    // ── Verify payment after Razorpay modal success ─────────────────────
+    const verifyPayment = async (response, itemId) => {
         const token = localStorage.getItem('token');
-        if (!token) return toast.error("Please login to subscribe.");
 
-        setIsLoading({ ...isLoading, 'pro': true });
-        
         try {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/pricing/subscribe`, {
+            const verifyRes = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/payment/verify-payment`, {
                 method: "POST",
-                headers: { "Authorization": `Bearer ${token}` }
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`
+                },
+                body: JSON.stringify({
+                    razorpay_order_id: response.razorpay_order_id,
+                    razorpay_payment_id: response.razorpay_payment_id,
+                    razorpay_signature: response.razorpay_signature,
+                })
             });
-            const data = await res.json();
-            
-            if (res.ok) {
-                toast.success("Welcome to Pro Plan! You now have 200 credits.");
+            const verifyData = await verifyRes.json();
+
+            if (verifyRes.ok) {
+                toast.success(`Payment successful! You now have ${verifyData.creditsRemaining} credits.`);
+                // Update local user state
                 if (user) {
-                    const updatedUser = { ...user, credits: data.creditsRemaining, plan: data.plan };
+                    const updatedUser = {
+                        ...user,
+                        credits: verifyData.creditsRemaining,
+                        ...(verifyData.plan && { plan: verifyData.plan }),
+                    };
                     localStorage.setItem('user', JSON.stringify(updatedUser));
                     window.dispatchEvent(new Event("userUpdated"));
                 }
             } else {
-                toast.error(data.message || "Subscription failed.");
+                toast.error(verifyData.message || "Payment verification failed. Contact support.");
             }
         } catch (err) {
-            toast.error("Network error during subscription.");
+            console.error("Payment verification error:", err);
+            toast.error("Verification failed. If money was debited, it will be refunded automatically.");
         } finally {
-            setIsLoading({ ...isLoading, 'pro': false });
+            setIsLoading(prev => ({ ...prev, [itemId]: false }));
         }
     };
 
     return (
         <div className="min-h-screen bg-slate-50 font-sans pb-24">
             <Navbar />
-            
+
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
@@ -101,7 +158,7 @@ export default function PricingPage() {
                 <div className="mb-20">
                     <h2 className="text-2xl font-bold text-slate-900 mb-8 text-center">Subscription Plans</h2>
                     <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                        <PricingCard 
+                        <PricingCard
                             title="Free Plan"
                             price={0}
                             credits={10}
@@ -114,10 +171,10 @@ export default function PricingPage() {
                             ]}
                             buttonText={(!user?.plan || user?.plan === 'free') ? "Current Plan" : "Included"}
                             isCurrentPlan={!user?.plan || user?.plan === 'free'}
-                            onAction={() => {}}
+                            onAction={() => { }}
                             isPopular={false}
                         />
-                        <PricingCard 
+                        <PricingCard
                             title="Pro Plan"
                             price={299}
                             credits={200}
@@ -131,7 +188,7 @@ export default function PricingPage() {
                             badge="Recommended"
                             buttonText={user?.plan === 'pro' ? "Current Plan" : "Upgrade to Pro"}
                             isCurrentPlan={user?.plan === 'pro'}
-                            onAction={handleSubscribe}
+                            onAction={() => initiateRazorpayPayment('pro')}
                             isPopular={true}
                             isLoading={isLoading['pro']}
                         />
@@ -141,13 +198,13 @@ export default function PricingPage() {
                 <div className="pt-12 border-t border-slate-200">
                     <h2 className="text-2xl font-bold text-slate-900 mb-4 text-center">Need more credits?</h2>
                     <p className="text-slate-600 text-center mb-12 max-w-2xl mx-auto">
-                        Buy one-time credit packs. Credits are added instantly and never expire. 
+                        Buy one-time credit packs. Credits are added instantly and never expire.
                         <br className="hidden md:block" />
                         <span className="font-bold text-slate-800">1 standard generation = 1 credit.</span> No hidden charges.
                     </p>
-                    
+
                     <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                        <PricingCard 
+                        <PricingCard
                             title="Starter Pack"
                             price={49}
                             credits={40}
@@ -157,10 +214,10 @@ export default function PricingPage() {
                                 "Never expires"
                             ]}
                             buttonText="Buy Now"
-                            onAction={() => handlePurchasePack('pack_40')}
+                            onAction={() => initiateRazorpayPayment('pack_40')}
                             isLoading={isLoading['pack_40']}
                         />
-                        <PricingCard 
+                        <PricingCard
                             title="Pro Pack"
                             price={99}
                             credits={100}
@@ -171,11 +228,11 @@ export default function PricingPage() {
                             ]}
                             badge="Most Popular"
                             buttonText="Buy Now"
-                            onAction={() => handlePurchasePack('pack_100')}
+                            onAction={() => initiateRazorpayPayment('pack_100')}
                             isPopular={true}
                             isLoading={isLoading['pack_100']}
                         />
-                        <PricingCard 
+                        <PricingCard
                             title="Ultra Pack"
                             price={199}
                             credits={250}
@@ -186,7 +243,7 @@ export default function PricingPage() {
                             ]}
                             badge="Best Value"
                             buttonText="Buy Now"
-                            onAction={() => handlePurchasePack('pack_250')}
+                            onAction={() => initiateRazorpayPayment('pack_250')}
                             isLoading={isLoading['pack_250']}
                         />
                     </div>
