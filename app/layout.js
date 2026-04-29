@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono, Space_Grotesk, DM_Sans, Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Footer from "./components/Footer";
 import { Navbar } from "./components/Navbar";
@@ -90,6 +91,7 @@ export default async function RootLayout({ children }) {
             <Toaster position="bottom-center" />
           </AuthGuard>
         </GoogleProviderWrapper>
+        <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
       </body>
     </html>
   );
