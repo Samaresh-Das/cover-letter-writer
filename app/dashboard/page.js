@@ -14,6 +14,7 @@ export default function Dashboard() {
   const [model, setModel] = useState(process.env.NEXT_PUBLIC_DEFAULT_MODEL);
   const [customInstr, setCustomInstr] = useState("");
   const [defaultUserInstr, setDefaultUserInstr] = useState("");
+  const [userPlan, setUserPlan] = useState("free");
   const [loading, setLoading] = useState(false);
   const [letters, setLetters] = useState([]);
   const [error, setError] = useState(null);
@@ -27,6 +28,7 @@ export default function Dashboard() {
         const user = JSON.parse(savedUser);
         if (user.resumeLink) setResumeLink(user.resumeLink);
         if (user.customInstructions) setDefaultUserInstr(user.customInstructions);
+        if (user.plan) setUserPlan(user.plan);
       } catch (e) {
         console.error("Error parsing user from localStorage", e);
       }
@@ -133,6 +135,7 @@ export default function Dashboard() {
         model={model} setModel={setModel}
         customInstr={customInstr} setCustomInstr={setCustomInstr}
         defaultUserInstr={defaultUserInstr}
+        userPlan={userPlan}
         jd={jd} setJd={setJd}
         onGenerate={onGenerate}
         loading={loading}

@@ -8,6 +8,7 @@ export default function RightJDInput({
     onGenerate,
     loading,
     error,
+    userPlan,
     setManager,
     setCustomInstr,
 }) {
@@ -18,7 +19,41 @@ export default function RightJDInput({
         if (!jdLink.trim()) return;
         setFetching(true);
 
+        const token = localStorage.getItem('token');
+        if (!token) {
+            alert("You must be logged in to extract JD.");
+            setFetching(false);
+            return;
+        }
+
         try {
+            // Deduct credits if free user
+            if (userPlan !== "pro") {
+                const deductRes = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/users/deduct-jd`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${token}`
+                    }
+                });
+
+                const deductData = await deductRes.json();
+                if (!deductRes.ok) {
+                    alert(deductData.message || "Failed to deduct credits");
+                    setFetching(false);
+                    return;
+                }
+
+                // Update credits in local storage
+                const savedUser = localStorage.getItem('user');
+                if (savedUser && deductData.creditsRemaining !== undefined) {
+                    const userObj = JSON.parse(savedUser);
+                    userObj.credits = deductData.creditsRemaining;
+                    localStorage.setItem('user', JSON.stringify(userObj));
+                    window.dispatchEvent(new Event("userUpdated"));
+                }
+            }
+
             const res = await fetch("/api/fetch-jd", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -62,8 +97,11 @@ export default function RightJDInput({
                         {fetching ? "Extracting…" : "Extract"}
                     </button>
                 </div>
+                <p className="text-xs text-slate-500 mt-2">
+                    {userPlan !== "pro" ? "Costs 1 credit to extract. Pro users extract for free." : "Free extraction for Pro users."}
+                </p>
             </label>
-            
+
             <div className="flex items-center gap-4 py-1">
                 <hr className="flex-1 border-gray-200" />
                 <span className="text-gray-400 text-xs font-medium uppercase tracking-widest">OR</span>
@@ -106,6 +144,10 @@ export default function RightJDInput({
                     Clear All
                 </button>
             </div>
+
+            <p className="text-xs text-slate-500">
+                Generating a cover letter takes 1 credit.
+            </p>
 
             {error && <p className="text-red-600 text-sm font-medium">{error}</p>}
 

@@ -21,7 +21,7 @@ const plans = [
   },
   {
     name: 'Pro',
-    price: '300 INR',
+    price: '299 INR',
     period: '/month',
     desc: 'For serious job seekers',
     features: [
