@@ -116,7 +116,9 @@ export const Navbar = () => {
                         {user ? (
                             <nav className="flex gap-8 text-sm font-medium text-slate-600">
                                 <Link href="/dashboard" className={`hover:text-blue-600 transition-colors ${pathname === '/dashboard' ? 'text-blue-600 font-semibold' : ''}`}>Dashboard</Link>
-                                <Link href="/profile" className={`hover:text-blue-600 transition-colors ${pathname === '/profile' ? 'text-blue-600 font-semibold' : ''}`}>Profile</Link>
+                                {pathname !== '/profile' && (
+                                    <Link href="/profile" className="hover:text-blue-600 transition-colors">Profile</Link>
+                                )}
                             </nav>
                         ) : (
                             <nav className="flex items-center gap-8 text-sm font-medium text-slate-600">
@@ -145,7 +147,7 @@ export const Navbar = () => {
                                         What&apos;s coming in v2.0
                                     </motion.button>
 
-                                    {pathname !== '/dashboard' && (
+                                    {pathname !== '/dashboard' && pathname !== '/profile' && (
                                         <div className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 rounded-full border border-slate-200 shadow-sm">
                                             <span className="text-xs font-bold text-slate-600">Credits:</span>
                                             <span className="text-sm font-black text-blue-600">{user.credits}</span>
