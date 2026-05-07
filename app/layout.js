@@ -69,6 +69,9 @@ export const metadata = {
     ],
     type: "website"
   },
+  verification: {
+    google: "H3Nzgw2aM8kSSZm3bnMKtygZ9lDBUapHc3pkBWeFb0Y",
+  },
 };
 
 
