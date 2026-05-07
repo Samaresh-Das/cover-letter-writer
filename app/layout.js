@@ -57,7 +57,7 @@ export const metadata = {
     title: "CovGen – Create Job-Winning Cover Letters Instantly",
     description:
       "CovGen helps job seekers generate AI-powered cover letters based on real job descriptions with modern design and features.",
-    url: "https://cover-letter-writer-ajmg.vercel.app/",
+    url: "https://covgen-ai.vercel.app/",
     siteName: "CovGen",
     images: [
       {
