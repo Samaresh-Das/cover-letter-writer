@@ -1046,9 +1046,9 @@
       "source_file": "middleware.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middleware_js",
-      "target": "cover_letter_writer_middleware_middleware",
-      "confidence_score": 1.0
+      "target": "cover_letter_writer_middleware_middleware"
     },
     {
       "relation": "imports",
@@ -1057,9 +1057,9 @@
       "source_file": "app/layout.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_layout_js",
-      "target": "components_navbar_navbar",
-      "confidence_score": 1.0
+      "target": "components_navbar_navbar"
     },
     {
       "relation": "contains",
@@ -1067,9 +1067,9 @@
       "source_file": "app/layout.js",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_layout_js",
-      "target": "app_layout_rootlayout",
-      "confidence_score": 1.0
+      "target": "app_layout_rootlayout"
     },
     {
       "relation": "contains",
@@ -1077,9 +1077,9 @@
       "source_file": "app/page.js",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_page_js",
-      "target": "app_page_home",
-      "confidence_score": 1.0
+      "target": "app_page_home"
     },
     {
       "relation": "contains",
@@ -1087,9 +1087,9 @@
       "source_file": "app/sitemap.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_sitemap_js",
-      "target": "app_sitemap_sitemap",
-      "confidence_score": 1.0
+      "target": "app_sitemap_sitemap"
     },
     {
       "relation": "imports",
@@ -1098,9 +1098,9 @@
       "source_file": "app/about/page.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_about_page_js",
-      "target": "components_navbar_navbar",
-      "confidence_score": 1.0
+      "target": "components_navbar_navbar"
     },
     {
       "relation": "contains",
@@ -1108,9 +1108,9 @@
       "source_file": "app/about/page.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_about_page_js",
-      "target": "about_page_aboutpage",
-      "confidence_score": 1.0
+      "target": "about_page_aboutpage"
     },
     {
       "relation": "contains",
@@ -1118,9 +1118,9 @@
       "source_file": "app/api/fetch-jd/route.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_api_fetch_jd_route_ts",
-      "target": "fetch_jd_route_post",
-      "confidence_score": 1.0
+      "target": "fetch_jd_route_post"
     },
     {
       "relation": "contains",
@@ -1128,9 +1128,9 @@
       "source_file": "app/auth/page.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_auth_page_js",
-      "target": "auth_page_authpage",
-      "confidence_score": 1.0
+      "target": "auth_page_authpage"
     },
     {
       "relation": "contains",
@@ -1138,9 +1138,9 @@
       "source_file": "app/blogs/page.js",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_blogs_page_js",
-      "target": "blogs_page_formatdate",
-      "confidence_score": 1.0
+      "target": "blogs_page_formatdate"
     },
     {
       "relation": "contains",
@@ -1148,9 +1148,9 @@
       "source_file": "app/blogs/page.js",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_blogs_page_js",
-      "target": "blogs_page_getreadingtime",
-      "confidence_score": 1.0
+      "target": "blogs_page_getreadingtime"
     },
     {
       "relation": "contains",
@@ -1158,9 +1158,9 @@
       "source_file": "app/blogs/page.js",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_blogs_page_js",
-      "target": "blogs_page_getexcerpt",
-      "confidence_score": 1.0
+      "target": "blogs_page_getexcerpt"
     },
     {
       "relation": "contains",
@@ -1168,9 +1168,9 @@
       "source_file": "app/blogs/page.js",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_blogs_page_js",
-      "target": "blogs_page_blogspage",
-      "confidence_score": 1.0
+      "target": "blogs_page_blogspage"
     },
     {
       "relation": "contains",
@@ -1178,9 +1178,9 @@
       "source_file": "app/blogs/[slug]/page.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_blogs_slug_page_js",
-      "target": "slug_page_generatestaticparams",
-      "confidence_score": 1.0
+      "target": "slug_page_generatestaticparams"
     },
     {
       "relation": "contains",
@@ -1188,9 +1188,9 @@
       "source_file": "app/blogs/[slug]/page.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_blogs_slug_page_js",
-      "target": "slug_page_generatemetadata",
-      "confidence_score": 1.0
+      "target": "slug_page_generatemetadata"
     },
     {
       "relation": "contains",
@@ -1198,9 +1198,9 @@
       "source_file": "app/blogs/[slug]/page.js",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_blogs_slug_page_js",
-      "target": "slug_page_formatdate",
-      "confidence_score": 1.0
+      "target": "slug_page_formatdate"
     },
     {
       "relation": "contains",
@@ -1208,9 +1208,9 @@
       "source_file": "app/blogs/[slug]/page.js",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_blogs_slug_page_js",
-      "target": "slug_page_getreadingtime",
-      "confidence_score": 1.0
+      "target": "slug_page_getreadingtime"
     },
     {
       "relation": "contains",
@@ -1218,9 +1218,9 @@
       "source_file": "app/blogs/[slug]/page.js",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_blogs_slug_page_js",
-      "target": "slug_page_blogpost",
-      "confidence_score": 1.0
+      "target": "slug_page_blogpost"
     },
     {
       "relation": "calls",
@@ -1229,9 +1229,9 @@
       "source_file": "app/blogs/[slug]/page.js",
       "source_location": "L106",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "slug_page_blogpost",
-      "target": "slug_page_formatdate",
-      "confidence_score": 1.0
+      "target": "slug_page_formatdate"
     },
     {
       "relation": "calls",
@@ -1240,9 +1240,9 @@
       "source_file": "app/blogs/[slug]/page.js",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "slug_page_blogpost",
-      "target": "slug_page_getreadingtime",
-      "confidence_score": 1.0
+      "target": "slug_page_getreadingtime"
     },
     {
       "relation": "contains",
@@ -1250,9 +1250,9 @@
       "source_file": "app/components/AuthGuard.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_authguard_js",
-      "target": "components_authguard_authguard",
-      "confidence_score": 1.0
+      "target": "components_authguard_authguard"
     },
     {
       "relation": "contains",
@@ -1260,9 +1260,9 @@
       "source_file": "app/components/Controls.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_controls_js",
-      "target": "components_controls_controls",
-      "confidence_score": 1.0
+      "target": "components_controls_controls"
     },
     {
       "relation": "contains",
@@ -1270,9 +1270,9 @@
       "source_file": "app/components/Footer.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_footer_js",
-      "target": "components_footer_footer",
-      "confidence_score": 1.0
+      "target": "components_footer_footer"
     },
     {
       "relation": "contains",
@@ -1280,9 +1280,9 @@
       "source_file": "app/components/GoogleProviderWrapper.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_googleproviderwrapper_js",
-      "target": "components_googleproviderwrapper_googleproviderwrapper",
-      "confidence_score": 1.0
+      "target": "components_googleproviderwrapper_googleproviderwrapper"
     },
     {
       "relation": "contains",
@@ -1290,9 +1290,9 @@
       "source_file": "app/components/Header.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_header_js",
-      "target": "components_header_header",
-      "confidence_score": 1.0
+      "target": "components_header_header"
     },
     {
       "relation": "contains",
@@ -1300,9 +1300,9 @@
       "source_file": "app/components/IntroModal.js",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_intromodal_js",
-      "target": "components_intromodal_intromodal",
-      "confidence_score": 1.0
+      "target": "components_intromodal_intromodal"
     },
     {
       "relation": "contains",
@@ -1310,9 +1310,9 @@
       "source_file": "app/components/JDInputSection.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_jdinputsection_js",
-      "target": "components_jdinputsection_jdinputsection",
-      "confidence_score": 1.0
+      "target": "components_jdinputsection_jdinputsection"
     },
     {
       "relation": "contains",
@@ -1320,9 +1320,9 @@
       "source_file": "app/components/LeftOptions.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_leftoptions_js",
-      "target": "components_leftoptions_leftoptions",
-      "confidence_score": 1.0
+      "target": "components_leftoptions_leftoptions"
     },
     {
       "relation": "contains",
@@ -1330,9 +1330,9 @@
       "source_file": "app/components/Letter.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_letter_js",
-      "target": "components_letter_downloadpdf",
-      "confidence_score": 1.0
+      "target": "components_letter_downloadpdf"
     },
     {
       "relation": "contains",
@@ -1340,9 +1340,9 @@
       "source_file": "app/components/Letter.js",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_letter_js",
-      "target": "components_letter_lettercard",
-      "confidence_score": 1.0
+      "target": "components_letter_lettercard"
     },
     {
       "relation": "contains",
@@ -1350,9 +1350,9 @@
       "source_file": "app/components/Letter.js",
       "source_location": "L136",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_letter_js",
-      "target": "components_letter_letter",
-      "confidence_score": 1.0
+      "target": "components_letter_letter"
     },
     {
       "relation": "contains",
@@ -1360,9 +1360,9 @@
       "source_file": "app/components/ModelDropdown.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_modeldropdown_js",
-      "target": "components_modeldropdown_customdropdown",
-      "confidence_score": 1.0
+      "target": "components_modeldropdown_customdropdown"
     },
     {
       "relation": "contains",
@@ -1370,9 +1370,9 @@
       "source_file": "app/components/Navbar.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_navbar_js",
-      "target": "components_navbar_navbar",
-      "confidence_score": 1.0
+      "target": "components_navbar_navbar"
     },
     {
       "relation": "imports",
@@ -1381,9 +1381,9 @@
       "source_file": "app/contact/page.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_contact_page_js",
-      "target": "components_navbar_navbar",
-      "confidence_score": 1.0
+      "target": "components_navbar_navbar"
     },
     {
       "relation": "imports",
@@ -1392,9 +1392,9 @@
       "source_file": "app/pricing/page.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_pricing_page_js",
-      "target": "components_navbar_navbar",
-      "confidence_score": 1.0
+      "target": "components_navbar_navbar"
     },
     {
       "relation": "imports",
@@ -1403,9 +1403,9 @@
       "source_file": "app/privacy-policy/page.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_privacy_policy_page_js",
-      "target": "components_navbar_navbar",
-      "confidence_score": 1.0
+      "target": "components_navbar_navbar"
     },
     {
       "relation": "imports",
@@ -1414,9 +1414,9 @@
       "source_file": "app/refund-policy/page.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_refund_policy_page_js",
-      "target": "components_navbar_navbar",
-      "confidence_score": 1.0
+      "target": "components_navbar_navbar"
     },
     {
       "relation": "imports",
@@ -1425,9 +1425,9 @@
       "source_file": "app/terms-and-conditions/page.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_terms_and_conditions_page_js",
-      "target": "components_navbar_navbar",
-      "confidence_score": 1.0
+      "target": "components_navbar_navbar"
     },
     {
       "relation": "contains",
@@ -1435,9 +1435,9 @@
       "source_file": "app/components/RightJDInput.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_rightjdinput_js",
-      "target": "components_rightjdinput_rightjdinput",
-      "confidence_score": 1.0
+      "target": "components_rightjdinput_rightjdinput"
     },
     {
       "relation": "contains",
@@ -1445,9 +1445,9 @@
       "source_file": "app/components/V2FeaturesModal.js",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_v2featuresmodal_js",
-      "target": "components_v2featuresmodal_v2featuresmodal",
-      "confidence_score": 1.0
+      "target": "components_v2featuresmodal_v2featuresmodal"
     },
     {
       "relation": "contains",
@@ -1455,9 +1455,9 @@
       "source_file": "app/components/Auth/HistoryModal.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_auth_historymodal_js",
-      "target": "auth_historymodal_historymodal",
-      "confidence_score": 1.0
+      "target": "auth_historymodal_historymodal"
     },
     {
       "relation": "contains",
@@ -1465,9 +1465,9 @@
       "source_file": "app/components/Auth/Profile.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_auth_profile_js",
-      "target": "auth_profile_cleanjobdescription",
-      "confidence_score": 1.0
+      "target": "auth_profile_cleanjobdescription"
     },
     {
       "relation": "contains",
@@ -1475,9 +1475,9 @@
       "source_file": "app/components/Auth/Profile.js",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_auth_profile_js",
-      "target": "auth_profile_downloadpdf",
-      "confidence_score": 1.0
+      "target": "auth_profile_downloadpdf"
     },
     {
       "relation": "contains",
@@ -1485,9 +1485,9 @@
       "source_file": "app/components/Auth/Profile.js",
       "source_location": "L55",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_auth_profile_js",
-      "target": "auth_profile_skeletoncard",
-      "confidence_score": 1.0
+      "target": "auth_profile_skeletoncard"
     },
     {
       "relation": "contains",
@@ -1495,9 +1495,9 @@
       "source_file": "app/components/Auth/Profile.js",
       "source_location": "L78",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_auth_profile_js",
-      "target": "auth_profile_savedlettercard",
-      "confidence_score": 1.0
+      "target": "auth_profile_savedlettercard"
     },
     {
       "relation": "contains",
@@ -1505,9 +1505,9 @@
       "source_file": "app/components/Auth/Profile.js",
       "source_location": "L256",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_auth_profile_js",
-      "target": "auth_profile_profile",
-      "confidence_score": 1.0
+      "target": "auth_profile_profile"
     },
     {
       "relation": "calls",
@@ -1516,9 +1516,9 @@
       "source_file": "app/components/Auth/Profile.js",
       "source_location": "L210",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_profile_savedlettercard",
-      "target": "auth_profile_cleanjobdescription",
-      "confidence_score": 1.0
+      "target": "auth_profile_cleanjobdescription"
     },
     {
       "relation": "contains",
@@ -1526,9 +1526,9 @@
       "source_file": "app/components/landing/FeatureGrid.jsx",
       "source_location": "L63",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_landing_featuregrid_jsx",
-      "target": "landing_featuregrid_featuregrid",
-      "confidence_score": 1.0
+      "target": "landing_featuregrid_featuregrid"
     },
     {
       "relation": "contains",
@@ -1536,9 +1536,9 @@
       "source_file": "app/components/landing/FinalCTA.jsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_landing_finalcta_jsx",
-      "target": "landing_finalcta_finalcta",
-      "confidence_score": 1.0
+      "target": "landing_finalcta_finalcta"
     },
     {
       "relation": "contains",
@@ -1546,9 +1546,9 @@
       "source_file": "app/components/landing/HeroSection.jsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_landing_herosection_jsx",
-      "target": "landing_herosection_herosection",
-      "confidence_score": 1.0
+      "target": "landing_herosection_herosection"
     },
     {
       "relation": "contains",
@@ -1556,9 +1556,9 @@
       "source_file": "app/components/landing/HowItWorks.jsx",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_landing_howitworks_jsx",
-      "target": "landing_howitworks_howitworks",
-      "confidence_score": 1.0
+      "target": "landing_howitworks_howitworks"
     },
     {
       "relation": "contains",
@@ -1566,9 +1566,9 @@
       "source_file": "app/components/landing/LandingFooter.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_landing_landingfooter_jsx",
-      "target": "landing_landingfooter_landingfooter",
-      "confidence_score": 1.0
+      "target": "landing_landingfooter_landingfooter"
     },
     {
       "relation": "contains",
@@ -1576,9 +1576,9 @@
       "source_file": "app/components/landing/LandingNavbar.jsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_landing_landingnavbar_jsx",
-      "target": "landing_landingnavbar_landingnavbar",
-      "confidence_score": 1.0
+      "target": "landing_landingnavbar_landingnavbar"
     },
     {
       "relation": "contains",
@@ -1586,9 +1586,9 @@
       "source_file": "app/components/landing/LinkedInFeature.jsx",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_landing_linkedinfeature_jsx",
-      "target": "landing_linkedinfeature_linkedinfeature",
-      "confidence_score": 1.0
+      "target": "landing_linkedinfeature_linkedinfeature"
     },
     {
       "relation": "contains",
@@ -1596,9 +1596,9 @@
       "source_file": "app/components/landing/PricingSection.jsx",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_landing_pricingsection_jsx",
-      "target": "landing_pricingsection_pricingsection",
-      "confidence_score": 1.0
+      "target": "landing_pricingsection_pricingsection"
     },
     {
       "relation": "contains",
@@ -1606,9 +1606,9 @@
       "source_file": "app/components/landing/ProblemSection.jsx",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_landing_problemsection_jsx",
-      "target": "landing_problemsection_problemsection",
-      "confidence_score": 1.0
+      "target": "landing_problemsection_problemsection"
     },
     {
       "relation": "contains",
@@ -1616,9 +1616,9 @@
       "source_file": "app/components/landing/ProductDemo.jsx",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_landing_productdemo_jsx",
-      "target": "landing_productdemo_productdemo",
-      "confidence_score": 1.0
+      "target": "landing_productdemo_productdemo"
     },
     {
       "relation": "contains",
@@ -1626,9 +1626,9 @@
       "source_file": "app/components/landing/SolutionSection.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_landing_solutionsection_jsx",
-      "target": "landing_solutionsection_solutionsection",
-      "confidence_score": 1.0
+      "target": "landing_solutionsection_solutionsection"
     },
     {
       "relation": "contains",
@@ -1636,9 +1636,9 @@
       "source_file": "app/components/landing/Testimonials.jsx",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_landing_testimonials_jsx",
-      "target": "landing_testimonials_testimonials",
-      "confidence_score": 1.0
+      "target": "landing_testimonials_testimonials"
     },
     {
       "relation": "contains",
@@ -1646,9 +1646,9 @@
       "source_file": "app/components/landing/WaveCanvas.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_landing_wavecanvas_jsx",
-      "target": "landing_wavecanvas_wavecanvas",
-      "confidence_score": 1.0
+      "target": "landing_wavecanvas_wavecanvas"
     },
     {
       "relation": "contains",
@@ -1656,9 +1656,9 @@
       "source_file": "app/components/pricing/PricingCard.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_pricing_pricingcard_jsx",
-      "target": "pricing_pricingcard_pricingcard",
-      "confidence_score": 1.0
+      "target": "pricing_pricingcard_pricingcard"
     },
     {
       "relation": "imports",
@@ -1667,9 +1667,9 @@
       "source_file": "app/pricing/page.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_pricing_page_js",
-      "target": "pricing_pricingcard_pricingcard",
-      "confidence_score": 1.0
+      "target": "pricing_pricingcard_pricingcard"
     },
     {
       "relation": "contains",
@@ -1677,9 +1677,9 @@
       "source_file": "app/contact/page.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_contact_page_js",
-      "target": "contact_page_contactpage",
-      "confidence_score": 1.0
+      "target": "contact_page_contactpage"
     },
     {
       "relation": "contains",
@@ -1687,9 +1687,9 @@
       "source_file": "app/dashboard/page.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_dashboard_page_js",
-      "target": "dashboard_page_dashboard",
-      "confidence_score": 1.0
+      "target": "dashboard_page_dashboard"
     },
     {
       "relation": "contains",
@@ -1697,9 +1697,9 @@
       "source_file": "app/onboarding/page.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_onboarding_page_js",
-      "target": "onboarding_page_onboardingpage",
-      "confidence_score": 1.0
+      "target": "onboarding_page_onboardingpage"
     },
     {
       "relation": "contains",
@@ -1707,9 +1707,9 @@
       "source_file": "app/pricing/page.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_pricing_page_js",
-      "target": "pricing_page_pricingpage",
-      "confidence_score": 1.0
+      "target": "pricing_page_pricingpage"
     },
     {
       "relation": "contains",
@@ -1717,9 +1717,9 @@
       "source_file": "app/privacy-policy/page.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_privacy_policy_page_js",
-      "target": "privacy_policy_page_privacypolicypage",
-      "confidence_score": 1.0
+      "target": "privacy_policy_page_privacypolicypage"
     },
     {
       "relation": "contains",
@@ -1727,9 +1727,9 @@
       "source_file": "app/profile/page.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_profile_page_js",
-      "target": "profile_page_page",
-      "confidence_score": 1.0
+      "target": "profile_page_page"
     },
     {
       "relation": "contains",
@@ -1737,9 +1737,9 @@
       "source_file": "app/purchases/page.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_purchases_page_js",
-      "target": "purchases_page_purchasespage",
-      "confidence_score": 1.0
+      "target": "purchases_page_purchasespage"
     },
     {
       "relation": "contains",
@@ -1747,9 +1747,9 @@
       "source_file": "app/refund-policy/page.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_refund_policy_page_js",
-      "target": "refund_policy_page_refundpolicypage",
-      "confidence_score": 1.0
+      "target": "refund_policy_page_refundpolicypage"
     },
     {
       "relation": "contains",
@@ -1757,9 +1757,9 @@
       "source_file": "app/terms-and-conditions/page.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_terms_and_conditions_page_js",
-      "target": "terms_and_conditions_page_termsandconditionspage",
-      "confidence_score": 1.0
+      "target": "terms_and_conditions_page_termsandconditionspage"
     },
     {
       "relation": "contains",
@@ -1767,11 +1767,11 @@
       "source_file": "lib/SanitizeCovLetter.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_sanitizecovletter_js",
-      "target": "lib_sanitizecovletter_sanitizecoverletter",
-      "confidence_score": 1.0
+      "target": "lib_sanitizecovletter_sanitizecoverletter"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "8984ceb1c801a5e31c1533d450790bc65bcc51f0"
+  "built_at_commit": "3dfb657f75e168f6163fccdf76f79fbb9da2c335"
 }
