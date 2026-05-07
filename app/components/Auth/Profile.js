@@ -478,10 +478,14 @@ export default function Profile() {
                     {/* Editable Fields */}
                     <div className="space-y-5 mt-8">
                         <div>
-                            <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Resume Link</label>
+                            <div className="flex justify-between mb-2">
+                                <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider">Resume Link</label>
+                                <span className="text-xs text-slate-400">{resumeLink?.length || 0}/500</span>
+                            </div>
                             <input
                                 type="url"
                                 value={resumeLink}
+                                maxLength={500}
                                 onChange={(e) => setResumeLink(e.target.value)}
                                 placeholder="https://drive.google.com/your-resume"
                                 className="w-full px-4 py-3 rounded-xl bg-slate-50/80 border border-slate-200 text-sm text-slate-700 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all placeholder:text-slate-300"
@@ -489,9 +493,13 @@ export default function Profile() {
                         </div>
 
                         <div>
-                            <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Default Instructions</label>
+                            <div className="flex justify-between mb-2">
+                                <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider">Default Instructions</label>
+                                <span className="text-xs text-slate-400">{customInstr?.length || 0}/10000</span>
+                            </div>
                             <textarea
                                 value={customInstr}
+                                maxLength={10000}
                                 onChange={(e) => setCustomInstr(e.target.value)}
                                 placeholder="Tell the AI about yourself — your skills, experience, tone preferences..."
                                 rows={4}

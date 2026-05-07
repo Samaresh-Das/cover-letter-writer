@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function LandingFooter() {
   return (
@@ -9,13 +10,16 @@ export default function LandingFooter() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center shadow-lg shadow-blue-500/20">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                  <polyline points="14 2 14 8 20 8" />
-                  <line x1="16" y1="13" x2="8" y2="13" />
-                  <line x1="16" y1="17" x2="8" y2="17" />
-                </svg>
+              <div className="w-14 h-14 rounded-xl overflow-hidden shadow-lg shadow-blue-500/20">
+                <Image 
+                  src="/logo.jpg" 
+                  alt="CovGen Logo" 
+                  width={56} 
+                  height={56} 
+                  quality={100}
+                  unoptimized={true}
+                  className="object-cover w-full h-full"
+                />
               </div>
               <span className="text-xl font-bold tracking-tight text-slate-900" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                 Cov<span className="gradient-text">Gen</span>
@@ -38,6 +42,7 @@ export default function LandingFooter() {
               <li><a href="#features" className="hover:text-blue-500 transition-colors cursor-pointer">Features</a></li>
               <li><a href="#how-it-works" className="hover:text-blue-500 transition-colors cursor-pointer">How it Works</a></li>
               <li><Link href="/pricing" className="hover:text-blue-500 transition-colors cursor-pointer">Pricing</Link></li>
+              <li><Link href="/blogs" className="hover:text-blue-500 transition-colors cursor-pointer">Blog</Link></li>
               <li><Link href="/about" className="hover:text-blue-500 transition-colors cursor-pointer">About Us</Link></li>
             </ul>
           </div>

@@ -34,13 +34,17 @@ export default function JDInputSection({ jd, setJd }) {
 
     return (
         <div className="space-y-4">
-            <input
-                type="text"
-                placeholder="Paste JD Share Link here"
-                className="w-full p-2 border rounded bg-white text-black"
-                value={jdLink}
-                onChange={(e) => setJdLink(e.target.value)}
-            />
+            <div>
+                <input
+                    type="text"
+                    placeholder="Paste JD Share Link here"
+                    maxLength={500}
+                    className="w-full p-2 border rounded bg-white text-black"
+                    value={jdLink}
+                    onChange={(e) => setJdLink(e.target.value)}
+                />
+                <div className="text-right text-xs text-slate-500 mt-1">{jdLink?.length || 0}/500</div>
+            </div>
             <button
                 onClick={fetchJDFromLink}
                 disabled={loading}
@@ -49,12 +53,16 @@ export default function JDInputSection({ jd, setJd }) {
                 {loading ? 'Fetching...' : 'Fetch JD from Link'}
             </button>
 
-            <textarea
-                placeholder="Or paste JD manually here"
-                value={jd}
-                onChange={(e) => setJd(e.target.value)}
-                className="w-full min-h-[200px] p-2 border rounded bg-white text-black"
-            />
+            <div>
+                <textarea
+                    placeholder="Or paste JD manually here"
+                    value={jd}
+                    maxLength={15000}
+                    onChange={(e) => setJd(e.target.value)}
+                    className="w-full min-h-[200px] p-2 border rounded bg-white text-black"
+                />
+                <div className="text-right text-xs text-slate-500 mt-1">{jd?.length || 0}/15000</div>
+            </div>
         </div>
     );
 }

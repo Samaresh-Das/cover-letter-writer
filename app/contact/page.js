@@ -68,10 +68,14 @@ export default function ContactPage() {
           <div className="md:col-span-3">
             <form onSubmit={handleSubmit} className="bg-white p-8 rounded-3xl border border-slate-200 shadow-xl space-y-6">
               <div>
-                <label className="block text-sm font-bold text-slate-700 mb-2">Full Name</label>
+                <label className="block text-sm font-bold text-slate-700 mb-2 flex justify-between">
+                  <span>Full Name</span>
+                  <span className="text-xs text-slate-500 font-normal">{formData.name?.length || 0}/100</span>
+                </label>
                 <input
                   type="text"
                   required
+                  maxLength={100}
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
                   placeholder="John Doe"
                   value={formData.name}
@@ -79,10 +83,14 @@ export default function ContactPage() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-bold text-slate-700 mb-2">Email Address</label>
+                <label className="block text-sm font-bold text-slate-700 mb-2 flex justify-between">
+                  <span>Email Address</span>
+                  <span className="text-xs text-slate-500 font-normal">{formData.email?.length || 0}/254</span>
+                </label>
                 <input
                   type="email"
                   required
+                  maxLength={254}
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
                   placeholder="john@example.com"
                   value={formData.email}
@@ -90,9 +98,13 @@ export default function ContactPage() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-bold text-slate-700 mb-2">Message</label>
+                <label className="block text-sm font-bold text-slate-700 mb-2 flex justify-between">
+                  <span>Message</span>
+                  <span className="text-xs text-slate-500 font-normal">{formData.message?.length || 0}/2000</span>
+                </label>
                 <textarea
                   required
+                  maxLength={2000}
                   rows="4"
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none"
                   placeholder="How can we help you?"

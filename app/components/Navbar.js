@@ -95,14 +95,16 @@ export const Navbar = () => {
                 {/* Logo Section */}
                 <div className="flex-1 flex justify-start">
                     <Link href="/" className="flex items-center gap-2.5 cursor-pointer group">
-                        <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/40 transition-shadow duration-300">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                                <polyline points="14 2 14 8 20 8" />
-                                <line x1="16" y1="13" x2="8" y2="13" />
-                                <line x1="16" y1="17" x2="8" y2="17" />
-                                <polyline points="10 9 9 9 8 9" />
-                            </svg>
+                        <div className="w-12 h-12 rounded-xl overflow-hidden shadow-lg group-hover:shadow-blue-500/40 transition-shadow duration-300">
+                            <Image 
+                                src="/logo.jpg" 
+                                alt="CovGen Logo" 
+                                width={48} 
+                                height={48} 
+                                quality={100}
+                                unoptimized={true}
+                                className="object-cover w-full h-full"
+                            />
                         </div>
                         <span className="text-xl font-bold tracking-tight text-slate-900" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                             Cov<span className="gradient-text">Gen</span>
