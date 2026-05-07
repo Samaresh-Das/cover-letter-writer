@@ -1,16 +1,16 @@
 # Graph Report - cover-letter-writer  (2026-05-08)
 
 ## Corpus Check
-- 54 files · ~72,466 words
+- 55 files · ~72,540 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 115 nodes · 72 edges · 47 communities (44 shown, 3 thin omitted)
+- 117 nodes · 73 edges · 48 communities (45 shown, 3 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `7ffdc6ca`
+- Built from commit: `84835de4`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -32,7 +32,7 @@
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
 
-## Communities (47 total, 3 thin omitted)
+## Communities (48 total, 3 thin omitted)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.47
