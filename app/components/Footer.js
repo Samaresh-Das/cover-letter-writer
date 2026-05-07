@@ -1,7 +1,9 @@
 'use client';
+import React from 'react';
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { FaInstagram, FaLinkedin, FaGlobe } from "react-icons/fa";
 
 export default function Footer() {
@@ -16,9 +18,22 @@ export default function Footer() {
 
                     {/* Branding */}
                     <div>
-                        <h2 className="text-xl font-bold tracking-tight text-gray-900">
-                            CovGen
-                        </h2>
+                        <div className="flex items-center gap-2 mb-2">
+                            <div className="w-14 h-14 rounded-xl overflow-hidden shadow-md">
+                                <Image 
+                                    src="/logo.jpg" 
+                                    alt="CovGen Logo" 
+                                    width={56} 
+                                    height={56} 
+                                    quality={100}
+                                    unoptimized={true}
+                                    className="object-cover w-full h-full"
+                                />
+                            </div>
+                            <h2 className="text-xl font-bold tracking-tight text-gray-900">
+                                CovGen
+                            </h2>
+                        </div>
                         <p className="mt-2 text-sm text-gray-500 leading-relaxed">
                             Elevate your applications with AI-crafted, job-specific cover letters.
                         </p>
@@ -36,11 +51,13 @@ export default function Footer() {
                         <div className="grid grid-cols-2 gap-2 text-sm text-gray-500">
                             <Link href="/" className="hover:text-blue-600 transition-colors duration-200">Home</Link>
                             <Link href="/about" className="hover:text-blue-600 transition-colors duration-200">About</Link>
+                            <Link href="/blogs" className="hover:text-blue-600 transition-colors duration-200">Blog</Link>
                             <Link href="/contact" className="hover:text-blue-600 transition-colors duration-200">Contact</Link>
                             <Link href="/pricing" className="hover:text-blue-600 transition-colors duration-200">Pricing</Link>
                             <Link href="/privacy-policy" className="hover:text-blue-600 transition-colors duration-200">Privacy Policy</Link>
                             <Link href="/terms-and-conditions" className="hover:text-blue-600 transition-colors duration-200">Terms & Conditions</Link>
                             <Link href="/refund-policy" className="hover:text-blue-600 transition-colors duration-200">Refund Policy</Link>
+                            <Link href="/sitemap.xml" className="hover:text-blue-600 transition-colors duration-200">Sitemap</Link>
                         </div>
                     </div>
 

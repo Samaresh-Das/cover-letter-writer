@@ -80,11 +80,15 @@ export default function RightJDInput({
 
             {/* JD Link Input */}
             <label className="block">
-                <span className="text-sm font-semibold text-slate-700 mb-2 block">LinkedIn Job URL <span className="text-slate-400 font-normal">(Auto-extracts JD)</span></span>
+                <span className="text-sm font-semibold text-slate-700 mb-2 block flex justify-between">
+                    <span>LinkedIn Job URL <span className="text-slate-400 font-normal">(Auto-extracts JD)</span></span>
+                    <span className="text-xs text-slate-400 font-normal">{jdLink?.length || 0}/500</span>
+                </span>
                 <div className="flex gap-2">
                     <input
                         type="url"
                         value={jdLink}
+                        maxLength={500}
                         onChange={(e) => setJdLink(e.target.value)}
                         placeholder="https://www.linkedin.com/jobs/view/..."
                         className="flex-1 px-4 py-3 rounded-xl bg-slate-50/80 text-slate-900 border border-blue-100 outline-none transition-all duration-200 placeholder:text-slate-400 focus:bg-white focus:border-blue-400 focus:ring-4 focus:ring-blue-50"
@@ -109,9 +113,13 @@ export default function RightJDInput({
             </div>
 
             <label className="block">
-                <span className="text-sm font-semibold text-slate-700 mb-2 block">Or paste Job Description manually</span>
+                <span className="text-sm font-semibold text-slate-700 mb-2 block flex justify-between">
+                    <span>Or paste Job Description manually</span>
+                    <span className="text-xs text-slate-400 font-normal">{jd?.length || 0}/15000</span>
+                </span>
                 <textarea
                     value={jd}
+                    maxLength={15000}
                     onChange={e => setJd(e.target.value)}
                     className="w-full rounded-xl bg-slate-50/80 text-slate-900 px-4 py-4 h-[240px] border border-blue-100 outline-none transition-all duration-200 resize-y placeholder:text-slate-400 focus:bg-white focus:border-blue-400 focus:ring-4 focus:ring-blue-50"
                     placeholder="Paste the full job description here…"

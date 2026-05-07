@@ -49,7 +49,10 @@ export const metadata = {
     "job seeker tools"
   ],
   authors: [{ name: "Samaresh Das", url: "https://portfolio-2-tau-sable.vercel.app/" }],
-  creator: "Samaresh Das",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
   openGraph: {
     title: "CovGen – Create Job-Winning Cover Letters Instantly",
     description:
