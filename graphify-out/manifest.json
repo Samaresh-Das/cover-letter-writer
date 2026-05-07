@@ -1,0 +1,254 @@
+{
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\eslint.config.mjs": {
+    "mtime": 1777447399.4995553,
+    "hash": "581889378ec0b107e9f15ef681e7f270"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\middleware.js": {
+    "mtime": 1777447399.5005567,
+    "hash": "03f19c5e4f23a1279882714572dff50f"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\next-env.d.ts": {
+    "mtime": 1753681324.8154206,
+    "hash": "c68600c0eb0d34c34bfc0f4b2547e31f"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\next.config.mjs": {
+    "mtime": 1777202575.2339313,
+    "hash": "a754137a6e48d7cb3117bedc8750e8b4"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\postcss.config.mjs": {
+    "mtime": 1753681212.956786,
+    "hash": "0a8c5fa8885965eb3d71ee945ff2e9be"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\tailwind.config.js": {
+    "mtime": 1777044339.629013,
+    "hash": "1219fb72a6e401c10471a594e9e1b252"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\layout.js": {
+    "mtime": 1778183040.2887733,
+    "hash": "a25cf2ecf06ab2f9abbe173ca0849031"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\page.js": {
+    "mtime": 1778183175.7740672,
+    "hash": "c418fc60348b227b4d7a534dad03dfa5"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\sitemap.js": {
+    "mtime": 1777268675.8782694,
+    "hash": "95da0f62600d61bbc20282bb5edf5588"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\about\\page.js": {
+    "mtime": 1777447399.2799246,
+    "hash": "6316dc82d8147e5fe309feda8fa37016"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\api\\fetch-jd\\route.ts": {
+    "mtime": 1753715681.9189162,
+    "hash": "aa9faff0ff397254f45e4d21f4c7e1b8"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\auth\\page.js": {
+    "mtime": 1778183289.229033,
+    "hash": "c2563feb657b301fd919227397e7fa7d"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\blogs\\page.js": {
+    "mtime": 1778183568.5865843,
+    "hash": "3dd4828aa969e07c5526e79cae98d08e"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\blogs\\[slug]\\page.js": {
+    "mtime": 1778183611.543383,
+    "hash": "76f8ab3c74a219a4910c7ed2a9769924"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\AuthGuard.js": {
+    "mtime": 1777823460.2657566,
+    "hash": "1e2967d9a6fa83558fbaa5733812795c"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Controls.js": {
+    "mtime": 1777482428.6086187,
+    "hash": "65cf755dbff225f532ae89f4485bd281"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Footer.js": {
+    "mtime": 1778183636.660456,
+    "hash": "324a2645bb61115c4af753eb9a7aed7b"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\GoogleProviderWrapper.js": {
+    "mtime": 1777202575.2125676,
+    "hash": "0416e5398364ed35159d3d7c100000b4"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Header.js": {
+    "mtime": 1777447399.3204322,
+    "hash": "2bb17a578a20f5e73f2f45e0a2f30f42"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\IntroModal.js": {
+    "mtime": 1777046804.4107192,
+    "hash": "c7a4fe14983626cefbb67ec8aa76ff27"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\JDInputSection.js": {
+    "mtime": 1778182087.9716196,
+    "hash": "362d15b872e9ffcad162bf8e96968089"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\LeftOptions.js": {
+    "mtime": 1778182182.1447203,
+    "hash": "ee2c100b12969f1e358e7a4aebd62dc6"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Letter.js": {
+    "mtime": 1777823460.8599951,
+    "hash": "a7733011c024c6d9c4eb62537fc1b877"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\ModelDropdown.js": {
+    "mtime": 1777823460.8949714,
+    "hash": "24a75ff12d3cfd513397758bfe010426"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Navbar.js": {
+    "mtime": 1778183268.481208,
+    "hash": "107ce344b8934388b5a10eba8811f3ee"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\RightJDInput.js": {
+    "mtime": 1778182063.1459978,
+    "hash": "96c2dbe9c412ba5672bf3c52b9a72931"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\V2FeaturesModal.js": {
+    "mtime": 1777268675.8746538,
+    "hash": "5f0c8e6cfaecff597ab7623397479c04"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\HistoryModal.js": {
+    "mtime": 1777044339.6055808,
+    "hash": "0bee800e77ebb0229f61daff1bbc3acf"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js": {
+    "mtime": 1778182164.112313,
+    "hash": "ebe1dae8e558bce6132d46678ad0dcb0"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\FeatureGrid.jsx": {
+    "mtime": 1777044339.6139772,
+    "hash": "78680e656d5e1942150816e3baaccc59"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\FinalCTA.jsx": {
+    "mtime": 1777202575.2156003,
+    "hash": "e2412d1fca9f343389ccb2af26f4a9df"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\HeroSection.jsx": {
+    "mtime": 1777202575.2156003,
+    "hash": "4cf508d3dfe551449799d0815048767a"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\HowItWorks.jsx": {
+    "mtime": 1777044339.6154988,
+    "hash": "dc0de0d5a94087225b0f97c56226e8d6"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\LandingFooter.jsx": {
+    "mtime": 1778183647.7540464,
+    "hash": "1e841d1921a3f64c24d273f0748b84d9"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\LandingNavbar.jsx": {
+    "mtime": 1778183275.5152972,
+    "hash": "351384f95445f489212bb332ed23c6fd"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\LinkedInFeature.jsx": {
+    "mtime": 1777044339.617541,
+    "hash": "efe5a0853913cb390aeab8410b01eb9e"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\PricingSection.jsx": {
+    "mtime": 1777482428.6116397,
+    "hash": "4213e339e1525ab51f84d7ae465a4b9b"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\ProblemSection.jsx": {
+    "mtime": 1777044339.6191878,
+    "hash": "67663a91b1c7a5362b2491923097da5a"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\ProductDemo.jsx": {
+    "mtime": 1777044339.6191878,
+    "hash": "44904a315d8c4c22a0e6947c91d15791"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\SolutionSection.jsx": {
+    "mtime": 1777044339.620198,
+    "hash": "bf5ea38f603957b4436019d7eb93b8ff"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\Testimonials.jsx": {
+    "mtime": 1777044339.6207025,
+    "hash": "030cfb03bba2c3fa333a2b6ada6c2afc"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\WaveCanvas.jsx": {
+    "mtime": 1777044339.6217349,
+    "hash": "3e45d60dca1e6ffc3a4d8dc810d1d0df"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\pricing\\PricingCard.jsx": {
+    "mtime": 1777447399.3553305,
+    "hash": "35c2068e6f227b9124d461f8e5f77e23"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\contact\\page.js": {
+    "mtime": 1778182103.5056555,
+    "hash": "74d3da0b58337bbf2a02567e8addab8b"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\dashboard\\page.js": {
+    "mtime": 1777823461.1178174,
+    "hash": "b13f59b71dd9fb240e5fb77f5dec361b"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\onboarding\\page.js": {
+    "mtime": 1778183172.2265599,
+    "hash": "44ec6b0ef6d1546151cdb4508b237d40"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\pricing\\page.js": {
+    "mtime": 1777447399.3643212,
+    "hash": "386bac19b01ca15626e520219e27de86"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\privacy-policy\\page.js": {
+    "mtime": 1777447399.399676,
+    "hash": "11af3feeeb8364b9fb71ee08f708a12a"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\profile\\page.js": {
+    "mtime": 1754669744.0447516,
+    "hash": "135002ff81dac3506b0a43bbcca92471"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\purchases\\page.js": {
+    "mtime": 1777447399.4006767,
+    "hash": "42e89710064c5ded7af618a104ef9e91"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\refund-policy\\page.js": {
+    "mtime": 1777447399.454526,
+    "hash": "a3412917db42987082ee0b6ac2c69a39"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\terms-and-conditions\\page.js": {
+    "mtime": 1777447399.498555,
+    "hash": "dc3bb1b8ea9c0e5c2b6971b97df95969"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\lib\\prompt.js": {
+    "mtime": 1776410129.9129279,
+    "hash": "79d91a863a5b49906c875b9c73fb851a"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\lib\\SanitizeCovLetter.js": {
+    "mtime": 1777577939.7257497,
+    "hash": "e735a06dacc4b1231cd2fb1b6eb3814c"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\README.md": {
+    "mtime": 1777447399.2642448,
+    "hash": "8c0ff17a833ef5014d0fd92ecc8e4398"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\public\\file.svg": {
+    "mtime": 1753681212.956786,
+    "hash": "d09f95206c3fa0bb9bd9fefabfd0ea71"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\public\\globe.svg": {
+    "mtime": 1753681212.957792,
+    "hash": "2aaafa6a49b6563925fe440891e32717"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\public\\How to Write a Cover Letter in 2026.png": {
+    "mtime": 1778183710.8626537,
+    "hash": "2e756bc5db088d4afa803357b29e0730"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\public\\logo.jpg": {
+    "mtime": 1753893753.8930254,
+    "hash": "5c4e2a0b1ba0e92ae5968e5daccb2c41"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\public\\logo.png": {
+    "mtime": 1753893753.8930254,
+    "hash": "5c4e2a0b1ba0e92ae5968e5daccb2c41"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\public\\next.svg": {
+    "mtime": 1753681212.957792,
+    "hash": "8e061864f388b47f33a1c3780831193e"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\public\\vercel.svg": {
+    "mtime": 1753681212.957792,
+    "hash": "c0af2f507b369b085b35ef4bbe3bcf1e"
+  },
+  "E:\\PROJECTS\\CovGen\\cover-letter-writer\\public\\window.svg": {
+    "mtime": 1753681212.957792,
+    "hash": "a2760511c65806022ad20adf74370ff3"
+  }
+}

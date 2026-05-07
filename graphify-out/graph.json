@@ -1,0 +1,1777 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "eslint.config.mjs",
+      "file_type": "code",
+      "source_file": "eslint.config.mjs",
+      "source_location": "L1",
+      "id": "eslint_config_mjs",
+      "community": 41,
+      "norm_label": "eslint.config.mjs"
+    },
+    {
+      "label": "middleware.js",
+      "file_type": "code",
+      "source_file": "middleware.js",
+      "source_location": "L1",
+      "id": "middleware_js",
+      "community": 6,
+      "norm_label": "middleware.js"
+    },
+    {
+      "label": "middleware()",
+      "file_type": "code",
+      "source_file": "middleware.js",
+      "source_location": "L9",
+      "id": "cover_letter_writer_middleware_middleware",
+      "community": 6,
+      "norm_label": "middleware()"
+    },
+    {
+      "label": "next-env.d.ts",
+      "file_type": "code",
+      "source_file": "next-env.d.ts",
+      "source_location": "L1",
+      "id": "next_env_d_ts",
+      "community": 42,
+      "norm_label": "next-env.d.ts"
+    },
+    {
+      "label": "next.config.mjs",
+      "file_type": "code",
+      "source_file": "next.config.mjs",
+      "source_location": "L1",
+      "id": "next_config_mjs",
+      "community": 43,
+      "norm_label": "next.config.mjs"
+    },
+    {
+      "label": "postcss.config.mjs",
+      "file_type": "code",
+      "source_file": "postcss.config.mjs",
+      "source_location": "L1",
+      "id": "postcss_config_mjs",
+      "community": 44,
+      "norm_label": "postcss.config.mjs"
+    },
+    {
+      "label": "tailwind.config.js",
+      "file_type": "code",
+      "source_file": "tailwind.config.js",
+      "source_location": "L1",
+      "id": "tailwind_config_js",
+      "community": 45,
+      "norm_label": "tailwind.config.js"
+    },
+    {
+      "label": "layout.js",
+      "file_type": "code",
+      "source_file": "app/layout.js",
+      "source_location": "L1",
+      "id": "app_layout_js",
+      "community": 0,
+      "norm_label": "layout.js"
+    },
+    {
+      "label": "RootLayout()",
+      "file_type": "code",
+      "source_file": "app/layout.js",
+      "source_location": "L81",
+      "id": "app_layout_rootlayout",
+      "community": 0,
+      "norm_label": "rootlayout()"
+    },
+    {
+      "label": "page.js",
+      "file_type": "code",
+      "source_file": "app/page.js",
+      "source_location": "L1",
+      "id": "app_page_js",
+      "community": 7,
+      "norm_label": "page.js"
+    },
+    {
+      "label": "Home()",
+      "file_type": "code",
+      "source_file": "app/page.js",
+      "source_location": "L16",
+      "id": "app_page_home",
+      "community": 7,
+      "norm_label": "home()"
+    },
+    {
+      "label": "sitemap.js",
+      "file_type": "code",
+      "source_file": "app/sitemap.js",
+      "source_location": "L1",
+      "id": "app_sitemap_js",
+      "community": 8,
+      "norm_label": "sitemap.js"
+    },
+    {
+      "label": "sitemap()",
+      "file_type": "code",
+      "source_file": "app/sitemap.js",
+      "source_location": "L1",
+      "id": "app_sitemap_sitemap",
+      "community": 8,
+      "norm_label": "sitemap()"
+    },
+    {
+      "label": "page.js",
+      "file_type": "code",
+      "source_file": "app/about/page.js",
+      "source_location": "L1",
+      "id": "app_about_page_js",
+      "community": 0,
+      "norm_label": "page.js"
+    },
+    {
+      "label": "AboutPage()",
+      "file_type": "code",
+      "source_file": "app/about/page.js",
+      "source_location": "L9",
+      "id": "about_page_aboutpage",
+      "community": 0,
+      "norm_label": "aboutpage()"
+    },
+    {
+      "label": "route.ts",
+      "file_type": "code",
+      "source_file": "app/api/fetch-jd/route.ts",
+      "source_location": "L1",
+      "id": "app_api_fetch_jd_route_ts",
+      "community": 9,
+      "norm_label": "route.ts"
+    },
+    {
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "app/api/fetch-jd/route.ts",
+      "source_location": "L4",
+      "id": "fetch_jd_route_post",
+      "community": 9,
+      "norm_label": "post()"
+    },
+    {
+      "label": "page.js",
+      "file_type": "code",
+      "source_file": "app/auth/page.js",
+      "source_location": "L1",
+      "id": "app_auth_page_js",
+      "community": 10,
+      "norm_label": "page.js"
+    },
+    {
+      "label": "AuthPage()",
+      "file_type": "code",
+      "source_file": "app/auth/page.js",
+      "source_location": "L10",
+      "id": "auth_page_authpage",
+      "community": 10,
+      "norm_label": "authpage()"
+    },
+    {
+      "label": "page.js",
+      "file_type": "code",
+      "source_file": "app/blogs/page.js",
+      "source_location": "L1",
+      "id": "app_blogs_page_js",
+      "community": 3,
+      "norm_label": "page.js"
+    },
+    {
+      "label": "formatDate()",
+      "file_type": "code",
+      "source_file": "app/blogs/page.js",
+      "source_location": "L23",
+      "id": "blogs_page_formatdate",
+      "community": 3,
+      "norm_label": "formatdate()"
+    },
+    {
+      "label": "getReadingTime()",
+      "file_type": "code",
+      "source_file": "app/blogs/page.js",
+      "source_location": "L31",
+      "id": "blogs_page_getreadingtime",
+      "community": 3,
+      "norm_label": "getreadingtime()"
+    },
+    {
+      "label": "getExcerpt()",
+      "file_type": "code",
+      "source_file": "app/blogs/page.js",
+      "source_location": "L40",
+      "id": "blogs_page_getexcerpt",
+      "community": 3,
+      "norm_label": "getexcerpt()"
+    },
+    {
+      "label": "BlogsPage()",
+      "file_type": "code",
+      "source_file": "app/blogs/page.js",
+      "source_location": "L53",
+      "id": "blogs_page_blogspage",
+      "community": 3,
+      "norm_label": "blogspage()"
+    },
+    {
+      "label": "page.js",
+      "file_type": "code",
+      "source_file": "app/blogs/[slug]/page.js",
+      "source_location": "L1",
+      "id": "app_blogs_slug_page_js",
+      "community": 1,
+      "norm_label": "page.js"
+    },
+    {
+      "label": "generateStaticParams()",
+      "file_type": "code",
+      "source_file": "app/blogs/[slug]/page.js",
+      "source_location": "L6",
+      "id": "slug_page_generatestaticparams",
+      "community": 1,
+      "norm_label": "generatestaticparams()"
+    },
+    {
+      "label": "generateMetadata()",
+      "file_type": "code",
+      "source_file": "app/blogs/[slug]/page.js",
+      "source_location": "L13",
+      "id": "slug_page_generatemetadata",
+      "community": 1,
+      "norm_label": "generatemetadata()"
+    },
+    {
+      "label": "formatDate()",
+      "file_type": "code",
+      "source_file": "app/blogs/[slug]/page.js",
+      "source_location": "L32",
+      "id": "slug_page_formatdate",
+      "community": 1,
+      "norm_label": "formatdate()"
+    },
+    {
+      "label": "getReadingTime()",
+      "file_type": "code",
+      "source_file": "app/blogs/[slug]/page.js",
+      "source_location": "L40",
+      "id": "slug_page_getreadingtime",
+      "community": 1,
+      "norm_label": "getreadingtime()"
+    },
+    {
+      "label": "BlogPost()",
+      "file_type": "code",
+      "source_file": "app/blogs/[slug]/page.js",
+      "source_location": "L49",
+      "id": "slug_page_blogpost",
+      "community": 1,
+      "norm_label": "blogpost()"
+    },
+    {
+      "label": "AuthGuard.js",
+      "file_type": "code",
+      "source_file": "app/components/AuthGuard.js",
+      "source_location": "L1",
+      "id": "app_components_authguard_js",
+      "community": 11,
+      "norm_label": "authguard.js"
+    },
+    {
+      "label": "AuthGuard()",
+      "file_type": "code",
+      "source_file": "app/components/AuthGuard.js",
+      "source_location": "L8",
+      "id": "components_authguard_authguard",
+      "community": 11,
+      "norm_label": "authguard()"
+    },
+    {
+      "label": "Controls.js",
+      "file_type": "code",
+      "source_file": "app/components/Controls.js",
+      "source_location": "L1",
+      "id": "app_components_controls_js",
+      "community": 12,
+      "norm_label": "controls.js"
+    },
+    {
+      "label": "Controls()",
+      "file_type": "code",
+      "source_file": "app/components/Controls.js",
+      "source_location": "L8",
+      "id": "components_controls_controls",
+      "community": 12,
+      "norm_label": "controls()"
+    },
+    {
+      "label": "Footer.js",
+      "file_type": "code",
+      "source_file": "app/components/Footer.js",
+      "source_location": "L1",
+      "id": "app_components_footer_js",
+      "community": 13,
+      "norm_label": "footer.js"
+    },
+    {
+      "label": "Footer()",
+      "file_type": "code",
+      "source_file": "app/components/Footer.js",
+      "source_location": "L9",
+      "id": "components_footer_footer",
+      "community": 13,
+      "norm_label": "footer()"
+    },
+    {
+      "label": "GoogleProviderWrapper.js",
+      "file_type": "code",
+      "source_file": "app/components/GoogleProviderWrapper.js",
+      "source_location": "L1",
+      "id": "app_components_googleproviderwrapper_js",
+      "community": 14,
+      "norm_label": "googleproviderwrapper.js"
+    },
+    {
+      "label": "GoogleProviderWrapper()",
+      "file_type": "code",
+      "source_file": "app/components/GoogleProviderWrapper.js",
+      "source_location": "L5",
+      "id": "components_googleproviderwrapper_googleproviderwrapper",
+      "community": 14,
+      "norm_label": "googleproviderwrapper()"
+    },
+    {
+      "label": "Header.js",
+      "file_type": "code",
+      "source_file": "app/components/Header.js",
+      "source_location": "L1",
+      "id": "app_components_header_js",
+      "community": 15,
+      "norm_label": "header.js"
+    },
+    {
+      "label": "Header()",
+      "file_type": "code",
+      "source_file": "app/components/Header.js",
+      "source_location": "L4",
+      "id": "components_header_header",
+      "community": 15,
+      "norm_label": "header()"
+    },
+    {
+      "label": "IntroModal.js",
+      "file_type": "code",
+      "source_file": "app/components/IntroModal.js",
+      "source_location": "L1",
+      "id": "app_components_intromodal_js",
+      "community": 16,
+      "norm_label": "intromodal.js"
+    },
+    {
+      "label": "IntroModal()",
+      "file_type": "code",
+      "source_file": "app/components/IntroModal.js",
+      "source_location": "L19",
+      "id": "components_intromodal_intromodal",
+      "community": 16,
+      "norm_label": "intromodal()"
+    },
+    {
+      "label": "JDInputSection.js",
+      "file_type": "code",
+      "source_file": "app/components/JDInputSection.js",
+      "source_location": "L1",
+      "id": "app_components_jdinputsection_js",
+      "community": 17,
+      "norm_label": "jdinputsection.js"
+    },
+    {
+      "label": "JDInputSection()",
+      "file_type": "code",
+      "source_file": "app/components/JDInputSection.js",
+      "source_location": "L5",
+      "id": "components_jdinputsection_jdinputsection",
+      "community": 17,
+      "norm_label": "jdinputsection()"
+    },
+    {
+      "label": "LeftOptions.js",
+      "file_type": "code",
+      "source_file": "app/components/LeftOptions.js",
+      "source_location": "L1",
+      "id": "app_components_leftoptions_js",
+      "community": 18,
+      "norm_label": "leftoptions.js"
+    },
+    {
+      "label": "LeftOptions()",
+      "file_type": "code",
+      "source_file": "app/components/LeftOptions.js",
+      "source_location": "L5",
+      "id": "components_leftoptions_leftoptions",
+      "community": 18,
+      "norm_label": "leftoptions()"
+    },
+    {
+      "label": "Letter.js",
+      "file_type": "code",
+      "source_file": "app/components/Letter.js",
+      "source_location": "L1",
+      "id": "app_components_letter_js",
+      "community": 4,
+      "norm_label": "letter.js"
+    },
+    {
+      "label": "downloadPdf()",
+      "file_type": "code",
+      "source_file": "app/components/Letter.js",
+      "source_location": "L9",
+      "id": "components_letter_downloadpdf",
+      "community": 4,
+      "norm_label": "downloadpdf()"
+    },
+    {
+      "label": "LetterCard()",
+      "file_type": "code",
+      "source_file": "app/components/Letter.js",
+      "source_location": "L39",
+      "id": "components_letter_lettercard",
+      "community": 4,
+      "norm_label": "lettercard()"
+    },
+    {
+      "label": "Letter()",
+      "file_type": "code",
+      "source_file": "app/components/Letter.js",
+      "source_location": "L136",
+      "id": "components_letter_letter",
+      "community": 4,
+      "norm_label": "letter()"
+    },
+    {
+      "label": "ModelDropdown.js",
+      "file_type": "code",
+      "source_file": "app/components/ModelDropdown.js",
+      "source_location": "L1",
+      "id": "app_components_modeldropdown_js",
+      "community": 19,
+      "norm_label": "modeldropdown.js"
+    },
+    {
+      "label": "CustomDropdown()",
+      "file_type": "code",
+      "source_file": "app/components/ModelDropdown.js",
+      "source_location": "L9",
+      "id": "components_modeldropdown_customdropdown",
+      "community": 19,
+      "norm_label": "customdropdown()"
+    },
+    {
+      "label": "Navbar.js",
+      "file_type": "code",
+      "source_file": "app/components/Navbar.js",
+      "source_location": "L1",
+      "id": "app_components_navbar_js",
+      "community": 0,
+      "norm_label": "navbar.js"
+    },
+    {
+      "label": "Navbar()",
+      "file_type": "code",
+      "source_file": "app/components/Navbar.js",
+      "source_location": "L10",
+      "id": "components_navbar_navbar",
+      "community": 0,
+      "norm_label": "navbar()"
+    },
+    {
+      "label": "RightJDInput.js",
+      "file_type": "code",
+      "source_file": "app/components/RightJDInput.js",
+      "source_location": "L1",
+      "id": "app_components_rightjdinput_js",
+      "community": 20,
+      "norm_label": "rightjdinput.js"
+    },
+    {
+      "label": "RightJDInput()",
+      "file_type": "code",
+      "source_file": "app/components/RightJDInput.js",
+      "source_location": "L6",
+      "id": "components_rightjdinput_rightjdinput",
+      "community": 20,
+      "norm_label": "rightjdinput()"
+    },
+    {
+      "label": "V2FeaturesModal.js",
+      "file_type": "code",
+      "source_file": "app/components/V2FeaturesModal.js",
+      "source_location": "L1",
+      "id": "app_components_v2featuresmodal_js",
+      "community": 21,
+      "norm_label": "v2featuresmodal.js"
+    },
+    {
+      "label": "V2FeaturesModal()",
+      "file_type": "code",
+      "source_file": "app/components/V2FeaturesModal.js",
+      "source_location": "L25",
+      "id": "components_v2featuresmodal_v2featuresmodal",
+      "community": 21,
+      "norm_label": "v2featuresmodal()"
+    },
+    {
+      "label": "HistoryModal.js",
+      "file_type": "code",
+      "source_file": "app/components/Auth/HistoryModal.js",
+      "source_location": "L1",
+      "id": "app_components_auth_historymodal_js",
+      "community": 22,
+      "norm_label": "historymodal.js"
+    },
+    {
+      "label": "HistoryModal()",
+      "file_type": "code",
+      "source_file": "app/components/Auth/HistoryModal.js",
+      "source_location": "L4",
+      "id": "auth_historymodal_historymodal",
+      "community": 22,
+      "norm_label": "historymodal()"
+    },
+    {
+      "label": "Profile.js",
+      "file_type": "code",
+      "source_file": "app/components/Auth/Profile.js",
+      "source_location": "L1",
+      "id": "app_components_auth_profile_js",
+      "community": 2,
+      "norm_label": "profile.js"
+    },
+    {
+      "label": "cleanJobDescription()",
+      "file_type": "code",
+      "source_file": "app/components/Auth/Profile.js",
+      "source_location": "L12",
+      "id": "auth_profile_cleanjobdescription",
+      "community": 2,
+      "norm_label": "cleanjobdescription()"
+    },
+    {
+      "label": "downloadPdf()",
+      "file_type": "code",
+      "source_file": "app/components/Auth/Profile.js",
+      "source_location": "L24",
+      "id": "auth_profile_downloadpdf",
+      "community": 2,
+      "norm_label": "downloadpdf()"
+    },
+    {
+      "label": "SkeletonCard()",
+      "file_type": "code",
+      "source_file": "app/components/Auth/Profile.js",
+      "source_location": "L55",
+      "id": "auth_profile_skeletoncard",
+      "community": 2,
+      "norm_label": "skeletoncard()"
+    },
+    {
+      "label": "SavedLetterCard()",
+      "file_type": "code",
+      "source_file": "app/components/Auth/Profile.js",
+      "source_location": "L78",
+      "id": "auth_profile_savedlettercard",
+      "community": 2,
+      "norm_label": "savedlettercard()"
+    },
+    {
+      "label": "Profile()",
+      "file_type": "code",
+      "source_file": "app/components/Auth/Profile.js",
+      "source_location": "L256",
+      "id": "auth_profile_profile",
+      "community": 2,
+      "norm_label": "profile()"
+    },
+    {
+      "label": "FeatureGrid.jsx",
+      "file_type": "code",
+      "source_file": "app/components/landing/FeatureGrid.jsx",
+      "source_location": "L1",
+      "id": "app_components_landing_featuregrid_jsx",
+      "community": 23,
+      "norm_label": "featuregrid.jsx"
+    },
+    {
+      "label": "FeatureGrid()",
+      "file_type": "code",
+      "source_file": "app/components/landing/FeatureGrid.jsx",
+      "source_location": "L63",
+      "id": "landing_featuregrid_featuregrid",
+      "community": 23,
+      "norm_label": "featuregrid()"
+    },
+    {
+      "label": "FinalCTA.jsx",
+      "file_type": "code",
+      "source_file": "app/components/landing/FinalCTA.jsx",
+      "source_location": "L1",
+      "id": "app_components_landing_finalcta_jsx",
+      "community": 24,
+      "norm_label": "finalcta.jsx"
+    },
+    {
+      "label": "FinalCTA()",
+      "file_type": "code",
+      "source_file": "app/components/landing/FinalCTA.jsx",
+      "source_location": "L6",
+      "id": "landing_finalcta_finalcta",
+      "community": 24,
+      "norm_label": "finalcta()"
+    },
+    {
+      "label": "HeroSection.jsx",
+      "file_type": "code",
+      "source_file": "app/components/landing/HeroSection.jsx",
+      "source_location": "L1",
+      "id": "app_components_landing_herosection_jsx",
+      "community": 25,
+      "norm_label": "herosection.jsx"
+    },
+    {
+      "label": "HeroSection()",
+      "file_type": "code",
+      "source_file": "app/components/landing/HeroSection.jsx",
+      "source_location": "L6",
+      "id": "landing_herosection_herosection",
+      "community": 25,
+      "norm_label": "herosection()"
+    },
+    {
+      "label": "HowItWorks.jsx",
+      "file_type": "code",
+      "source_file": "app/components/landing/HowItWorks.jsx",
+      "source_location": "L1",
+      "id": "app_components_landing_howitworks_jsx",
+      "community": 26,
+      "norm_label": "howitworks.jsx"
+    },
+    {
+      "label": "HowItWorks()",
+      "file_type": "code",
+      "source_file": "app/components/landing/HowItWorks.jsx",
+      "source_location": "L42",
+      "id": "landing_howitworks_howitworks",
+      "community": 26,
+      "norm_label": "howitworks()"
+    },
+    {
+      "label": "LandingFooter.jsx",
+      "file_type": "code",
+      "source_file": "app/components/landing/LandingFooter.jsx",
+      "source_location": "L1",
+      "id": "app_components_landing_landingfooter_jsx",
+      "community": 27,
+      "norm_label": "landingfooter.jsx"
+    },
+    {
+      "label": "LandingFooter()",
+      "file_type": "code",
+      "source_file": "app/components/landing/LandingFooter.jsx",
+      "source_location": "L5",
+      "id": "landing_landingfooter_landingfooter",
+      "community": 27,
+      "norm_label": "landingfooter()"
+    },
+    {
+      "label": "LandingNavbar.jsx",
+      "file_type": "code",
+      "source_file": "app/components/landing/LandingNavbar.jsx",
+      "source_location": "L1",
+      "id": "app_components_landing_landingnavbar_jsx",
+      "community": 28,
+      "norm_label": "landingnavbar.jsx"
+    },
+    {
+      "label": "LandingNavbar()",
+      "file_type": "code",
+      "source_file": "app/components/landing/LandingNavbar.jsx",
+      "source_location": "L8",
+      "id": "landing_landingnavbar_landingnavbar",
+      "community": 28,
+      "norm_label": "landingnavbar()"
+    },
+    {
+      "label": "LinkedInFeature.jsx",
+      "file_type": "code",
+      "source_file": "app/components/landing/LinkedInFeature.jsx",
+      "source_location": "L1",
+      "id": "app_components_landing_linkedinfeature_jsx",
+      "community": 29,
+      "norm_label": "linkedinfeature.jsx"
+    },
+    {
+      "label": "LinkedInFeature()",
+      "file_type": "code",
+      "source_file": "app/components/landing/LinkedInFeature.jsx",
+      "source_location": "L46",
+      "id": "landing_linkedinfeature_linkedinfeature",
+      "community": 29,
+      "norm_label": "linkedinfeature()"
+    },
+    {
+      "label": "PricingSection.jsx",
+      "file_type": "code",
+      "source_file": "app/components/landing/PricingSection.jsx",
+      "source_location": "L1",
+      "id": "app_components_landing_pricingsection_jsx",
+      "community": 30,
+      "norm_label": "pricingsection.jsx"
+    },
+    {
+      "label": "PricingSection()",
+      "file_type": "code",
+      "source_file": "app/components/landing/PricingSection.jsx",
+      "source_location": "L42",
+      "id": "landing_pricingsection_pricingsection",
+      "community": 30,
+      "norm_label": "pricingsection()"
+    },
+    {
+      "label": "ProblemSection.jsx",
+      "file_type": "code",
+      "source_file": "app/components/landing/ProblemSection.jsx",
+      "source_location": "L1",
+      "id": "app_components_landing_problemsection_jsx",
+      "community": 31,
+      "norm_label": "problemsection.jsx"
+    },
+    {
+      "label": "ProblemSection()",
+      "file_type": "code",
+      "source_file": "app/components/landing/ProblemSection.jsx",
+      "source_location": "L48",
+      "id": "landing_problemsection_problemsection",
+      "community": 31,
+      "norm_label": "problemsection()"
+    },
+    {
+      "label": "ProductDemo.jsx",
+      "file_type": "code",
+      "source_file": "app/components/landing/ProductDemo.jsx",
+      "source_location": "L1",
+      "id": "app_components_landing_productdemo_jsx",
+      "community": 32,
+      "norm_label": "productdemo.jsx"
+    },
+    {
+      "label": "ProductDemo()",
+      "file_type": "code",
+      "source_file": "app/components/landing/ProductDemo.jsx",
+      "source_location": "L27",
+      "id": "landing_productdemo_productdemo",
+      "community": 32,
+      "norm_label": "productdemo()"
+    },
+    {
+      "label": "SolutionSection.jsx",
+      "file_type": "code",
+      "source_file": "app/components/landing/SolutionSection.jsx",
+      "source_location": "L1",
+      "id": "app_components_landing_solutionsection_jsx",
+      "community": 33,
+      "norm_label": "solutionsection.jsx"
+    },
+    {
+      "label": "SolutionSection()",
+      "file_type": "code",
+      "source_file": "app/components/landing/SolutionSection.jsx",
+      "source_location": "L5",
+      "id": "landing_solutionsection_solutionsection",
+      "community": 33,
+      "norm_label": "solutionsection()"
+    },
+    {
+      "label": "Testimonials.jsx",
+      "file_type": "code",
+      "source_file": "app/components/landing/Testimonials.jsx",
+      "source_location": "L1",
+      "id": "app_components_landing_testimonials_jsx",
+      "community": 34,
+      "norm_label": "testimonials.jsx"
+    },
+    {
+      "label": "Testimonials()",
+      "file_type": "code",
+      "source_file": "app/components/landing/Testimonials.jsx",
+      "source_location": "L29",
+      "id": "landing_testimonials_testimonials",
+      "community": 34,
+      "norm_label": "testimonials()"
+    },
+    {
+      "label": "WaveCanvas.jsx",
+      "file_type": "code",
+      "source_file": "app/components/landing/WaveCanvas.jsx",
+      "source_location": "L1",
+      "id": "app_components_landing_wavecanvas_jsx",
+      "community": 35,
+      "norm_label": "wavecanvas.jsx"
+    },
+    {
+      "label": "WaveCanvas()",
+      "file_type": "code",
+      "source_file": "app/components/landing/WaveCanvas.jsx",
+      "source_location": "L4",
+      "id": "landing_wavecanvas_wavecanvas",
+      "community": 35,
+      "norm_label": "wavecanvas()"
+    },
+    {
+      "label": "PricingCard.jsx",
+      "file_type": "code",
+      "source_file": "app/components/pricing/PricingCard.jsx",
+      "source_location": "L1",
+      "id": "app_components_pricing_pricingcard_jsx",
+      "community": 5,
+      "norm_label": "pricingcard.jsx"
+    },
+    {
+      "label": "PricingCard()",
+      "file_type": "code",
+      "source_file": "app/components/pricing/PricingCard.jsx",
+      "source_location": "L5",
+      "id": "pricing_pricingcard_pricingcard",
+      "community": 5,
+      "norm_label": "pricingcard()"
+    },
+    {
+      "label": "page.js",
+      "file_type": "code",
+      "source_file": "app/contact/page.js",
+      "source_location": "L1",
+      "id": "app_contact_page_js",
+      "community": 0,
+      "norm_label": "page.js"
+    },
+    {
+      "label": "ContactPage()",
+      "file_type": "code",
+      "source_file": "app/contact/page.js",
+      "source_location": "L6",
+      "id": "contact_page_contactpage",
+      "community": 0,
+      "norm_label": "contactpage()"
+    },
+    {
+      "label": "page.js",
+      "file_type": "code",
+      "source_file": "app/dashboard/page.js",
+      "source_location": "L1",
+      "id": "app_dashboard_page_js",
+      "community": 36,
+      "norm_label": "page.js"
+    },
+    {
+      "label": "Dashboard()",
+      "file_type": "code",
+      "source_file": "app/dashboard/page.js",
+      "source_location": "L10",
+      "id": "dashboard_page_dashboard",
+      "community": 36,
+      "norm_label": "dashboard()"
+    },
+    {
+      "label": "page.js",
+      "file_type": "code",
+      "source_file": "app/onboarding/page.js",
+      "source_location": "L1",
+      "id": "app_onboarding_page_js",
+      "community": 37,
+      "norm_label": "page.js"
+    },
+    {
+      "label": "OnboardingPage()",
+      "file_type": "code",
+      "source_file": "app/onboarding/page.js",
+      "source_location": "L8",
+      "id": "onboarding_page_onboardingpage",
+      "community": 37,
+      "norm_label": "onboardingpage()"
+    },
+    {
+      "label": "page.js",
+      "file_type": "code",
+      "source_file": "app/pricing/page.js",
+      "source_location": "L1",
+      "id": "app_pricing_page_js",
+      "community": 5,
+      "norm_label": "page.js"
+    },
+    {
+      "label": "PricingPage()",
+      "file_type": "code",
+      "source_file": "app/pricing/page.js",
+      "source_location": "L8",
+      "id": "pricing_page_pricingpage",
+      "community": 5,
+      "norm_label": "pricingpage()"
+    },
+    {
+      "label": "page.js",
+      "file_type": "code",
+      "source_file": "app/privacy-policy/page.js",
+      "source_location": "L1",
+      "id": "app_privacy_policy_page_js",
+      "community": 0,
+      "norm_label": "page.js"
+    },
+    {
+      "label": "PrivacyPolicyPage()",
+      "file_type": "code",
+      "source_file": "app/privacy-policy/page.js",
+      "source_location": "L9",
+      "id": "privacy_policy_page_privacypolicypage",
+      "community": 0,
+      "norm_label": "privacypolicypage()"
+    },
+    {
+      "label": "page.js",
+      "file_type": "code",
+      "source_file": "app/profile/page.js",
+      "source_location": "L1",
+      "id": "app_profile_page_js",
+      "community": 38,
+      "norm_label": "page.js"
+    },
+    {
+      "label": "page()",
+      "file_type": "code",
+      "source_file": "app/profile/page.js",
+      "source_location": "L4",
+      "id": "profile_page_page",
+      "community": 38,
+      "norm_label": "page()"
+    },
+    {
+      "label": "page.js",
+      "file_type": "code",
+      "source_file": "app/purchases/page.js",
+      "source_location": "L1",
+      "id": "app_purchases_page_js",
+      "community": 39,
+      "norm_label": "page.js"
+    },
+    {
+      "label": "PurchasesPage()",
+      "file_type": "code",
+      "source_file": "app/purchases/page.js",
+      "source_location": "L8",
+      "id": "purchases_page_purchasespage",
+      "community": 39,
+      "norm_label": "purchasespage()"
+    },
+    {
+      "label": "page.js",
+      "file_type": "code",
+      "source_file": "app/refund-policy/page.js",
+      "source_location": "L1",
+      "id": "app_refund_policy_page_js",
+      "community": 0,
+      "norm_label": "page.js"
+    },
+    {
+      "label": "RefundPolicyPage()",
+      "file_type": "code",
+      "source_file": "app/refund-policy/page.js",
+      "source_location": "L9",
+      "id": "refund_policy_page_refundpolicypage",
+      "community": 0,
+      "norm_label": "refundpolicypage()"
+    },
+    {
+      "label": "page.js",
+      "file_type": "code",
+      "source_file": "app/terms-and-conditions/page.js",
+      "source_location": "L1",
+      "id": "app_terms_and_conditions_page_js",
+      "community": 0,
+      "norm_label": "page.js"
+    },
+    {
+      "label": "TermsAndConditionsPage()",
+      "file_type": "code",
+      "source_file": "app/terms-and-conditions/page.js",
+      "source_location": "L9",
+      "id": "terms_and_conditions_page_termsandconditionspage",
+      "community": 0,
+      "norm_label": "termsandconditionspage()"
+    },
+    {
+      "label": "prompt.js",
+      "file_type": "code",
+      "source_file": "lib/prompt.js",
+      "source_location": "L1",
+      "id": "lib_prompt_js",
+      "community": 46,
+      "norm_label": "prompt.js"
+    },
+    {
+      "label": "SanitizeCovLetter.js",
+      "file_type": "code",
+      "source_file": "lib/SanitizeCovLetter.js",
+      "source_location": "L1",
+      "id": "lib_sanitizecovletter_js",
+      "community": 40,
+      "norm_label": "sanitizecovletter.js"
+    },
+    {
+      "label": "sanitizeCoverLetter()",
+      "file_type": "code",
+      "source_file": "lib/SanitizeCovLetter.js",
+      "source_location": "L1",
+      "id": "lib_sanitizecovletter_sanitizecoverletter",
+      "community": 40,
+      "norm_label": "sanitizecoverletter()"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "middleware.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "middleware_js",
+      "target": "cover_letter_writer_middleware_middleware",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_layout_js",
+      "target": "components_navbar_navbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.js",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "app_layout_js",
+      "target": "app_layout_rootlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "app_page_js",
+      "target": "app_page_home",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/sitemap.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "app_sitemap_js",
+      "target": "app_sitemap_sitemap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/about/page.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "app_about_page_js",
+      "target": "components_navbar_navbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/about/page.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "app_about_page_js",
+      "target": "about_page_aboutpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/fetch-jd/route.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_api_fetch_jd_route_ts",
+      "target": "fetch_jd_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/auth/page.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "app_auth_page_js",
+      "target": "auth_page_authpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/blogs/page.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "app_blogs_page_js",
+      "target": "blogs_page_formatdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/blogs/page.js",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "app_blogs_page_js",
+      "target": "blogs_page_getreadingtime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/blogs/page.js",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "app_blogs_page_js",
+      "target": "blogs_page_getexcerpt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/blogs/page.js",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "app_blogs_page_js",
+      "target": "blogs_page_blogspage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/blogs/[slug]/page.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_blogs_slug_page_js",
+      "target": "slug_page_generatestaticparams",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/blogs/[slug]/page.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "app_blogs_slug_page_js",
+      "target": "slug_page_generatemetadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/blogs/[slug]/page.js",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "app_blogs_slug_page_js",
+      "target": "slug_page_formatdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/blogs/[slug]/page.js",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "app_blogs_slug_page_js",
+      "target": "slug_page_getreadingtime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/blogs/[slug]/page.js",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "app_blogs_slug_page_js",
+      "target": "slug_page_blogpost",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/blogs/[slug]/page.js",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "slug_page_blogpost",
+      "target": "slug_page_formatdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/blogs/[slug]/page.js",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "slug_page_blogpost",
+      "target": "slug_page_getreadingtime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/AuthGuard.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "app_components_authguard_js",
+      "target": "components_authguard_authguard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Controls.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "app_components_controls_js",
+      "target": "components_controls_controls",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Footer.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "app_components_footer_js",
+      "target": "components_footer_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/GoogleProviderWrapper.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_components_googleproviderwrapper_js",
+      "target": "components_googleproviderwrapper_googleproviderwrapper",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Header.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_components_header_js",
+      "target": "components_header_header",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/IntroModal.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "app_components_intromodal_js",
+      "target": "components_intromodal_intromodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/JDInputSection.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_components_jdinputsection_js",
+      "target": "components_jdinputsection_jdinputsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/LeftOptions.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_components_leftoptions_js",
+      "target": "components_leftoptions_leftoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Letter.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "app_components_letter_js",
+      "target": "components_letter_downloadpdf",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Letter.js",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "app_components_letter_js",
+      "target": "components_letter_lettercard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Letter.js",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "app_components_letter_js",
+      "target": "components_letter_letter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/ModelDropdown.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "app_components_modeldropdown_js",
+      "target": "components_modeldropdown_customdropdown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Navbar.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "app_components_navbar_js",
+      "target": "components_navbar_navbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/contact/page.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "app_contact_page_js",
+      "target": "components_navbar_navbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/pricing/page.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_pricing_page_js",
+      "target": "components_navbar_navbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/privacy-policy/page.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "app_privacy_policy_page_js",
+      "target": "components_navbar_navbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/refund-policy/page.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "app_refund_policy_page_js",
+      "target": "components_navbar_navbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/terms-and-conditions/page.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "app_terms_and_conditions_page_js",
+      "target": "components_navbar_navbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/RightJDInput.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_components_rightjdinput_js",
+      "target": "components_rightjdinput_rightjdinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/V2FeaturesModal.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "app_components_v2featuresmodal_js",
+      "target": "components_v2featuresmodal_v2featuresmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Auth/HistoryModal.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_components_auth_historymodal_js",
+      "target": "auth_historymodal_historymodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Auth/Profile.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "app_components_auth_profile_js",
+      "target": "auth_profile_cleanjobdescription",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Auth/Profile.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "app_components_auth_profile_js",
+      "target": "auth_profile_downloadpdf",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Auth/Profile.js",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "app_components_auth_profile_js",
+      "target": "auth_profile_skeletoncard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Auth/Profile.js",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "app_components_auth_profile_js",
+      "target": "auth_profile_savedlettercard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Auth/Profile.js",
+      "source_location": "L256",
+      "weight": 1.0,
+      "source": "app_components_auth_profile_js",
+      "target": "auth_profile_profile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Auth/Profile.js",
+      "source_location": "L210",
+      "weight": 1.0,
+      "source": "auth_profile_savedlettercard",
+      "target": "auth_profile_cleanjobdescription",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/landing/FeatureGrid.jsx",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "app_components_landing_featuregrid_jsx",
+      "target": "landing_featuregrid_featuregrid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/landing/FinalCTA.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_components_landing_finalcta_jsx",
+      "target": "landing_finalcta_finalcta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/landing/HeroSection.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_components_landing_herosection_jsx",
+      "target": "landing_herosection_herosection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/landing/HowItWorks.jsx",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "app_components_landing_howitworks_jsx",
+      "target": "landing_howitworks_howitworks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/landing/LandingFooter.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_components_landing_landingfooter_jsx",
+      "target": "landing_landingfooter_landingfooter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/landing/LandingNavbar.jsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "app_components_landing_landingnavbar_jsx",
+      "target": "landing_landingnavbar_landingnavbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/landing/LinkedInFeature.jsx",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "app_components_landing_linkedinfeature_jsx",
+      "target": "landing_linkedinfeature_linkedinfeature",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/landing/PricingSection.jsx",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "app_components_landing_pricingsection_jsx",
+      "target": "landing_pricingsection_pricingsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/landing/ProblemSection.jsx",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "app_components_landing_problemsection_jsx",
+      "target": "landing_problemsection_problemsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/landing/ProductDemo.jsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "app_components_landing_productdemo_jsx",
+      "target": "landing_productdemo_productdemo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/landing/SolutionSection.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_components_landing_solutionsection_jsx",
+      "target": "landing_solutionsection_solutionsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/landing/Testimonials.jsx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "app_components_landing_testimonials_jsx",
+      "target": "landing_testimonials_testimonials",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/landing/WaveCanvas.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_components_landing_wavecanvas_jsx",
+      "target": "landing_wavecanvas_wavecanvas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/pricing/PricingCard.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_components_pricing_pricingcard_jsx",
+      "target": "pricing_pricingcard_pricingcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/pricing/page.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_pricing_page_js",
+      "target": "pricing_pricingcard_pricingcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/contact/page.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_contact_page_js",
+      "target": "contact_page_contactpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/dashboard/page.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "app_dashboard_page_js",
+      "target": "dashboard_page_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/onboarding/page.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "app_onboarding_page_js",
+      "target": "onboarding_page_onboardingpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/pricing/page.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "app_pricing_page_js",
+      "target": "pricing_page_pricingpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/privacy-policy/page.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "app_privacy_policy_page_js",
+      "target": "privacy_policy_page_privacypolicypage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/profile/page.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_profile_page_js",
+      "target": "profile_page_page",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/purchases/page.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "app_purchases_page_js",
+      "target": "purchases_page_purchasespage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/refund-policy/page.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "app_refund_policy_page_js",
+      "target": "refund_policy_page_refundpolicypage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/terms-and-conditions/page.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "app_terms_and_conditions_page_js",
+      "target": "terms_and_conditions_page_termsandconditionspage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/SanitizeCovLetter.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "lib_sanitizecovletter_js",
+      "target": "lib_sanitizecovletter_sanitizecoverletter",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "8984ceb1c801a5e31c1533d450790bc65bcc51f0"
+}
