@@ -1,7 +1,7 @@
 import blogsData from "../local_data/covgen-blogs.json";
 
 export default function sitemap() {
-  const baseUrl = "https://covgen.samsdev.xyz";
+  const baseUrl = "https://covgen-ai.vercel.app";
 
   // Static public pages
   const staticPages = [

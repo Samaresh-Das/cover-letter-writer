@@ -1,5 +1,5 @@
 export default function robots() {
-  const baseUrl = "https://covgen.samsdev.xyz";
+  const baseUrl = "https://covgen-ai.vercel.app";
 
   return {
     rules: [
