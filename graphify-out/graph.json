@@ -79,7 +79,7 @@
       "label": "RootLayout()",
       "file_type": "code",
       "source_file": "app/layout.js",
-      "source_location": "L81",
+      "source_location": "L85",
       "id": "app_layout_rootlayout",
       "community": 0,
       "norm_label": "rootlayout()"
@@ -877,10 +877,28 @@
       "norm_label": "page.js"
     },
     {
+      "label": "isClientRateLimited()",
+      "file_type": "code",
+      "source_file": "app/contact/page.js",
+      "source_location": "L30",
+      "id": "contact_page_isclientratelimited",
+      "community": 0,
+      "norm_label": "isclientratelimited()"
+    },
+    {
+      "label": "recordClientSubmission()",
+      "file_type": "code",
+      "source_file": "app/contact/page.js",
+      "source_location": "L42",
+      "id": "contact_page_recordclientsubmission",
+      "community": 0,
+      "norm_label": "recordclientsubmission()"
+    },
+    {
       "label": "ContactPage()",
       "file_type": "code",
       "source_file": "app/contact/page.js",
-      "source_location": "L6",
+      "source_location": "L55",
       "id": "contact_page_contactpage",
       "community": 0,
       "norm_label": "contactpage()"
@@ -1703,6 +1721,26 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/contact/page.js",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "app_contact_page_js",
+      "target": "contact_page_isclientratelimited",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/contact/page.js",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "app_contact_page_js",
+      "target": "contact_page_recordclientsubmission",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/contact/page.js",
       "source_location": "L6",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -1801,5 +1839,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "84835de4d84d7bc8d8d9984f892f56ebec83f295"
+  "built_at_commit": "9e5f851081f88b3913507f333ef2fdaf2db5b5d6"
 }

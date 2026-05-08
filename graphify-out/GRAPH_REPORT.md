@@ -1,16 +1,16 @@
 # Graph Report - cover-letter-writer  (2026-05-08)
 
 ## Corpus Check
-- 55 files · ~72,540 words
+- 55 files · ~72,956 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 117 nodes · 73 edges · 48 communities (45 shown, 3 thin omitted)
+- 119 nodes · 75 edges · 48 communities (45 shown, 3 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `84835de4`
+- Built from commit: `9e5f8510`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -45,6 +45,6 @@ Nodes (3): BlogPost(), formatDate(), getReadingTime()
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Navbar()` connect `Community 0` to `Community 5`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.14 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.12 - nodes in this community are weakly interconnected._
