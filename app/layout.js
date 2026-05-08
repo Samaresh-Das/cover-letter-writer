@@ -34,7 +34,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata = {
-  manifest: "/manifest.webmanifest",
+  metadataBase: new URL("https://covgen-ai.vercel.app"),
+  manifest: "/manifest.json",
   title: "CovGen – Cover Letter Generator",
   description:
     "CovGen is your AI-powered assistant to generate personalized, professional cover letters in seconds. Paste a job description, customize your details, and get a tailored letter aligned with your skills and experience.",
