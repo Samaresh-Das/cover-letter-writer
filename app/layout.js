@@ -98,7 +98,6 @@ export default async function RootLayout({ children }) {
             <Toaster position="bottom-center" />
           </AuthGuard>
         </GoogleProviderWrapper>
-        <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
       </body>
     </html>
   );

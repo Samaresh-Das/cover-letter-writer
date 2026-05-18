@@ -19,15 +19,28 @@ export default function PricingPage() {
         return () => window.removeEventListener('userUpdated', loadUser);
     }, []);
 
-    // ── Shared Razorpay payment flow ────────────────────────────────────
+    /**
+     * ── initiateRazorpayPayment ──
+     * 
+     * Initiates the checkout process using Razorpay Hosted Checkout (Payment Links API).
+     * 1. Fetches a secure payment link from our backend for the selected itemId (e.g. 'pack_40').
+     * 2. If successful, redirects the user's browser (window.location.href) directly to
+     *    the secure checkout page hosted by Razorpay.
+     * 
+     * @param {string} itemId - The ID of the item being purchased (e.g. 'pro', 'pack_40')
+     */
     const initiateRazorpayPayment = async (itemId) => {
+        // Retrieve JWT token for authorizing the order creation
         const token = localStorage.getItem('token');
         if (!token) return toast.error("Please login to make a purchase.");
 
+        // Set local loading state to show loading spinner on the card button
         setIsLoading(prev => ({ ...prev, [itemId]: true }));
 
         try {
-            // ── Step 1: Create order on backend ─────────────────────────
+            // ── Step 1: Request Payment Link creation from Backend ──────
+            // We pass the itemId. The backend acts as the single source of truth for
+            // price values to prevent malicious client-side price tampering.
             const orderRes = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/payment/create-order`, {
                 method: "POST",
                 headers: {
@@ -38,105 +51,28 @@ export default function PricingPage() {
             });
             const orderData = await orderRes.json();
 
+            // Handle errors (e.g., database failures, auth errors, network timeouts)
             if (!orderRes.ok) {
                 toast.error(orderData.message || "Failed to create order.");
                 setIsLoading(prev => ({ ...prev, [itemId]: false }));
                 return;
             }
 
-            // ── Step 2: Open Razorpay modal ─────────────────────────────
-            let paymentSuccess = false;
-            const options = {
-                key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
-                amount: orderData.amount,
-                currency: orderData.currency,
-                name: "CovGen",
-                description: orderData.itemLabel,
-                order_id: orderData.orderId,
-                handler: async function (response) {
-                    paymentSuccess = true;
-                    // ── Step 3: Verify payment on backend ───────────────
-                    await verifyPayment(response, itemId);
-                },
-                prefill: {
-                    name: user?.name || "",
-                    email: user?.email || "",
-                },
-                theme: {
-                    color: "#4F46E5",
-                },
-                modal: {
-                    ondismiss: function () {
-                        if (!paymentSuccess) {
-                            toast("Payment cancelled.", { icon: "ℹ️" });
-                            setIsLoading(prev => ({ ...prev, [itemId]: false }));
-                        }
-                    },
-                },
-            };
-
-            // Check if Razorpay script is loaded
-            if (typeof window.Razorpay === "undefined") {
-                toast.error("Payment gateway is loading. Please try again in a moment.");
+            // ── Step 2: Redirect to Razorpay Hosted Checkout ────────────
+            // The backend returns a pre-signed Payment Link URL (paymentLink.short_url).
+            // We change the window location to this URL, taking the user away from our
+            // app to complete the transaction safely on Razorpay's site.
+            if (orderData.paymentLinkUrl) {
+                window.location.href = orderData.paymentLinkUrl;
+            } else {
+                toast.error("Invalid payment link received.");
                 setIsLoading(prev => ({ ...prev, [itemId]: false }));
-                return;
             }
-
-            const rzp = new window.Razorpay(options);
-
-            rzp.on("payment.failed", function (response) {
-                toast.error(response.error?.description || "Payment failed. Please try again.");
-                setIsLoading(prev => ({ ...prev, [itemId]: false }));
-            });
-
-            rzp.open();
         } catch (err) {
             console.error("Payment initiation error:", err);
             toast.error("Network error. Please try again.");
-            setIsLoading(prev => ({ ...prev, [itemId]: false }));
         } finally {
-            // Don't clear loading here — it's cleared in handler/ondismiss/failed
-        }
-    };
-
-    // ── Verify payment after Razorpay modal success ─────────────────────
-    const verifyPayment = async (response, itemId) => {
-        const token = localStorage.getItem('token');
-
-        try {
-            const verifyRes = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/payment/verify-payment`, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": `Bearer ${token}`
-                },
-                body: JSON.stringify({
-                    razorpay_order_id: response.razorpay_order_id,
-                    razorpay_payment_id: response.razorpay_payment_id,
-                    razorpay_signature: response.razorpay_signature,
-                })
-            });
-            const verifyData = await verifyRes.json();
-
-            if (verifyRes.ok) {
-                toast.success(`Payment successful! You now have ${verifyData.creditsRemaining} credits.`);
-                // Update local user state
-                if (user) {
-                    const updatedUser = {
-                        ...user,
-                        credits: verifyData.creditsRemaining,
-                        ...(verifyData.plan && { plan: verifyData.plan }),
-                    };
-                    localStorage.setItem('user', JSON.stringify(updatedUser));
-                    window.dispatchEvent(new Event("userUpdated"));
-                }
-            } else {
-                toast.error(verifyData.message || "Payment verification failed. Contact support.");
-            }
-        } catch (err) {
-            console.error("Payment verification error:", err);
-            toast.error("Verification failed. If money was debited, it will be refunded automatically.");
-        } finally {
+            // Revert loading state regardless of outcome
             setIsLoading(prev => ({ ...prev, [itemId]: false }));
         }
     };
