@@ -5,18 +5,25 @@ import { Navbar } from "./components/Navbar";
 export const metadata = {
   metadataBase: new URL("https://covgen-ai.vercel.app"),
   manifest: "/manifest.json",
-  title: "CovGen – Cover Letter Generator",
-  description:
-    "CovGen is your AI-powered assistant to generate personalized, professional cover letters in seconds. Paste a job description, customize your details, and get a tailored letter aligned with your skills and experience.",
+  title: "AI Resume Builder & Cover Letter Generator — ATS Optimized | CovGen",
+  description: "Build ATS-optimized resumes and generate personalized cover letters with AI in seconds. Paste a job description, get a tailored application. Used by 5,000+ job seekers.",
   keywords: [
-    "AI cover letter",
-    "cover letter generator",
-    "Next.js cover letter tool",
-    "personalized cover letter",
+    "AI resume builder",
+    "AI cover letter generator",
+    "ATS optimized resume",
+    "cover letter generator free",
+    "AI cover letter from job description",
+    "resume builder AI",
+    "LinkedIn job cover letter",
+    "free cover letter generator",
+    "ATS resume checker",
+    "job application AI tool",
+    "cover letter from LinkedIn",
+    "AI resume writer",
+    "best cover letter generator 2026",
+    "resume builder ATS friendly",
     "CovGen",
-    "job application",
-    "resume",
-    "job seeker tools"
+    "Next.js cover letter tool"
   ],
   authors: [{ name: "Samaresh Das", url: "https://portfolio-2-tau-sable.vercel.app/" }],
   icons: {
@@ -24,20 +31,25 @@ export const metadata = {
     apple: "/logo.png",
   },
   openGraph: {
-    title: "CovGen – Create Job-Winning Cover Letters Instantly",
-    description:
-      "CovGen helps job seekers generate AI-powered cover letters based on real job descriptions with modern design and features.",
+    title: "AI Resume Builder & Cover Letter Generator",
+    description: "Generate ATS-optimized resumes and personalized cover letters in seconds.",
     url: "https://covgen-ai.vercel.app/",
     siteName: "CovGen",
     images: [
       {
-        url: "https://your-app.vercel.app/og-image.png",
+        url: "https://covgen-ai.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "CovGen App Preview"
       }
     ],
     type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Resume Builder & Cover Letter Generator",
+    description: "Generate ATS-optimized resumes and cover letters in seconds. Free to start.",
+    images: ["https://covgen-ai.vercel.app/og-image.png"]
   },
   verification: {
     google: "H3Nzgw2aM8kSSZm3bnMKtygZ9lDBUapHc3pkBWeFb0Y",
@@ -52,8 +64,27 @@ import V2FeaturesModal from "./components/V2FeaturesModal";
 import { Toaster } from "react-hot-toast";
 
 export default async function RootLayout({ children }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "CovGen",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className="antialiased"
         suppressHydrationWarning
