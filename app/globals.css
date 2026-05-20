@@ -6,29 +6,42 @@
 
 /* ─── Landing Page Design Tokens ─── */
 :root {
-  --landing-bg: #FAFBFF;
-  --landing-bg-alt: #F0F4FF;
-  --landing-primary: #3B82F6;
-  --landing-primary-dark: #1D4ED8;
-  --landing-primary-light: #93C5FD;
-  --landing-accent: #8B5CF6;
-  --landing-accent-warm: #F97316;
-  --landing-surface: #FFFFFF;
-  --landing-text: #0F172A;
+  --font-geist-sans:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-geist-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --font-inter:
+    Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-space-grotesk:
+    "Space Grotesk", Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --font-dm-sans:
+    "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --landing-bg: #fafbff;
+  --landing-bg-alt: #f0f4ff;
+  --landing-primary: #3b82f6;
+  --landing-primary-dark: #1d4ed8;
+  --landing-primary-light: #93c5fd;
+  --landing-accent: #8b5cf6;
+  --landing-accent-warm: #f97316;
+  --landing-surface: #ffffff;
+  --landing-text: #0f172a;
   --landing-text-muted: #475569;
-  --landing-gradient-1: linear-gradient(135deg, #3B82F6, #8B5CF6);
-  --landing-gradient-2: linear-gradient(135deg, #3B82F6, #06B6D4);
-  --landing-gradient-3: linear-gradient(135deg, #8B5CF6, #EC4899);
+  --landing-gradient-1: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  --landing-gradient-2: linear-gradient(135deg, #3b82f6, #06b6d4);
+  --landing-gradient-3: linear-gradient(135deg, #8b5cf6, #ec4899);
 
   /* Claymorphism */
   --clay-radius: 20px;
   --clay-border: 2px solid rgba(59, 130, 246, 0.12);
-  --clay-shadow: 6px 6px 16px rgba(59, 130, 246, 0.06),
-                 -4px -4px 12px rgba(255, 255, 255, 0.8),
-                 inset 0 1px 0 rgba(255, 255, 255, 0.6);
-  --clay-shadow-hover: 8px 8px 20px rgba(59, 130, 246, 0.10),
-                       -6px -6px 16px rgba(255, 255, 255, 0.9),
-                       inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  --clay-shadow:
+    6px 6px 16px rgba(59, 130, 246, 0.06),
+    -4px -4px 12px rgba(255, 255, 255, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  --clay-shadow-hover:
+    8px 8px 20px rgba(59, 130, 246, 0.1),
+    -6px -6px 16px rgba(255, 255, 255, 0.9),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 /* ─── Smooth Scroll ─── */
@@ -38,7 +51,9 @@ html {
 
 /* ─── Reduced Motion ─── */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -50,7 +65,7 @@ html {
 .landing-page {
   background-color: var(--landing-bg);
   color: var(--landing-text);
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: "DM Sans", system-ui, sans-serif;
   overflow-x: hidden;
 }
 
@@ -60,7 +75,7 @@ html {
 .landing-page h4,
 .landing-page h5,
 .landing-page h6 {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: "Space Grotesk", system-ui, sans-serif;
 }
 
 /* ─── Claymorphism Card ─── */
@@ -69,7 +84,9 @@ html {
   border: var(--clay-border);
   border-radius: var(--clay-radius);
   box-shadow: var(--clay-shadow);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
 .clay-card:hover {
@@ -122,7 +139,7 @@ html {
 }
 
 .gradient-border::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: -2px;
   border-radius: calc(var(--clay-radius) + 2px);
@@ -143,7 +160,9 @@ html {
   border: none;
   cursor: pointer;
   font-size: 1rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
 }
 
@@ -164,7 +183,9 @@ html {
   border: var(--clay-border);
   cursor: pointer;
   font-size: 1rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   box-shadow: var(--clay-shadow);
 }
 
@@ -242,48 +263,80 @@ textarea:focus {
 }
 
 .landing-page::-webkit-scrollbar-thumb {
-  background-color: #93C5FD;
+  background-color: #93c5fd;
   border: 2px solid #f1f5f9;
 }
 
 .landing-page::-webkit-scrollbar-thumb:hover {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 .landing-page {
-  scrollbar-color: #93C5FD #f1f5f9;
+  scrollbar-color: #93c5fd #f1f5f9;
 }
 
 /* ─── Pipeline Flow Animation ─── */
 @keyframes flowPulse {
-  0%, 100% { opacity: 0.3; transform: scaleX(0.95); }
-  50% { opacity: 1; transform: scaleX(1); }
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scaleX(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
 }
 
 @keyframes dotFlow {
-  0% { left: 0; opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { left: 100%; opacity: 0; }
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
 }
 
 @keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink {
-  50% { border-color: transparent; }
+  50% {
+    border-color: transparent;
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
 
 /* ─── Blog Content Styles ─── */
@@ -324,7 +377,7 @@ textarea:focus {
 .blog-content blockquote {
   margin: 1.5rem 0;
   padding: 1rem 1.5rem;
-  border-left: 4px solid #3B82F6;
+  border-left: 4px solid #3b82f6;
   background: #f0f7ff;
   border-radius: 0 12px 12px 0;
   font-style: italic;
@@ -332,14 +385,14 @@ textarea:focus {
 }
 
 .blog-content a {
-  color: #3B82F6;
+  color: #3b82f6;
   text-decoration: underline;
   text-underline-offset: 2px;
   transition: color 0.2s;
 }
 
 .blog-content a:hover {
-  color: #1D4ED8;
+  color: #1d4ed8;
 }
 
 /* Line clamp utility */
@@ -355,4 +408,539 @@ textarea:focus {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/*
+  Resume builder: controlled, print-safe templates.
+
+  Called from:
+  - app/components/resumes/ResumeTemplate.js, which emits .resume-paper and
+    .resume-template-${template}.
+  - app/resumes/preview/[id]/page.js, which wraps the printable resume in
+    .resume-print-stage so @media print can hide all dashboard/sidebar UI.
+
+  Product rule:
+  - AI produces content JSON only. These CSS classes own layout, typography,
+    print behavior, spacing, and template style.
+*/
+.resume-paper {
+  width: 8.5in;
+  min-height: 11in;
+  margin: 0 auto;
+  background: #ffffff;
+  color: #111827;
+  padding: 0.62in;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.42;
+  box-shadow: 0 16px 45px rgba(15, 23, 42, 0.16);
+}
+
+.resume-header {
+  border-bottom: 1px solid #111827;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.resume-header h1 {
+  font-size: 24pt;
+  line-height: 1.05;
+  margin: 0;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/*
+  Contact data is rendered as normal selectable text spans instead of icons or
+  decorative graphics. This helps the ATS-safe template remain machine-readable.
+*/
+.resume-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin-top: 7px;
+  font-size: 9pt;
+  color: #374151;
+}
+
+/*
+  Section/page-break rules reduce broken experience/project entries when the
+  user prints to PDF. Browser pagination is still imperfect, but keeping each
+  section/item break-inside: avoid is the Phase 1 mitigation.
+*/
+.resume-section {
+  margin-top: 12px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.resume-section h2 {
+  margin: 0 0 6px;
+  border-bottom: 1px solid #d1d5db;
+  padding-bottom: 3px;
+  font-size: 10pt;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.resume-section p {
+  margin: 0;
+}
+
+.resume-item {
+  margin-top: 8px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Shared row layout for role/date, degree/date, and project/date pairs. */
+.resume-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.resume-row h3 {
+  margin: 0;
+  font-size: 10.5pt;
+  font-weight: 700;
+}
+
+.resume-row span {
+  flex: 0 0 auto;
+  font-size: 9pt;
+  color: #4b5563;
+}
+
+.resume-subline {
+  color: #374151;
+  font-size: 9.5pt;
+  font-style: italic;
+}
+
+.resume-paper ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin: 4px 0 0 17px;
+  padding: 0;
+}
+
+.resume-paper li {
+  display: list-item;
+  margin: 2px 0;
+  padding-left: 2px;
+}
+
+.resume-list-text {
+  color: #111827;
+}
+
+/*
+  Template: Modern Startup.
+  Selected by template ID "modern-startup" from lib/resumes/template-data.js and
+  stored in covgen-server/models/generated-resume.js.
+*/
+.resume-template-modern-startup {
+  border-top: 10px solid #ea580c;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+.resume-template-modern-startup .resume-header {
+  border-bottom: 2px solid #fed7aa;
+}
+
+.resume-template-modern-startup .resume-section h2 {
+  color: #c2410c;
+  border-bottom-color: #fed7aa;
+}
+
+/*
+  Template: Executive Minimal.
+  Selected by template ID "executive-minimal". Uses restrained typography for
+  senior profiles while preserving selectable text and semantic headings.
+*/
+.resume-template-executive-minimal {
+  padding: 0.72in;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.resume-template-executive-minimal .resume-header {
+  text-align: center;
+  border-bottom: 1px solid #9ca3af;
+}
+
+.resume-template-executive-minimal .resume-contact {
+  justify-content: center;
+}
+
+.resume-template-executive-minimal .resume-section h2 {
+  border-bottom-color: #9ca3af;
+  color: #1f2937;
+}
+
+.resume-template-designer-ux {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 0.9rem 1.2rem;
+  padding: 0.75in;
+}
+
+.resume-template-designer-ux .resume-paper {
+  background: #ffffff;
+}
+
+.resume-template-designer-ux .resume-header {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: end;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.resume-template-designer-ux .resume-header h1 {
+  font-size: 30pt;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.resume-template-designer-ux .resume-contact {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  color: #475569;
+  font-size: 9pt;
+}
+
+.resume-template-designer-ux .resume-section {
+  margin-top: 1.35rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.resume-template-designer-ux .resume-section h2 {
+  margin: 0 0 0.55rem;
+  font-size: 10.5pt;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #334155;
+  border-bottom: 1px solid rgba(100, 116, 139, 0.12);
+  padding-bottom: 0.35rem;
+}
+
+.resume-template-designer-ux .resume-section p {
+  margin: 0;
+}
+
+.resume-template-designer-ux .resume-item {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.resume-template-designer-ux .resume-item:last-child {
+  border-bottom: none;
+}
+
+.resume-template-designer-ux .resume-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.resume-template-designer-ux .resume-row h3 {
+  margin: 0;
+  font-size: 11pt;
+  font-weight: 700;
+}
+
+.resume-template-designer-ux .resume-row span {
+  flex: 0 0 auto;
+  font-size: 9pt;
+  color: #64748b;
+}
+
+.resume-template-designer-ux .resume-subline {
+  color: #475569;
+  font-size: 9.5pt;
+  font-style: normal;
+  margin: 0;
+}
+
+.resume-template-designer-ux ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin: 0.45rem 0 0 1.25rem;
+  padding: 0;
+}
+
+.resume-template-designer-ux li {
+  margin: 0.35rem 0;
+  padding-left: 2px;
+}
+
+.resume-template-designer-ux .resume-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.65rem;
+}
+
+.resume-template-designer-ux .resume-skills-list span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #334155;
+  font-size: 8.8pt;
+}
+
+.resume-template-designer-ux .designer-ux-summary {
+  grid-column: 1 / -1;
+}
+
+.resume-template-designer-ux .designer-ux-skills,
+.resume-template-designer-ux .designer-ux-education,
+.resume-template-designer-ux .designer-ux-certifications,
+.resume-template-designer-ux .designer-ux-achievements {
+  grid-column: 2 / 3;
+}
+
+.resume-template-designer-ux .designer-ux-experience,
+.resume-template-designer-ux .designer-ux-work {
+  grid-column: 1 / 2;
+}
+
+.resume-template-designer-ux .designer-ux-work h2,
+.resume-template-designer-ux .designer-ux-experience h2 {
+  margin-bottom: 0.8rem;
+}
+
+.resume-template-designer-product {
+  border-top: 10px solid #166534;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+.resume-template-designer-product .resume-header {
+  border-bottom: 2px solid #d9f99d;
+  margin-bottom: 22px;
+}
+
+.resume-template-designer-product .resume-header h1 {
+  font-size: 25pt;
+}
+
+.resume-template-designer-product .resume-section h2 {
+  color: #166534;
+  border-bottom-color: #d9f99d;
+}
+
+.resume-template-executive-elite {
+  background: #fbfbfb;
+  padding: 0.72in;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.resume-template-executive-elite .resume-paper {
+  background: #fbfbfb;
+}
+
+.resume-template-executive-elite .resume-header {
+  text-align: center;
+  border-bottom: none;
+}
+
+.resume-template-executive-elite .resume-contact {
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.resume-template-executive-elite .resume-section {
+  padding: 14px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  margin-top: 18px;
+}
+
+.resume-template-executive-elite .resume-section h2 {
+  border-bottom-color: #cbd5e1;
+  color: #111827;
+}
+
+.resume-template-data-ai {
+  border-top: 10px solid #0f172a;
+  font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
+}
+
+.resume-template-data-ai .resume-header {
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 18px;
+}
+
+.resume-template-data-ai .resume-contact {
+  color: #475569;
+}
+
+.resume-template-data-ai .resume-section h2 {
+  color: #0f172a;
+  border-bottom-color: #94a3b8;
+}
+
+.resume-template-data-ai .resume-row h3 {
+  font-family: "Courier New", monospace;
+}
+
+.resume-template-marketing-studio {
+  border-top: 10px solid #b91c1c;
+  font-family: "Source Serif Pro", Georgia, serif;
+}
+
+.resume-template-marketing-studio .resume-header {
+  border-bottom: 2px solid #fecaca;
+  margin-bottom: 20px;
+}
+
+.resume-template-marketing-studio .resume-section h2 {
+  color: #991b1b;
+  border-bottom-color: #fecaca;
+}
+
+.resume-template-marketing-studio .resume-section {
+  margin-top: 18px;
+}
+
+.resume-template-fresher-launch {
+  border-top: 10px solid #38bdf8;
+  background: #f7f7fc;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+.resume-template-fresher-launch .resume-header {
+  border-bottom: 2px dashed #bae6fd;
+  margin-bottom: 22px;
+}
+
+.resume-template-fresher-launch .resume-section {
+  background: #ffffff;
+  padding: 14px 16px;
+  border-radius: 14px;
+  margin-top: 16px;
+}
+
+.resume-template-fresher-launch .resume-section h2 {
+  color: #0c4a6e;
+  border-bottom-color: #bae6fd;
+}
+
+.resume-template-creative-cinematic {
+  border-top: 10px solid #f97316;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+.resume-template-creative-cinematic .resume-header {
+  border-bottom: 1px solid #fbbf24;
+  margin-bottom: 20px;
+}
+
+.resume-template-creative-cinematic .resume-section h2 {
+  color: #c2410c;
+  border-bottom-color: #fde68a;
+}
+
+.resume-template-creative-cinematic .resume-row span,
+.resume-template-creative-cinematic .resume-contact {
+  color: #475569;
+}
+
+@media (max-width: 900px) {
+  .resume-paper {
+    width: 100%;
+    min-height: auto;
+    padding: 28px;
+    font-size: 10pt;
+  }
+
+  .resume-row {
+    flex-direction: column;
+    gap: 1px;
+  }
+}
+
+/*
+  Browser PDF export rules.
+
+  Triggered by:
+  - app/resumes/preview/[id]/page.js printResume(), which calls window.print().
+
+  Behavior:
+  - Hide the app shell, navbar, sidebar, and buttons.
+  - Reveal only .resume-print-stage and its children.
+  - Keep Letter page sizing for consistent MVP PDF output.
+*/
+@media print {
+  @page {
+    size: Letter;
+    margin: 0;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .resume-print-stage,
+  .resume-print-stage * {
+    visibility: visible;
+  }
+
+  .resume-print-stage {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+  }
+
+  .resume-paper {
+    width: 8.5in;
+    min-height: 11in;
+    margin: 0;
+    box-shadow: none;
+  }
+}
+
+/* ─── Inline Editable Resume Content ─── */
+[contenteditable] {
+  -webkit-user-select: text;
+  user-select: text;
+  cursor: text;
+  outline: none;
+}
+
+[contenteditable]:focus {
+  outline: 2px solid #ea580c;
+  outline-offset: 1px;
+  border-radius: 2px;
+}
+
+/* Resume textarea and input styling for inline editing */
+.resume-paper textarea,
+.resume-paper input {
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
 }

@@ -2,6 +2,34 @@
 
 Generate **tailored, impactful cover letters** in seconds using free AI models from [OpenRouter](https://openrouter.ai). Whether you're pasting a job description or linking to one (experimental), this tool helps you craft the perfect first impression.
 
+## AI Resume Builder Module
+
+CovGen now includes a Phase 1 ATS-aware resume optimization workflow:
+
+- `/resumes`: Resume Dashboard.
+- `/resumes/upload`: Upload selectable PDF/DOCX resumes.
+- `/resumes/[id]/analysis`: Paste JD and generate ATS analysis.
+- `/resumes/[id]/templates`: Choose a controlled resume template.
+- `/resumes/preview/[id]`: Preview and export through browser print/download.
+
+Frontend responsibilities:
+- Render structured resume JSON.
+- Show ATS suggestions and match score.
+- Offer 3 controlled HTML/CSS templates: ATS Classic, Modern Startup, Executive Minimal.
+- Export via `window.print()` for MVP validation.
+- Keep layouts print-safe and selectable.
+
+Future resume upgrades, not included in Phase 1:
+- Backend Puppeteer rendering.
+- LaTeX templates.
+- LinkedIn import.
+- GitHub analysis.
+- Resume analytics.
+- Interview preparation.
+- ATS simulation.
+- OCR support.
+- AI portfolio generation.
+
 ---
 
 ## ⚙️ Features

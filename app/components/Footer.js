@@ -52,6 +52,8 @@ export default function Footer() {
                             <Link href="/" className="hover:text-blue-600 transition-colors duration-200">Home</Link>
                             <Link href="/about" className="hover:text-blue-600 transition-colors duration-200">About</Link>
                             <Link href="/blogs" className="hover:text-blue-600 transition-colors duration-200">Blog</Link>
+                            {/* Resume module entrypoint. This links to app/resumes/page.js, which loads GET /api/resumes. */}
+                            <Link href="/resumes" className="hover:text-orange-600 transition-colors duration-200">AI Resume Builder</Link>
                             <Link href="/contact" className="hover:text-blue-600 transition-colors duration-200">Contact</Link>
                             <Link href="/pricing" className="hover:text-blue-600 transition-colors duration-200">Pricing</Link>
                             <Link href="/privacy-policy" className="hover:text-blue-600 transition-colors duration-200">Privacy Policy</Link>

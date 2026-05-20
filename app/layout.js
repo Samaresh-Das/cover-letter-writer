@@ -1,37 +1,6 @@
-import { Geist, Geist_Mono, Space_Grotesk, DM_Sans, Inter } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import Footer from "./components/Footer";
 import { Navbar } from "./components/Navbar";
-import { headers } from "next/headers";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
 
 export const metadata = {
   metadataBase: new URL("https://covgen-ai.vercel.app"),
@@ -86,7 +55,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${spaceGrotesk.variable} ${dmSans.variable} antialiased`}
+        className="antialiased"
         suppressHydrationWarning
       >
         <GoogleProviderWrapper>

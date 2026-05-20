@@ -3,7 +3,11 @@
 import { useEffect, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 
-const PROTECTED_ROUTES = ['/dashboard', '/profile', '/onboarding'];
+// /resumes is protected because every resume API route is scoped by JWT auth in
+// covgen-server/routes/resume-routes.js. Keeping the frontend route protected
+// prevents unauthenticated users from reaching upload/analysis UI that would
+// immediately fail backend authorization.
+const PROTECTED_ROUTES = ['/dashboard', '/profile', '/onboarding', '/resumes'];
 
 export default function AuthGuard({ children }) {
   const router = useRouter();
