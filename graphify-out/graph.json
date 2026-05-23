@@ -3860,9 +3860,9 @@
       "source_file": "app\\resumes\\preview\\[id]\\page.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_resumes_preview_id_page_js",
-      "target": "resumes_api_downloadresumepdf",
-      "confidence_score": 1.0
+      "target": "resumes_api_downloadresumepdf"
     },
     {
       "relation": "contains",
@@ -4044,9 +4044,9 @@
       "source_file": "lib\\resumes\\api.js",
       "source_location": "L74",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_resumes_api_js",
-      "target": "resumes_api_downloadresumepdf",
-      "confidence_score": 1.0
+      "target": "resumes_api_downloadresumepdf"
     },
     {
       "relation": "calls",
@@ -4066,9 +4066,9 @@
       "source_file": "lib\\resumes\\api.js",
       "source_location": "L78",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "resumes_api_downloadresumepdf",
-      "target": "resumes_api_authheaders",
-      "confidence_score": 1.0
+      "target": "resumes_api_authheaders"
     },
     {
       "relation": "contains",
