@@ -423,9 +423,15 @@ textarea:focus {
   - AI produces content JSON only. These CSS classes own layout, typography,
     print behavior, spacing, and template style.
 */
+/*
+  Resume paper dimensions are intentionally A4 (210mm × 297mm) to match the
+  backend Puppeteer PDF exactly. Using US Letter (8.5in) would make the content
+  area ~5mm wider than the PDF, causing different text-wrapping and a different
+  page count. This is the single most important alignment between preview and PDF.
+*/
 .resume-paper {
-  width: 8.5in;
-  min-height: 11in;
+  width: 210mm;
+  min-height: 297mm;
   margin: 0 auto;
   background: #ffffff;
   color: #111827;
@@ -861,6 +867,61 @@ textarea:focus {
   color: #475569;
 }
 
+/*
+  Multi-page preview — Google Docs style.
+
+  Architecture:
+  .resume-page-view          → scrollable container with grey bg
+    .resume-page-card        → 297mm tall white card (full A4), padding 0.62in
+      .resume-page-clip      → fills content box (265.5mm tall), overflow:hidden
+        <div margin-top>     → shifts resume up by i pages
+          <ResumeTemplate/>  → .resume-paper has padding:0 here (card owns the margins)
+
+  Why the padding lives on the card, NOT on .resume-paper:
+    CSS @page margins repeat on EVERY page. Element padding only exists once.
+    By putting padding on each card, we simulate per-page margins.
+    The content is sliced via margin-top offsets at 265.5mm intervals.
+*/
+.resume-page-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 24px 0;
+  background: #e5e7eb;
+  border-radius: 12px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Full A4 page card with per-page margins */
+.resume-page-view .resume-page-card {
+  width: 210mm;
+  height: 297mm;
+  padding: 0.62in;
+  box-sizing: border-box;
+  background: #ffffff;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.13), 0 1px 3px rgba(0,0,0,0.08);
+  flex-shrink: 0;
+}
+
+/* Content viewport — clips to the card's content box (265.5mm) */
+.resume-page-view .resume-page-clip {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Remove .resume-paper padding inside page view — the card's own padding
+   simulates @page margins instead. This prevents double whitespace. */
+.resume-page-view .resume-paper {
+  padding: 0;
+  width: 100%;
+  min-height: auto;
+  box-shadow: none;
+  margin: 0;
+}
+
 @media (max-width: 900px) {
   .resume-paper {
     width: 100%;
@@ -876,20 +937,13 @@ textarea:focus {
 }
 
 /*
-  Browser PDF export rules.
-
-  Triggered by:
-  - app/resumes/preview/[id]/page.js printResume(), which calls window.print().
-
-  Behavior:
-  - Hide the app shell, navbar, sidebar, and buttons.
-  - Reveal only .resume-print-stage and its children.
-  - Keep Letter page sizing for consistent MVP PDF output.
+  Fallback browser print rules (not used for Resume PDFs — those go through
+  the Puppeteer backend endpoint). Kept here for any future direct-print needs.
 */
 @media print {
   @page {
-    size: Letter;
-    margin: 0;
+    size: A4;
+    margin: 0.62in;
   }
 
   html,
@@ -915,8 +969,8 @@ textarea:focus {
   }
 
   .resume-paper {
-    width: 8.5in;
-    min-height: 11in;
+    width: 210mm;
+    min-height: 297mm;
     margin: 0;
     box-shadow: none;
   }
