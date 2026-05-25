@@ -177,16 +177,10 @@ export default function ResumePreviewPage() {
     const element = document.querySelector(".resume-print-stage .resume-paper");
     if (!element) return;
 
-    // Temporarily force strict single-page dimensions and remove shadows for capture
-    const originalHeight = element.style.height;
-    const originalMinHeight = element.style.minHeight;
-    const originalOverflow = element.style.overflow;
+    // Remove shadows/transforms for clean capture but do NOT constrain natural height
     const originalBoxShadow = element.style.boxShadow;
     const originalTransform = element.style.transform;
     
-    element.style.height = "11in";
-    element.style.minHeight = "11in";
-    element.style.overflow = "hidden";
     element.style.boxShadow = "none";
     element.style.transform = "none";
 
@@ -196,19 +190,34 @@ export default function ResumePreviewPage() {
       
       const pdf = new jsPDF({
         orientation: "portrait",
-        unit: "in",
-        format: "letter"
+        unit: "mm",
+        format: "a4"
       });
       
-      pdf.addImage(imgData, "JPEG", 0, 0, 8.5, 11);
+      const pdfWidth = 210;
+      const pdfHeight = 297;
+      
+      const imgWidth = canvas.width;
+      const imgHeight = canvas.height;
+      const ratio = imgWidth / imgHeight;
+      
+      let finalWidth = pdfWidth;
+      let finalHeight = pdfWidth / ratio;
+      
+      // If the content is taller than A4, scale it down to fit one page exactly
+      if (finalHeight > pdfHeight) {
+        finalHeight = pdfHeight;
+        finalWidth = finalHeight * ratio;
+      }
+      
+      const xOffset = (pdfWidth - finalWidth) / 2;
+      
+      pdf.addImage(imgData, "JPEG", xOffset, 0, finalWidth, finalHeight);
       
       const fileName = jd?.company ? `${jd.company.replace(/\s+/g, '_')}_Resume.pdf` : "Resume.pdf";
       pdf.save(fileName);
     } finally {
       // Restore original element styles
-      element.style.height = originalHeight;
-      element.style.minHeight = originalMinHeight;
-      element.style.overflow = originalOverflow;
       element.style.boxShadow = originalBoxShadow;
       element.style.transform = originalTransform;
     }

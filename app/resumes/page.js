@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { FaArrowRight, FaFileUpload, FaRegFileAlt } from "react-icons/fa";
+import { FaArrowRight, FaFileUpload, FaRegFileAlt, FaTrash } from "react-icons/fa";
 import ResumePageShell from "../components/resumes/ResumePageShell";
 import { fetchJson } from "../../lib/resumes/api";
 
@@ -30,6 +30,33 @@ export default function ResumeDashboardPage() {
   const [loading, setLoading] = useState(true);
   // error stores the normalized message thrown by fetchJson() if the backend rejects/fails.
   const [error, setError] = useState("");
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const ITEMS_PER_PAGE = 5;
+
+  const handleDeleteTailored = async (id) => {
+    if (!window.confirm("Are you sure you want to delete this tailored resume?")) return;
+    try {
+      await fetchJson(`/api/resumes/generated/${id}`, { method: "DELETE" });
+      setData(prev => {
+        const newGenerated = prev.generatedResumes.filter(r => r._id !== id);
+        // Adjust pagination if deleting the last item on the current page
+        const newTotal = newGenerated.length;
+        if (currentPage > 1 && newTotal <= (currentPage - 1) * ITEMS_PER_PAGE) {
+          setCurrentPage(prevPage => prevPage - 1);
+        }
+        return { ...prev, generatedResumes: newGenerated };
+      });
+    } catch (err) {
+      alert(err.message || "Failed to delete resume");
+    }
+  };
+
+  const totalPages = Math.ceil(data.generatedResumes.length / ITEMS_PER_PAGE);
+  const paginatedResumes = data.generatedResumes.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
 
   /**
    * Loads the authenticated user's resume workspace once when /resumes mounts.
@@ -95,18 +122,50 @@ export default function ResumeDashboardPage() {
             </div>
             <div className="space-y-3">
               {data.generatedResumes.length === 0 && <p className="rounded-lg border border-slate-100 bg-white p-4 text-sm text-slate-600">JD-tailored resumes will appear here.</p>}
-              {data.generatedResumes.map((item) => (
-                <Link key={item._id} href={`/resumes/preview/${item._id}`} className="flex items-center justify-between rounded-lg border border-slate-200 bg-white p-4 shadow-[0_8px_26px_rgba(15,23,42,0.03)] hover:border-orange-300 hover:shadow-[0_12px_34px_rgba(249,115,22,0.10)]">
-                  <div>
-                    <p className="font-semibold text-slate-900">{item.jobDescription?.title || (item.generationType === "general" ? "General Optimized Resume" : "Tailored Resume")}</p>
-                    <p className="text-sm text-slate-500">{item.jobDescription?.company || item.template}</p>
+              {paginatedResumes.map((item) => (
+                <div key={item._id} className="group relative flex items-center justify-between rounded-lg border border-slate-200 bg-white p-4 shadow-[0_8px_26px_rgba(15,23,42,0.03)] hover:border-orange-300 hover:shadow-[0_12px_34px_rgba(249,115,22,0.10)] transition-all">
+                  <Link href={`/resumes/preview/${item._id}`} className="flex-1">
+                    <div>
+                      <p className="font-semibold text-slate-900">{item.jobDescription?.title || (item.generationType === "general" ? "General Optimized Resume" : "Tailored Resume")}</p>
+                      <p className="text-sm text-slate-500">{item.jobDescription?.company || item.template}</p>
+                    </div>
+                  </Link>
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2 text-sm font-bold text-orange-600">
+                      <FaRegFileAlt />
+                      {item.atsAnalysis?.matchScore ?? item.atsAnalysis?.atsScore ?? 0}%
+                    </div>
+                    <button
+                      onClick={() => handleDeleteTailored(item._id)}
+                      className="rounded p-2 text-slate-400 hover:bg-red-50 hover:text-red-600 transition-colors"
+                      title="Delete tailored resume"
+                    >
+                      <FaTrash />
+                    </button>
                   </div>
-                  <div className="flex items-center gap-3 text-sm font-bold text-orange-600">
-                    <FaRegFileAlt />
-                    {item.atsAnalysis?.matchScore ?? item.atsAnalysis?.atsScore ?? 0}%
-                  </div>
-                </Link>
+                </div>
               ))}
+              {totalPages > 1 && (
+                <div className="mt-4 flex items-center justify-between border-t border-slate-100 pt-4">
+                  <button
+                    onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                    disabled={currentPage === 1}
+                    className="rounded-md px-3 py-1.5 text-sm font-medium text-slate-600 hover:bg-slate-50 disabled:opacity-50"
+                  >
+                    Previous
+                  </button>
+                  <span className="text-sm text-slate-500">
+                    Page {currentPage} of {totalPages}
+                  </span>
+                  <button
+                    onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                    disabled={currentPage === totalPages}
+                    className="rounded-md px-3 py-1.5 text-sm font-medium text-slate-600 hover:bg-slate-50 disabled:opacity-50"
+                  >
+                    Next
+                  </button>
+                </div>
+              )}
             </div>
           </section>
         </div>
