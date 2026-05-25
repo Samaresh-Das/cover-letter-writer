@@ -9,7 +9,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\eslint.config.mjs",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_eslint_config_mjs",
-      "community": 47,
+      "community": 55,
       "norm_label": "eslint.config.mjs"
     },
     {
@@ -36,7 +36,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\next-env.d.ts",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_next_env_d_ts",
-      "community": 48,
+      "community": 56,
       "norm_label": "next-env.d.ts"
     },
     {
@@ -45,7 +45,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\next.config.mjs",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_next_config_mjs",
-      "community": 49,
+      "community": 57,
       "norm_label": "next.config.mjs"
     },
     {
@@ -54,7 +54,7 @@
       "source_file": "postcss.config.mjs",
       "source_location": "L1",
       "id": "postcss_config_mjs",
-      "community": 50,
+      "community": 58,
       "norm_label": "postcss.config.mjs"
     },
     {
@@ -63,7 +63,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\tailwind.config.js",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_tailwind_config_js",
-      "community": 51,
+      "community": 59,
       "norm_label": "tailwind.config.js"
     },
     {
@@ -79,7 +79,7 @@
       "label": "RootLayout()",
       "file_type": "code",
       "source_file": "app\\layout.js",
-      "source_location": "L54",
+      "source_location": "L66",
       "id": "app_layout_rootlayout",
       "community": 0,
       "norm_label": "rootlayout()"
@@ -87,19 +87,28 @@
     {
       "label": "page.js",
       "file_type": "code",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\page.js",
+      "source_file": "app\\page.js",
       "source_location": "L1",
-      "id": "e_projects_covgen_cover_letter_writer_app_page_js",
-      "community": 11,
+      "id": "app_page_js",
+      "community": 9,
       "norm_label": "page.js"
+    },
+    {
+      "label": "LandingPageContent()",
+      "file_type": "code",
+      "source_file": "app\\page.js",
+      "source_location": "L34",
+      "id": "app_page_landingpagecontent",
+      "community": 9,
+      "norm_label": "landingpagecontent()"
     },
     {
       "label": "Home()",
       "file_type": "code",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\page.js",
-      "source_location": "L16",
+      "source_file": "app\\page.js",
+      "source_location": "L117",
       "id": "app_page_home",
-      "community": 11,
+      "community": 9,
       "norm_label": "home()"
     },
     {
@@ -108,7 +117,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\robots.js",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_robots_js",
-      "community": 12,
+      "community": 11,
       "norm_label": "robots.js"
     },
     {
@@ -117,7 +126,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\robots.js",
       "source_location": "L1",
       "id": "app_robots_robots",
-      "community": 12,
+      "community": 11,
       "norm_label": "robots()"
     },
     {
@@ -126,7 +135,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\sitemap.js",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_sitemap_js",
-      "community": 13,
+      "community": 12,
       "norm_label": "sitemap.js"
     },
     {
@@ -135,7 +144,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\sitemap.js",
       "source_location": "L3",
       "id": "app_sitemap_sitemap",
-      "community": 13,
+      "community": 12,
       "norm_label": "sitemap()"
     },
     {
@@ -213,19 +222,19 @@
     {
       "label": "page.js",
       "file_type": "code",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\auth\\page.js",
+      "source_file": "app\\auth\\page.js",
       "source_location": "L1",
-      "id": "e_projects_covgen_cover_letter_writer_app_auth_page_js",
-      "community": 14,
+      "id": "app_auth_page_js",
+      "community": 13,
       "norm_label": "page.js"
     },
     {
       "label": "AuthPage()",
       "file_type": "code",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\auth\\page.js",
-      "source_location": "L10",
+      "source_file": "app\\auth\\page.js",
+      "source_location": "L12",
       "id": "auth_page_authpage",
-      "community": 14,
+      "community": 13,
       "norm_label": "authpage()"
     },
     {
@@ -333,7 +342,7 @@
       "source_file": "app\\components\\AuthGuard.js",
       "source_location": "L1",
       "id": "app_components_authguard_js",
-      "community": 42,
+      "community": 43,
       "norm_label": "authguard.js"
     },
     {
@@ -342,7 +351,7 @@
       "source_file": "app\\components\\AuthGuard.js",
       "source_location": "L12",
       "id": "components_authguard_authguard",
-      "community": 42,
+      "community": 43,
       "norm_label": "authguard()"
     },
     {
@@ -351,7 +360,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Controls.js",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_components_controls_js",
-      "community": 15,
+      "community": 14,
       "norm_label": "controls.js"
     },
     {
@@ -360,7 +369,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Controls.js",
       "source_location": "L8",
       "id": "components_controls_controls",
-      "community": 15,
+      "community": 14,
       "norm_label": "controls()"
     },
     {
@@ -369,7 +378,7 @@
       "source_file": "app\\components\\Footer.js",
       "source_location": "L1",
       "id": "app_components_footer_js",
-      "community": 43,
+      "community": 44,
       "norm_label": "footer.js"
     },
     {
@@ -378,7 +387,7 @@
       "source_file": "app\\components\\Footer.js",
       "source_location": "L9",
       "id": "components_footer_footer",
-      "community": 43,
+      "community": 44,
       "norm_label": "footer()"
     },
     {
@@ -387,7 +396,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\GoogleProviderWrapper.js",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_components_googleproviderwrapper_js",
-      "community": 16,
+      "community": 15,
       "norm_label": "googleproviderwrapper.js"
     },
     {
@@ -396,7 +405,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\GoogleProviderWrapper.js",
       "source_location": "L5",
       "id": "components_googleproviderwrapper_googleproviderwrapper",
-      "community": 16,
+      "community": 15,
       "norm_label": "googleproviderwrapper()"
     },
     {
@@ -405,7 +414,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Header.js",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_components_header_js",
-      "community": 17,
+      "community": 16,
       "norm_label": "header.js"
     },
     {
@@ -414,7 +423,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Header.js",
       "source_location": "L4",
       "id": "components_header_header",
-      "community": 17,
+      "community": 16,
       "norm_label": "header()"
     },
     {
@@ -423,7 +432,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\IntroModal.js",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_components_intromodal_js",
-      "community": 18,
+      "community": 17,
       "norm_label": "intromodal.js"
     },
     {
@@ -432,7 +441,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\IntroModal.js",
       "source_location": "L19",
       "id": "components_intromodal_intromodal",
-      "community": 18,
+      "community": 17,
       "norm_label": "intromodal()"
     },
     {
@@ -441,7 +450,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\JDInputSection.js",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_components_jdinputsection_js",
-      "community": 19,
+      "community": 18,
       "norm_label": "jdinputsection.js"
     },
     {
@@ -450,7 +459,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\JDInputSection.js",
       "source_location": "L5",
       "id": "components_jdinputsection_jdinputsection",
-      "community": 19,
+      "community": 18,
       "norm_label": "jdinputsection()"
     },
     {
@@ -459,7 +468,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\LeftOptions.js",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_components_leftoptions_js",
-      "community": 20,
+      "community": 19,
       "norm_label": "leftoptions.js"
     },
     {
@@ -468,7 +477,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\LeftOptions.js",
       "source_location": "L5",
       "id": "components_leftoptions_leftoptions",
-      "community": 20,
+      "community": 19,
       "norm_label": "leftoptions()"
     },
     {
@@ -513,7 +522,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\ModelDropdown.js",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_components_modeldropdown_js",
-      "community": 21,
+      "community": 20,
       "norm_label": "modeldropdown.js"
     },
     {
@@ -522,7 +531,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\ModelDropdown.js",
       "source_location": "L9",
       "id": "components_modeldropdown_customdropdown",
-      "community": 21,
+      "community": 20,
       "norm_label": "customdropdown()"
     },
     {
@@ -531,7 +540,7 @@
       "source_file": "app\\components\\Navbar.js",
       "source_location": "L1",
       "id": "app_components_navbar_js",
-      "community": 9,
+      "community": 0,
       "norm_label": "navbar.js"
     },
     {
@@ -540,7 +549,7 @@
       "source_file": "app\\components\\Navbar.js",
       "source_location": "L43",
       "id": "components_navbar_isactivepath",
-      "community": 9,
+      "community": 0,
       "norm_label": "isactivepath()"
     },
     {
@@ -549,7 +558,7 @@
       "source_file": "app\\components\\Navbar.js",
       "source_location": "L48",
       "id": "components_navbar_desktopnavitem",
-      "community": 9,
+      "community": 0,
       "norm_label": "desktopnavitem()"
     },
     {
@@ -558,7 +567,7 @@
       "source_file": "app\\components\\Navbar.js",
       "source_location": "L68",
       "id": "components_navbar_menulink",
-      "community": 9,
+      "community": 0,
       "norm_label": "menulink()"
     },
     {
@@ -576,7 +585,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\RightJDInput.js",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_components_rightjdinput_js",
-      "community": 22,
+      "community": 21,
       "norm_label": "rightjdinput.js"
     },
     {
@@ -585,7 +594,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\RightJDInput.js",
       "source_location": "L6",
       "id": "components_rightjdinput_rightjdinput",
-      "community": 22,
+      "community": 21,
       "norm_label": "rightjdinput()"
     },
     {
@@ -594,7 +603,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\V2FeaturesModal.js",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_components_v2featuresmodal_js",
-      "community": 23,
+      "community": 22,
       "norm_label": "v2featuresmodal.js"
     },
     {
@@ -603,7 +612,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\V2FeaturesModal.js",
       "source_location": "L25",
       "id": "components_v2featuresmodal_v2featuresmodal",
-      "community": 23,
+      "community": 22,
       "norm_label": "v2featuresmodal()"
     },
     {
@@ -612,7 +621,7 @@
       "source_file": "app\\components\\Auth\\HistoryModal.js",
       "source_location": "L1",
       "id": "app_components_auth_historymodal_js",
-      "community": 44,
+      "community": 45,
       "norm_label": "historymodal.js"
     },
     {
@@ -621,7 +630,7 @@
       "source_file": "app\\components\\Auth\\HistoryModal.js",
       "source_location": "L4",
       "id": "auth_historymodal_historymodal",
-      "community": 44,
+      "community": 45,
       "norm_label": "historymodal()"
     },
     {
@@ -684,7 +693,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\FeatureGrid.jsx",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_components_landing_featuregrid_jsx",
-      "community": 24,
+      "community": 23,
       "norm_label": "featuregrid.jsx"
     },
     {
@@ -693,7 +702,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\FeatureGrid.jsx",
       "source_location": "L63",
       "id": "landing_featuregrid_featuregrid",
-      "community": 24,
+      "community": 23,
       "norm_label": "featuregrid()"
     },
     {
@@ -702,7 +711,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\FinalCTA.jsx",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_components_landing_finalcta_jsx",
-      "community": 25,
+      "community": 24,
       "norm_label": "finalcta.jsx"
     },
     {
@@ -711,7 +720,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\FinalCTA.jsx",
       "source_location": "L6",
       "id": "landing_finalcta_finalcta",
-      "community": 25,
+      "community": 24,
       "norm_label": "finalcta()"
     },
     {
@@ -720,7 +729,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\HeroSection.jsx",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_components_landing_herosection_jsx",
-      "community": 26,
+      "community": 25,
       "norm_label": "herosection.jsx"
     },
     {
@@ -729,7 +738,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\HeroSection.jsx",
       "source_location": "L6",
       "id": "landing_herosection_herosection",
-      "community": 26,
+      "community": 25,
       "norm_label": "herosection()"
     },
     {
@@ -738,7 +747,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\HowItWorks.jsx",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_components_landing_howitworks_jsx",
-      "community": 27,
+      "community": 26,
       "norm_label": "howitworks.jsx"
     },
     {
@@ -747,7 +756,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\HowItWorks.jsx",
       "source_location": "L42",
       "id": "landing_howitworks_howitworks",
-      "community": 27,
+      "community": 26,
       "norm_label": "howitworks()"
     },
     {
@@ -756,7 +765,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\LandingFooter.jsx",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_components_landing_landingfooter_jsx",
-      "community": 28,
+      "community": 27,
       "norm_label": "landingfooter.jsx"
     },
     {
@@ -765,25 +774,25 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\LandingFooter.jsx",
       "source_location": "L5",
       "id": "landing_landingfooter_landingfooter",
-      "community": 28,
+      "community": 27,
       "norm_label": "landingfooter()"
     },
     {
       "label": "LandingNavbar.jsx",
       "file_type": "code",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\LandingNavbar.jsx",
+      "source_file": "app\\components\\landing\\LandingNavbar.jsx",
       "source_location": "L1",
-      "id": "e_projects_covgen_cover_letter_writer_app_components_landing_landingnavbar_jsx",
-      "community": 29,
+      "id": "app_components_landing_landingnavbar_jsx",
+      "community": 28,
       "norm_label": "landingnavbar.jsx"
     },
     {
       "label": "LandingNavbar()",
       "file_type": "code",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\LandingNavbar.jsx",
-      "source_location": "L8",
+      "source_file": "app\\components\\landing\\LandingNavbar.jsx",
+      "source_location": "L7",
       "id": "landing_landingnavbar_landingnavbar",
-      "community": 29,
+      "community": 28,
       "norm_label": "landingnavbar()"
     },
     {
@@ -792,7 +801,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\LinkedInFeature.jsx",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_components_landing_linkedinfeature_jsx",
-      "community": 30,
+      "community": 29,
       "norm_label": "linkedinfeature.jsx"
     },
     {
@@ -801,7 +810,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\LinkedInFeature.jsx",
       "source_location": "L46",
       "id": "landing_linkedinfeature_linkedinfeature",
-      "community": 30,
+      "community": 29,
       "norm_label": "linkedinfeature()"
     },
     {
@@ -810,7 +819,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\PricingSection.jsx",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_components_landing_pricingsection_jsx",
-      "community": 31,
+      "community": 30,
       "norm_label": "pricingsection.jsx"
     },
     {
@@ -819,7 +828,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\PricingSection.jsx",
       "source_location": "L42",
       "id": "landing_pricingsection_pricingsection",
-      "community": 31,
+      "community": 30,
       "norm_label": "pricingsection()"
     },
     {
@@ -828,7 +837,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\ProblemSection.jsx",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_components_landing_problemsection_jsx",
-      "community": 32,
+      "community": 31,
       "norm_label": "problemsection.jsx"
     },
     {
@@ -837,7 +846,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\ProblemSection.jsx",
       "source_location": "L48",
       "id": "landing_problemsection_problemsection",
-      "community": 32,
+      "community": 31,
       "norm_label": "problemsection()"
     },
     {
@@ -846,7 +855,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\ProductDemo.jsx",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_components_landing_productdemo_jsx",
-      "community": 33,
+      "community": 32,
       "norm_label": "productdemo.jsx"
     },
     {
@@ -855,7 +864,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\ProductDemo.jsx",
       "source_location": "L27",
       "id": "landing_productdemo_productdemo",
-      "community": 33,
+      "community": 32,
       "norm_label": "productdemo()"
     },
     {
@@ -864,7 +873,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\SolutionSection.jsx",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_components_landing_solutionsection_jsx",
-      "community": 34,
+      "community": 33,
       "norm_label": "solutionsection.jsx"
     },
     {
@@ -873,7 +882,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\SolutionSection.jsx",
       "source_location": "L5",
       "id": "landing_solutionsection_solutionsection",
-      "community": 34,
+      "community": 33,
       "norm_label": "solutionsection()"
     },
     {
@@ -882,7 +891,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\Testimonials.jsx",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_components_landing_testimonials_jsx",
-      "community": 35,
+      "community": 34,
       "norm_label": "testimonials.jsx"
     },
     {
@@ -891,7 +900,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\Testimonials.jsx",
       "source_location": "L29",
       "id": "landing_testimonials_testimonials",
-      "community": 35,
+      "community": 34,
       "norm_label": "testimonials()"
     },
     {
@@ -900,7 +909,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\WaveCanvas.jsx",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_components_landing_wavecanvas_jsx",
-      "community": 36,
+      "community": 35,
       "norm_label": "wavecanvas.jsx"
     },
     {
@@ -909,8 +918,188 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\WaveCanvas.jsx",
       "source_location": "L4",
       "id": "landing_wavecanvas_wavecanvas",
-      "community": 36,
+      "community": 35,
       "norm_label": "wavecanvas()"
+    },
+    {
+      "label": "PillSwitcher.jsx",
+      "file_type": "code",
+      "source_file": "app\\components\\new-landing\\PillSwitcher.jsx",
+      "source_location": "L1",
+      "id": "app_components_new_landing_pillswitcher_jsx",
+      "community": 46,
+      "norm_label": "pillswitcher.jsx"
+    },
+    {
+      "label": "PillSwitcher()",
+      "file_type": "code",
+      "source_file": "app\\components\\new-landing\\PillSwitcher.jsx",
+      "source_location": "L5",
+      "id": "new_landing_pillswitcher_pillswitcher",
+      "community": 46,
+      "norm_label": "pillswitcher()"
+    },
+    {
+      "label": "ResumeFeatures.jsx",
+      "file_type": "code",
+      "source_file": "app\\components\\new-landing\\ResumeFeatures.jsx",
+      "source_location": "L1",
+      "id": "app_components_new_landing_resumefeatures_jsx",
+      "community": 47,
+      "norm_label": "resumefeatures.jsx"
+    },
+    {
+      "label": "ResumeFeatures()",
+      "file_type": "code",
+      "source_file": "app\\components\\new-landing\\ResumeFeatures.jsx",
+      "source_location": "L24",
+      "id": "new_landing_resumefeatures_resumefeatures",
+      "community": 47,
+      "norm_label": "resumefeatures()"
+    },
+    {
+      "label": "ResumeFinalCTA.jsx",
+      "file_type": "code",
+      "source_file": "app\\components\\new-landing\\ResumeFinalCTA.jsx",
+      "source_location": "L1",
+      "id": "app_components_new_landing_resumefinalcta_jsx",
+      "community": 48,
+      "norm_label": "resumefinalcta.jsx"
+    },
+    {
+      "label": "ResumeFinalCTA()",
+      "file_type": "code",
+      "source_file": "app\\components\\new-landing\\ResumeFinalCTA.jsx",
+      "source_location": "L6",
+      "id": "new_landing_resumefinalcta_resumefinalcta",
+      "community": 48,
+      "norm_label": "resumefinalcta()"
+    },
+    {
+      "label": "ResumeHero.jsx",
+      "file_type": "code",
+      "source_file": "app\\components\\new-landing\\ResumeHero.jsx",
+      "source_location": "L1",
+      "id": "app_components_new_landing_resumehero_jsx",
+      "community": 49,
+      "norm_label": "resumehero.jsx"
+    },
+    {
+      "label": "ResumeHero()",
+      "file_type": "code",
+      "source_file": "app\\components\\new-landing\\ResumeHero.jsx",
+      "source_location": "L7",
+      "id": "new_landing_resumehero_resumehero",
+      "community": 49,
+      "norm_label": "resumehero()"
+    },
+    {
+      "label": "ResumeHowItWorks.jsx",
+      "file_type": "code",
+      "source_file": "app\\components\\new-landing\\ResumeHowItWorks.jsx",
+      "source_location": "L1",
+      "id": "app_components_new_landing_resumehowitworks_jsx",
+      "community": 50,
+      "norm_label": "resumehowitworks.jsx"
+    },
+    {
+      "label": "ResumeHowItWorks()",
+      "file_type": "code",
+      "source_file": "app\\components\\new-landing\\ResumeHowItWorks.jsx",
+      "source_location": "L28",
+      "id": "new_landing_resumehowitworks_resumehowitworks",
+      "community": 50,
+      "norm_label": "resumehowitworks()"
+    },
+    {
+      "label": "ResumeLiveDemo.jsx",
+      "file_type": "code",
+      "source_file": "app\\components\\new-landing\\ResumeLiveDemo.jsx",
+      "source_location": "L1",
+      "id": "app_components_new_landing_resumelivedemo_jsx",
+      "community": 51,
+      "norm_label": "resumelivedemo.jsx"
+    },
+    {
+      "label": "ResumeLiveDemo()",
+      "file_type": "code",
+      "source_file": "app\\components\\new-landing\\ResumeLiveDemo.jsx",
+      "source_location": "L7",
+      "id": "new_landing_resumelivedemo_resumelivedemo",
+      "community": 51,
+      "norm_label": "resumelivedemo()"
+    },
+    {
+      "label": "ResumePricing.jsx",
+      "file_type": "code",
+      "source_file": "app\\components\\new-landing\\ResumePricing.jsx",
+      "source_location": "L1",
+      "id": "app_components_new_landing_resumepricing_jsx",
+      "community": 52,
+      "norm_label": "resumepricing.jsx"
+    },
+    {
+      "label": "ResumePricing()",
+      "file_type": "code",
+      "source_file": "app\\components\\new-landing\\ResumePricing.jsx",
+      "source_location": "L8",
+      "id": "new_landing_resumepricing_resumepricing",
+      "community": 52,
+      "norm_label": "resumepricing()"
+    },
+    {
+      "label": "ResumeSocialProof.jsx",
+      "file_type": "code",
+      "source_file": "app\\components\\new-landing\\ResumeSocialProof.jsx",
+      "source_location": "L1",
+      "id": "app_components_new_landing_resumesocialproof_jsx",
+      "community": 36,
+      "norm_label": "resumesocialproof.jsx"
+    },
+    {
+      "label": "AbstractAvatar()",
+      "file_type": "code",
+      "source_file": "app\\components\\new-landing\\ResumeSocialProof.jsx",
+      "source_location": "L31",
+      "id": "new_landing_resumesocialproof_abstractavatar",
+      "community": 36,
+      "norm_label": "abstractavatar()"
+    },
+    {
+      "label": "ResumeSocialProof()",
+      "file_type": "code",
+      "source_file": "app\\components\\new-landing\\ResumeSocialProof.jsx",
+      "source_location": "L46",
+      "id": "new_landing_resumesocialproof_resumesocialproof",
+      "community": 36,
+      "norm_label": "resumesocialproof()"
+    },
+    {
+      "label": "ResumeStats.jsx",
+      "file_type": "code",
+      "source_file": "app\\components\\new-landing\\ResumeStats.jsx",
+      "source_location": "L1",
+      "id": "app_components_new_landing_resumestats_jsx",
+      "community": 37,
+      "norm_label": "resumestats.jsx"
+    },
+    {
+      "label": "Counter()",
+      "file_type": "code",
+      "source_file": "app\\components\\new-landing\\ResumeStats.jsx",
+      "source_location": "L13",
+      "id": "new_landing_resumestats_counter",
+      "community": 37,
+      "norm_label": "counter()"
+    },
+    {
+      "label": "ResumeStats()",
+      "file_type": "code",
+      "source_file": "app\\components\\new-landing\\ResumeStats.jsx",
+      "source_location": "L35",
+      "id": "new_landing_resumestats_resumestats",
+      "community": 37,
+      "norm_label": "resumestats()"
     },
     {
       "label": "PricingCard.jsx",
@@ -936,7 +1125,7 @@
       "source_file": "app\\components\\resumes\\ResumePageShell.js",
       "source_location": "L1",
       "id": "app_components_resumes_resumepageshell_js",
-      "community": 45,
+      "community": 53,
       "norm_label": "resumepageshell.js"
     },
     {
@@ -945,7 +1134,7 @@
       "source_file": "app\\components\\resumes\\ResumePageShell.js",
       "source_location": "L25",
       "id": "resumes_resumepageshell_resumepageshell",
-      "community": 45,
+      "community": 53,
       "norm_label": "resumepageshell()"
     },
     {
@@ -1071,7 +1260,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\dashboard\\page.js",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_dashboard_page_js",
-      "community": 37,
+      "community": 38,
       "norm_label": "page.js"
     },
     {
@@ -1080,7 +1269,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\dashboard\\page.js",
       "source_location": "L10",
       "id": "dashboard_page_dashboard",
-      "community": 37,
+      "community": 38,
       "norm_label": "dashboard()"
     },
     {
@@ -1089,7 +1278,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\onboarding\\page.js",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_onboarding_page_js",
-      "community": 38,
+      "community": 39,
       "norm_label": "page.js"
     },
     {
@@ -1098,7 +1287,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\onboarding\\page.js",
       "source_location": "L8",
       "id": "onboarding_page_onboardingpage",
-      "community": 38,
+      "community": 39,
       "norm_label": "onboardingpage()"
     },
     {
@@ -1197,7 +1386,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\profile\\page.js",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_profile_page_js",
-      "community": 39,
+      "community": 40,
       "norm_label": "page.js"
     },
     {
@@ -1206,7 +1395,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\profile\\page.js",
       "source_location": "L4",
       "id": "profile_page_page",
-      "community": 39,
+      "community": 40,
       "norm_label": "page()"
     },
     {
@@ -1215,7 +1404,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\purchases\\page.js",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_app_purchases_page_js",
-      "community": 40,
+      "community": 41,
       "norm_label": "page.js"
     },
     {
@@ -1224,7 +1413,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\purchases\\page.js",
       "source_location": "L8",
       "id": "purchases_page_purchasespage",
-      "community": 40,
+      "community": 41,
       "norm_label": "purchasespage()"
     },
     {
@@ -1395,7 +1584,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\lib\\prompt.js",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_lib_prompt_js",
-      "community": 52,
+      "community": 60,
       "norm_label": "prompt.js"
     },
     {
@@ -1404,7 +1593,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\lib\\SanitizeCovLetter.js",
       "source_location": "L1",
       "id": "e_projects_covgen_cover_letter_writer_lib_sanitizecovletter_js",
-      "community": 41,
+      "community": 42,
       "norm_label": "sanitizecovletter.js"
     },
     {
@@ -1413,7 +1602,7 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\lib\\SanitizeCovLetter.js",
       "source_location": "L1",
       "id": "lib_sanitizecovletter_sanitizecoverletter",
-      "community": 41,
+      "community": 42,
       "norm_label": "sanitizecoverletter()"
     },
     {
@@ -1444,12 +1633,21 @@
       "norm_label": "fetchjson()"
     },
     {
+      "label": "downloadResumePdf()",
+      "file_type": "code",
+      "source_file": "lib\\resumes\\api.js",
+      "source_location": "L74",
+      "id": "resumes_api_downloadresumepdf",
+      "community": 1,
+      "norm_label": "downloadresumepdf()"
+    },
+    {
       "label": "template-data.js",
       "file_type": "code",
       "source_file": "lib\\resumes\\template-data.js",
       "source_location": "L1",
       "id": "lib_resumes_template_data_js",
-      "community": 46,
+      "community": 54,
       "norm_label": "template-data.js"
     },
     {
@@ -1458,15 +1656,42 @@
       "source_file": "lib\\resumes\\template-data.js",
       "source_location": "L93",
       "id": "resumes_template_data_templatebyid",
-      "community": 46,
+      "community": 54,
       "norm_label": "templatebyid()"
+    },
+    {
+      "label": "page.js",
+      "file_type": "code",
+      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\page.js",
+      "source_location": "L1",
+      "community": 9,
+      "norm_label": "page.js",
+      "id": "e_projects_covgen_cover_letter_writer_app_page_js"
+    },
+    {
+      "label": "page.js",
+      "file_type": "code",
+      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\auth\\page.js",
+      "source_location": "L1",
+      "community": 13,
+      "norm_label": "page.js",
+      "id": "e_projects_covgen_cover_letter_writer_app_auth_page_js"
+    },
+    {
+      "label": "LandingNavbar.jsx",
+      "file_type": "code",
+      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\LandingNavbar.jsx",
+      "source_location": "L1",
+      "community": 28,
+      "norm_label": "landingnavbar.jsx",
+      "id": "e_projects_covgen_cover_letter_writer_app_components_landing_landingnavbar_jsx"
     },
     {
       "label": "eslint.config.mjs",
       "file_type": "code",
       "source_file": "eslint.config.mjs",
       "source_location": "L1",
-      "community": 53,
+      "community": 61,
       "norm_label": "eslint.config.mjs",
       "id": "eslint_config_mjs"
     },
@@ -1484,7 +1709,7 @@
       "file_type": "code",
       "source_file": "next-env.d.ts",
       "source_location": "L1",
-      "community": 54,
+      "community": 62,
       "norm_label": "next-env.d.ts",
       "id": "next_env_d_ts"
     },
@@ -1493,7 +1718,7 @@
       "file_type": "code",
       "source_file": "next.config.mjs",
       "source_location": "L1",
-      "community": 55,
+      "community": 63,
       "norm_label": "next.config.mjs",
       "id": "next_config_mjs"
     },
@@ -1502,25 +1727,16 @@
       "file_type": "code",
       "source_file": "tailwind.config.js",
       "source_location": "L1",
-      "community": 56,
+      "community": 64,
       "norm_label": "tailwind.config.js",
       "id": "tailwind_config_js"
-    },
-    {
-      "label": "page.js",
-      "file_type": "code",
-      "source_file": "app/page.js",
-      "source_location": "L1",
-      "community": 11,
-      "norm_label": "page.js",
-      "id": "app_page_js"
     },
     {
       "label": "robots.js",
       "file_type": "code",
       "source_file": "app/robots.js",
       "source_location": "L1",
-      "community": 12,
+      "community": 11,
       "norm_label": "robots.js",
       "id": "app_robots_js"
     },
@@ -1529,7 +1745,7 @@
       "file_type": "code",
       "source_file": "app/sitemap.js",
       "source_location": "L1",
-      "community": 13,
+      "community": 12,
       "norm_label": "sitemap.js",
       "id": "app_sitemap_js"
     },
@@ -1541,15 +1757,6 @@
       "community": 0,
       "norm_label": "page.js",
       "id": "app_about_page_js"
-    },
-    {
-      "label": "page.js",
-      "file_type": "code",
-      "source_file": "app/auth/page.js",
-      "source_location": "L1",
-      "community": 14,
-      "norm_label": "page.js",
-      "id": "app_auth_page_js"
     },
     {
       "label": "page.js",
@@ -1574,7 +1781,7 @@
       "file_type": "code",
       "source_file": "app/components/Controls.js",
       "source_location": "L1",
-      "community": 15,
+      "community": 14,
       "norm_label": "controls.js",
       "id": "app_components_controls_js"
     },
@@ -1583,7 +1790,7 @@
       "file_type": "code",
       "source_file": "app/components/GoogleProviderWrapper.js",
       "source_location": "L1",
-      "community": 16,
+      "community": 15,
       "norm_label": "googleproviderwrapper.js",
       "id": "app_components_googleproviderwrapper_js"
     },
@@ -1592,7 +1799,7 @@
       "file_type": "code",
       "source_file": "app/components/Header.js",
       "source_location": "L1",
-      "community": 17,
+      "community": 16,
       "norm_label": "header.js",
       "id": "app_components_header_js"
     },
@@ -1601,7 +1808,7 @@
       "file_type": "code",
       "source_file": "app/components/IntroModal.js",
       "source_location": "L1",
-      "community": 18,
+      "community": 17,
       "norm_label": "intromodal.js",
       "id": "app_components_intromodal_js"
     },
@@ -1610,7 +1817,7 @@
       "file_type": "code",
       "source_file": "app/components/JDInputSection.js",
       "source_location": "L1",
-      "community": 19,
+      "community": 18,
       "norm_label": "jdinputsection.js",
       "id": "app_components_jdinputsection_js"
     },
@@ -1619,7 +1826,7 @@
       "file_type": "code",
       "source_file": "app/components/LeftOptions.js",
       "source_location": "L1",
-      "community": 20,
+      "community": 19,
       "norm_label": "leftoptions.js",
       "id": "app_components_leftoptions_js"
     },
@@ -1637,7 +1844,7 @@
       "file_type": "code",
       "source_file": "app/components/ModelDropdown.js",
       "source_location": "L1",
-      "community": 21,
+      "community": 20,
       "norm_label": "modeldropdown.js",
       "id": "app_components_modeldropdown_js"
     },
@@ -1646,7 +1853,7 @@
       "file_type": "code",
       "source_file": "app/components/RightJDInput.js",
       "source_location": "L1",
-      "community": 22,
+      "community": 21,
       "norm_label": "rightjdinput.js",
       "id": "app_components_rightjdinput_js"
     },
@@ -1655,7 +1862,7 @@
       "file_type": "code",
       "source_file": "app/components/V2FeaturesModal.js",
       "source_location": "L1",
-      "community": 23,
+      "community": 22,
       "norm_label": "v2featuresmodal.js",
       "id": "app_components_v2featuresmodal_js"
     },
@@ -1673,7 +1880,7 @@
       "file_type": "code",
       "source_file": "app/components/landing/FeatureGrid.jsx",
       "source_location": "L1",
-      "community": 24,
+      "community": 23,
       "norm_label": "featuregrid.jsx",
       "id": "app_components_landing_featuregrid_jsx"
     },
@@ -1682,7 +1889,7 @@
       "file_type": "code",
       "source_file": "app/components/landing/FinalCTA.jsx",
       "source_location": "L1",
-      "community": 25,
+      "community": 24,
       "norm_label": "finalcta.jsx",
       "id": "app_components_landing_finalcta_jsx"
     },
@@ -1691,7 +1898,7 @@
       "file_type": "code",
       "source_file": "app/components/landing/HeroSection.jsx",
       "source_location": "L1",
-      "community": 26,
+      "community": 25,
       "norm_label": "herosection.jsx",
       "id": "app_components_landing_herosection_jsx"
     },
@@ -1700,7 +1907,7 @@
       "file_type": "code",
       "source_file": "app/components/landing/HowItWorks.jsx",
       "source_location": "L1",
-      "community": 27,
+      "community": 26,
       "norm_label": "howitworks.jsx",
       "id": "app_components_landing_howitworks_jsx"
     },
@@ -1709,25 +1916,16 @@
       "file_type": "code",
       "source_file": "app/components/landing/LandingFooter.jsx",
       "source_location": "L1",
-      "community": 28,
+      "community": 27,
       "norm_label": "landingfooter.jsx",
       "id": "app_components_landing_landingfooter_jsx"
-    },
-    {
-      "label": "LandingNavbar.jsx",
-      "file_type": "code",
-      "source_file": "app/components/landing/LandingNavbar.jsx",
-      "source_location": "L1",
-      "community": 29,
-      "norm_label": "landingnavbar.jsx",
-      "id": "app_components_landing_landingnavbar_jsx"
     },
     {
       "label": "LinkedInFeature.jsx",
       "file_type": "code",
       "source_file": "app/components/landing/LinkedInFeature.jsx",
       "source_location": "L1",
-      "community": 30,
+      "community": 29,
       "norm_label": "linkedinfeature.jsx",
       "id": "app_components_landing_linkedinfeature_jsx"
     },
@@ -1736,7 +1934,7 @@
       "file_type": "code",
       "source_file": "app/components/landing/PricingSection.jsx",
       "source_location": "L1",
-      "community": 31,
+      "community": 30,
       "norm_label": "pricingsection.jsx",
       "id": "app_components_landing_pricingsection_jsx"
     },
@@ -1745,7 +1943,7 @@
       "file_type": "code",
       "source_file": "app/components/landing/ProblemSection.jsx",
       "source_location": "L1",
-      "community": 32,
+      "community": 31,
       "norm_label": "problemsection.jsx",
       "id": "app_components_landing_problemsection_jsx"
     },
@@ -1754,7 +1952,7 @@
       "file_type": "code",
       "source_file": "app/components/landing/ProductDemo.jsx",
       "source_location": "L1",
-      "community": 33,
+      "community": 32,
       "norm_label": "productdemo.jsx",
       "id": "app_components_landing_productdemo_jsx"
     },
@@ -1763,7 +1961,7 @@
       "file_type": "code",
       "source_file": "app/components/landing/SolutionSection.jsx",
       "source_location": "L1",
-      "community": 34,
+      "community": 33,
       "norm_label": "solutionsection.jsx",
       "id": "app_components_landing_solutionsection_jsx"
     },
@@ -1772,7 +1970,7 @@
       "file_type": "code",
       "source_file": "app/components/landing/Testimonials.jsx",
       "source_location": "L1",
-      "community": 35,
+      "community": 34,
       "norm_label": "testimonials.jsx",
       "id": "app_components_landing_testimonials_jsx"
     },
@@ -1781,7 +1979,7 @@
       "file_type": "code",
       "source_file": "app/components/landing/WaveCanvas.jsx",
       "source_location": "L1",
-      "community": 36,
+      "community": 35,
       "norm_label": "wavecanvas.jsx",
       "id": "app_components_landing_wavecanvas_jsx"
     },
@@ -1799,7 +1997,7 @@
       "file_type": "code",
       "source_file": "app/dashboard/page.js",
       "source_location": "L1",
-      "community": 37,
+      "community": 38,
       "norm_label": "page.js",
       "id": "app_dashboard_page_js"
     },
@@ -1808,7 +2006,7 @@
       "file_type": "code",
       "source_file": "app/onboarding/page.js",
       "source_location": "L1",
-      "community": 38,
+      "community": 39,
       "norm_label": "page.js",
       "id": "app_onboarding_page_js"
     },
@@ -1826,7 +2024,7 @@
       "file_type": "code",
       "source_file": "app/profile/page.js",
       "source_location": "L1",
-      "community": 39,
+      "community": 40,
       "norm_label": "page.js",
       "id": "app_profile_page_js"
     },
@@ -1835,7 +2033,7 @@
       "file_type": "code",
       "source_file": "app/purchases/page.js",
       "source_location": "L1",
-      "community": 40,
+      "community": 41,
       "norm_label": "page.js",
       "id": "app_purchases_page_js"
     },
@@ -1862,7 +2060,7 @@
       "file_type": "code",
       "source_file": "lib/prompt.js",
       "source_location": "L1",
-      "community": 57,
+      "community": 65,
       "norm_label": "prompt.js",
       "id": "lib_prompt_js"
     },
@@ -1871,7 +2069,7 @@
       "file_type": "code",
       "source_file": "lib/SanitizeCovLetter.js",
       "source_location": "L1",
-      "community": 41,
+      "community": 42,
       "norm_label": "sanitizecovletter.js",
       "id": "lib_sanitizecovletter_js"
     }
@@ -1883,9 +2081,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\middleware.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_middleware_js",
-      "target": "cover_letter_writer_middleware_middleware",
-      "confidence_score": 1.0
+      "target": "cover_letter_writer_middleware_middleware"
     },
     {
       "relation": "contains",
@@ -1921,12 +2119,12 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\page.js",
-      "source_location": "L16",
+      "source_file": "app\\page.js",
+      "source_location": "L34",
       "weight": 1.0,
-      "source": "e_projects_covgen_cover_letter_writer_app_page_js",
-      "target": "app_page_home",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "app_page_js",
+      "target": "app_page_landingpagecontent"
     },
     {
       "relation": "contains",
@@ -1941,12 +2139,22 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\page.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "e_projects_covgen_cover_letter_writer_app_page_js",
+      "target": "app_page_home"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\robots.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_robots_js",
-      "target": "app_robots_robots",
-      "confidence_score": 1.0
+      "target": "app_robots_robots"
     },
     {
       "relation": "contains",
@@ -1964,9 +2172,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\sitemap.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_sitemap_js",
-      "target": "app_sitemap_sitemap",
-      "confidence_score": 1.0
+      "target": "app_sitemap_sitemap"
     },
     {
       "relation": "contains",
@@ -1985,9 +2193,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\about\\page.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_about_page_js",
-      "target": "components_navbar_navbar",
-      "confidence_score": 1.0
+      "target": "components_navbar_navbar"
     },
     {
       "relation": "contains",
@@ -1995,9 +2203,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\about\\page.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_about_page_js",
-      "target": "about_page_aboutpage",
-      "confidence_score": 1.0
+      "target": "about_page_aboutpage"
     },
     {
       "relation": "contains",
@@ -2015,9 +2223,9 @@
       "source_file": "app\\api\\fetch-jd\\route.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_api_fetch_jd_route_ts",
-      "target": "fetch_jd_route_normalizespaces",
-      "confidence_score": 1.0
+      "target": "fetch_jd_route_normalizespaces"
     },
     {
       "relation": "contains",
@@ -2025,9 +2233,9 @@
       "source_file": "app\\api\\fetch-jd\\route.ts",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_api_fetch_jd_route_ts",
-      "target": "fetch_jd_route_textfromfirst",
-      "confidence_score": 1.0
+      "target": "fetch_jd_route_textfromfirst"
     },
     {
       "relation": "contains",
@@ -2035,9 +2243,9 @@
       "source_file": "app\\api\\fetch-jd\\route.ts",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_api_fetch_jd_route_ts",
-      "target": "fetch_jd_route_linkedindescriptiontext",
-      "confidence_score": 1.0
+      "target": "fetch_jd_route_linkedindescriptiontext"
     },
     {
       "relation": "contains",
@@ -2045,9 +2253,9 @@
       "source_file": "app\\api\\fetch-jd\\route.ts",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_api_fetch_jd_route_ts",
-      "target": "fetch_jd_route_formatlinkedinjobtext",
-      "confidence_score": 1.0
+      "target": "fetch_jd_route_formatlinkedinjobtext"
     },
     {
       "relation": "contains",
@@ -2066,9 +2274,9 @@
       "source_file": "app\\api\\fetch-jd\\route.ts",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "fetch_jd_route_textfromfirst",
-      "target": "fetch_jd_route_normalizespaces",
-      "confidence_score": 1.0
+      "target": "fetch_jd_route_normalizespaces"
     },
     {
       "relation": "calls",
@@ -2077,9 +2285,9 @@
       "source_file": "app\\api\\fetch-jd\\route.ts",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "fetch_jd_route_linkedindescriptiontext",
-      "target": "fetch_jd_route_normalizespaces",
-      "confidence_score": 1.0
+      "target": "fetch_jd_route_normalizespaces"
     },
     {
       "relation": "calls",
@@ -2088,9 +2296,9 @@
       "source_file": "app\\api\\fetch-jd\\route.ts",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "fetch_jd_route_formatlinkedinjobtext",
-      "target": "fetch_jd_route_normalizespaces",
-      "confidence_score": 1.0
+      "target": "fetch_jd_route_normalizespaces"
     },
     {
       "relation": "calls",
@@ -2099,9 +2307,9 @@
       "source_file": "app\\api\\fetch-jd\\route.ts",
       "source_location": "L120",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "fetch_jd_route_post",
-      "target": "fetch_jd_route_textfromfirst",
-      "confidence_score": 1.0
+      "target": "fetch_jd_route_textfromfirst"
     },
     {
       "relation": "calls",
@@ -2110,9 +2318,9 @@
       "source_file": "app\\api\\fetch-jd\\route.ts",
       "source_location": "L136",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "fetch_jd_route_post",
-      "target": "fetch_jd_route_linkedindescriptiontext",
-      "confidence_score": 1.0
+      "target": "fetch_jd_route_linkedindescriptiontext"
     },
     {
       "relation": "calls",
@@ -2121,19 +2329,9 @@
       "source_file": "app\\api\\fetch-jd\\route.ts",
       "source_location": "L136",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "fetch_jd_route_post",
-      "target": "fetch_jd_route_formatlinkedinjobtext",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\auth\\page.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "source": "e_projects_covgen_cover_letter_writer_app_auth_page_js",
-      "target": "auth_page_authpage",
-      "confidence_score": 1.0
+      "target": "fetch_jd_route_formatlinkedinjobtext"
     },
     {
       "relation": "contains",
@@ -2148,12 +2346,22 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\auth\\page.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "e_projects_covgen_cover_letter_writer_app_auth_page_js",
+      "target": "auth_page_authpage"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\blogs\\page.js",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_blogs_page_js",
-      "target": "blogs_page_formatdate",
-      "confidence_score": 1.0
+      "target": "blogs_page_formatdate"
     },
     {
       "relation": "contains",
@@ -2161,9 +2369,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\blogs\\page.js",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_blogs_page_js",
-      "target": "blogs_page_getreadingtime",
-      "confidence_score": 1.0
+      "target": "blogs_page_getreadingtime"
     },
     {
       "relation": "contains",
@@ -2171,9 +2379,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\blogs\\page.js",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_blogs_page_js",
-      "target": "blogs_page_getexcerpt",
-      "confidence_score": 1.0
+      "target": "blogs_page_getexcerpt"
     },
     {
       "relation": "contains",
@@ -2181,9 +2389,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\blogs\\page.js",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_blogs_page_js",
-      "target": "blogs_page_blogspage",
-      "confidence_score": 1.0
+      "target": "blogs_page_blogspage"
     },
     {
       "relation": "contains",
@@ -2231,9 +2439,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\blogs\\[slug]\\page.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_blogs_slug_page_js",
-      "target": "slug_page_generatestaticparams",
-      "confidence_score": 1.0
+      "target": "slug_page_generatestaticparams"
     },
     {
       "relation": "contains",
@@ -2241,9 +2449,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\blogs\\[slug]\\page.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_blogs_slug_page_js",
-      "target": "slug_page_generatemetadata",
-      "confidence_score": 1.0
+      "target": "slug_page_generatemetadata"
     },
     {
       "relation": "contains",
@@ -2251,9 +2459,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\blogs\\[slug]\\page.js",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_blogs_slug_page_js",
-      "target": "slug_page_formatdate",
-      "confidence_score": 1.0
+      "target": "slug_page_formatdate"
     },
     {
       "relation": "contains",
@@ -2261,9 +2469,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\blogs\\[slug]\\page.js",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_blogs_slug_page_js",
-      "target": "slug_page_getreadingtime",
-      "confidence_score": 1.0
+      "target": "slug_page_getreadingtime"
     },
     {
       "relation": "contains",
@@ -2271,9 +2479,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\blogs\\[slug]\\page.js",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_blogs_slug_page_js",
-      "target": "slug_page_blogpost",
-      "confidence_score": 1.0
+      "target": "slug_page_blogpost"
     },
     {
       "relation": "contains",
@@ -2363,9 +2571,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Controls.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_controls_js",
-      "target": "components_controls_controls",
-      "confidence_score": 1.0
+      "target": "components_controls_controls"
     },
     {
       "relation": "contains",
@@ -2393,9 +2601,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\GoogleProviderWrapper.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_googleproviderwrapper_js",
-      "target": "components_googleproviderwrapper_googleproviderwrapper",
-      "confidence_score": 1.0
+      "target": "components_googleproviderwrapper_googleproviderwrapper"
     },
     {
       "relation": "contains",
@@ -2413,9 +2621,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Header.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_header_js",
-      "target": "components_header_header",
-      "confidence_score": 1.0
+      "target": "components_header_header"
     },
     {
       "relation": "contains",
@@ -2433,9 +2641,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\IntroModal.js",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_intromodal_js",
-      "target": "components_intromodal_intromodal",
-      "confidence_score": 1.0
+      "target": "components_intromodal_intromodal"
     },
     {
       "relation": "contains",
@@ -2453,9 +2661,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\JDInputSection.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_jdinputsection_js",
-      "target": "components_jdinputsection_jdinputsection",
-      "confidence_score": 1.0
+      "target": "components_jdinputsection_jdinputsection"
     },
     {
       "relation": "contains",
@@ -2473,9 +2681,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\LeftOptions.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_leftoptions_js",
-      "target": "components_leftoptions_leftoptions",
-      "confidence_score": 1.0
+      "target": "components_leftoptions_leftoptions"
     },
     {
       "relation": "contains",
@@ -2493,9 +2701,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Letter.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_letter_js",
-      "target": "components_letter_downloadpdf",
-      "confidence_score": 1.0
+      "target": "components_letter_downloadpdf"
     },
     {
       "relation": "contains",
@@ -2503,9 +2711,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Letter.js",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_letter_js",
-      "target": "components_letter_lettercard",
-      "confidence_score": 1.0
+      "target": "components_letter_lettercard"
     },
     {
       "relation": "contains",
@@ -2513,9 +2721,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Letter.js",
       "source_location": "L136",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_letter_js",
-      "target": "components_letter_letter",
-      "confidence_score": 1.0
+      "target": "components_letter_letter"
     },
     {
       "relation": "contains",
@@ -2553,9 +2761,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\ModelDropdown.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_modeldropdown_js",
-      "target": "components_modeldropdown_customdropdown",
-      "confidence_score": 1.0
+      "target": "components_modeldropdown_customdropdown"
     },
     {
       "relation": "contains",
@@ -2573,9 +2781,9 @@
       "source_file": "app\\components\\Navbar.js",
       "source_location": "L43",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_navbar_js",
-      "target": "components_navbar_isactivepath",
-      "confidence_score": 1.0
+      "target": "components_navbar_isactivepath"
     },
     {
       "relation": "contains",
@@ -2583,9 +2791,9 @@
       "source_file": "app\\components\\Navbar.js",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_navbar_js",
-      "target": "components_navbar_desktopnavitem",
-      "confidence_score": 1.0
+      "target": "components_navbar_desktopnavitem"
     },
     {
       "relation": "contains",
@@ -2593,9 +2801,9 @@
       "source_file": "app\\components\\Navbar.js",
       "source_location": "L68",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_navbar_js",
-      "target": "components_navbar_menulink",
-      "confidence_score": 1.0
+      "target": "components_navbar_menulink"
     },
     {
       "relation": "contains",
@@ -2614,9 +2822,9 @@
       "source_file": "app\\components\\Navbar.js",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_navbar_desktopnavitem",
-      "target": "components_navbar_isactivepath",
-      "confidence_score": 1.0
+      "target": "components_navbar_isactivepath"
     },
     {
       "relation": "imports",
@@ -2636,9 +2844,9 @@
       "source_file": "app\\payment\\failed\\page.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_payment_failed_page_js",
-      "target": "components_navbar_navbar",
-      "confidence_score": 1.0
+      "target": "components_navbar_navbar"
     },
     {
       "relation": "imports",
@@ -2647,9 +2855,9 @@
       "source_file": "app\\payment\\success\\page.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_payment_success_page_js",
-      "target": "components_navbar_navbar",
-      "confidence_score": 1.0
+      "target": "components_navbar_navbar"
     },
     {
       "relation": "imports",
@@ -2669,9 +2877,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\privacy-policy\\page.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_privacy_policy_page_js",
-      "target": "components_navbar_navbar",
-      "confidence_score": 1.0
+      "target": "components_navbar_navbar"
     },
     {
       "relation": "imports",
@@ -2680,9 +2888,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\refund-policy\\page.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_refund_policy_page_js",
-      "target": "components_navbar_navbar",
-      "confidence_score": 1.0
+      "target": "components_navbar_navbar"
     },
     {
       "relation": "imports",
@@ -2691,9 +2899,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\terms-and-conditions\\page.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_terms_and_conditions_page_js",
-      "target": "components_navbar_navbar",
-      "confidence_score": 1.0
+      "target": "components_navbar_navbar"
     },
     {
       "relation": "imports",
@@ -2745,9 +2953,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\RightJDInput.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_rightjdinput_js",
-      "target": "components_rightjdinput_rightjdinput",
-      "confidence_score": 1.0
+      "target": "components_rightjdinput_rightjdinput"
     },
     {
       "relation": "contains",
@@ -2765,9 +2973,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\V2FeaturesModal.js",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_v2featuresmodal_js",
-      "target": "components_v2featuresmodal_v2featuresmodal",
-      "confidence_score": 1.0
+      "target": "components_v2featuresmodal_v2featuresmodal"
     },
     {
       "relation": "contains",
@@ -2795,9 +3003,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_auth_profile_js",
-      "target": "auth_profile_cleanjobdescription",
-      "confidence_score": 1.0
+      "target": "auth_profile_cleanjobdescription"
     },
     {
       "relation": "contains",
@@ -2805,9 +3013,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_auth_profile_js",
-      "target": "auth_profile_downloadpdf",
-      "confidence_score": 1.0
+      "target": "auth_profile_downloadpdf"
     },
     {
       "relation": "contains",
@@ -2815,9 +3023,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
       "source_location": "L55",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_auth_profile_js",
-      "target": "auth_profile_skeletoncard",
-      "confidence_score": 1.0
+      "target": "auth_profile_skeletoncard"
     },
     {
       "relation": "contains",
@@ -2825,9 +3033,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
       "source_location": "L78",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_auth_profile_js",
-      "target": "auth_profile_savedlettercard",
-      "confidence_score": 1.0
+      "target": "auth_profile_savedlettercard"
     },
     {
       "relation": "contains",
@@ -2835,9 +3043,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
       "source_location": "L256",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_auth_profile_js",
-      "target": "auth_profile_profile",
-      "confidence_score": 1.0
+      "target": "auth_profile_profile"
     },
     {
       "relation": "calls",
@@ -2906,9 +3114,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\FeatureGrid.jsx",
       "source_location": "L63",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_landing_featuregrid_jsx",
-      "target": "landing_featuregrid_featuregrid",
-      "confidence_score": 1.0
+      "target": "landing_featuregrid_featuregrid"
     },
     {
       "relation": "contains",
@@ -2926,9 +3134,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\FinalCTA.jsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_landing_finalcta_jsx",
-      "target": "landing_finalcta_finalcta",
-      "confidence_score": 1.0
+      "target": "landing_finalcta_finalcta"
     },
     {
       "relation": "contains",
@@ -2946,9 +3154,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\HeroSection.jsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_landing_herosection_jsx",
-      "target": "landing_herosection_herosection",
-      "confidence_score": 1.0
+      "target": "landing_herosection_herosection"
     },
     {
       "relation": "contains",
@@ -2966,9 +3174,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\HowItWorks.jsx",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_landing_howitworks_jsx",
-      "target": "landing_howitworks_howitworks",
-      "confidence_score": 1.0
+      "target": "landing_howitworks_howitworks"
     },
     {
       "relation": "contains",
@@ -2986,9 +3194,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\LandingFooter.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_landing_landingfooter_jsx",
-      "target": "landing_landingfooter_landingfooter",
-      "confidence_score": 1.0
+      "target": "landing_landingfooter_landingfooter"
     },
     {
       "relation": "contains",
@@ -3003,16 +3211,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\LandingNavbar.jsx",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "e_projects_covgen_cover_letter_writer_app_components_landing_landingnavbar_jsx",
-      "target": "landing_landingnavbar_landingnavbar",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "app/components/landing/LandingNavbar.jsx",
       "source_location": "L8",
       "weight": 1.0,
@@ -3023,12 +3221,22 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\LandingNavbar.jsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "e_projects_covgen_cover_letter_writer_app_components_landing_landingnavbar_jsx",
+      "target": "landing_landingnavbar_landingnavbar"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\LinkedInFeature.jsx",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_landing_linkedinfeature_jsx",
-      "target": "landing_linkedinfeature_linkedinfeature",
-      "confidence_score": 1.0
+      "target": "landing_linkedinfeature_linkedinfeature"
     },
     {
       "relation": "contains",
@@ -3046,9 +3254,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\PricingSection.jsx",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_landing_pricingsection_jsx",
-      "target": "landing_pricingsection_pricingsection",
-      "confidence_score": 1.0
+      "target": "landing_pricingsection_pricingsection"
     },
     {
       "relation": "contains",
@@ -3066,9 +3274,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\ProblemSection.jsx",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_landing_problemsection_jsx",
-      "target": "landing_problemsection_problemsection",
-      "confidence_score": 1.0
+      "target": "landing_problemsection_problemsection"
     },
     {
       "relation": "contains",
@@ -3086,9 +3294,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\ProductDemo.jsx",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_landing_productdemo_jsx",
-      "target": "landing_productdemo_productdemo",
-      "confidence_score": 1.0
+      "target": "landing_productdemo_productdemo"
     },
     {
       "relation": "contains",
@@ -3106,9 +3314,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\SolutionSection.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_landing_solutionsection_jsx",
-      "target": "landing_solutionsection_solutionsection",
-      "confidence_score": 1.0
+      "target": "landing_solutionsection_solutionsection"
     },
     {
       "relation": "contains",
@@ -3126,9 +3334,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\Testimonials.jsx",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_landing_testimonials_jsx",
-      "target": "landing_testimonials_testimonials",
-      "confidence_score": 1.0
+      "target": "landing_testimonials_testimonials"
     },
     {
       "relation": "contains",
@@ -3146,9 +3354,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\landing\\WaveCanvas.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_landing_wavecanvas_jsx",
-      "target": "landing_wavecanvas_wavecanvas",
-      "confidence_score": 1.0
+      "target": "landing_wavecanvas_wavecanvas"
     },
     {
       "relation": "contains",
@@ -3163,12 +3371,122 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "app\\components\\new-landing\\PillSwitcher.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "app_components_new_landing_pillswitcher_jsx",
+      "target": "new_landing_pillswitcher_pillswitcher"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\components\\new-landing\\ResumeFeatures.jsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "app_components_new_landing_resumefeatures_jsx",
+      "target": "new_landing_resumefeatures_resumefeatures"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\components\\new-landing\\ResumeFinalCTA.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "app_components_new_landing_resumefinalcta_jsx",
+      "target": "new_landing_resumefinalcta_resumefinalcta"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\components\\new-landing\\ResumeHero.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "app_components_new_landing_resumehero_jsx",
+      "target": "new_landing_resumehero_resumehero"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\components\\new-landing\\ResumeHowItWorks.jsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "app_components_new_landing_resumehowitworks_jsx",
+      "target": "new_landing_resumehowitworks_resumehowitworks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\components\\new-landing\\ResumeLiveDemo.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "app_components_new_landing_resumelivedemo_jsx",
+      "target": "new_landing_resumelivedemo_resumelivedemo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\components\\new-landing\\ResumePricing.jsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "app_components_new_landing_resumepricing_jsx",
+      "target": "new_landing_resumepricing_resumepricing"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\components\\new-landing\\ResumeSocialProof.jsx",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "app_components_new_landing_resumesocialproof_jsx",
+      "target": "new_landing_resumesocialproof_abstractavatar"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\components\\new-landing\\ResumeSocialProof.jsx",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "app_components_new_landing_resumesocialproof_jsx",
+      "target": "new_landing_resumesocialproof_resumesocialproof"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\components\\new-landing\\ResumeStats.jsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "app_components_new_landing_resumestats_jsx",
+      "target": "new_landing_resumestats_counter"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\components\\new-landing\\ResumeStats.jsx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "app_components_new_landing_resumestats_jsx",
+      "target": "new_landing_resumestats_resumestats"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\pricing\\PricingCard.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_components_pricing_pricingcard_jsx",
-      "target": "pricing_pricingcard_pricingcard",
-      "confidence_score": 1.0
+      "target": "pricing_pricingcard_pricingcard"
     },
     {
       "relation": "imports",
@@ -3197,9 +3515,9 @@
       "source_file": "app\\components\\resumes\\ResumePageShell.js",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_resumes_resumepageshell_js",
-      "target": "resumes_resumepageshell_resumepageshell",
-      "confidence_score": 1.0
+      "target": "resumes_resumepageshell_resumepageshell"
     },
     {
       "relation": "contains",
@@ -3207,9 +3525,9 @@
       "source_file": "app\\components\\resumes\\ResumeTemplate.js",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_resumes_resumetemplate_js",
-      "target": "resumes_resumetemplate_join",
-      "confidence_score": 1.0
+      "target": "resumes_resumetemplate_join"
     },
     {
       "relation": "contains",
@@ -3217,9 +3535,9 @@
       "source_file": "app\\components\\resumes\\ResumeTemplate.js",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_resumes_resumetemplate_js",
-      "target": "resumes_resumetemplate_contactline",
-      "confidence_score": 1.0
+      "target": "resumes_resumetemplate_contactline"
     },
     {
       "relation": "contains",
@@ -3227,9 +3545,9 @@
       "source_file": "app\\components\\resumes\\ResumeTemplate.js",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_resumes_resumetemplate_js",
-      "target": "resumes_resumetemplate_section",
-      "confidence_score": 1.0
+      "target": "resumes_resumetemplate_section"
     },
     {
       "relation": "contains",
@@ -3237,9 +3555,9 @@
       "source_file": "app\\components\\resumes\\ResumeTemplate.js",
       "source_location": "L78",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_resumes_resumetemplate_js",
-      "target": "resumes_resumetemplate_experience",
-      "confidence_score": 1.0
+      "target": "resumes_resumetemplate_experience"
     },
     {
       "relation": "contains",
@@ -3247,9 +3565,9 @@
       "source_file": "app\\components\\resumes\\ResumeTemplate.js",
       "source_location": "L109",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_resumes_resumetemplate_js",
-      "target": "resumes_resumetemplate_education",
-      "confidence_score": 1.0
+      "target": "resumes_resumetemplate_education"
     },
     {
       "relation": "contains",
@@ -3257,9 +3575,9 @@
       "source_file": "app\\components\\resumes\\ResumeTemplate.js",
       "source_location": "L141",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_resumes_resumetemplate_js",
-      "target": "resumes_resumetemplate_projects",
-      "confidence_score": 1.0
+      "target": "resumes_resumetemplate_projects"
     },
     {
       "relation": "contains",
@@ -3267,9 +3585,9 @@
       "source_file": "app\\components\\resumes\\ResumeTemplate.js",
       "source_location": "L175",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_resumes_resumetemplate_js",
-      "target": "resumes_resumetemplate_simplelist",
-      "confidence_score": 1.0
+      "target": "resumes_resumetemplate_simplelist"
     },
     {
       "relation": "contains",
@@ -3277,9 +3595,9 @@
       "source_file": "app\\components\\resumes\\ResumeTemplate.js",
       "source_location": "L220",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_resumes_resumetemplate_js",
-      "target": "resumes_resumetemplate_resumetemplate",
-      "confidence_score": 1.0
+      "target": "resumes_resumetemplate_resumetemplate"
     },
     {
       "relation": "calls",
@@ -3288,9 +3606,9 @@
       "source_file": "app\\components\\resumes\\ResumeTemplate.js",
       "source_location": "L192",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "resumes_resumetemplate_simplelist",
-      "target": "resumes_resumetemplate_join",
-      "confidence_score": 1.0
+      "target": "resumes_resumetemplate_join"
     },
     {
       "relation": "calls",
@@ -3299,9 +3617,9 @@
       "source_file": "app\\components\\resumes\\ResumeTemplate.js",
       "source_location": "L286",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "resumes_resumetemplate_resumetemplate",
-      "target": "resumes_resumetemplate_join",
-      "confidence_score": 1.0
+      "target": "resumes_resumetemplate_join"
     },
     {
       "relation": "contains",
@@ -3339,9 +3657,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\dashboard\\page.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_dashboard_page_js",
-      "target": "dashboard_page_dashboard",
-      "confidence_score": 1.0
+      "target": "dashboard_page_dashboard"
     },
     {
       "relation": "contains",
@@ -3359,9 +3677,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\onboarding\\page.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_onboarding_page_js",
-      "target": "onboarding_page_onboardingpage",
-      "confidence_score": 1.0
+      "target": "onboarding_page_onboardingpage"
     },
     {
       "relation": "contains",
@@ -3379,9 +3697,9 @@
       "source_file": "app\\payment\\failed\\page.js",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_payment_failed_page_js",
-      "target": "failed_page_failedcontent",
-      "confidence_score": 1.0
+      "target": "failed_page_failedcontent"
     },
     {
       "relation": "contains",
@@ -3389,9 +3707,9 @@
       "source_file": "app\\payment\\failed\\page.js",
       "source_location": "L120",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_payment_failed_page_js",
-      "target": "failed_page_paymentfailedpage",
-      "confidence_score": 1.0
+      "target": "failed_page_paymentfailedpage"
     },
     {
       "relation": "contains",
@@ -3399,9 +3717,9 @@
       "source_file": "app\\payment\\success\\page.js",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_payment_success_page_js",
-      "target": "success_page_successcontent",
-      "confidence_score": 1.0
+      "target": "success_page_successcontent"
     },
     {
       "relation": "contains",
@@ -3409,9 +3727,9 @@
       "source_file": "app\\payment\\success\\page.js",
       "source_location": "L165",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_payment_success_page_js",
-      "target": "success_page_paymentsuccesspage",
-      "confidence_score": 1.0
+      "target": "success_page_paymentsuccesspage"
     },
     {
       "relation": "contains",
@@ -3429,9 +3747,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\privacy-policy\\page.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_privacy_policy_page_js",
-      "target": "privacy_policy_page_privacypolicypage",
-      "confidence_score": 1.0
+      "target": "privacy_policy_page_privacypolicypage"
     },
     {
       "relation": "contains",
@@ -3449,9 +3767,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\profile\\page.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_profile_page_js",
-      "target": "profile_page_page",
-      "confidence_score": 1.0
+      "target": "profile_page_page"
     },
     {
       "relation": "contains",
@@ -3469,9 +3787,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\purchases\\page.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_purchases_page_js",
-      "target": "purchases_page_purchasespage",
-      "confidence_score": 1.0
+      "target": "purchases_page_purchasespage"
     },
     {
       "relation": "contains",
@@ -3489,9 +3807,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\refund-policy\\page.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_refund_policy_page_js",
-      "target": "refund_policy_page_refundpolicypage",
-      "confidence_score": 1.0
+      "target": "refund_policy_page_refundpolicypage"
     },
     {
       "relation": "contains",
@@ -3510,9 +3828,9 @@
       "source_file": "app\\resumes\\page.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_resumes_page_js",
-      "target": "resumes_api_fetchjson",
-      "confidence_score": 1.0
+      "target": "resumes_api_fetchjson"
     },
     {
       "relation": "contains",
@@ -3520,9 +3838,9 @@
       "source_file": "app\\resumes\\page.js",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_resumes_page_js",
-      "target": "resumes_page_resumedashboardpage",
-      "confidence_score": 1.0
+      "target": "resumes_page_resumedashboardpage"
     },
     {
       "relation": "imports",
@@ -3531,9 +3849,20 @@
       "source_file": "app\\resumes\\preview\\[id]\\page.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_resumes_preview_id_page_js",
-      "target": "resumes_api_fetchjson",
-      "confidence_score": 1.0
+      "target": "resumes_api_fetchjson"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\resumes\\preview\\[id]\\page.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "app_resumes_preview_id_page_js",
+      "target": "resumes_api_downloadresumepdf"
     },
     {
       "relation": "contains",
@@ -3541,9 +3870,9 @@
       "source_file": "app\\resumes\\preview\\[id]\\page.js",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_resumes_preview_id_page_js",
-      "target": "id_page_resumepreviewpage",
-      "confidence_score": 1.0
+      "target": "id_page_resumepreviewpage"
     },
     {
       "relation": "imports",
@@ -3552,9 +3881,9 @@
       "source_file": "app\\resumes\\upload\\page.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_resumes_upload_page_js",
-      "target": "resumes_api_authheaders",
-      "confidence_score": 1.0
+      "target": "resumes_api_authheaders"
     },
     {
       "relation": "contains",
@@ -3562,9 +3891,9 @@
       "source_file": "app\\resumes\\upload\\page.js",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_resumes_upload_page_js",
-      "target": "upload_page_uploadresumepage",
-      "confidence_score": 1.0
+      "target": "upload_page_uploadresumepage"
     },
     {
       "relation": "imports",
@@ -3573,9 +3902,9 @@
       "source_file": "app\\resumes\\[id]\\analysis\\page.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_resumes_id_analysis_page_js",
-      "target": "resumes_api_fetchjson",
-      "confidence_score": 1.0
+      "target": "resumes_api_fetchjson"
     },
     {
       "relation": "contains",
@@ -3583,9 +3912,9 @@
       "source_file": "app\\resumes\\[id]\\analysis\\page.js",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_resumes_id_analysis_page_js",
-      "target": "analysis_page_resumeanalysispage",
-      "confidence_score": 1.0
+      "target": "analysis_page_resumeanalysispage"
     },
     {
       "relation": "contains",
@@ -3593,9 +3922,9 @@
       "source_file": "app\\resumes\\[id]\\analysis\\page.js",
       "source_location": "L199",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_resumes_id_analysis_page_js",
-      "target": "analysis_page_insightpanel",
-      "confidence_score": 1.0
+      "target": "analysis_page_insightpanel"
     },
     {
       "relation": "imports",
@@ -3604,9 +3933,9 @@
       "source_file": "app\\resumes\\[id]\\tailor\\page.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_resumes_id_tailor_page_js",
-      "target": "resumes_api_fetchjson",
-      "confidence_score": 1.0
+      "target": "resumes_api_fetchjson"
     },
     {
       "relation": "contains",
@@ -3614,9 +3943,9 @@
       "source_file": "app\\resumes\\[id]\\tailor\\page.js",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_resumes_id_tailor_page_js",
-      "target": "tailor_page_resumetailorpage",
-      "confidence_score": 1.0
+      "target": "tailor_page_resumetailorpage"
     },
     {
       "relation": "contains",
@@ -3624,9 +3953,9 @@
       "source_file": "app\\resumes\\[id]\\tailor\\page.js",
       "source_location": "L183",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_resumes_id_tailor_page_js",
-      "target": "tailor_page_tabbutton",
-      "confidence_score": 1.0
+      "target": "tailor_page_tabbutton"
     },
     {
       "relation": "imports",
@@ -3635,9 +3964,9 @@
       "source_file": "app\\resumes\\[id]\\templates\\page.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_resumes_id_templates_page_js",
-      "target": "resumes_api_fetchjson",
-      "confidence_score": 1.0
+      "target": "resumes_api_fetchjson"
     },
     {
       "relation": "contains",
@@ -3645,9 +3974,9 @@
       "source_file": "app\\resumes\\[id]\\templates\\page.js",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_resumes_id_templates_page_js",
-      "target": "templates_page_templateselectionpage",
-      "confidence_score": 1.0
+      "target": "templates_page_templateselectionpage"
     },
     {
       "relation": "contains",
@@ -3655,9 +3984,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\terms-and-conditions\\page.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_app_terms_and_conditions_page_js",
-      "target": "terms_and_conditions_page_termsandconditionspage",
-      "confidence_score": 1.0
+      "target": "terms_and_conditions_page_termsandconditionspage"
     },
     {
       "relation": "contains",
@@ -3675,9 +4004,9 @@
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\lib\\SanitizeCovLetter.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "e_projects_covgen_cover_letter_writer_lib_sanitizecovletter_js",
-      "target": "lib_sanitizecovletter_sanitizecoverletter",
-      "confidence_score": 1.0
+      "target": "lib_sanitizecovletter_sanitizecoverletter"
     },
     {
       "relation": "contains",
@@ -3695,9 +4024,9 @@
       "source_file": "lib\\resumes\\api.js",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_resumes_api_js",
-      "target": "resumes_api_authheaders",
-      "confidence_score": 1.0
+      "target": "resumes_api_authheaders"
     },
     {
       "relation": "contains",
@@ -3705,9 +4034,19 @@
       "source_file": "lib\\resumes\\api.js",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_resumes_api_js",
-      "target": "resumes_api_fetchjson",
-      "confidence_score": 1.0
+      "target": "resumes_api_fetchjson"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib\\resumes\\api.js",
+      "source_location": "L74",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "lib_resumes_api_js",
+      "target": "resumes_api_downloadresumepdf"
     },
     {
       "relation": "calls",
@@ -3716,9 +4055,20 @@
       "source_file": "lib\\resumes\\api.js",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "resumes_api_fetchjson",
-      "target": "resumes_api_authheaders",
-      "confidence_score": 1.0
+      "target": "resumes_api_authheaders"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib\\resumes\\api.js",
+      "source_location": "L78",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "resumes_api_downloadresumepdf",
+      "target": "resumes_api_authheaders"
     },
     {
       "relation": "contains",
@@ -3726,9 +4076,9 @@
       "source_file": "lib\\resumes\\template-data.js",
       "source_location": "L93",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_resumes_template_data_js",
-      "target": "resumes_template_data_templatebyid",
-      "confidence_score": 1.0
+      "target": "resumes_template_data_templatebyid"
     }
   ],
   "hyperedges": []

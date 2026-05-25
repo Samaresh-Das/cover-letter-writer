@@ -1,12 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { FaDownload, FaSave } from "react-icons/fa";
 import ResumePageShell from "../../../components/resumes/ResumePageShell";
 import ResumeTemplate from "../../../components/resumes/ResumeTemplate";
-import { fetchJson } from "../../../../lib/resumes/api";
+import { fetchJson, downloadResumePdf } from "../../../../lib/resumes/api";
 
 /**
  * Resume Preview route: /resumes/preview/:id
@@ -15,13 +15,13 @@ import { fetchJson } from "../../../../lib/resumes/api";
  * - useEffect() calls GET /api/resumes/generated/:id to load final preview data.
  * - "Save Resume State" button calls PATCH /api/resumes/generated/:id with PDF
  *   metadata.
- * - "Download PDF" button calls the same PATCH through saveMarker(), then runs
- *   window.print() for browser PDF export.
+ * - "Download PDF" button calls POST /api/resumes/generated/:id/pdf which
+ *   triggers Puppeteer-based backend rendering (replaces html2canvas/jsPDF).
  *
  * Components called:
  * - ResumePageShell wraps the page.
- * - ResumeTemplate renders generatedResume.optimizedResume with the persisted
- *   generatedResume.template.
+ * - ResumeTemplate renders generatedResume.optimizedResume for live preview only.
+ *   PDF rendering is done entirely on the backend via resume-pdf-service.js.
  */
 export default function ResumePreviewPage() {
   // id is the GeneratedResume MongoDB ObjectId from the preview route segment.
@@ -40,6 +40,46 @@ export default function ResumePreviewPage() {
   const [savingEdit, setSavingEdit] = useState(false);
   // error stores load/save failures from fetchJson().
   const [error, setError] = useState("");
+  // downloadingPdf controls the "Download PDF" button while the backend
+  // Puppeteer render is in flight.
+  const [downloadingPdf, setDownloadingPdf] = useState(false);
+  // pageCount: how many A4 pages the resume content occupies.
+  // Measured from the actual rendered height of the resume DOM.
+  const [pageCount, setPageCount] = useState(1);
+  // Hidden offscreen ref used to measure the true resume content height.
+  const measureRef = useRef(null);
+
+  /**
+   * A4 content height in pixels (at 96dpi):
+   *   A4 = 297mm, @page margin = 0.62in top + 0.62in bottom = 31.5mm
+   *   Content height = 297 - 31.5 = 265.5mm = 265.5 * 96/25.4 ≈ 1003.65px
+   */
+  const PAGE_CONTENT_PX = 265.5 * (96 / 25.4);
+
+  /**
+   * 0.62in in pixels at 96dpi = 59.52px.
+   * Used to subtract .resume-paper padding from the measured scrollHeight
+   * since the hidden measurement div renders .resume-paper with its normal
+   * padding, but the page cards strip it and provide their own.
+   */
+  const PADDING_PX = 0.62 * 96;
+
+  /**
+   * Measures the true rendered content height (minus padding) and calculates
+   * how many A4 pages are needed.
+   */
+  const measurePages = useCallback(() => {
+    if (!measureRef.current) return;
+    requestAnimationFrame(() => {
+      if (!measureRef.current) return;
+      const rawHeight = measureRef.current.scrollHeight;
+      // Subtract top + bottom padding of .resume-paper (rendered with padding
+      // in the hidden div) to get pure content height.
+      const contentHeight = rawHeight - 2 * PADDING_PX;
+      const pages = Math.max(1, Math.ceil(contentHeight / PAGE_CONTENT_PX));
+      setPageCount(pages);
+    });
+  }, [PAGE_CONTENT_PX, PADDING_PX]);
 
   /**
    * Loads the generated resume preview payload when /resumes/preview/:id mounts.
@@ -58,6 +98,8 @@ export default function ResumePreviewPage() {
       })
       .catch((err) => setError(err.message));
   }, [id]);
+
+
 
   /**
    * Saves lightweight PDF metadata to the generated resume document.
@@ -167,9 +209,23 @@ export default function ResumePreviewPage() {
     }
   };
 
+  /**
+   * Triggers backend Puppeteer PDF generation and downloads the result.
+   *
+   * Call path:
+   * - downloadResumePdf() in lib/resumes/api.js
+   * - POST /api/resumes/generated/:id/pdf
+   * - covgen-server/controllers/resume-pdf-controller.js generateResumePdfHandler()
+   * - covgen-server/services/resume-pdf-service.js generateResumePdf()
+   *
+   * The browser print dialog, html2canvas, and jsPDF are no longer used.
+   * Puppeteer renders the resume server-side from a self-contained HTML template
+   * with inline CSS, ensuring A4 pagination, no overflow clipping, and
+   * consistent print quality across all platforms.
+   */
   const printResume = async () => {
     await saveMarker().catch(() => { });
-    
+
     // Dynamically import PDF generation libraries to avoid SSR issues
     const { default: jsPDF } = await import("jspdf");
     const { default: html2canvas } = await import("html2canvas");
@@ -180,40 +236,40 @@ export default function ResumePreviewPage() {
     // Remove shadows/transforms for clean capture but do NOT constrain natural height
     const originalBoxShadow = element.style.boxShadow;
     const originalTransform = element.style.transform;
-    
+
     element.style.boxShadow = "none";
     element.style.transform = "none";
 
     try {
       const canvas = await html2canvas(element, { scale: 2, useCORS: true });
       const imgData = canvas.toDataURL("image/jpeg", 1.0);
-      
+
       const pdf = new jsPDF({
         orientation: "portrait",
         unit: "mm",
         format: "a4"
       });
-      
+
       const pdfWidth = 210;
       const pdfHeight = 297;
-      
+
       const imgWidth = canvas.width;
       const imgHeight = canvas.height;
       const ratio = imgWidth / imgHeight;
-      
+
       let finalWidth = pdfWidth;
       let finalHeight = pdfWidth / ratio;
-      
+
       // If the content is taller than A4, scale it down to fit one page exactly
       if (finalHeight > pdfHeight) {
         finalHeight = pdfHeight;
         finalWidth = finalHeight * ratio;
       }
-      
+
       const xOffset = (pdfWidth - finalWidth) / 2;
-      
+
       pdf.addImage(imgData, "JPEG", xOffset, 0, finalWidth, finalHeight);
-      
+
       const fileName = jd?.company ? `${jd.company.replace(/\s+/g, '_')}_Resume.pdf` : "Resume.pdf";
       pdf.save(fileName);
     } finally {
@@ -227,7 +283,13 @@ export default function ResumePreviewPage() {
   const jd = generatedResume?.jobDescription || {};
   const keywordList = analysis.missingKeywords || analysis.keywordGaps || [];
   const suggestionList = analysis.atsOptimizationSuggestions || analysis.importantSuggestions || [];
+  // displayedResume must be declared before the useEffect that measures it.
   const displayedResume = editResume || generatedResume?.optimizedResume;
+
+  // Re-measure page count whenever the displayed resume content changes.
+  useEffect(() => {
+    measurePages();
+  }, [displayedResume, editing, measurePages]);
 
   return (
     <ResumePageShell
@@ -237,8 +299,13 @@ export default function ResumePreviewPage() {
       action={
         <>
           {generatedResume && <Link href={`/resumes/${generatedResume.resume?._id || generatedResume.resume}/templates?generated=${id}`} className="rounded-lg border border-orange-100 bg-white/95 px-4 py-2 text-sm font-semibold text-slate-700 shadow-[0_10px_30px_rgba(249,115,22,0.08)]">Templates</Link>}
-          <button onClick={printResume} className="inline-flex items-center gap-2 rounded-lg bg-orange-600 px-4 py-2 text-sm font-bold text-white hover:bg-orange-700">
-            <FaDownload /> Download PDF
+          <button
+            onClick={printResume}
+            disabled={!generatedResume || downloadingPdf}
+            className="inline-flex items-center gap-2 rounded-lg bg-orange-600 px-4 py-2 text-sm font-bold text-white hover:bg-orange-700 disabled:opacity-60 disabled:cursor-not-allowed"
+          >
+            <FaDownload />
+            {downloadingPdf ? "Generating PDF…" : "Download PDF"}
           </button>
         </>
       }
@@ -314,8 +381,37 @@ export default function ResumePreviewPage() {
               <FaSave /> Save Resume State
             </button>
           </aside>
-          <div className="resume-print-stage overflow-auto rounded-xl border border-orange-100/80 bg-white p-4 shadow-[0_22px_70px_rgba(249,115,22,0.08)] print:overflow-visible print:border-0 print:bg-white print:p-0 print:shadow-none">
-            <ResumeTemplate resume={displayedResume} template={generatedResume.template} isEditing={editing} onFieldChange={handleResumeChange} />
+          <div className="resume-print-stage overflow-auto rounded-xl print:overflow-visible print:border-0 print:bg-white print:p-0 print:shadow-none">
+            {/* Hidden offscreen copy for measuring true content height.
+                Renders with normal .resume-paper padding so we can measure
+                scrollHeight and subtract padding to get pure content height. */}
+            <div
+              ref={measureRef}
+              aria-hidden="true"
+              style={{ position: 'absolute', left: '-9999px', top: 0, width: '210mm', visibility: 'hidden' }}
+            >
+              <ResumeTemplate resume={displayedResume} template={generatedResume.template} />
+            </div>
+
+            {/* Multi-page view: scrollable container with discrete A4 page cards.
+                Each card has 0.62in padding (simulating @page margins) and a
+                clip div that shows only 265.5mm of content per page. */}
+            <div className="resume-page-view">
+              {Array.from({ length: pageCount }, (_, i) => (
+                <div key={i} className="resume-page-card">
+                  <div className="resume-page-clip">
+                    <div style={{ marginTop: `${-i * PAGE_CONTENT_PX}px` }}>
+                      <ResumeTemplate
+                        resume={displayedResume}
+                        template={generatedResume.template}
+                        isEditing={editing && i === 0}
+                        onFieldChange={i === 0 ? handleResumeChange : undefined}
+                      />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       ) : (

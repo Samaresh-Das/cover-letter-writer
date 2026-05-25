@@ -24,12 +24,12 @@
     "hash": "1219fb72a6e401c10471a594e9e1b252"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\layout.js": {
-    "mtime": 1779304909.1519544,
-    "hash": "bff683c38d6136070f74f2846d02b8a5"
+    "mtime": 1779306939.183187,
+    "hash": "cae7be4d8fa5349a4a65337084594eb5"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\page.js": {
-    "mtime": 1777748150.6371813,
-    "hash": "c418fc60348b227b4d7a534dad03dfa5"
+    "mtime": 1779306751.1865995,
+    "hash": "293c19065c48296bcef70ecc186378c8"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\robots.js": {
     "mtime": 1779218778.815597,
@@ -48,8 +48,8 @@
     "hash": "d223ba65cef298834f70bea877a87cce"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\auth\\page.js": {
-    "mtime": 1779218778.8079164,
-    "hash": "c2563feb657b301fd919227397e7fa7d"
+    "mtime": 1779307963.5958025,
+    "hash": "c178ef33132d2c7745b35c5819cd8391"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\blogs\\page.js": {
     "mtime": 1779218778.8079164,
@@ -140,8 +140,8 @@
     "hash": "fdf6d0df9e6762bffff9440fe9a8440c"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\landing\\LandingNavbar.jsx": {
-    "mtime": 1779218778.8079164,
-    "hash": "351384f95445f489212bb332ed23c6fd"
+    "mtime": 1779307647.0779018,
+    "hash": "2fd3976252efbc026a95acca333211a0"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\landing\\LinkedInFeature.jsx": {
     "mtime": 1777748150.6326833,
@@ -170,6 +170,42 @@
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\landing\\WaveCanvas.jsx": {
     "mtime": 1777748150.633617,
     "hash": "3e45d60dca1e6ffc3a4d8dc810d1d0df"
+  },
+  "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\new-landing\\PillSwitcher.jsx": {
+    "mtime": 1779306732.8702896,
+    "hash": "3eff27b11bf3ab3ddee86b4a058756ae"
+  },
+  "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\new-landing\\ResumeFeatures.jsx": {
+    "mtime": 1779306991.4126954,
+    "hash": "5ed79e32dea2affac27d7053bc534a3f"
+  },
+  "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\new-landing\\ResumeFinalCTA.jsx": {
+    "mtime": 1779307600.1815224,
+    "hash": "b15229c0364585dcbd716cb9f7c34c9f"
+  },
+  "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\new-landing\\ResumeHero.jsx": {
+    "mtime": 1779307561.8842216,
+    "hash": "2c356bdbf482c7e8e872f01c387c6d7f"
+  },
+  "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\new-landing\\ResumeHowItWorks.jsx": {
+    "mtime": 1779306854.3382397,
+    "hash": "b6d5cef81d35f2f0a0444d5c4669244e"
+  },
+  "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\new-landing\\ResumeLiveDemo.jsx": {
+    "mtime": 1779307206.6789398,
+    "hash": "ba9930e86a5bef3465b2b47068ab1189"
+  },
+  "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\new-landing\\ResumePricing.jsx": {
+    "mtime": 1779307580.5178018,
+    "hash": "620e175168c1dc8ed5c1f36894498eb9"
+  },
+  "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\new-landing\\ResumeSocialProof.jsx": {
+    "mtime": 1779306871.4034772,
+    "hash": "c162307e32e4f6a5216e1fb3fbd6781e"
+  },
+  "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\new-landing\\ResumeStats.jsx": {
+    "mtime": 1779306808.3176801,
+    "hash": "e1672a0b8551550936fdc52c41b68344"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\pricing\\PricingCard.jsx": {
     "mtime": 1777748150.633617,
@@ -228,8 +264,8 @@
     "hash": "316974c0389c01574f3e9155b04a0bf2"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\resumes\\preview\\[id]\\page.js": {
-    "mtime": 1779304909.1539662,
-    "hash": "115039157a040aa1cd7d99c3b2f66e33"
+    "mtime": 1779566572.5768638,
+    "hash": "7e4e7ae977f718f54a2eb19ed91571e5"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\resumes\\upload\\page.js": {
     "mtime": 1779304909.1539662,
@@ -260,8 +296,8 @@
     "hash": "e735a06dacc4b1231cd2fb1b6eb3814c"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\lib\\resumes\\api.js": {
-    "mtime": 1779304909.1539662,
-    "hash": "9dad7fa475109aba147cfe3063e6cf94"
+    "mtime": 1779565051.644457,
+    "hash": "d8001014c6e9d5afaa1b4213671c7283"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\lib\\resumes\\template-data.js": {
     "mtime": 1779304909.1539662,
