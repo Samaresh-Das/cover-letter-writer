@@ -5,7 +5,7 @@ import { useRef } from 'react';
 const features = [
   {
     title: 'Tailored to each job automatically',
-    desc: 'Every letter is written from scratch based on the specific job description. No recycled templates, no generic filler.',
+    desc: 'Every letter is written from scratch based on the specific JD. No recycled templates, no generic corporate filler.',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><path d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
     ),
@@ -14,7 +14,7 @@ const features = [
   },
   {
     title: 'Pick your writing style',
-    desc: 'Switch between AI models for different tones — formal, conversational, technical. Find the voice that fits you.',
+    desc: 'Switch between AI models for different tones — highly technical, product-focused, or leadership. Find the voice that fits.',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
     ),
@@ -23,7 +23,7 @@ const features = [
   },
   {
     title: 'You control the output',
-    desc: 'Add custom instructions — emphasize specific skills, set a tone, mention projects. The AI listens.',
+    desc: 'Add custom instructions — emphasize specific backend scaling experience, frontend frameworks, or system design.',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" /><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" /></svg>
     ),
@@ -31,8 +31,8 @@ const features = [
     bgColor: 'bg-cyan-50',
   },
   {
-    title: 'Uses your real experience',
-    desc: 'Link your resume or portfolio so the AI references your actual background — not made-up qualifications.',
+    title: 'Uses your real projects',
+    desc: 'Link your resume or GitHub so the AI references your actual shipped code — not made-up qualifications.',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg>
     ),
@@ -40,8 +40,8 @@ const features = [
     bgColor: 'bg-amber-50',
   },
   {
-    title: 'Matches job requirements instantly',
-    desc: 'Paste a LinkedIn URL and CovGen auto-extracts every requirement, skill, and role detail. Zero manual work.',
+    title: 'Extracts the exact tech stack',
+    desc: 'Paste a LinkedIn URL and CovGen auto-extracts every framework, database, and cloud requirement. Zero manual work.',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" className="text-blue-600"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" /></svg>
     ),

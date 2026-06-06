@@ -30,7 +30,7 @@ export default function SolutionSection() {
               Meet <span className="gradient-text">CovGen</span>
             </h2>
             <p className="text-lg text-slate-500 mb-8 leading-relaxed">
-              CovGen reads the job description so you don&apos;t have to. Paste a LinkedIn job link, and our AI extracts the requirements, matches them to your profile, and writes a letter that sounds like you.
+              CovGen reads the job description so you don&apos;t have to. Paste a job link, and our AI extracts the tech stack, matches it to your experience, and writes a highly technical letter optimized for engineering recruiters.
             </p>
             <div className="grid grid-cols-3 gap-4">
               {stats.map((s) => (

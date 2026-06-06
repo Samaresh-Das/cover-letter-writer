@@ -11,8 +11,8 @@ const painPoints = [
         <polyline points="12 6 12 12 16 14" />
       </svg>
     ),
-    title: '30+ minutes per letter',
-    description: 'Writing a cover letter from scratch takes forever. Multiply that by 20 applications and you\'ve lost an entire week.',
+    title: 'Tailoring is tedious',
+    description: 'Manually rewriting your projects and tech stack for every role takes forever. Multiply that by 20 applications and you\'ve lost an entire weekend.',
     color: '#EF4444',
     bgColor: 'bg-red-50',
   },
@@ -24,8 +24,8 @@ const painPoints = [
         <line x1="9" y1="21" x2="9" y2="9" />
       </svg>
     ),
-    title: 'Templates feel generic',
-    description: 'Copy-paste templates don\'t work. Recruiters read dozens daily and can spot a template instantly. You blend in instead of standing out.',
+    title: 'Templates fail ATS',
+    description: 'Copy-paste templates don\'t work for engineering roles. They fail to highlight technical impact and get filtered out by the ATS instantly.',
     color: '#F59E0B',
     bgColor: 'bg-amber-50',
   },
@@ -38,8 +38,8 @@ const painPoints = [
         <line x1="9" y1="15" x2="15" y2="15" />
       </svg>
     ),
-    title: 'Tailoring is exhausting',
-    description: 'Reading job descriptions, matching keywords, adjusting tone — it\'s mentally draining work that steals energy from actual interview prep.',
+    title: 'Keyword matching is exhausting',
+    description: 'Extracting the exact tech stack from the JD and weaving it naturally into your bullets is mentally draining work that steals time from actual interview prep.',
     color: '#8B5CF6',
     bgColor: 'bg-purple-50',
   },

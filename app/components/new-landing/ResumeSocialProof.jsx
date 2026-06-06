@@ -5,24 +5,24 @@ import { LuStar } from 'react-icons/lu';
 
 const testimonials = [
   {
-    quote: "I was struggling to get past the ATS for months. I used the AI builder, matched my resume to a senior PM role, and got an interview request the next morning. The real-time score is a game changer.",
+    quote: "I was struggling to get past the ATS for months. Covgen automatically extracted the tech stack from the JD and optimized my project bullets. I got a callback for a Senior Backend role the next day.",
     name: "Sarah J.",
-    role: "Product Manager",
-    company: "Tech Startups",
+    role: "Backend Engineer",
+    company: "Series B Startup",
     avatarColor: "#f59e0b" // amber-500
   },
   {
-    quote: "It saved me literally hours of writing bullet points. The AI knew exactly how to phrase my frontend experience to sound impactful rather than just listing tech stacks.",
+    quote: "It saved me hours of writing bullet points. The AI knew exactly how to phrase my React and Node.js experience to sound like high-impact engineering achievements rather than just listing tools.",
     name: "David K.",
-    role: "Senior Frontend Engineer",
+    role: "Fullstack Developer",
     company: "Fintech Co.",
     avatarColor: "#ec4899" // pink-500
   },
   {
-    quote: "The ability to have multiple versions tailored for different jobs without manually copying and pasting is incredible. I've seen a 3x increase in my callback rate.",
+    quote: "The ability to generate multiple versions tailored for different stacks without manually copying and pasting is incredible. I've seen a 3x increase in my engineering interview rate.",
     name: "Elena M.",
-    role: "Marketing Director",
-    company: "Global Agency",
+    role: "DevOps Engineer",
+    company: "Cloud Infrastructure",
     avatarColor: "#3b82f6" // blue-500
   }
 ];
@@ -49,7 +49,7 @@ export default function ResumeSocialProof() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-black text-slate-950">From job seekers who got interviews.</h2>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-950">From developers who got the interview.</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

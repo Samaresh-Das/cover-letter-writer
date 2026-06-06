@@ -28,17 +28,17 @@ export default function FinalCTA() {
             className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
             style={{ fontFamily: 'Space Grotesk, sans-serif' }}
           >
-            Paste a job link.
+            Paste a JD.
             <br />
-            Apply in minutes.
+            Generate a technical cover letter.
           </h2>
           <p className="text-lg text-blue-100/80 mb-10 max-w-xl mx-auto leading-relaxed">
-            Stop writing cover letters manually. Let CovGen extract the requirements and write a tailored letter for you.
+            Stop writing cover letters manually. Let CovGen extract the tech stack and align it with your GitHub projects.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/auth">
               <button className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-700 font-bold rounded-xl text-base shadow-lg shadow-black/10 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-                Try CovGen Now
+                Optimize your application
                 <svg className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                   <line x1="5" y1="12" x2="19" y2="12" />
                   <polyline points="12 5 19 12 12 19" />

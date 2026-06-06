@@ -18,7 +18,7 @@ export default function ResumeHero() {
         >
           <div className="absolute inset-0 rounded-full border border-amber-400 animate-[pulse_2s_ease-in-out_infinite]" style={{ pointerEvents: 'none' }} />
           <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-          <span className="text-xs font-bold text-amber-900 tracking-wide uppercase">v2.0 — AI Resume Builder</span>
+          <span className="text-xs font-bold text-amber-900 tracking-wide uppercase">v2.0 — Built for Software Engineers</span>
         </motion.div>
 
         {/* Headline */}
@@ -29,15 +29,15 @@ export default function ResumeHero() {
           className="mb-6"
         >
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-slate-950 tracking-tight leading-[1.1]">
-            Build a resume that <br />
-            beats the <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-400">
-              ATS system.
+            Build engineering resumes that <br />
+            pass <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-400">
+              ATS filters.
               <svg className="absolute -bottom-2 left-0 w-full h-3 text-amber-400 opacity-60" viewBox="0 0 100 10" preserveAspectRatio="none">
                 <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="4" fill="transparent" strokeLinecap="round" />
               </svg>
             </span>
             <br />
-            In minutes, not hours.
+            Without the boilerplate.
           </h1>
         </motion.div>
 
@@ -48,7 +48,7 @@ export default function ResumeHero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed"
         >
-          Stop guessing what recruiters want. Our AI analyzes job descriptions and tailors your resume instantly, maximizing your chances of getting an interview.
+          Turn your tech stack, projects, and system design experience into recruiter-ready resumes. Our AI extracts technical requirements from job descriptions and optimizes your bullets for maximum engineering impact.
         </motion.p>
 
         {/* CTAs */}
@@ -62,7 +62,7 @@ export default function ResumeHero() {
               href="/auth"
               className="inline-block px-8 py-3.5 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold rounded-xl shadow-[0_8px_20px_-6px_rgba(245,158,11,0.5)] transition-all hover:scale-105 active:scale-95"
             >
-              Build your resume free
+              Optimize your resume
             </Link>
           </motion.div>
 

@@ -28,7 +28,7 @@ export default function HeroSection() {
             <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500" />
           </span>
           <span className="text-sm font-medium text-blue-700" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-            LinkedIn Auto-Extract — Paste a link, get a letter
+            Built for software engineers applying to serious tech roles
           </span>
         </motion.div>
 
@@ -40,9 +40,9 @@ export default function HeroSection() {
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6"
           style={{ fontFamily: 'Space Grotesk, sans-serif' }}
         >
-          Turn LinkedIn job posts into{' '}
+          Turn job posts into{' '}
           <br className="hidden sm:block" />
-          <span className="gradient-text">cover letters — instantly.</span>
+          <span className="gradient-text">engineering cover letters.</span>
         </motion.h1>
 
         {/* Subheadline */}
@@ -53,9 +53,9 @@ export default function HeroSection() {
           className="text-lg sm:text-xl text-slate-500 max-w-2xl mx-auto mb-10 leading-relaxed"
           style={{ fontFamily: 'DM Sans, sans-serif' }}
         >
-          Drop a job link. Our AI extracts the description, matches your skills,
+          Paste a job link. Our AI extracts the tech stack, aligns your GitHub projects,
           <br className="hidden sm:block" />
-          and writes a cover letter that actually gets read.
+          and writes a cover letter optimized for technical recruiters.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -67,7 +67,7 @@ export default function HeroSection() {
         >
           <Link href="/auth">
             <button className="btn-primary-landing text-base px-8 py-4 cursor-pointer group">
-              Try CovGen Now
+              Optimize your application
               <svg className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />

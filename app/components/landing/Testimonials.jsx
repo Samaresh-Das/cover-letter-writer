@@ -5,22 +5,22 @@ import { useRef } from 'react';
 const testimonials = [
   {
     name: 'Priya Sharma',
-    role: 'CS Student, IIT Delhi',
-    quote: 'I used to spend an hour on each cover letter. CovGen does it in 10 seconds. Applied to 15 jobs in one evening.',
+    role: 'SDE Intern',
+    quote: 'I used to spend an hour trying to write a non-cringy cover letter. CovGen extracts the JD and does it in 10 seconds. Applied to 15 startups in one evening.',
     avatar: 'PS',
     gradient: 'from-blue-500 to-purple-500',
   },
   {
     name: 'Alex Rivera',
     role: 'Full-Stack Developer',
-    quote: 'The LinkedIn extraction feature is genius. Paste the link, hit generate, done. No more copy-pasting job descriptions.',
+    quote: 'The extraction feature is genius. Paste the link, and the AI maps my exact React and Node.js skills to their requirements. Done.',
     avatar: 'AR',
     gradient: 'from-purple-500 to-pink-500',
   },
   {
     name: 'Sarah Kim',
-    role: 'Freelance Designer',
-    quote: 'Finally a tool that doesn\'t produce generic garbage. The letters actually reference specific job requirements. Impressed.',
+    role: 'AI/ML Engineer',
+    quote: 'Finally a tool that doesn\'t produce generic corporate garbage. The letters actually reference the specific cloud and data requirements. Impressed.',
     avatar: 'SK',
     gradient: 'from-cyan-500 to-blue-500',
   },
@@ -39,9 +39,9 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200/60 text-sm font-medium text-blue-600 mb-4">Built for job seekers</span>
+          <span className="inline-block px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200/60 text-sm font-medium text-blue-600 mb-4">Built for technical roles</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-            Generated <span className="gradient-text">1,000+</span> cover letters
+            Generated <span className="gradient-text">1,000+</span> engineering cover letters
           </h2>
         </motion.div>
 

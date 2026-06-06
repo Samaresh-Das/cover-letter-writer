@@ -5,18 +5,18 @@ import { LuFileText, LuWand, LuLayers } from 'react-icons/lu';
 
 const features = [
   {
-    title: 'ATS Score in Real Time',
-    desc: "See your match percentage update live as you build. Know exactly what the recruiter's system sees before you submit.",
+    title: 'Technical Keyword Matching',
+    desc: "See your ATS match percentage update live. Our AI ensures your stack and skills perfectly align with the job description.",
     icon: LuFileText,
   },
   {
-    title: 'AI Writes Your Bullet Points',
-    desc: 'Describe what you did in plain language. AI rewrites it with impact metrics, strong action verbs, and keyword alignment.',
+    title: 'Engineering Impact Rewriting',
+    desc: 'Describe what you shipped. AI rewrites weak bullets into impact-focused engineering achievements with the right technical phrasing.',
     icon: LuWand,
   },
   {
-    title: 'One Resume Per Job',
-    desc: 'Stop sending the same resume everywhere. AI tailors each version to the specific job description in one click.',
+    title: 'Tailored For Your Stack',
+    desc: 'Stop sending generic resumes. Generate React, Python, Node.js, or Fullstack tailored resumes specifically for each role in one click.',
     icon: LuLayers,
   }
 ];
@@ -27,7 +27,7 @@ export default function ResumeFeatures() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-black text-slate-950">Built for serious job seekers.</h2>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-950">Built for modern tech hiring.</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

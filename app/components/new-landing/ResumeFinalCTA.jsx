@@ -20,7 +20,7 @@ export default function ResumeFinalCTA() {
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-6xl font-black text-slate-950 mb-6 tracking-tight"
         >
-          Your next big career move <br className="hidden md:block"/> shouldn't be blocked by a PDF.
+          Your next big engineering role <br className="hidden md:block"/> shouldn't be blocked by a PDF.
         </motion.h2>
 
         <motion.p 
@@ -30,7 +30,7 @@ export default function ResumeFinalCTA() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto font-medium"
         >
-          Let AI handle the formatting, keywords, and recruiter psychology. You just focus on the interview.
+          Let AI handle the ATS keyword matching and impact formatting. You focus on system design and algorithms.
         </motion.p>
 
         <motion.div
@@ -53,7 +53,7 @@ export default function ResumeFinalCTA() {
           
           <Link href="/auth" className="btn-shimmer inline-block relative overflow-hidden px-10 py-4 bg-slate-950 text-white font-bold rounded-2xl text-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(245,158,11,0.2)] transition-all hover:scale-105 active:scale-95 group">
               
-              <span className="relative z-10">Build your winning resume</span>
+              <span className="relative z-10">Optimize your engineering resume</span>
               
               {/* Shimmer Effect overlay */}
               <div className="shimmer-element absolute top-0 left-0 h-full w-[200%] -translate-x-[150%] bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 z-0 opacity-0 group-hover:opacity-100 transition-opacity" />

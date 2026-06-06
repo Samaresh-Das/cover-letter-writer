@@ -47,10 +47,10 @@ export default function ResumePricing() {
               <span className="text-4xl font-black text-slate-950">$0</span>
               <span className="text-slate-500 font-medium"> / forever</span>
             </div>
-            <p className="text-slate-600 text-sm mb-8 font-medium">Build your baseline resume and test the waters.</p>
+            <p className="text-slate-600 text-sm mb-8 font-medium">Build a baseline technical resume and test the waters.</p>
             
             <ul className="space-y-4 mb-8 flex-1">
-              {['1 standard resume', 'Basic ATS scoring', 'Standard templates', 'PDF Export'].map((feature, i) => (
+              {['1 standard tech resume', 'Basic ATS scoring', 'Standard templates', 'PDF Export'].map((feature, i) => (
                 <li key={i} className="flex items-start gap-3 text-sm text-slate-700 font-medium">
                   <LuCheck className="w-5 h-5 text-slate-400 shrink-0" />
                   {feature}
@@ -81,7 +81,7 @@ export default function ResumePricing() {
               <span className="text-5xl font-black text-white">{isAnnual ? '$12' : '$15'}</span>
               <span className="text-slate-400 font-medium"> / month</span>
             </div>
-            <p className="text-amber-200/80 text-sm mb-8 font-medium">The ultimate edge for securing top-tier interviews.</p>
+            <p className="text-amber-200/80 text-sm mb-8 font-medium">The ultimate edge for securing top-tier engineering interviews.</p>
             
             <ul className="space-y-4 mb-8 flex-1">
               {[

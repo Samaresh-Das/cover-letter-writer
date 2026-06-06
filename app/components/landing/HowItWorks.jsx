@@ -5,7 +5,7 @@ import { useRef } from 'react';
 const steps = [
   {
     num: '1',
-    title: 'Paste the job link',
+    title: 'Paste the JD or link',
     desc: 'Drop a LinkedIn job URL or paste the job description directly. CovGen handles both.',
     gradient: 'from-blue-500 to-blue-600',
     icon: (
@@ -17,8 +17,8 @@ const steps = [
   },
   {
     num: '2',
-    title: 'AI does the heavy lifting',
-    desc: 'Our AI reads the JD, identifies key skills and requirements, then writes a tailored cover letter.',
+    title: 'Technical optimization',
+    desc: 'Our AI parses the tech stack, aligns your GitHub projects, and drafts a highly technical cover letter.',
     gradient: 'from-purple-500 to-purple-600',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round">
@@ -28,7 +28,7 @@ const steps = [
   },
   {
     num: '3',
-    title: 'Copy, tweak, apply',
+    title: 'Export and apply',
     desc: 'Get a polished letter instantly. Edit if needed, copy to clipboard, and submit your application.',
     gradient: 'from-cyan-500 to-cyan-600',
     icon: (

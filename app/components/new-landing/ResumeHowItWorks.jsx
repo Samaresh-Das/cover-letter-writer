@@ -7,20 +7,20 @@ import { LuUpload, LuBot, LuDownload } from 'react-icons/lu';
 const steps = [
   {
     num: '01',
-    title: 'Upload or start fresh',
-    desc: 'Upload your current resume or start from scratch.',
+    title: 'Input stack & projects',
+    desc: 'Upload your existing resume or pull from your past experience.',
     icon: LuUpload
   },
   {
     num: '02',
-    title: 'AI optimization',
-    desc: 'AI analyzes and builds each section for ATS success.',
+    title: 'Technical optimization',
+    desc: 'AI extracts ATS keywords and optimizes engineering bullets.',
     icon: LuBot
   },
   {
     num: '03',
-    title: 'Export and apply',
-    desc: 'Download your tailored PDF and apply instantly.',
+    title: 'Export & apply',
+    desc: 'Download a recruiter-ready PDF for your next tech role.',
     icon: LuDownload
   }
 ];
@@ -34,7 +34,7 @@ export default function ResumeHowItWorks() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-5xl font-black text-slate-950">Three steps. Then apply.</h2>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-950">Three steps to your next engineering role.</h2>
         </div>
 
         <div ref={containerRef} className="relative flex flex-col md:flex-row gap-12 md:gap-8 justify-between">

@@ -23,9 +23,9 @@ const plans = [
     name: 'Pro',
     price: '299 INR',
     period: '/month',
-    desc: 'For serious job seekers',
+    desc: 'For engineers actively interviewing',
     features: [
-      'Unlimited cover letters',
+      'Unlimited engineering cover letters',
       'LinkedIn job extraction',
       'All AI models (GPT-4, Claude, etc.)',
       'Custom instructions',
@@ -55,9 +55,9 @@ export default function PricingSection() {
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200/60 text-sm font-medium text-blue-600 mb-4">Pricing</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-            Simple, <span className="gradient-text">honest</span> pricing
+            Pricing for <span className="gradient-text">developers</span>
           </h2>
-          <p className="text-lg text-slate-500">Start free. Upgrade when you need more.</p>
+          <p className="text-lg text-slate-500">Start free. Upgrade when you are ready to ship.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
