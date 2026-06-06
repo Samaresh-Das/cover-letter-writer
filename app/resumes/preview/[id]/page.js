@@ -224,58 +224,15 @@ export default function ResumePreviewPage() {
    * consistent print quality across all platforms.
    */
   const printResume = async () => {
+    setDownloadingPdf(true);
     await saveMarker().catch(() => { });
 
-    // Dynamically import PDF generation libraries to avoid SSR issues
-    const { default: jsPDF } = await import("jspdf");
-    const { default: html2canvas } = await import("html2canvas");
-
-    const element = document.querySelector(".resume-print-stage .resume-paper");
-    if (!element) return;
-
-    // Remove shadows/transforms for clean capture but do NOT constrain natural height
-    const originalBoxShadow = element.style.boxShadow;
-    const originalTransform = element.style.transform;
-
-    element.style.boxShadow = "none";
-    element.style.transform = "none";
-
     try {
-      const canvas = await html2canvas(element, { scale: 2, useCORS: true });
-      const imgData = canvas.toDataURL("image/jpeg", 1.0);
-
-      const pdf = new jsPDF({
-        orientation: "portrait",
-        unit: "mm",
-        format: "a4"
-      });
-
-      const pdfWidth = 210;
-      const pdfHeight = 297;
-
-      const imgWidth = canvas.width;
-      const imgHeight = canvas.height;
-      const ratio = imgWidth / imgHeight;
-
-      let finalWidth = pdfWidth;
-      let finalHeight = pdfWidth / ratio;
-
-      // If the content is taller than A4, scale it down to fit one page exactly
-      if (finalHeight > pdfHeight) {
-        finalHeight = pdfHeight;
-        finalWidth = finalHeight * ratio;
-      }
-
-      const xOffset = (pdfWidth - finalWidth) / 2;
-
-      pdf.addImage(imgData, "JPEG", xOffset, 0, finalWidth, finalHeight);
-
-      const fileName = jd?.company ? `${jd.company.replace(/\s+/g, '_')}_Resume.pdf` : "Resume.pdf";
-      pdf.save(fileName);
+      await downloadResumePdf(id);
+    } catch (err) {
+      setError(err.message || "Failed to download PDF.");
     } finally {
-      // Restore original element styles
-      element.style.boxShadow = originalBoxShadow;
-      element.style.transform = originalTransform;
+      setDownloadingPdf(false);
     }
   };
 

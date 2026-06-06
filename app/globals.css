@@ -469,6 +469,25 @@ textarea:focus {
   color: #374151;
 }
 
+/* Resume hyperlinks — clean professional style, inherits text color */
+.resume-link,
+.resume-project-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.resume-link:hover,
+.resume-project-link:hover {
+  text-decoration: underline;
+}
+
+.resume-project-link {
+  font-weight: 400;
+  font-size: 9pt;
+  margin-left: 6px;
+  color: #4b5563;
+}
+
 /*
   Section/page-break rules reduce broken experience/project entries when the
   user prints to PDF. Browser pagination is still imperfect, but keeping each

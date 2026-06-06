@@ -14,6 +14,30 @@
 const join = (items = [], fallback = "") => (items || []).filter(Boolean).join(" | ") || fallback;
 
 /**
+ * Determines if a string looks like a URL and returns a short display label.
+ * Returns null if it's not a URL-like value.
+ */
+function getLinkInfo(value) {
+  if (!value) return null;
+  const v = value.trim();
+
+  // Explicit URL or domain-like patterns
+  if (/^https?:\/\//i.test(v) || /^www\./i.test(v) || /\.(com|org|net|io|dev|app|co)(\/|$)/i.test(v)) {
+    const url = /^https?:\/\//i.test(v) ? v : `https://${v}`;
+
+    // Derive a friendly display label from the domain
+    if (/linkedin\.com/i.test(v)) return { url, label: "LinkedIn" };
+    if (/github\.com/i.test(v)) return { url, label: "GitHub" };
+    if (/twitter\.com|x\.com/i.test(v)) return { url, label: "Twitter" };
+    if (/behance\.net/i.test(v)) return { url, label: "Behance" };
+    if (/dribbble\.com/i.test(v)) return { url, label: "Dribbble" };
+    return { url, label: "Portfolio" };
+  }
+
+  return null;
+}
+
+/**
  * Renders the candidate contact row.
  *
  * Props:
@@ -21,15 +45,39 @@ const join = (items = [], fallback = "") => (items || []).filter(Boolean).join("
  *   backend in covgen-server/models/resume.js or optimizedResume from
  *   covgen-server/models/generated-resume.js.
  *
+ * Contact fields that contain URLs (linkedin, portfolio, github) are rendered
+ * as clickable <a> tags with short labels. Plain text fields (email, phone,
+ * location) remain as <span> tags.
+ *
  * Called by:
  * - ResumeTemplate() below.
  */
 function ContactLine({ info = {} }) {
+  // email is rendered as a mailto: link
+  const emailField = info.email ? (
+    <a key="email" href={`mailto:${info.email}`} className="resume-link">{info.email}</a>
+  ) : null;
+
+  // phone and location are plain text
+  const plainFields = [info.phone, info.location].filter(Boolean).map((item, index) => (
+    <span key={`plain-${index}`}>{item}</span>
+  ));
+
+  // URL fields get rendered as clickable links
+  const urlFields = [info.linkedin, info.portfolio, info.github].filter(Boolean).map((item, index) => {
+    const link = getLinkInfo(item);
+    if (link) {
+      return <a key={`url-${index}`} href={link.url} target="_blank" rel="noopener noreferrer" className="resume-link">{link.label}</a>;
+    }
+    return <span key={`url-${index}`}>{item}</span>;
+  });
+
+  const allItems = [emailField, ...plainFields, ...urlFields].filter(Boolean);
+  if (!allItems.length) return null;
+
   return (
     <div className="resume-contact">
-      {[info.email, info.phone, info.location, info.linkedin, info.portfolio, info.github].filter(Boolean).map((item, index) => (
-        <span key={`${item}-${index}`}>{item}</span>
-      ))}
+      {allItems}
     </div>
   );
 }
@@ -142,20 +190,28 @@ function Projects({ title = "Projects", items = [] }) {
   if (!items.length) return null;
   return (
     <Section title={title}>
-      {items.map((item, index) => (
-        <article className="resume-item" key={`${item.name}-${index}`}>
-          <div className="resume-row">
-            <h3>{item.name}</h3>
-            <span>{item.date}</span>
-          </div>
-          {item.description && <p className="resume-subline">{item.description}</p>}
-          <ul>
-            {(item.bullets || []).map((bullet, bulletIndex) => (
-              <li key={`${bullet}-${bulletIndex}`}>{bullet}</li>
-            ))}
-          </ul>
-        </article>
-      ))}
+      {items.map((item, index) => {
+        const link = getLinkInfo(item.link);
+        return (
+          <article className="resume-item" key={`${item.name}-${index}`}>
+            <div className="resume-row">
+              <h3>
+                {item.name}
+                {link && (
+                  <a href={link.url} target="_blank" rel="noopener noreferrer" className="resume-project-link">{link.label === "GitHub" ? "Code" : "Link"}</a>
+                )}
+              </h3>
+              <span>{item.date}</span>
+            </div>
+            {item.description && <p className="resume-subline">{item.description}</p>}
+            <ul>
+              {(item.bullets || []).map((bullet, bulletIndex) => (
+                <li key={`${bullet}-${bulletIndex}`}>{bullet}</li>
+              ))}
+            </ul>
+          </article>
+        );
+      })}
     </Section>
   );
 }

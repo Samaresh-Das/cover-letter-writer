@@ -52,6 +52,31 @@ export default function ResumeDashboardPage() {
     }
   };
 
+  const handleDeleteSource = async (id) => {
+    if (!window.confirm("Are you sure you want to delete this source resume? This will also permanently delete all tailored resumes generated from it.")) return;
+    try {
+      await fetchJson(`/api/resumes/${id}`, { method: "DELETE" });
+      setData(prev => {
+        const newResumes = prev.resumes.filter(r => r._id !== id);
+        // Filter out generated resumes whose source resume ID matches the deleted ID.
+        // NOTE: populated 'resume' field in generatedResumes might be an ObjectId string
+        // or a populated object, so we check both cases.
+        const newGenerated = prev.generatedResumes.filter(r => {
+          const sourceId = typeof r.resume === 'string' ? r.resume : (r.resume?._id || null);
+          return sourceId !== id;
+        });
+
+        const newTotal = newGenerated.length;
+        if (currentPage > 1 && newTotal <= (currentPage - 1) * ITEMS_PER_PAGE) {
+          setCurrentPage(prevPage => prevPage - 1);
+        }
+        return { resumes: newResumes, generatedResumes: newGenerated };
+      });
+    } catch (err) {
+      alert(err.message || "Failed to delete source resume");
+    }
+  };
+
   const totalPages = Math.ceil(data.generatedResumes.length / ITEMS_PER_PAGE);
   const paginatedResumes = data.generatedResumes.slice(
     (currentPage - 1) * ITEMS_PER_PAGE,
@@ -107,7 +132,20 @@ export default function ResumeDashboardPage() {
                         <p className="mt-1 line-clamp-2 text-sm text-slate-600">{resume.structured?.summary || "Structured resume ready for JD tailoring."}</p>
                         <p className="mt-2 text-xs uppercase tracking-wide text-orange-600">{resume.parsing?.status === "needs_review" ? "Needs review" : "Parsed"}</p>
                       </div>
-                      <FaArrowRight className="mt-1 text-orange-500" />
+                      <div className="flex flex-col items-end gap-2">
+                        <button
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            handleDeleteSource(resume._id);
+                          }}
+                          className="rounded p-2 text-slate-400 hover:bg-red-50 hover:text-red-600 transition-colors"
+                          title="Delete source resume"
+                        >
+                          <FaTrash />
+                        </button>
+                        <FaArrowRight className="mt-1 text-orange-500" />
+                      </div>
                     </div>
                   </Link>
                 );
