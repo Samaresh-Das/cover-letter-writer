@@ -2588,9 +2588,9 @@
       "source_file": "app\\components\\AppToaster.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_components_apptoaster_js",
-      "target": "components_apptoaster_apptoaster",
-      "confidence_score": 1.0
+      "target": "components_apptoaster_apptoaster"
     },
     {
       "relation": "contains",
