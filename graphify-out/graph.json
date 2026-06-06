@@ -1156,10 +1156,19 @@
       "norm_label": "join()"
     },
     {
+      "label": "getLinkInfo()",
+      "file_type": "code",
+      "source_file": "app\\components\\resumes\\ResumeTemplate.js",
+      "source_location": "L20",
+      "id": "resumes_resumetemplate_getlinkinfo",
+      "community": 2,
+      "norm_label": "getlinkinfo()"
+    },
+    {
       "label": "ContactLine()",
       "file_type": "code",
       "source_file": "app\\components\\resumes\\ResumeTemplate.js",
-      "source_location": "L27",
+      "source_location": "L55",
       "id": "resumes_resumetemplate_contactline",
       "community": 2,
       "norm_label": "contactline()"
@@ -1168,7 +1177,7 @@
       "label": "Section()",
       "file_type": "code",
       "source_file": "app\\components\\resumes\\ResumeTemplate.js",
-      "source_location": "L53",
+      "source_location": "L101",
       "id": "resumes_resumetemplate_section",
       "community": 2,
       "norm_label": "section()"
@@ -1177,7 +1186,7 @@
       "label": "Experience()",
       "file_type": "code",
       "source_file": "app\\components\\resumes\\ResumeTemplate.js",
-      "source_location": "L78",
+      "source_location": "L126",
       "id": "resumes_resumetemplate_experience",
       "community": 2,
       "norm_label": "experience()"
@@ -1186,7 +1195,7 @@
       "label": "Education()",
       "file_type": "code",
       "source_file": "app\\components\\resumes\\ResumeTemplate.js",
-      "source_location": "L109",
+      "source_location": "L157",
       "id": "resumes_resumetemplate_education",
       "community": 2,
       "norm_label": "education()"
@@ -1195,7 +1204,7 @@
       "label": "Projects()",
       "file_type": "code",
       "source_file": "app\\components\\resumes\\ResumeTemplate.js",
-      "source_location": "L141",
+      "source_location": "L189",
       "id": "resumes_resumetemplate_projects",
       "community": 2,
       "norm_label": "projects()"
@@ -1204,7 +1213,7 @@
       "label": "SimpleList()",
       "file_type": "code",
       "source_file": "app\\components\\resumes\\ResumeTemplate.js",
-      "source_location": "L175",
+      "source_location": "L231",
       "id": "resumes_resumetemplate_simplelist",
       "community": 2,
       "norm_label": "simplelist()"
@@ -1213,7 +1222,7 @@
       "label": "ResumeTemplate()",
       "file_type": "code",
       "source_file": "app\\components\\resumes\\ResumeTemplate.js",
-      "source_location": "L220",
+      "source_location": "L276",
       "id": "resumes_resumetemplate_resumetemplate",
       "community": 2,
       "norm_label": "resumetemplate()"
@@ -3528,6 +3537,16 @@
       "confidence_score": 1.0,
       "source": "app_components_resumes_resumetemplate_js",
       "target": "resumes_resumetemplate_join"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\components\\resumes\\ResumeTemplate.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "app_components_resumes_resumetemplate_js",
+      "target": "resumes_resumetemplate_getlinkinfo",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",

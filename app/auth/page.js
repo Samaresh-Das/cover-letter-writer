@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import Image from 'next/image';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import { motion } from 'motion/react';
 import Link from 'next/link';
 
@@ -20,24 +20,32 @@ export default function AuthPage() {
         credential: credentialResponse.credential,
       });
 
-      const { token, onboardingComplete, user } = response.data;
+      const { token, onboardingComplete, user, requiresRegistration } = response.data;
 
-      // Save token and user to localStorage
-      localStorage.setItem('token', token);
-      localStorage.setItem('user', JSON.stringify(user));
-      // Also set a cookie so Next.js middleware can read it for server-side redirects
-      document.cookie = `token=${token}; path=/; max-age=604800; SameSite=Lax`; // 7 days
-
-      toast.success('Successfully logged in!');
-
-      if (!onboardingComplete) {
+      if (requiresRegistration) {
+        // New user: do not save user data, save registration token and redirect to onboarding
+        localStorage.setItem('registrationToken', token);
+        // Set cookie so middleware allows /onboarding access
+        document.cookie = `registrationToken=${token}; path=/; max-age=3600; SameSite=Lax`; // 1 hour
+        toast.success('Google verification successful. Please complete your profile.', { id: 'auth-register' });
         router.push('/onboarding');
       } else {
-        router.push('/dashboard');
+        // Existing user
+        localStorage.setItem('token', token);
+        localStorage.setItem('user', JSON.stringify(user));
+        document.cookie = `token=${token}; path=/; max-age=604800; SameSite=Lax`; // 7 days
+
+        toast.success('Successfully logged in!', { id: 'auth-login' });
+
+        if (!onboardingComplete) {
+          router.push('/onboarding');
+        } else {
+          router.push('/dashboard');
+        }
       }
     } catch (error) {
       console.error('Login failed:', error);
-      toast.error(error.response?.data?.message || 'Authentication failed. Please try again.');
+      toast.error(error.response?.data?.message || 'Authentication failed. Please try again.', { id: 'auth-error' });
       setLoading(false);
     }
   };
@@ -48,7 +56,7 @@ export default function AuthPage() {
 
   return (
     <div className="min-h-screen relative flex items-center justify-center overflow-hidden">
-      <Toaster position="top-center" />
+
 
       {/* Animated Background */}
       <div className="absolute inset-0 bg-slate-50" />

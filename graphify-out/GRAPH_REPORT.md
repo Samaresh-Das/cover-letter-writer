@@ -1,11 +1,11 @@
-# Graph Report - cover-letter-writer  (2026-05-24)
+# Graph Report - cover-letter-writer  (2026-06-07)
 
 ## Corpus Check
-- 76 files · ~86,641 words
+- 76 files · ~87,284 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 230 nodes · 197 edges · 41 communities detected
+- 231 nodes · 198 edges · 41 communities detected
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
@@ -78,7 +78,7 @@ Cohesion: 0.13
 Nodes (3): authHeaders(), downloadResumePdf(), fetchJson()
 
 ### Community 2 - "Community 2"
-Cohesion: 0.28
+Cohesion: 0.24
 Nodes (3): join(), ResumeTemplate(), SimpleList()
 
 ### Community 3 - "Community 3"
