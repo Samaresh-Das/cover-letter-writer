@@ -17,7 +17,14 @@ export default function AuthGuard({ children }) {
   useEffect(() => {
     const checkAuth = () => {
       const token = localStorage.getItem('token');
+      const registrationToken = localStorage.getItem('registrationToken');
       const isProtectedRoute = PROTECTED_ROUTES.some(route => pathname.startsWith(route));
+
+      // Allow /onboarding if user has either token or registrationToken
+      if (pathname.startsWith('/onboarding') && (token || registrationToken)) {
+        setAuthorized(true);
+        return;
+      }
 
       if (isProtectedRoute && !token) {
         setAuthorized(false);

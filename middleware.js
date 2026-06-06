@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 const AUTH_ROUTES = ['/', '/auth'];
 
 // Routes that require a token; redirect to /auth if missing
-const PROTECTED_ROUTES = ['/dashboard', '/profile', '/onboarding'];
+const PROTECTED_ROUTES = ['/dashboard', '/profile'];
 
 export function middleware(request) {
   const { pathname } = request.nextUrl;
