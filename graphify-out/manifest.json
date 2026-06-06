@@ -4,8 +4,8 @@
     "hash": "581889378ec0b107e9f15ef681e7f270"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\middleware.js": {
-    "mtime": 1779218778.8349032,
-    "hash": "d52e21c08686cb2eb319dfbc3171845a"
+    "mtime": 1780775717.091813,
+    "hash": "92a9bb516b6982a9b46687b9ad6a8f73"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\next-env.d.ts": {
     "mtime": 1753642866.312844,
@@ -24,8 +24,8 @@
     "hash": "1219fb72a6e401c10471a594e9e1b252"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\layout.js": {
-    "mtime": 1780771646.1811807,
-    "hash": "cae7be4d8fa5349a4a65337084594eb5"
+    "mtime": 1780775717.0778346,
+    "hash": "5318a14f7bffd005c5d1401e2df3716e"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\page.js": {
     "mtime": 1780771646.1811807,
@@ -48,8 +48,8 @@
     "hash": "d223ba65cef298834f70bea877a87cce"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\auth\\page.js": {
-    "mtime": 1780771646.1724093,
-    "hash": "ba6346a6d273c6a3dd8cc2efed433343"
+    "mtime": 1780775717.074822,
+    "hash": "12e52302fa5a04883efc7b20804e3c52"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\blogs\\page.js": {
     "mtime": 1779218778.8079164,
@@ -59,9 +59,13 @@
     "mtime": 1779218778.8079164,
     "hash": "269f44b3613ec023272ce2efe27f9a5f"
   },
+  "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\AppToaster.js": {
+    "mtime": 1780775717.0768287,
+    "hash": "5be92208f5438e36afbd7d92cb594c7c"
+  },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\AuthGuard.js": {
-    "mtime": 1780771646.1724093,
-    "hash": "e201d8b1e81fdc25257c81880f94b14f"
+    "mtime": 1780775717.0768287,
+    "hash": "8fbf522ae02b71536fd00171ba13c58a"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\Controls.js": {
     "mtime": 1777748150.6215608,
@@ -120,20 +124,20 @@
     "hash": "ebe1dae8e558bce6132d46678ad0dcb0"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\landing\\FeatureGrid.jsx": {
-    "mtime": 1777748150.6306589,
-    "hash": "78680e656d5e1942150816e3baaccc59"
+    "mtime": 1780775998.66116,
+    "hash": "f43b8b13fa3d1d18d78b5a969e9adb01"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\landing\\FinalCTA.jsx": {
-    "mtime": 1777748150.6306589,
-    "hash": "e2412d1fca9f343389ccb2af26f4a9df"
+    "mtime": 1780775928.0723364,
+    "hash": "b3a7af3ff01b0950e00b23ff9f6714cf"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\landing\\HeroSection.jsx": {
-    "mtime": 1777748150.6306589,
-    "hash": "4cf508d3dfe551449799d0815048767a"
+    "mtime": 1780775813.1432953,
+    "hash": "91bc6183d7110f0fd4d5b9d51caa8d2d"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\landing\\HowItWorks.jsx": {
-    "mtime": 1777748150.6306589,
-    "hash": "dc0de0d5a94087225b0f97c56226e8d6"
+    "mtime": 1780775996.6099212,
+    "hash": "18035984d7f8e8c199bc3e27eb72b943"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\landing\\LandingFooter.jsx": {
     "mtime": 1779218778.8079164,
@@ -148,24 +152,24 @@
     "hash": "efe5a0853913cb390aeab8410b01eb9e"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\landing\\PricingSection.jsx": {
-    "mtime": 1777748150.633617,
-    "hash": "4213e339e1525ab51f84d7ae465a4b9b"
+    "mtime": 1780775926.0402584,
+    "hash": "52af789b67b05b23d8af6d86c9ea7bd5"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\landing\\ProblemSection.jsx": {
-    "mtime": 1777748150.633617,
-    "hash": "67663a91b1c7a5362b2491923097da5a"
+    "mtime": 1780775885.7526808,
+    "hash": "6dcf34b6f1de5ecd0917b227fc89e7bc"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\landing\\ProductDemo.jsx": {
     "mtime": 1777748150.633617,
     "hash": "44904a315d8c4c22a0e6947c91d15791"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\landing\\SolutionSection.jsx": {
-    "mtime": 1777748150.633617,
-    "hash": "bf5ea38f603957b4436019d7eb93b8ff"
+    "mtime": 1780775887.7819016,
+    "hash": "c8e885f767621782565bcb67574203cb"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\landing\\Testimonials.jsx": {
-    "mtime": 1777748150.633617,
-    "hash": "030cfb03bba2c3fa333a2b6ada6c2afc"
+    "mtime": 1780775906.9017248,
+    "hash": "30e8b83132316d6a0eec83e10f854b6b"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\landing\\WaveCanvas.jsx": {
     "mtime": 1777748150.633617,
@@ -176,32 +180,32 @@
     "hash": "f5cdc230497d51d2a9957e8f37556ab7"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\new-landing\\ResumeFeatures.jsx": {
-    "mtime": 1780771646.1749136,
-    "hash": "96d4906ea0b4e09de26fef343cb7ad6a"
+    "mtime": 1780775827.8608243,
+    "hash": "37b255b1e36c79c166a032c6dd6c1dd9"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\new-landing\\ResumeFinalCTA.jsx": {
-    "mtime": 1780771646.1749136,
-    "hash": "005da235dda086831959a7676844e915"
+    "mtime": 1780775957.4724345,
+    "hash": "40ce064d6b2fa31ea6e437f9bd63693d"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\new-landing\\ResumeHero.jsx": {
-    "mtime": 1780771646.1749136,
-    "hash": "0aba5dd6f96e7773b410f594f00dd4d7"
+    "mtime": 1780775795.2150373,
+    "hash": "e4394ebacee8592c99016ced2d428acf"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\new-landing\\ResumeHowItWorks.jsx": {
-    "mtime": 1780771646.1749136,
-    "hash": "a743dedfaf3b78103606f7c5c060300b"
+    "mtime": 1780775842.4004655,
+    "hash": "9253a5c0703aba83cea67ca1c9030e66"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\new-landing\\ResumeLiveDemo.jsx": {
     "mtime": 1780771646.1749136,
     "hash": "57067c36e07a403f47cecde38f04212f"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\new-landing\\ResumePricing.jsx": {
-    "mtime": 1780771646.1749136,
-    "hash": "27b4a16201a89c5cd4e3d0223a90dd18"
+    "mtime": 1780775948.3067334,
+    "hash": "e977bddb4aad87b748fe1f3896cdd786"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\new-landing\\ResumeSocialProof.jsx": {
-    "mtime": 1780771646.1749136,
-    "hash": "577e977cac8223adb9f237acca195f62"
+    "mtime": 1780775863.4686363,
+    "hash": "9191139b43ddf08c7ea8d9688b103c8c"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\components\\new-landing\\ResumeStats.jsx": {
     "mtime": 1780771646.1749136,
@@ -228,8 +232,8 @@
     "hash": "b13f59b71dd9fb240e5fb77f5dec361b"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\onboarding\\page.js": {
-    "mtime": 1779218778.8079164,
-    "hash": "44ec6b0ef6d1546151cdb4508b237d40"
+    "mtime": 1780775717.0778346,
+    "hash": "1fa861a246603c8d77d0a9d2e8d2dac4"
   },
   "D:\\Projects\\covgen\\cover-letter-writer\\app\\payment\\failed\\page.js": {
     "mtime": 1779218778.815597,
