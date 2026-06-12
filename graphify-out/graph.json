@@ -375,16 +375,16 @@
     {
       "label": "Controls.js",
       "file_type": "code",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Controls.js",
+      "source_file": "app\\components\\Controls.js",
       "source_location": "L1",
-      "id": "e_projects_covgen_cover_letter_writer_app_components_controls_js",
+      "id": "app_components_controls_js",
       "community": 15,
       "norm_label": "controls.js"
     },
     {
       "label": "Controls()",
       "file_type": "code",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Controls.js",
+      "source_file": "app\\components\\Controls.js",
       "source_location": "L8",
       "id": "components_controls_controls",
       "community": 15,
@@ -483,16 +483,16 @@
     {
       "label": "LeftOptions.js",
       "file_type": "code",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\LeftOptions.js",
+      "source_file": "app\\components\\LeftOptions.js",
       "source_location": "L1",
-      "id": "e_projects_covgen_cover_letter_writer_app_components_leftoptions_js",
+      "id": "app_components_leftoptions_js",
       "community": 20,
       "norm_label": "leftoptions.js"
     },
     {
       "label": "LeftOptions()",
       "file_type": "code",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\LeftOptions.js",
+      "source_file": "app\\components\\LeftOptions.js",
       "source_location": "L5",
       "id": "components_leftoptions_leftoptions",
       "community": 20,
@@ -654,16 +654,16 @@
     {
       "label": "Profile.js",
       "file_type": "code",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
+      "source_file": "app\\components\\Auth\\Profile.js",
       "source_location": "L1",
-      "id": "e_projects_covgen_cover_letter_writer_app_components_auth_profile_js",
+      "id": "app_components_auth_profile_js",
       "community": 4,
       "norm_label": "profile.js"
     },
     {
       "label": "cleanJobDescription()",
       "file_type": "code",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
+      "source_file": "app\\components\\Auth\\Profile.js",
       "source_location": "L12",
       "id": "auth_profile_cleanjobdescription",
       "community": 4,
@@ -672,7 +672,7 @@
     {
       "label": "downloadPdf()",
       "file_type": "code",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
+      "source_file": "app\\components\\Auth\\Profile.js",
       "source_location": "L24",
       "id": "auth_profile_downloadpdf",
       "community": 4,
@@ -681,7 +681,7 @@
     {
       "label": "SkeletonCard()",
       "file_type": "code",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
+      "source_file": "app\\components\\Auth\\Profile.js",
       "source_location": "L55",
       "id": "auth_profile_skeletoncard",
       "community": 4,
@@ -690,7 +690,7 @@
     {
       "label": "SavedLetterCard()",
       "file_type": "code",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
+      "source_file": "app\\components\\Auth\\Profile.js",
       "source_location": "L78",
       "id": "auth_profile_savedlettercard",
       "community": 4,
@@ -699,8 +699,8 @@
     {
       "label": "Profile()",
       "file_type": "code",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
-      "source_location": "L256",
+      "source_file": "app\\components\\Auth\\Profile.js",
+      "source_location": "L266",
       "id": "auth_profile_profile",
       "community": 4,
       "norm_label": "profile()"
@@ -1687,6 +1687,33 @@
       "norm_label": "templatebyid()"
     },
     {
+      "label": "Controls.js",
+      "file_type": "code",
+      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Controls.js",
+      "source_location": "L1",
+      "community": 15,
+      "norm_label": "controls.js",
+      "id": "e_projects_covgen_cover_letter_writer_app_components_controls_js"
+    },
+    {
+      "label": "LeftOptions.js",
+      "file_type": "code",
+      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\LeftOptions.js",
+      "source_location": "L1",
+      "community": 20,
+      "norm_label": "leftoptions.js",
+      "id": "e_projects_covgen_cover_letter_writer_app_components_leftoptions_js"
+    },
+    {
+      "label": "Profile.js",
+      "file_type": "code",
+      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
+      "source_location": "L1",
+      "community": 4,
+      "norm_label": "profile.js",
+      "id": "e_projects_covgen_cover_letter_writer_app_components_auth_profile_js"
+    },
+    {
       "label": "middleware.js",
       "file_type": "code",
       "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\middleware.js",
@@ -1885,15 +1912,6 @@
       "id": "app_blogs_slug_page_js"
     },
     {
-      "label": "Controls.js",
-      "file_type": "code",
-      "source_file": "app/components/Controls.js",
-      "source_location": "L1",
-      "community": 15,
-      "norm_label": "controls.js",
-      "id": "app_components_controls_js"
-    },
-    {
       "label": "GoogleProviderWrapper.js",
       "file_type": "code",
       "source_file": "app/components/GoogleProviderWrapper.js",
@@ -1930,15 +1948,6 @@
       "id": "app_components_jdinputsection_js"
     },
     {
-      "label": "LeftOptions.js",
-      "file_type": "code",
-      "source_file": "app/components/LeftOptions.js",
-      "source_location": "L1",
-      "community": 20,
-      "norm_label": "leftoptions.js",
-      "id": "app_components_leftoptions_js"
-    },
-    {
       "label": "Letter.js",
       "file_type": "code",
       "source_file": "app/components/Letter.js",
@@ -1973,15 +1982,6 @@
       "community": 23,
       "norm_label": "v2featuresmodal.js",
       "id": "app_components_v2featuresmodal_js"
-    },
-    {
-      "label": "Profile.js",
-      "file_type": "code",
-      "source_file": "app/components/Auth/Profile.js",
-      "source_location": "L1",
-      "community": 4,
-      "norm_label": "profile.js",
-      "id": "app_components_auth_profile_js"
     },
     {
       "label": "LandingFooter.jsx",
@@ -2605,21 +2605,21 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Controls.js",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "e_projects_covgen_cover_letter_writer_app_components_controls_js",
-      "target": "components_controls_controls"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "app/components/Controls.js",
       "source_location": "L8",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "app_components_controls_js",
+      "target": "components_controls_controls"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Controls.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "e_projects_covgen_cover_letter_writer_app_components_controls_js",
       "target": "components_controls_controls"
     },
     {
@@ -2715,21 +2715,21 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\LeftOptions.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "e_projects_covgen_cover_letter_writer_app_components_leftoptions_js",
-      "target": "components_leftoptions_leftoptions"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "app/components/LeftOptions.js",
       "source_location": "L5",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "app_components_leftoptions_js",
+      "target": "components_leftoptions_leftoptions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\LeftOptions.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "e_projects_covgen_cover_letter_writer_app_components_leftoptions_js",
       "target": "components_leftoptions_leftoptions"
     },
     {
@@ -3037,51 +3037,51 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
+      "source_file": "app/components/Auth/Profile.js",
       "source_location": "L12",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "e_projects_covgen_cover_letter_writer_app_components_auth_profile_js",
+      "source": "app_components_auth_profile_js",
       "target": "auth_profile_cleanjobdescription"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
+      "source_file": "app/components/Auth/Profile.js",
       "source_location": "L24",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "e_projects_covgen_cover_letter_writer_app_components_auth_profile_js",
+      "source": "app_components_auth_profile_js",
       "target": "auth_profile_downloadpdf"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
+      "source_file": "app/components/Auth/Profile.js",
       "source_location": "L55",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "e_projects_covgen_cover_letter_writer_app_components_auth_profile_js",
+      "source": "app_components_auth_profile_js",
       "target": "auth_profile_skeletoncard"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
+      "source_file": "app/components/Auth/Profile.js",
       "source_location": "L78",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "e_projects_covgen_cover_letter_writer_app_components_auth_profile_js",
+      "source": "app_components_auth_profile_js",
       "target": "auth_profile_savedlettercard"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
+      "source_file": "app/components/Auth/Profile.js",
       "source_location": "L256",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "e_projects_covgen_cover_letter_writer_app_components_auth_profile_js",
+      "source": "app_components_auth_profile_js",
       "target": "auth_profile_profile"
     },
     {
@@ -3098,51 +3098,51 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "app/components/Auth/Profile.js",
+      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
       "source_location": "L12",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "app_components_auth_profile_js",
+      "source": "e_projects_covgen_cover_letter_writer_app_components_auth_profile_js",
       "target": "auth_profile_cleanjobdescription"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "app/components/Auth/Profile.js",
+      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
       "source_location": "L24",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "app_components_auth_profile_js",
+      "source": "e_projects_covgen_cover_letter_writer_app_components_auth_profile_js",
       "target": "auth_profile_downloadpdf"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "app/components/Auth/Profile.js",
+      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
       "source_location": "L55",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "app_components_auth_profile_js",
+      "source": "e_projects_covgen_cover_letter_writer_app_components_auth_profile_js",
       "target": "auth_profile_skeletoncard"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "app/components/Auth/Profile.js",
+      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
       "source_location": "L78",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "app_components_auth_profile_js",
+      "source": "e_projects_covgen_cover_letter_writer_app_components_auth_profile_js",
       "target": "auth_profile_savedlettercard"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "app/components/Auth/Profile.js",
+      "source_file": "E:\\PROJECTS\\CovGen\\cover-letter-writer\\app\\components\\Auth\\Profile.js",
       "source_location": "L256",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "app_components_auth_profile_js",
+      "source": "e_projects_covgen_cover_letter_writer_app_components_auth_profile_js",
       "target": "auth_profile_profile"
     },
     {

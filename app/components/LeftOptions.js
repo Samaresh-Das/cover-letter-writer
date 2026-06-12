@@ -49,7 +49,7 @@ export default function LeftOptions({
             <label className="block">
                 <span className="text-sm font-semibold text-slate-700 mb-2 block flex justify-between items-center">
                     <span>
-                        Custom Instruction <span className="text-slate-400 font-normal">(leave empty to use default, any input overrides)</span>
+                        Additional Instructions <span className="text-slate-400 font-normal">(appended after default)</span>
                     </span>
                     {userPlan !== "pro" ? (
                         <span className="text-xs font-bold text-amber-500 bg-amber-50 px-2 py-1 rounded-md border border-amber-200">PRO Only</span>
@@ -63,7 +63,7 @@ export default function LeftOptions({
                     maxLength={10000}
                     onChange={e => setCustomInstr(e.target.value)}
                     disabled={userPlan !== "pro"}
-                    placeholder={userPlan !== "pro" ? "Upgrade to Pro to use custom instructions..." : "Override the default prompt…"}
+                    placeholder={userPlan !== "pro" ? "Upgrade to Pro to use additional instructions..." : "Add any extra instructions here…"}
                     className={`block w-full rounded-xl px-4 py-3 border outline-none transition-all duration-200 resize-y focus:ring-4 focus:ring-blue-50 ${
                         userPlan !== "pro" 
                         ? "bg-slate-100 text-slate-400 border-slate-200 cursor-not-allowed" 
