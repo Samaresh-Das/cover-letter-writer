@@ -2974,9 +2974,9 @@
       "source_file": "app\\usage\\page.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_usage_page_js",
-      "target": "components_navbar_navbar",
-      "confidence_score": 1.0
+      "target": "components_navbar_navbar"
     },
     {
       "relation": "imports",
@@ -4089,9 +4089,9 @@
       "source_file": "app\\usage\\page.js",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_usage_page_js",
-      "target": "usage_page_transactionrow",
-      "confidence_score": 1.0
+      "target": "usage_page_transactionrow"
     },
     {
       "relation": "contains",
@@ -4099,9 +4099,9 @@
       "source_file": "app\\usage\\page.js",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_usage_page_js",
-      "target": "usage_page_usagepage",
-      "confidence_score": 1.0
+      "target": "usage_page_usagepage"
     },
     {
       "relation": "contains",
