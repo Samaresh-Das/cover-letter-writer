@@ -1,11 +1,11 @@
 # Graph Report - cover-letter-writer  (2026-06-13)
 
 ## Corpus Check
-- 77 files · ~88,814 words
+- 78 files · ~89,727 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 233 nodes · 199 edges · 42 communities detected
+- 236 nodes · 202 edges · 41 communities detected
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
@@ -46,15 +46,14 @@
 - [[_COMMUNITY_Community 33|Community 33]]
 - [[_COMMUNITY_Community 34|Community 34]]
 - [[_COMMUNITY_Community 35|Community 35]]
-- [[_COMMUNITY_Community 36|Community 36]]
+- [[_COMMUNITY_Community 38|Community 38]]
 - [[_COMMUNITY_Community 39|Community 39]]
 - [[_COMMUNITY_Community 40|Community 40]]
 - [[_COMMUNITY_Community 41|Community 41]]
 - [[_COMMUNITY_Community 42|Community 42]]
-- [[_COMMUNITY_Community 43|Community 43]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `Navbar()` - 14 edges
+1. `Navbar()` - 15 edges
 2. `fetchJson()` - 7 edges
 3. `normalizeSpaces()` - 4 edges
 4. `POST()` - 4 edges
@@ -71,8 +70,8 @@
 ## Communities
 
 ### Community 0 - "Community 0"
-Cohesion: 0.09
-Nodes (5): AboutPage(), Navbar(), PrivacyPolicyPage(), RefundPolicyPage(), TermsAndConditionsPage()
+Cohesion: 0.07
+Nodes (7): AboutPage(), DesktopNavItem(), isActivePath(), Navbar(), PrivacyPolicyPage(), RefundPolicyPage(), TermsAndConditionsPage()
 
 ### Community 1 - "Community 1"
 Cohesion: 0.13
@@ -112,129 +111,125 @@ Nodes (1): Home()
 
 ### Community 10 - "Community 10"
 Cohesion: 0.67
-Nodes (2): DesktopNavItem(), isActivePath()
+Nodes (1): middleware()
 
 ### Community 11 - "Community 11"
 Cohesion: 0.67
-Nodes (1): middleware()
+Nodes (1): robots()
 
 ### Community 12 - "Community 12"
 Cohesion: 0.67
-Nodes (1): robots()
+Nodes (1): sitemap()
 
 ### Community 13 - "Community 13"
 Cohesion: 0.67
-Nodes (1): sitemap()
+Nodes (1): AuthPage()
 
 ### Community 14 - "Community 14"
 Cohesion: 0.67
-Nodes (1): AuthPage()
+Nodes (1): Controls()
 
 ### Community 15 - "Community 15"
 Cohesion: 0.67
-Nodes (1): Controls()
+Nodes (1): GoogleProviderWrapper()
 
 ### Community 16 - "Community 16"
 Cohesion: 0.67
-Nodes (1): GoogleProviderWrapper()
+Nodes (1): Header()
 
 ### Community 17 - "Community 17"
 Cohesion: 0.67
-Nodes (1): Header()
+Nodes (1): IntroModal()
 
 ### Community 18 - "Community 18"
 Cohesion: 0.67
-Nodes (1): IntroModal()
+Nodes (1): JDInputSection()
 
 ### Community 19 - "Community 19"
 Cohesion: 0.67
-Nodes (1): JDInputSection()
+Nodes (1): LeftOptions()
 
 ### Community 20 - "Community 20"
 Cohesion: 0.67
-Nodes (1): LeftOptions()
+Nodes (1): CustomDropdown()
 
 ### Community 21 - "Community 21"
 Cohesion: 0.67
-Nodes (1): CustomDropdown()
+Nodes (1): RightJDInput()
 
 ### Community 22 - "Community 22"
 Cohesion: 0.67
-Nodes (1): RightJDInput()
+Nodes (1): V2FeaturesModal()
 
 ### Community 23 - "Community 23"
 Cohesion: 0.67
-Nodes (1): V2FeaturesModal()
+Nodes (1): FeatureGrid()
 
 ### Community 24 - "Community 24"
 Cohesion: 0.67
-Nodes (1): FeatureGrid()
+Nodes (1): FinalCTA()
 
 ### Community 25 - "Community 25"
 Cohesion: 0.67
-Nodes (1): FinalCTA()
+Nodes (1): HeroSection()
 
 ### Community 26 - "Community 26"
 Cohesion: 0.67
-Nodes (1): HeroSection()
+Nodes (1): HowItWorks()
 
 ### Community 27 - "Community 27"
 Cohesion: 0.67
-Nodes (1): HowItWorks()
+Nodes (1): LandingFooter()
 
 ### Community 28 - "Community 28"
 Cohesion: 0.67
-Nodes (1): LandingFooter()
+Nodes (1): LandingNavbar()
 
 ### Community 29 - "Community 29"
 Cohesion: 0.67
-Nodes (1): LandingNavbar()
+Nodes (1): LinkedInFeature()
 
 ### Community 30 - "Community 30"
 Cohesion: 0.67
-Nodes (1): LinkedInFeature()
+Nodes (1): PricingSection()
 
 ### Community 31 - "Community 31"
 Cohesion: 0.67
-Nodes (1): PricingSection()
+Nodes (1): ProblemSection()
 
 ### Community 32 - "Community 32"
 Cohesion: 0.67
-Nodes (1): ProblemSection()
+Nodes (1): ProductDemo()
 
 ### Community 33 - "Community 33"
 Cohesion: 0.67
-Nodes (1): ProductDemo()
+Nodes (1): SolutionSection()
 
 ### Community 34 - "Community 34"
 Cohesion: 0.67
-Nodes (1): SolutionSection()
+Nodes (1): Testimonials()
 
 ### Community 35 - "Community 35"
 Cohesion: 0.67
-Nodes (1): Testimonials()
-
-### Community 36 - "Community 36"
-Cohesion: 0.67
 Nodes (1): WaveCanvas()
 
-### Community 39 - "Community 39"
+### Community 38 - "Community 38"
 Cohesion: 0.67
 Nodes (1): Dashboard()
 
-### Community 40 - "Community 40"
+### Community 39 - "Community 39"
 Cohesion: 0.67
 Nodes (1): OnboardingPage()
 
-### Community 41 - "Community 41"
+### Community 40 - "Community 40"
 Cohesion: 0.67
 Nodes (1): page()
 
-### Community 42 - "Community 42"
+### Community 41 - "Community 41"
 Cohesion: 0.67
 Nodes (1): PurchasesPage()
 
-### Community 43 - "Community 43"
+### Community 42 - "Community 42"
 Cohesion: 0.67
 Nodes (1): sanitizeCoverLetter()
 
@@ -243,77 +238,75 @@ Nodes (1): sanitizeCoverLetter()
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 9`** (4 nodes): `Home()`, `page.js`, `LandingPageContent()`, `page.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 10`** (4 nodes): `Navbar.js`, `DesktopNavItem()`, `isActivePath()`, `MenuLink()`
+- **Thin community `Community 10`** (3 nodes): `middleware()`, `middleware.js`, `middleware.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 11`** (3 nodes): `middleware()`, `middleware.js`, `middleware.js`
+- **Thin community `Community 11`** (3 nodes): `robots.js`, `robots()`, `robots.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 12`** (3 nodes): `robots.js`, `robots()`, `robots.js`
+- **Thin community `Community 12`** (3 nodes): `sitemap.js`, `sitemap()`, `sitemap.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 13`** (3 nodes): `sitemap.js`, `sitemap()`, `sitemap.js`
+- **Thin community `Community 13`** (3 nodes): `page.js`, `AuthPage()`, `page.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 14`** (3 nodes): `page.js`, `AuthPage()`, `page.js`
+- **Thin community `Community 14`** (3 nodes): `Controls.js`, `Controls()`, `Controls.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 15`** (3 nodes): `Controls.js`, `Controls()`, `Controls.js`
+- **Thin community `Community 15`** (3 nodes): `GoogleProviderWrapper.js`, `GoogleProviderWrapper()`, `GoogleProviderWrapper.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 16`** (3 nodes): `GoogleProviderWrapper.js`, `GoogleProviderWrapper()`, `GoogleProviderWrapper.js`
+- **Thin community `Community 16`** (3 nodes): `Header.js`, `Header()`, `Header.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 17`** (3 nodes): `Header.js`, `Header()`, `Header.js`
+- **Thin community `Community 17`** (3 nodes): `IntroModal.js`, `IntroModal()`, `IntroModal.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 18`** (3 nodes): `IntroModal.js`, `IntroModal()`, `IntroModal.js`
+- **Thin community `Community 18`** (3 nodes): `JDInputSection.js`, `JDInputSection()`, `JDInputSection.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 19`** (3 nodes): `JDInputSection.js`, `JDInputSection()`, `JDInputSection.js`
+- **Thin community `Community 19`** (3 nodes): `LeftOptions.js`, `LeftOptions()`, `LeftOptions.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 20`** (3 nodes): `LeftOptions.js`, `LeftOptions()`, `LeftOptions.js`
+- **Thin community `Community 20`** (3 nodes): `ModelDropdown.js`, `CustomDropdown()`, `ModelDropdown.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 21`** (3 nodes): `ModelDropdown.js`, `CustomDropdown()`, `ModelDropdown.js`
+- **Thin community `Community 21`** (3 nodes): `RightJDInput.js`, `RightJDInput()`, `RightJDInput.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 22`** (3 nodes): `RightJDInput.js`, `RightJDInput()`, `RightJDInput.js`
+- **Thin community `Community 22`** (3 nodes): `V2FeaturesModal.js`, `V2FeaturesModal()`, `V2FeaturesModal.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 23`** (3 nodes): `V2FeaturesModal.js`, `V2FeaturesModal()`, `V2FeaturesModal.js`
+- **Thin community `Community 23`** (3 nodes): `FeatureGrid.jsx`, `FeatureGrid.jsx`, `FeatureGrid()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 24`** (3 nodes): `FeatureGrid.jsx`, `FeatureGrid.jsx`, `FeatureGrid()`
+- **Thin community `Community 24`** (3 nodes): `FinalCTA.jsx`, `FinalCTA.jsx`, `FinalCTA()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 25`** (3 nodes): `FinalCTA.jsx`, `FinalCTA.jsx`, `FinalCTA()`
+- **Thin community `Community 25`** (3 nodes): `HeroSection.jsx`, `HeroSection.jsx`, `HeroSection()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 26`** (3 nodes): `HeroSection.jsx`, `HeroSection.jsx`, `HeroSection()`
+- **Thin community `Community 26`** (3 nodes): `HowItWorks.jsx`, `HowItWorks.jsx`, `HowItWorks()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 27`** (3 nodes): `HowItWorks.jsx`, `HowItWorks.jsx`, `HowItWorks()`
+- **Thin community `Community 27`** (3 nodes): `LandingFooter.jsx`, `LandingFooter.jsx`, `LandingFooter()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 28`** (3 nodes): `LandingFooter.jsx`, `LandingFooter.jsx`, `LandingFooter()`
+- **Thin community `Community 28`** (3 nodes): `LandingNavbar.jsx`, `LandingNavbar.jsx`, `LandingNavbar()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 29`** (3 nodes): `LandingNavbar.jsx`, `LandingNavbar.jsx`, `LandingNavbar()`
+- **Thin community `Community 29`** (3 nodes): `LinkedInFeature.jsx`, `LinkedInFeature.jsx`, `LinkedInFeature()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 30`** (3 nodes): `LinkedInFeature.jsx`, `LinkedInFeature.jsx`, `LinkedInFeature()`
+- **Thin community `Community 30`** (3 nodes): `PricingSection.jsx`, `PricingSection.jsx`, `PricingSection()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 31`** (3 nodes): `PricingSection.jsx`, `PricingSection.jsx`, `PricingSection()`
+- **Thin community `Community 31`** (3 nodes): `ProblemSection.jsx`, `ProblemSection.jsx`, `ProblemSection()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 32`** (3 nodes): `ProblemSection.jsx`, `ProblemSection.jsx`, `ProblemSection()`
+- **Thin community `Community 32`** (3 nodes): `ProductDemo.jsx`, `ProductDemo.jsx`, `ProductDemo()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 33`** (3 nodes): `ProductDemo.jsx`, `ProductDemo.jsx`, `ProductDemo()`
+- **Thin community `Community 33`** (3 nodes): `SolutionSection.jsx`, `SolutionSection.jsx`, `SolutionSection()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 34`** (3 nodes): `SolutionSection.jsx`, `SolutionSection.jsx`, `SolutionSection()`
+- **Thin community `Community 34`** (3 nodes): `Testimonials.jsx`, `Testimonials.jsx`, `Testimonials()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 35`** (3 nodes): `Testimonials.jsx`, `Testimonials.jsx`, `Testimonials()`
+- **Thin community `Community 35`** (3 nodes): `WaveCanvas.jsx`, `WaveCanvas.jsx`, `WaveCanvas()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 36`** (3 nodes): `WaveCanvas.jsx`, `WaveCanvas.jsx`, `WaveCanvas()`
+- **Thin community `Community 38`** (3 nodes): `page.js`, `Dashboard()`, `page.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 39`** (3 nodes): `page.js`, `Dashboard()`, `page.js`
+- **Thin community `Community 39`** (3 nodes): `page.js`, `page.js`, `OnboardingPage()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 40`** (3 nodes): `page.js`, `page.js`, `OnboardingPage()`
+- **Thin community `Community 40`** (3 nodes): `page.js`, `page.js`, `page()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 41`** (3 nodes): `page.js`, `page.js`, `page()`
+- **Thin community `Community 41`** (3 nodes): `page.js`, `page.js`, `PurchasesPage()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 42`** (3 nodes): `page.js`, `page.js`, `PurchasesPage()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 43`** (3 nodes): `SanitizeCovLetter.js`, `SanitizeCovLetter.js`, `sanitizeCoverLetter()`
+- **Thin community `Community 42`** (3 nodes): `SanitizeCovLetter.js`, `SanitizeCovLetter.js`, `sanitizeCoverLetter()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Navbar()` connect `Community 0` to `Community 8`, `Community 10`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
+- **Why does `Navbar()` connect `Community 0` to `Community 8`?**
+  _High betweenness centrality (0.021) - this node is a cross-community bridge._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.09 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.13 - nodes in this community are weakly interconnected._
