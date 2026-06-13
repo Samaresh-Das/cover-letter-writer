@@ -75,7 +75,7 @@ function SkeletonCard() {
 }
 
 // ─── Letter Card Component ───
-function SavedLetterCard({ letter, index, userPlan, onDelete }) {
+function SavedLetterCard({ letter, index, userPlan, onDelete, selectionMode, isSelected, onToggleSelect }) {
     const [showJd, setShowJd] = useState(false);
     const [deleting, setDeleting] = useState(false);
     const [confirmDelete, setConfirmDelete] = useState(false);
@@ -149,8 +149,18 @@ function SavedLetterCard({ letter, index, userPlan, onDelete }) {
             exit={{ opacity: 0, y: -20, scale: 0.95 }}
             transition={{ duration: 0.3, delay: index * 0.05 }}
             layout
-            className="group bg-white rounded-3xl p-6 border border-slate-200/60 shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_40px_rgba(59,130,246,0.08)] hover:border-blue-200/60 transition-all duration-300"
+            className="relative group bg-white rounded-3xl p-6 border border-slate-200/60 shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_40px_rgba(59,130,246,0.08)] hover:border-blue-200/60 transition-all duration-300"
         >
+            {selectionMode && (
+                <div className="absolute top-4 right-4 z-10">
+                    <input 
+                        type="checkbox" 
+                        checked={isSelected} 
+                        onChange={() => onToggleSelect(letter._id)} 
+                        className="w-5 h-5 cursor-pointer accent-blue-600 rounded"
+                    />
+                </div>
+            )}
             {/* Header */}
             <div className="flex items-start justify-between mb-4">
                 <div>
@@ -265,6 +275,10 @@ export default function Profile() {
     const [hasChanges, setHasChanges] = useState(false);
     const [origResumeLink, setOrigResumeLink] = useState("");
     const [origCustomInstr, setOrigCustomInstr] = useState("");
+    const [selectionMode, setSelectionMode] = useState(false);
+    const [selectedLetters, setSelectedLetters] = useState([]);
+    const [bulkDeleting, setBulkDeleting] = useState(false);
+    const [showBulkConfirm, setShowBulkConfirm] = useState(false);
 
     // Load user from localStorage
     useEffect(() => {
@@ -320,6 +334,38 @@ export default function Profile() {
 
     // Track changes
     const profileChanged = resumeLink !== origResumeLink || customInstr !== origCustomInstr;
+
+    const handleBulkDelete = async () => {
+        if (selectedLetters.length === 0) return;
+        setBulkDeleting(true);
+        try {
+            const token = localStorage.getItem("token");
+            const res = await fetch(
+                `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/coverletters/bulk-delete`,
+                {
+                    method: "POST",
+                    headers: { 
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${token}` 
+                    },
+                    body: JSON.stringify({ letterIds: selectedLetters }),
+                }
+            );
+            if (res.ok) {
+                toast.success(`Deleted ${selectedLetters.length} letters`);
+                setLetters((prev) => prev.filter((l) => !selectedLetters.includes(l._id)));
+                setSelectedLetters([]);
+                setSelectionMode(false);
+                setShowBulkConfirm(false);
+            } else {
+                toast.error("Failed to delete letters");
+            }
+        } catch {
+            toast.error("Network error");
+        } finally {
+            setBulkDeleting(false);
+        }
+    };
 
     const handleSaveProfile = async () => {
         setSaving(true);
@@ -446,7 +492,15 @@ export default function Profile() {
                                         }`}
                                     >
                                         {user.plan === "pro" ? (
-                                            <><FaCrown className="w-3 h-3 text-yellow-500" /> Pro Plan</>
+                                            <>
+                                                <FaCrown className="w-3 h-3 text-yellow-500" /> 
+                                                Pro Plan
+                                                {user.proPlanExpiry && (
+                                                    <span className="ml-2 pl-2 border-l border-purple-200 text-purple-600 font-semibold">
+                                                        {Math.max(0, Math.ceil((new Date(user.proPlanExpiry).getTime() - Date.now()) / (1000 * 60 * 60 * 24)))} days left
+                                                    </span>
+                                                )}
+                                            </>
                                         ) : (
                                             "Free Plan"
                                         )}
@@ -466,8 +520,15 @@ export default function Profile() {
                     {/* Stats Row */}
                     <div className="grid grid-cols-2 gap-4 mt-8">
                         <div className="bg-slate-50/80 rounded-2xl p-4 text-center border border-slate-100">
-                            <p className="text-2xl font-black text-blue-600">{user.credits}</p>
-                            <p className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mt-1">Credits</p>
+                            <p className="text-2xl font-black text-blue-600">{user.credits ?? 0}</p>
+                            <p className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mt-1">Total Credits</p>
+                            <div className="flex justify-center gap-3 mt-2 text-[10px] font-semibold">
+                                {user.plan === "pro" && (
+                                    <span className="text-purple-500">Pro: {user.proCredits ?? 0}</span>
+                                )}
+                                <span className="text-emerald-500">Pack: {user.packCredits ?? 0}</span>
+                                <span className="text-slate-400">Free: {user.freeCredits ?? 0}</span>
+                            </div>
                         </div>
                         <div className="bg-slate-50/80 rounded-2xl p-4 text-center border border-slate-100">
                             <p className="text-2xl font-black text-purple-600">{letterLoading ? "—" : letters.length}</p>
@@ -554,6 +615,46 @@ export default function Profile() {
                                 : "Your letters are saved permanently"}
                         </p>
                     </div>
+                    {letters.length > 0 && (
+                        <div className="flex items-center gap-3 mt-4 md:mt-0">
+                            {selectionMode ? (
+                                <>
+                                    <button
+                                        onClick={() => {
+                                            if (selectedLetters.length === letters.length) {
+                                                setSelectedLetters([]);
+                                            } else {
+                                                setSelectedLetters(letters.map(l => l._id));
+                                            }
+                                        }}
+                                        className="text-sm font-semibold text-blue-600 hover:text-blue-700 transition cursor-pointer"
+                                    >
+                                        {selectedLetters.length === letters.length ? "Deselect All" : "Select All"}
+                                    </button>
+                                    <button
+                                        onClick={() => setShowBulkConfirm(true)}
+                                        disabled={selectedLetters.length === 0}
+                                        className="px-4 py-2 bg-red-50 text-red-600 hover:bg-red-100 rounded-xl text-sm font-bold transition disabled:opacity-50 cursor-pointer"
+                                    >
+                                        Delete ({selectedLetters.length})
+                                    </button>
+                                    <button
+                                        onClick={() => { setSelectionMode(false); setSelectedLetters([]); setShowBulkConfirm(false); }}
+                                        className="px-4 py-2 bg-slate-100 text-slate-600 hover:bg-slate-200 rounded-xl text-sm font-bold transition cursor-pointer"
+                                    >
+                                        Cancel
+                                    </button>
+                                </>
+                            ) : (
+                                <button
+                                    onClick={() => setSelectionMode(true)}
+                                    className="px-4 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-xl text-sm font-bold transition flex items-center gap-2 cursor-pointer"
+                                >
+                                    Select
+                                </button>
+                            )}
+                        </div>
+                    )}
                 </motion.div>
 
                 {letterLoading ? (
@@ -596,12 +697,52 @@ export default function Profile() {
                                     index={idx}
                                     userPlan={user.plan}
                                     onDelete={handleDeleteLetter}
+                                    selectionMode={selectionMode}
+                                    isSelected={selectedLetters.includes(letter._id)}
+                                    onToggleSelect={(id) => {
+                                        setSelectedLetters(prev => 
+                                            prev.includes(id) ? prev.filter(lId => lId !== id) : [...prev, id]
+                                        )
+                                    }}
                                 />
                             ))}
                         </AnimatePresence>
                     </div>
                 )}
             </section>
+
+            {/* Bulk Delete Modal */}
+            <AnimatePresence>
+                {showBulkConfirm && (
+                    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm">
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.95 }}
+                            className="bg-white rounded-3xl p-6 md:p-8 max-w-sm w-full shadow-2xl border border-slate-100"
+                        >
+                            <h3 className="text-xl font-bold text-slate-900 mb-2">Delete {selectedLetters.length} letters?</h3>
+                            <p className="text-sm text-slate-500 mb-6">This action cannot be undone. Are you sure you want to proceed?</p>
+                            <div className="flex gap-3">
+                                <button
+                                    onClick={() => setShowBulkConfirm(false)}
+                                    disabled={bulkDeleting}
+                                    className="flex-1 py-2.5 rounded-xl font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition cursor-pointer"
+                                >
+                                    Cancel
+                                </button>
+                                <button
+                                    onClick={handleBulkDelete}
+                                    disabled={bulkDeleting}
+                                    className="flex-1 py-2.5 rounded-xl font-bold text-white bg-red-500 hover:bg-red-600 transition disabled:opacity-50 flex justify-center items-center cursor-pointer"
+                                >
+                                    {bulkDeleting ? "Deleting..." : "Delete All"}
+                                </button>
+                            </div>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
 
             <footer className="mt-16 text-center text-sm text-slate-400">
                 Built with ❤️ by Samaresh
