@@ -8,6 +8,8 @@ export default function LeftOptions({
     model, setModel,
     customInstr, setCustomInstr,
     userPlan,
+    tone, setTone,
+    length, setLength,
 }) {
     return (
         <div className="flex-1 space-y-5">
@@ -40,6 +42,35 @@ export default function LeftOptions({
                     className="block w-full rounded-xl bg-slate-50/80 text-slate-900 px-4 py-3 border border-blue-100 outline-none transition-all duration-200 placeholder:text-slate-400 focus:bg-white focus:border-blue-400 focus:ring-4 focus:ring-blue-50"
                 />
             </label>
+
+            <div className="flex gap-4">
+                <label className="block flex-1">
+                    <span className="text-sm font-semibold text-slate-700 mb-2 block">Tone</span>
+                    <select
+                        value={tone}
+                        onChange={e => setTone(e.target.value)}
+                        className="w-full text-left bg-slate-50/80 border border-blue-100 text-slate-900 px-4 py-3 rounded-xl flex justify-between items-center outline-none transition-all duration-200 hover:border-blue-300 focus:bg-white focus:border-blue-400 focus:ring-4 focus:ring-blue-50 appearance-none"
+                    >
+                        <option value="Professional">Professional</option>
+                        <option value="Casual">Casual</option>
+                        <option value="Enthusiastic" disabled={userPlan !== "pro"}>Enthusiastic {userPlan !== "pro" ? "(PRO)" : ""}</option>
+                        <option value="Confident" disabled={userPlan !== "pro"}>Confident {userPlan !== "pro" ? "(PRO)" : ""}</option>
+                    </select>
+                </label>
+
+                <label className="block flex-1">
+                    <span className="text-sm font-semibold text-slate-700 mb-2 block">Length</span>
+                    <select
+                        value={length}
+                        onChange={e => setLength(e.target.value)}
+                        className="w-full text-left bg-slate-50/80 border border-blue-100 text-slate-900 px-4 py-3 rounded-xl flex justify-between items-center outline-none transition-all duration-200 hover:border-blue-300 focus:bg-white focus:border-blue-400 focus:ring-4 focus:ring-blue-50 appearance-none"
+                    >
+                        <option value="Short">Short</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Long">Long</option>
+                    </select>
+                </label>
+            </div>
 
             <div className="block">
                 <span className="text-sm font-semibold text-slate-700 mb-2 block">Generation Model</span>

@@ -14,6 +14,8 @@ export default function Controls({
     userPlan,
     jd, setJd,
     onGenerate, loading, error,
+    tone, setTone,
+    length, setLength,
 }) {
     const [isInstructionOpen, setIsInstructionOpen] = useState(false);
 
@@ -34,6 +36,8 @@ export default function Controls({
                         model={model} setModel={setModel}
                         customInstr={customInstr} setCustomInstr={setCustomInstr}
                         userPlan={userPlan}
+                        tone={tone} setTone={setTone}
+                        length={length} setLength={setLength}
                     />
                     <div className="hidden lg:block w-px bg-blue-100/50 my-4" /> {/* Divider */}
                     <RightJDInput

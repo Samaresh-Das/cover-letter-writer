@@ -12,6 +12,8 @@ export default function Dashboard() {
   const [manager, setManager] = useState("");
   const [resumeLink, setResumeLink] = useState("");
   const [model, setModel] = useState(process.env.NEXT_PUBLIC_DEFAULT_MODEL);
+  const [tone, setTone] = useState("Professional");
+  const [length, setLength] = useState("Medium");
   const [customInstr, setCustomInstr] = useState("");
   const [defaultUserInstr, setDefaultUserInstr] = useState("");
   const [userPlan, setUserPlan] = useState("free");
@@ -87,7 +89,7 @@ export default function Dashboard() {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${token}`
         },
-        body: JSON.stringify({ jobDescription: jd, model, manager, resumeLink, customInstr }),
+        body: JSON.stringify({ jobDescription: jd, model, manager, resumeLink, customInstr, tone, length }),
       });
 
       const data = await res.json();
@@ -140,6 +142,8 @@ export default function Dashboard() {
         onGenerate={onGenerate}
         loading={loading}
         error={error}
+        tone={tone} setTone={setTone}
+        length={length} setLength={setLength}
       />
 
       <button
