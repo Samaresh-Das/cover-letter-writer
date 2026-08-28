@@ -11,7 +11,7 @@ export default function Dashboard() {
   const [jd, setJd] = useState("");
   const [manager, setManager] = useState("");
   const [resumeLink, setResumeLink] = useState("");
-  const [model, setModel] = useState(process.env.NEXT_PUBLIC_DEFAULT_MODEL);
+  const [model, setModel] = useState(process.env.NEXT_PUBLIC_DEFAULT_MODEL || "groq/compound");
   const [tone, setTone] = useState("Professional");
   const [length, setLength] = useState("Medium");
   const [customInstr, setCustomInstr] = useState("");

@@ -1,9 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 
 const models = [
-    { label: "LLaMA 3.1 8B Instant ⚡", value: "llama-3.1-8b-instant", speed: "fastest" },
-    { label: "LLaMA 3.3 70B", value: "llama-3.3-70b-versatile", speed: "smart" },
-    { label: "GPT OSS 20B", value: "openai/gpt-oss-20b", speed: "balanced" },
+    { label: "Groq Compound", value: "groq/compound", speed: "smart" },
 ];
 
 export default function CustomDropdown({ model, setModel }) {
