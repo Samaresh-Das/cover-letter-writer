@@ -28,7 +28,7 @@ export default function ResumeAnalysisPage() {
   const [resume, setResume] = useState(null);
   // loading controls the first page fetch placeholder.
   const [loading, setLoading] = useState(true);
-  // applying controls the Apply General Improvements button while Groq rewrites
+  // applying controls the Apply General Improvements button while Gemini rewrites
   // content according to general suggestions.
   const [applying, setApplying] = useState(false);
   // refreshing controls the "Refresh Analysis" button, which regenerates and

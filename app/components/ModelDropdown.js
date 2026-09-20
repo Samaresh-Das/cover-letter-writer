@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 
 const models = [
-    { label: "Groq Compound", value: "groq/compound", speed: "smart" },
+    { label: "Gemini 2.5 (Lite)", value: "gemini-2.5-flash-lite", speed: "fast" },
 ];
 
 export default function CustomDropdown({ model, setModel }) {
