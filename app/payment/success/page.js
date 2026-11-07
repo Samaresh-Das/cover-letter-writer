@@ -46,7 +46,7 @@ function SuccessContent() {
             }
             try {
                 // Fetch the updated profile to sync the credits immediately after payment redirect
-                const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/users/profile`, {
+                const res = await fetch(`/api/users/profile`, {
                     headers: { "Authorization": `Bearer ${token}` }
                 });
                 if (res.ok) {

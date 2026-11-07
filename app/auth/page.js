@@ -16,7 +16,7 @@ export default function AuthPage() {
   const handleGoogleSuccess = async (credentialResponse) => {
     setLoading(true);
     try {
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/auth/google`, {
+      const response = await axios.post(`/api/auth/google`, {
         credential: credentialResponse.credential,
       });
 
@@ -26,14 +26,12 @@ export default function AuthPage() {
         // New user: do not save user data, save registration token and redirect to onboarding
         localStorage.setItem('registrationToken', token);
         // Set cookie so middleware allows /onboarding access
-        document.cookie = `registrationToken=${token}; path=/; max-age=3600; SameSite=Lax`; // 1 hour
         toast.success('Google verification successful. Please complete your profile.', { id: 'auth-register' });
         router.push('/onboarding');
       } else {
         // Existing user
         localStorage.setItem('token', token);
         localStorage.setItem('user', JSON.stringify(user));
-        document.cookie = `token=${token}; path=/; max-age=604800; SameSite=Lax`; // 7 days
 
         toast.success('Successfully logged in!', { id: 'auth-login' });
 

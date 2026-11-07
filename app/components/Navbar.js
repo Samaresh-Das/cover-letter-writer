@@ -114,7 +114,7 @@ export const Navbar = () => {
             const token = localStorage.getItem('token');
             if (!token) return;
             try {
-                const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/users/profile`, {
+                const res = await fetch(`/api/users/profile`, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 if (res.ok) {
@@ -148,10 +148,11 @@ export const Navbar = () => {
         };
     }, [pathname]);
 
-    const handleLogout = () => {
+    const handleLogout = async () => {
+        const response = await fetch("/api/auth/logout", { method: "POST" });
+        if (!response.ok) return;
         localStorage.removeItem('token');
         localStorage.removeItem('user');
-        document.cookie = 'token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=Lax';
         setUser(null);
         setIsDropdownOpen(false);
         window.location.href = '/';

@@ -20,7 +20,7 @@ export default function PurchasesPage() {
                     return;
                 }
 
-                const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/payment/history`, {
+                const res = await fetch(`/api/payment/history`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },

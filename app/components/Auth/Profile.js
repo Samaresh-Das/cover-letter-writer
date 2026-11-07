@@ -113,7 +113,7 @@ function SavedLetterCard({ letter, index, userPlan, onDelete, selectionMode, isS
         try {
             const token = localStorage.getItem("token");
             const res = await fetch(
-                `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/coverletters/${letter._id}`,
+                `/api/coverletters/${letter._id}`,
                 {
                     method: "DELETE",
                     headers: { Authorization: `Bearer ${token}` },
@@ -305,7 +305,7 @@ export default function Profile() {
                 const token = localStorage.getItem("token");
                 if (!token) return;
                 const res = await fetch(
-                    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/coverletters`,
+                    `/api/coverletters`,
                     { headers: { Authorization: `Bearer ${token}` } }
                 );
                 if (res.ok) {
@@ -321,10 +321,11 @@ export default function Profile() {
         fetchLetters();
     }, []);
 
-    const handleLogout = () => {
+    const handleLogout = async () => {
+        const response = await fetch("/api/auth/logout", { method: "POST" });
+        if (!response.ok) return;
         localStorage.removeItem("token");
         localStorage.removeItem("user");
-        document.cookie = "token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=Lax";
         window.location.href = "/";
     };
 
@@ -341,7 +342,7 @@ export default function Profile() {
         try {
             const token = localStorage.getItem("token");
             const res = await fetch(
-                `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/coverletters/bulk-delete`,
+                `/api/coverletters/bulk-delete`,
                 {
                     method: "POST",
                     headers: { 
@@ -372,7 +373,7 @@ export default function Profile() {
         try {
             const token = localStorage.getItem("token");
             const res = await fetch(
-                `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/users/onboarding`,
+                `/api/users/onboarding`,
                 {
                     method: "POST",
                     headers: {

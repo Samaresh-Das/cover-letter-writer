@@ -88,7 +88,7 @@ export default function UsagePage() {
                 return;
             }
             const res = await fetch(
-                `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/users/usage?page=${p}&limit=${limit}`,
+                `/api/users/usage?page=${p}&limit=${limit}`,
                 { headers: { Authorization: `Bearer ${token}` } }
             );
             if (res.ok) {

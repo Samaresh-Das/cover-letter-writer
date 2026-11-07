@@ -83,7 +83,7 @@ export default function Dashboard() {
     generationTimestamps.current.push(now);
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/generate`, {
+      const res = await fetch(`/api/generate`, {
         method: "POST",
         headers: { 
             "Content-Type": "application/json",

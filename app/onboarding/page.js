@@ -131,7 +131,7 @@ export default function OnboardingPage() {
       if (registrationToken) {
         // New user registration flow
         const response = await axios.post(
-          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/auth/register`,
+          `/api/auth/register`,
           { resumeLink, customInstructions, linkedInUrl, yearsOfExperience, jobRole, optionalLinks },
           { headers: { Authorization: `Bearer ${registrationToken}` } }
         );
@@ -142,14 +142,12 @@ export default function OnboardingPage() {
         localStorage.setItem('token', finalToken);
         localStorage.setItem('user', JSON.stringify(user));
         localStorage.removeItem('registrationToken');
-        document.cookie = `token=${finalToken}; path=/; max-age=604800; SameSite=Lax`;
-        document.cookie = `registrationToken=; path=/; max-age=0`; // Clear registration cookie
         
         toast.success('Registration complete!', { id: 'onboard-register' });
       } else if (token) {
         // Existing user update flow
         const response = await axios.post(
-          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/users/onboarding`,
+          `/api/users/onboarding`,
           { resumeLink, customInstructions, linkedInUrl, yearsOfExperience, jobRole, optionalLinks },
           { headers: { Authorization: `Bearer ${token}` } }
         );

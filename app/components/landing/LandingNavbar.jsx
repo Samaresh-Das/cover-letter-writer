@@ -13,7 +13,7 @@ export default function LandingNavbar() {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll, { passive: true });
 
-    const hasToken = document.cookie.split(';').some(c => c.trim().startsWith('token='));
+    const hasToken = localStorage.getItem("token") === "session";
     if (hasToken) setCtaHref('/dashboard');
 
     return () => window.removeEventListener('scroll', handleScroll);

@@ -41,7 +41,7 @@ export default function PricingPage() {
             // ── Step 1: Request Payment Link creation from Backend ──────
             // We pass the itemId. The backend acts as the single source of truth for
             // price values to prevent malicious client-side price tampering.
-            const orderRes = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/payment/create-order`, {
+            const orderRes = await fetch(`/api/payment/create-order`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

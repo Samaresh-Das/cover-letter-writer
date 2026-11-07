@@ -28,32 +28,6 @@ export default function RightJDInput({
 
         try {
             // Deduct credits if free user
-            if (userPlan !== "pro") {
-                const deductRes = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/users/deduct-jd`, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Authorization": `Bearer ${token}`
-                    }
-                });
-
-                const deductData = await deductRes.json();
-                if (!deductRes.ok) {
-                    alert(deductData.message || "Failed to deduct credits");
-                    setFetching(false);
-                    return;
-                }
-
-                // Update credits in local storage
-                const savedUser = localStorage.getItem('user');
-                if (savedUser && deductData.creditsRemaining !== undefined) {
-                    const userObj = JSON.parse(savedUser);
-                    userObj.credits = deductData.creditsRemaining;
-                    localStorage.setItem('user', JSON.stringify(userObj));
-                    window.dispatchEvent(new Event("userUpdated"));
-                }
-            }
-
             const res = await fetch("/api/fetch-jd", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -62,6 +36,12 @@ export default function RightJDInput({
 
             const data = await res.json();
             if (data.jd) {
+                const savedUser = JSON.parse(localStorage.getItem("user") || "{}");
+                if (data.creditsRemaining !== undefined) {
+                    savedUser.credits = data.creditsRemaining;
+                    localStorage.setItem("user", JSON.stringify(savedUser));
+                    window.dispatchEvent(new Event("userUpdated"));
+                }
                 setJd(data.jd);
             } else {
                 alert("Could not extract JD: " + (data.error || "Unknown error"));

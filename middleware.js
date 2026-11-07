@@ -4,11 +4,11 @@ import { NextResponse } from 'next/server';
 const AUTH_ROUTES = ['/', '/auth'];
 
 // Routes that require a token; redirect to /auth if missing
-const PROTECTED_ROUTES = ['/dashboard', '/profile'];
+const PROTECTED_ROUTES = ['/dashboard', '/profile', '/resumes', '/usage', '/purchases'];
 
 export function middleware(request) {
   const { pathname } = request.nextUrl;
-  const token = request.cookies.get('token')?.value;
+  const token = request.cookies.get('covgen_session')?.value;
 
   // If user is authenticated and trying to visit landing or auth page → go to dashboard
   if (token && AUTH_ROUTES.includes(pathname)) {

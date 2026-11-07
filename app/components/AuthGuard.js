@@ -7,7 +7,7 @@ import { useRouter, usePathname } from 'next/navigation';
 // covgen-server/routes/resume-routes.js. Keeping the frontend route protected
 // prevents unauthenticated users from reaching upload/analysis UI that would
 // immediately fail backend authorization.
-const PROTECTED_ROUTES = ['/dashboard', '/profile', '/onboarding', '/resumes'];
+const PROTECTED_ROUTES = ['/dashboard', '/profile', '/onboarding', '/resumes', '/usage', '/purchases'];
 
 export default function AuthGuard({ children }) {
   const router = useRouter();
@@ -16,6 +16,11 @@ export default function AuthGuard({ children }) {
 
   useEffect(() => {
     const checkAuth = () => {
+      // Credentials from the previous browser-storage flow are no longer used.
+      for (const key of ['token', 'registrationToken']) {
+        const value = localStorage.getItem(key);
+        if (value && value !== 'session') localStorage.removeItem(key);
+      }
       const token = localStorage.getItem('token');
       const registrationToken = localStorage.getItem('registrationToken');
       const isProtectedRoute = PROTECTED_ROUTES.some(route => pathname.startsWith(route));
